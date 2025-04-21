@@ -103,7 +103,7 @@ export default function QuestSearch({
     }, [isFocused])
 
     return (
-        <div id="search-container" className="relative w-full max-w-md mb-12 transition-all duration-300 z-30">
+        <div id="search-container" className="relative w-full max-w-2xl mb-12 transition-all duration-300 z-30">
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="relative">
                 <div className="absolute inset-0 bg-white/20 rounded-full blur-xl"></div>
                 <div className="relative">
