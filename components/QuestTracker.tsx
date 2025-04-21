@@ -1,15 +1,14 @@
 "use client"
 
-import { useState, useMemo, useEffect, useRef } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import {useMemo, useState} from "react"
+import {AnimatePresence, motion} from "framer-motion"
 import QuestSearch from "@/components/QuestSearch";
 import VisualGuideDialog from "./VisualGuideDialog";
 import VideoGuideDialog from "@/components/VideoGuideDialog";
 import {Button} from "@/components/ui/button";
 import QuestCard from "@/components/QuestCard";
 import EmptyQuestSlot from "@/components/EmptyQuestSlot";
-import { questsData } from "@/data/questData";
-
+import {questsData} from "@/data/questData";
 
 export type Quest = {
     id: number,
@@ -96,7 +95,6 @@ export default function QuestTracker() {
                     <h2 className="text-2xl font-semibold text-white/90 drop-shadow-md">Daily Quest Tracker</h2>
                 </motion.div>
 
-                {/* Search Component */}
                 <QuestSearch
                     searchQuery={searchQuery}
                     setSearchQuery={setSearchQuery}
@@ -105,21 +103,18 @@ export default function QuestTracker() {
                     selectedQuests={selectedQuests}
                 />
 
-                {/* Visual Guide Dialog */}
                 <VisualGuideDialog
                     isOpen={visualGuideDialog.isOpen}
                     quest={visualGuideDialog.quest}
                     onClose={closeVisualGuideDialog}
                 />
 
-                {/* Video Guide Dialog */}
                 <VideoGuideDialog
                     isOpen={videoGuideDialog.isOpen}
                     quest={videoGuideDialog.quest}
                     onClose={closeVideoGuideDialog}
                 />
 
-                {/* Daily Quests Section */}
                 <div className="w-full relative z-10">
                     <AnimatePresence>
                         {selectedQuests.length > 0 && (
@@ -144,12 +139,10 @@ export default function QuestTracker() {
                         )}
                     </AnimatePresence>
 
-                    {/* Quest container with fixed height to prevent layout shifts */}
                     <div
                         className="relative w-full"
                     >
                         <div className="grid grid-cols-1 gap-4">
-                            {/* Selected Quests */}
                             <AnimatePresence mode="popLayout">
                                 {selectedQuests.map((quest) => (
                                     <motion.div

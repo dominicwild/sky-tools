@@ -38,7 +38,6 @@ export default function QuestCard({ quest, onRemove, onOpenVisualGuide, onOpenVi
                                         {quest.realm}
                                     </Badge>
 
-                                    {/* Video Guide Button with Text */}
                                     {quest.videoGuideUrl && (
                                         <Button
                                             size="sm"
@@ -66,7 +65,6 @@ export default function QuestCard({ quest, onRemove, onOpenVisualGuide, onOpenVi
                         </Button>
                     </div>
 
-                    {/* Visual Guide Preview with Maximize Button */}
                     {quest.visualGuideUrl ? (
                         <div className="mt-2 relative group">
                             <div
