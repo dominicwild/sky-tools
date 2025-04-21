@@ -1,6 +1,8 @@
 import type {Metadata} from "next";
 import {Nunito} from "next/font/google";
 import "./globals.css";
+import {Circle} from "lucide-react";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Sky Quest Tracker",
@@ -22,6 +24,7 @@ export default function RootLayout({
         className={`${nunito.variable} antialiased min-h-screen`}
       >
         {children}
+<Footer />
       </body>
     </html>
   );

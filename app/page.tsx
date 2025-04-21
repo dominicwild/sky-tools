@@ -5,11 +5,11 @@ export default function Home() {
     return (
         <main className="relative">
             <div className="fixed inset-0 pointer-events-none">
-                <CloudEffect />
+                <CloudEffect/>
             </div>
 
-            <div >
-                <QuestTracker />
+            <div className={"min-h-screen"}>
+                <QuestTracker/>
             </div>
         </main>
     )
