@@ -1,6 +1,6 @@
 "use client"
 
-import {useMemo, useState} from "react"
+import {use, useMemo, useState} from "react"
 import {AnimatePresence, motion} from "framer-motion"
 import QuestSearch from "@/components/QuestSearch";
 import VisualGuideDialog from "./VisualGuideDialog";
@@ -9,6 +9,8 @@ import {Button} from "@/components/ui/button";
 import QuestCard from "@/components/QuestCard";
 import EmptyQuestSlot from "@/components/EmptyQuestSlot";
 import {questsData} from "@/data/questData";
+import {incrementQuest, QuestValue} from "@/server/redis";
+import {getSkyDate} from "@/lib/utils";
 
 export type Quest = {
     id: number,
@@ -20,17 +22,35 @@ export type Quest = {
     videoGuideUrl: string | null
 }
 
-export default function QuestTracker() {
-    const [selectedQuests, setSelectedQuests] = useState<Quest[]>([])
+interface QuestTrackerProps {
+    todaysQuests: Promise<{} | QuestValue>
+}
+
+function getMostLikelyQuests(quests: Record<string, number> | {}) {
+    const mostSelectedQuest = Object
+        .entries(quests)
+        .sort(([_a, inc], [_b, inc2]) => inc - inc2)
+
+    return mostSelectedQuest
+        .slice(0, 4)
+        .map(([questId, _]) => {
+            return questsData.find((quest) => quest.id === +questId);
+        })
+        .filter(quest => quest !== undefined)
+}
+
+export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>) {
+    const todaysQuestsResolved = use(todaysQuests)
+    const [selectedQuests, setSelectedQuests] = useState<Quest[]>(() => getMostLikelyQuests(todaysQuestsResolved))
     const [searchQuery, setSearchQuery] = useState("")
     const [visualGuideDialog, setVisualGuideDialog] = useState<{
         isOpen: boolean
         quest: Quest | null
-    }>({ isOpen: false, quest: null })
+    }>({isOpen: false, quest: null})
     const [videoGuideDialog, setVideoGuideDialog] = useState<{
         isOpen: boolean
         quest: Quest | null
-    }>({ isOpen: false, quest: null })
+    }>({isOpen: false, quest: null})
 
     const filteredQuests = useMemo(() => {
         if (!searchQuery.trim()) return []
@@ -46,8 +66,26 @@ export default function QuestTracker() {
             .slice(0, 8) // Limit results to 8 for better UX
     }, [searchQuery])
 
+    function trackQuestSelection(quest: Quest) {
+        const todaysDate = getSkyDate();
+        const selectedQuestData = localStorage.getItem(todaysDate);
+
+        if (!selectedQuestData) {
+            incrementQuest(quest.id)
+            localStorage.setItem(todaysDate, JSON.stringify([quest.id]))
+        } else {
+            const selectedQuestsForToday = JSON.parse(selectedQuestData) as number[];
+            if (!selectedQuestsForToday.includes(quest.id)) {
+                incrementQuest(quest.id)
+                localStorage.setItem(todaysDate, JSON.stringify([...selectedQuestsForToday, quest.id]))
+            }
+        }
+    }
+
     const addQuest = (quest: Quest) => {
         if (selectedQuests.length < 4 && !selectedQuests.includes(quest)) {
+            trackQuestSelection(quest);
+
             setSelectedQuests([...selectedQuests, quest])
             setSearchQuery("")
             const searchInput = document.getElementById("quest-search")
@@ -66,19 +104,19 @@ export default function QuestTracker() {
     }
 
     const openVisualGuideDialog = (quest: Quest) => {
-        setVisualGuideDialog({ isOpen: true, quest })
+        setVisualGuideDialog({isOpen: true, quest})
     }
 
     const closeVisualGuideDialog = () => {
-        setVisualGuideDialog(state => ({ ...state, isOpen: false }))
+        setVisualGuideDialog(state => ({...state, isOpen: false}))
     }
 
     const openVideoGuideDialog = (quest: Quest) => {
-        setVideoGuideDialog({ isOpen: true, quest })
+        setVideoGuideDialog({isOpen: true, quest})
     }
 
     const closeVideoGuideDialog = () => {
-        setVideoGuideDialog((state) => ({ ...state, isOpen: false }))
+        setVideoGuideDialog((state) => ({...state, isOpen: false}))
     }
 
     return (
@@ -86,9 +124,9 @@ export default function QuestTracker() {
             <div className="w-full max-w-3xl mx-auto flex flex-col items-center">
                 <motion.div
                     className="mb-8 text-center"
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    initial={{opacity: 0, y: -20}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 0.6, ease: "easeOut"}}
                 >
                     <img className={"relative"} src={"/sky-logo.png"}/>
                     <h2 className="text-2xl font-semibold text-white/90 drop-shadow-2xl ">
@@ -123,9 +161,9 @@ export default function QuestTracker() {
                     <AnimatePresence>
                         {selectedQuests.length > 0 && (
                             <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
+                                initial={{opacity: 0}}
+                                animate={{opacity: 1}}
+                                exit={{opacity: 0}}
                                 className="mb-4 flex justify-between items-center"
                             >
                                 <h3 className="text-xl font-semibold text-white drop-shadow-sm">
@@ -152,14 +190,14 @@ export default function QuestTracker() {
                                     <motion.div
                                         key={quest.questName + quest.type}
                                         layout
-                                        initial={{ opacity: 0, scale: 0.8 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.2 } }}
+                                        initial={{opacity: 0, scale: 0.8}}
+                                        animate={{opacity: 1, scale: 1}}
+                                        exit={{opacity: 0, scale: 0.8, transition: {duration: 0.2}}}
                                         transition={{
                                             type: "spring",
                                             stiffness: 500,
                                             damping: 30,
-                                            layout: { duration: 0.3 },
+                                            layout: {duration: 0.3},
                                         }}
                                         className="w-full"
                                     >
@@ -172,21 +210,21 @@ export default function QuestTracker() {
                                     </motion.div>
                                 ))}
 
-                                    <motion.div
-                                        layout
-                                        initial={{ opacity: 0, scale: 0.8 }}
-                                        animate={{ opacity: 1, scale: 1 }}
-                                        exit={{ opacity: 0, scale: 0.8 }}
-                                        transition={{
-                                            type: "spring",
-                                            stiffness: 500,
-                                            damping: 30,
-                                            layout: { duration: 0.3 },
-                                        }}
-                                        className="w-full"
-                                    >
-                                        {selectedQuests.length == 0 && <EmptyQuestSlot/>}
-                                    </motion.div>
+                                <motion.div
+                                    layout
+                                    initial={{opacity: 0, scale: 0.8}}
+                                    animate={{opacity: 1, scale: 1}}
+                                    exit={{opacity: 0, scale: 0.8}}
+                                    transition={{
+                                        type: "spring",
+                                        stiffness: 500,
+                                        damping: 30,
+                                        layout: {duration: 0.3},
+                                    }}
+                                    className="w-full"
+                                >
+                                    {selectedQuests.length == 0 && <EmptyQuestSlot/>}
+                                </motion.div>
                             </AnimatePresence>
                         </div>
                     </div>

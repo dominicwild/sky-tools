@@ -2,6 +2,7 @@ import type {Metadata} from "next";
 import {Nunito} from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import {Analytics} from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
     title: "Sky Quest Tracker",
@@ -22,7 +23,10 @@ export default function RootLayout({
         <body
             className={`${nunito.variable} antialiased min-h-screen bg-gradient-to-b from-sky-300 to-sky-400`}
         >
+        <Analytics/>
+
         {children}
+
         <Footer/>
         </body>
         </html>
