@@ -1,3 +1,4 @@
+"use client"
 import QuestTracker from "@/components/QuestTracker";
 import {CloudEffect} from "@/components/CloudEffect";
 
