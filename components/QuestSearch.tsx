@@ -24,13 +24,11 @@ export default function QuestSearch({
                                         filteredQuests,
                                         addQuest,
                                         selectedQuests,
-                                    }: QuestSearchProps) {
+                                    }: Readonly<QuestSearchProps>) {
     const [isFocused, setIsFocused] = useState(false)
 
-    // Show all quests when focused and no search query
     const displayQuests = searchQuery.trim() === "" && isFocused ? questsData.slice(0, 8) : filteredQuests
 
-    // Add a useEffect to focus the search input on initial load
     useEffect(() => {
         const searchInput = document.getElementById("quest-search")
         if (searchInput) {
@@ -39,7 +37,6 @@ export default function QuestSearch({
         }
     }, [])
 
-    // Animation variants for search results
     const searchResultsVariants = {
         hidden: {
             opacity: 0,
@@ -143,7 +140,7 @@ export default function QuestSearch({
                                     <div className="space-y-1">
                                         {displayQuests.map((quest, index) => (
                                             <motion.div
-                                                key={quest.type + quest.questName}
+                                                key={quest.id}
                                                 initial={{ opacity: 0, y: 10 }}
                                                 animate={{
                                                     opacity: 1,

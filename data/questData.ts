@@ -1,3 +1,5 @@
+import {Quest} from "@/components/QuestTracker";
+
 export const questsData =[
     {
         "type": "Realm Quest",
@@ -1925,4 +1927,4 @@ export const questsData =[
         "videoGuideUrl": "https://www.youtube.com/watch?v=f_CZ24gXpCk&list=PLl2dLrx-duQgedEYgPBHeLmbCV-ZooBo5",
         "id": 213
     }
-]
+] satisfies Quest[]

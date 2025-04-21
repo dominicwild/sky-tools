@@ -12,6 +12,7 @@ import { questsData } from "@/data/questData";
 
 
 export type Quest = {
+    id: number,
     type: string
     realm: string
     questName: string
