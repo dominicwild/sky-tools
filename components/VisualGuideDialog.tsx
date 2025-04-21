@@ -1,5 +1,6 @@
-import { Dialog, DialogContent } from "@/components/ui/dialog"
+import {Dialog, DialogContent, DialogTitle} from "@/components/ui/dialog"
 import {Quest} from "@/components/QuestTracker";
+import {getImageUrl} from "@/util/helper";
 
 interface VisualGuideDialogProps {
     isOpen: boolean
@@ -7,15 +8,18 @@ interface VisualGuideDialogProps {
     onClose: () => void
 }
 
-export default function VisualGuideDialog({ isOpen, quest, onClose }: VisualGuideDialogProps) {
+export default function VisualGuideDialog({ isOpen, quest, onClose }: Readonly<VisualGuideDialogProps>) {
     return (
         <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-            <DialogContent className="max-w-3xl bg-black/80 backdrop-blur-lg border-none text-white">
+            <DialogTitle>
+                Visual Guide
+            </DialogTitle>
+            <DialogContent className=" bg-black/80 backdrop-blur-lg border-none text-white">
                 <div className="mt-4">
                     {quest?.visualGuideUrl ? (
                         <div className="flex justify-center">
                             <img
-                                src={quest.visualGuideUrl || "/placeholder.svg"}
+                                src={getImageUrl(quest.visualGuideUrl)}
                                 alt="Visual guide"
                                 className="max-h-[70vh] object-contain rounded-lg"
                                 onError={(e) => {

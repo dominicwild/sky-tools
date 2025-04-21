@@ -8,6 +8,7 @@ import { questsData } from "@/data/questData"
 import {Quest} from "@/components/QuestTracker";
 import {Input} from "@/components/ui/input";
 import {Card, CardContent} from "@/components/ui/card";
+import {getImageUrl} from "@/util/helper";
 
 interface QuestSearchProps {
     searchQuery: string
@@ -129,7 +130,6 @@ export default function QuestSearch({
                     )}
                 </div>
 
-                {/* Floating Search Results with AnimatePresence for smooth exit */}
                 <AnimatePresence>
                     {displayQuests.length > 0 && isFocused && (
                         <motion.div
@@ -157,11 +157,11 @@ export default function QuestSearch({
                                                 <div className="flex items-center gap-3 flex-1">
                                                     {quest.iconUrl && (
                                                         <img
-                                                            src={quest.iconUrl || "/placeholder.svg"}
+                                                            src={getImageUrl(quest.iconUrl)}
                                                             alt="Quest icon"
                                                             className="w-5 h-5"
                                                             onError={(e) => {
-                                                                ;(e.target as HTMLImageElement).src = "/glowing-scroll-icon.png"
+                                                                ;(e.target as HTMLImageElement).src = "/oh-no.png"
                                                             }}
                                                         />
                                                     )}

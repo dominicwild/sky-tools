@@ -192,7 +192,7 @@ export default function QuestTracker() {
                             <AnimatePresence mode="popLayout">
                                 {selectedQuests.map((quest) => (
                                     <motion.div
-                                        key={quest.questName}
+                                        key={quest.questName + quest.type}
                                         layout
                                         initial={{ opacity: 0, scale: 0.8 }}
                                         animate={{ opacity: 1, scale: 1 }}

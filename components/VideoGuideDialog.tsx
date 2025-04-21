@@ -1,5 +1,5 @@
 import {Quest} from "@/components/QuestTracker";
-import {Dialog, DialogContent} from "@/components/ui/dialog";
+import {Dialog, DialogContent, DialogTitle} from "@/components/ui/dialog";
 
 interface VideoGuideDialogProps {
     isOpen: boolean
@@ -10,6 +10,9 @@ interface VideoGuideDialogProps {
 export default function VideoGuideDialog({ isOpen, quest, onClose }: VideoGuideDialogProps) {
     return (
         <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
+            <DialogTitle>
+             Video Guide
+            </DialogTitle>
             <DialogContent className="max-w-3xl bg-black/90 backdrop-blur-lg border-none text-white">
                 <div className="mt-4">
                     {quest?.videoGuideUrl ? (
@@ -20,6 +23,7 @@ export default function VideoGuideDialog({ isOpen, quest, onClose }: VideoGuideD
                                     .replace("youtu.be/", "youtube.com/embed/")
                                     .replace("youtube.com/watch?v=", "youtube.com/embed/")}
                                 title="YouTube video player"
+                                // These permissions are recommended when embedding YouTube videos
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
                             ></iframe>

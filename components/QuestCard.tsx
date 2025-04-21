@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Quest } from "./QuestTracker"
 import {Badge} from "@/components/ui/badge";
+import {getImageUrl} from "@/util/helper";
 
 interface QuestCardProps {
     quest: Quest
@@ -13,7 +14,7 @@ interface QuestCardProps {
     onOpenVideoGuide: (quest: Quest) => void
 }
 
-export default function QuestCard({ quest, onRemove, onOpenVisualGuide, onOpenVideoGuide }: QuestCardProps) {
+export default function QuestCard({ quest, onRemove, onOpenVisualGuide, onOpenVideoGuide }: Readonly<QuestCardProps>) {
     return (
         <Card className="bg-sky-700/80 backdrop-blur-md border-none shadow-lg overflow-hidden rounded-2xl hover:shadow-xl transition-shadow">
             <CardContent className="p-4">
@@ -22,11 +23,11 @@ export default function QuestCard({ quest, onRemove, onOpenVisualGuide, onOpenVi
                         <div className="flex items-start gap-3">
                             {quest.iconUrl && (
                                 <img
-                                    src={quest.iconUrl || "/placeholder.svg"}
+                                    src={getImageUrl(quest.iconUrl)}
                                     alt="Quest icon"
                                     className="w-6 h-6 mt-0.5"
                                     onError={(e) => {
-                                        ;(e.target as HTMLImageElement).src = "/glowing-scroll-icon.png"
+                                        ;(e.target as HTMLImageElement).src = "/oh-no.png"
                                     }}
                                 />
                             )}
@@ -73,11 +74,11 @@ export default function QuestCard({ quest, onRemove, onOpenVisualGuide, onOpenVi
                                 onClick={() => onOpenVisualGuide(quest)}
                             >
                                 <img
-                                    src={quest.visualGuideUrl || "/placeholder.svg"}
+                                    src={getImageUrl(quest.visualGuideUrl)}
                                     alt="Visual guide"
                                     className="h-48 object-contain rounded-md"
                                     onError={(e) => {
-                                        ;(e.target as HTMLImageElement).src = "/sky-cotl-quest-journey.png"
+                                        ;(e.target as HTMLImageElement).src = "/oh-no.png"
                                     }}
                                 />
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 flex items-center justify-center transition-all rounded-xl">

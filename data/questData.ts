@@ -3,623 +3,623 @@ export const questsData =[
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Meditate in Prairie's butterfly field",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/2b/01_DP_Quest_-_Meditate_at_butterfly_fields.png/revision/latest?cb=20220403145135",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "48e166fd-c49e-429b-a473-4a525f48301b.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Meditate at Prairie's cave shrine",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/e8/01_DP_Quest_-_Meditate_at_cave_shrine.png/revision/latest?cb=20220403145734",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "9b09a386-26f1-4bb1-ac82-1f82c977e033.png",
         "videoGuideUrl": "https://youtu.be/Pc8wrPEPcus"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Meditate at Prairie's bird nest shrine",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/57/01_DP_Quest_-_Meditate_at_Bird_Nest.png/revision/latest?cb=20220403145733",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "59170acc-45eb-46dd-b916-8b3e51ee847d.png",
         "videoGuideUrl": "https://youtu.be/OXLBHrmCTmU"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Meditate at the Sanctuary Islands",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/5a/01_DP_Quest_-_Meditate_at_Sanctuary_Islands.png/revision/latest?cb=20220403145728",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "be88cc61-4372-4fb9-90c3-7c17b778e7eb.png",
         "videoGuideUrl": "https://youtu.be/xyR4vlI1FxU"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Meditate at Prairie's faerie ring",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/8a/01_DP_Quest_-_Meditate_at_Faerie_Ring.png/revision/latest?cb=20220403145734",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "35e0b8ec-26c1-4efa-8750-0913653e299d.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Meditate by Prairie's koi pond",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/a5/01_DP_Quest_-_Meditate_at_Koi_Pond.png/revision/latest?cb=20220403145735",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "d14a5bc4-df0c-4923-a5fa-ab775a9cc6e7.png",
         "videoGuideUrl": "https://youtu.be/2oH89Ygc1Ao"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Catch the light in Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/1/1e/01_DP_Quest_-_Catch_the_light.png/revision/latest?cb=20220403152043",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "37dbc00e-1692-4e34-9d82-cbcfbea0fa73.png",
         "videoGuideUrl": "https://youtu.be/ik6eeSghJ-w"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Collect Green Light",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/58/02_DP_Quest_-_Collect_Green_Light.png/revision/latest?cb=20220403152048",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "a60a5010-4c19-427c-b43e-c01826ec8296.png",
         "videoGuideUrl": "https://youtu.be/mzUVM4sqroI"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Visit the polluted geyser in Sanctuary Islands",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/2d/01_DP_Quest_-_Visit_the_Polluted_Geyser.jpg/revision/latest?cb=20220403152049",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "09a4b9f5-8f01-43ac-9398-333de01424b7.jpeg",
         "videoGuideUrl": "https://youtu.be/jYhL0Cjxn-w"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Admire the sapling in Daylight Prairie for a short while",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/e4/01_DP_Quest_-_Admire_the_sapling.jpg/revision/latest?cb=20220403152049",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "8df0aa56-239f-4f6d-a7c4-68af8530c7c9.jpeg",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=131"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Find the candles at the end of the rainbow in the Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/61/01_DP_Quest_-_Find_the_candles_at_the_end_of_the_rainbow.png/revision/latest?cb=20230626230706",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "2f4abd7b-2b1b-473b-88f0-266107b71f59.png",
         "videoGuideUrl": "https://youtu.be/fCtpCZFJLmE"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Visit the cozy hideout in Prairie Caves",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d7/01_DP_Quest_-_Visit_the_Cozy_Hideout.png/revision/latest?cb=20230624234450",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "ea9bfd68-d91d-4bda-8440-58d6df4393e2.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Rid the Sanctuary Vortex of Darkness",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/45/01_DP_Quest_-_Rid_the_Sanctuary_Vortex_of_Darkness.png/revision/latest?cb=20230626232404",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "66a2f5e5-9fa5-4fc0-8209-9ed2910ffec1.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive a Spirit's memories in Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/fa/Icon_flame.png/revision/latest/scale-to-width-down/24?cb=20230718033048",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/a7/Relive_A_Spirits_Memory.png/revision/latest?cb=20220403153847",
+        "iconUrl": "22d3b05c-31ac-46a8-8eb9-26cc94cbb489.png",
+        "visualGuideUrl": "f67cd363-5547-47c1-a896-0bac9eaa5334.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Butterfly Charmer's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/0d/ButterflyCharmer-1.png/revision/latest/scale-to-width-down/24?cb=20230718022043",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d3/01_DP_Spirit_-_Butterfly_Charmer.png/revision/latest?cb=20220403162513",
+        "iconUrl": "2d01168a-b81b-4698-a46d-c0fa5f8c47b9.png",
+        "visualGuideUrl": "81bab9a7-b246-4b47-9b78-c9e4a59d460e.png",
         "videoGuideUrl": "https://youtu.be/-L_Q3jFZj18"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Waving Bellmaker's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/0d/WavingBellmaker-1.png/revision/latest/scale-to-width-down/24?cb=20230718022303",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/58/01_DP_Spirit_-_Waving_Bellmaker.png/revision/latest?cb=20220403162512",
+        "iconUrl": "8605d62f-a4ee-42c7-9eb3-0b6053467767.png",
+        "visualGuideUrl": "f927cf40-678b-4c51-9ccc-8f8a6dc67042.png",
         "videoGuideUrl": "https://youtu.be/zKJvf3ESVrE"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Laughing Light Catcher's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4e/LaughingLightCatcher-1.png/revision/latest/scale-to-width-down/24?cb=20230718022251",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/7e/01_DP_Spirit_-_Laughing_Light_Catcher.png/revision/latest?cb=20220403162456",
+        "iconUrl": "d515dff8-f4f1-41d6-9a54-3e387ff230d5.png",
+        "visualGuideUrl": "15ed053b-54fb-4463-bb47-07613c6aa321.png",
         "videoGuideUrl": "https://youtu.be/QyxnF3E58Xg?t=931"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Slumbering Shipwright's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/SlumberingShipwright-1.png/revision/latest/scale-to-width-down/24?cb=20230718022322",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/1/1e/01_DP_Spirit-_Slumbering_Shipwright.png/revision/latest?cb=20220403162512",
+        "iconUrl": "a382635d-5980-4294-83bf-90ba48ea995f.png",
+        "visualGuideUrl": "1fa9b088-3a44-422c-9005-42539c8ebdb8.png",
         "videoGuideUrl": "https://youtu.be/QyxnF3E58Xg?t=799"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Applauding Bellmaker's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/25/ApplaudingBellmaker-1.png/revision/latest/scale-to-width-down/24?cb=20230718022205",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/1/19/01_DP_Spirit_-_Applauding_Bellmaker.png/revision/latest?cb=20220403162513",
+        "iconUrl": "5b7ad492-b528-49bf-99df-f463ea18b8d2.png",
+        "visualGuideUrl": "2f21f0c8-3c84-4388-aa32-16eb1f93324a.png",
         "videoGuideUrl": "https://youtu.be/QyxnF3E58Xg"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Bird Whisperer's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/a5/BirdWhisperer-1.png/revision/latest/scale-to-width-down/24?cb=20230718022215",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/80/01_DP_Spirit_-_Bird_Whisperer.png/revision/latest?cb=20220403162511",
+        "iconUrl": "ac788dfe-fc04-4689-a6aa-7669341af427.png",
+        "visualGuideUrl": "83146e63-48a9-48e7-a777-06d4dde125fd.png",
         "videoGuideUrl": "https://youtu.be/QyxnF3E58Xg?t=1501"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Exhausted Dock Worker's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/6f/ExhaustedDockWorker-1.png/revision/latest/scale-to-width-down/24?cb=20230718022241",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/45/01_DP_Spirit_-_Exhausted_Dock_Worker.png/revision/latest?cb=20220403162513",
+        "iconUrl": "9ab42226-b1c1-478a-b3a2-189a15174d12.png",
+        "visualGuideUrl": "cbeff5f6-0437-4ca8-9195-1059b28ef4da.png",
         "videoGuideUrl": "https://youtu.be/QyxnF3E58Xg?t=1706"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Stretching Guru's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/82/Mimi-4117_02_stretching_guru_emote.png/revision/latest/scale-to-width-down/24?cb=20230718010543",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/52/01_DP_Spirit_-_Stretching_Guru.png/revision/latest?cb=20220404212750",
+        "iconUrl": "efcb7120-cd48-46bd-b5da-c3523b54769c.png",
+        "visualGuideUrl": "188c2548-a8ca-4ea9-8ff7-e35f246b7263.png",
         "videoGuideUrl": "https://www.youtube.com/watch?v=_Atgn5k2kBY"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Doublefive Light Catcher's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/8d/Mimi-4117_03_doublefive_light_catcher_emote.png/revision/latest/scale-to-width-down/24?cb=20230718010926",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4d/01_DP_Spirit_-_Doublefive_Light_Catcher.png/revision/latest?cb=20220404212754",
+        "iconUrl": "982f4aa8-3c82-43d7-b712-275f752af1b3.png",
+        "visualGuideUrl": "288d1830-fede-42a9-a677-76c494f16323.png",
         "videoGuideUrl": "https://www.youtube.com/watch?v=nQUnUlwujMc"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Confetti Cousin's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/b3/Belonging_confetti.png/revision/latest/scale-to-width-down/24?cb=20230718011513",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/1/14/01_DP_Spirit_-_Confetti_Cousin.png/revision/latest?cb=20220404212757",
+        "iconUrl": "d1ab2d79-4094-4b97-a961-2de825b965b2.png",
+        "visualGuideUrl": "e316c844-9b22-4b23-94c7-3d114ea9dbc8.png",
         "videoGuideUrl": "https://www.youtube.com/watch?v=bBjri4XwR2c"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Festival Spin Dancer's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/0c/Emote-dance.png/revision/latest/scale-to-width-down/24?cb=20230718012834",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4b/01_DP_Spirit_-_Festive_Spin_Dancer.png/revision/latest?cb=20220404212754",
+        "iconUrl": "dc8e48f5-033c-4aa9-a0b7-7bfcaee80b29.png",
+        "visualGuideUrl": "d29110f9-c185-48d2-b4db-ba92ae9d901c.png",
         "videoGuideUrl": "https://youtu.be/eTI_5rJNQqg"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Timid Bookworm's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d3/SoS_shy_stance.png/revision/latest/scale-to-width-down/24?cb=20230718013816",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/1/10/01_DP_Spirit_-_Timid_Bookworm.png/revision/latest?cb=20220404212757",
+        "iconUrl": "87df5d77-157d-403b-8984-0d4bc4878dfe.png",
+        "visualGuideUrl": "26c9257e-48da-4f39-b69f-223324915a22.png",
         "videoGuideUrl": "https://youtu.be/GTnvyuwFNE0"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Grateful Shell Collector's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f8/SOS_grateful.png/revision/latest/scale-to-width-down/24?cb=20230718013905",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/ed/01_DP_Spirit_-_Grateful_Shell_Collector.png/revision/latest?cb=20220404212755",
+        "iconUrl": "7514e1c5-3982-42af-b270-9f8f39eec2b0.png",
+        "visualGuideUrl": "6ee247ab-96d9-485a-8c31-3c821a43d287.png",
         "videoGuideUrl": "https://youtu.be/fMZdaF0WRC8"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Jelly Whisperer's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/35/SoS_jelly_fish_call.png/revision/latest/scale-to-width-down/24?cb=20230718013658",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/28/01_DP_Spirit_-_Jelly_Whisperer.png/revision/latest?cb=20220404212755",
+        "iconUrl": "be8136c6-e20e-4e4a-8b0d-83eb3dcfad5f.png",
+        "visualGuideUrl": "d96ac6ab-9ee3-4f36-801c-324989cdadb6.png",
         "videoGuideUrl": "https://youtu.be/svKLM5uXQpg"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Hiking Grouch's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/e3/SoS_grouch.png/revision/latest/scale-to-width-down/24?cb=20230718013848",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/ce/01_DP_Spirit_-_Hiking_Grouch.png/revision/latest?cb=20220404212755",
+        "iconUrl": "d980d2ff-2d83-4dae-896e-3f5abcf01a65.png",
+        "visualGuideUrl": "cbcafe77-27c4-40d1-b5b4-0b0523bf1ad0.png",
         "videoGuideUrl": "https://youtu.be/-VughqeQXCM"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Rallying Thrillseeker's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/37/SOS_rally.png/revision/latest/scale-to-width-down/24?cb=20230718013831",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/81/01_DP_Spirit_-_Rallying_Thrillseeker.png/revision/latest?cb=20220404212758",
+        "iconUrl": "dbf3e9bc-f8ad-4f84-8d68-5f774f4bd4bc.png",
+        "visualGuideUrl": "7d60286f-4aa8-4f50-be2b-c181c3bff41a.png",
         "videoGuideUrl": "https://youtu.be/vqDrzq5MZ9k"
     },
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
         "questName": "Relive Chill Sunbather's memory from Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/c2/SOS_Chill.png/revision/latest/scale-to-width-down/24?cb=20230718013920",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/88/01_DP_Seasonal_Spirit_-_Chill_Sunbather.png/revision/latest?cb=20220404212755",
+        "iconUrl": "d53416da-4460-4659-a1a1-90fcbe57049a.png",
+        "visualGuideUrl": "336b03be-0314-4ee9-a9a2-89f72eb213c2.png",
         "videoGuideUrl": "https://youtu.be/197tor-WWVo"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Meditate at Forest's clearing",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/9/91/02_HF_Quest_-_Meditate_at_Forest_Clearing.png/revision/latest?cb=20220514223845",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "8d5bf0ff-80d8-4b4e-9569-753e69a8f1ef.png",
         "videoGuideUrl": "https://youtu.be/jwLefLIZLi8"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Meditate above the Forest's brook",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d4/02_HF_Quest_-_Meditate_at_Forest_Brook.png/revision/latest?cb=20220514223845",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "f2784b0e-3e34-4133-9f3c-7f4b7d650250.png",
         "videoGuideUrl": "https://youtu.be/Yb5DSLxVn44"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Meditate in Forest's boneyard",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d0/02_HF_Quest_-_Meditate_at_Boneyard.png/revision/latest?cb=20220514223845",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "b1617a4b-75de-42a1-b3e7-295596aee6d6.png",
         "videoGuideUrl": "https://youtu.be/B8E7gWkP9aQ"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Meditate at Forest's end",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/ca/02_HF_Quest_-_Meditate_at_Forest_End.png/revision/latest?cb=20220514223840",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "5635d6dc-03e4-4f26-b50f-fbc23943993f.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Meditate at Forest's elevated clearing",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/c9/02_HF_Quest_-_Meditate_at_Elevated_Clearing.png/revision/latest?cb=20220514223845",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "de65b2bc-8e89-4410-a402-27b1cb63b77a.png",
         "videoGuideUrl": "https://youtu.be/9KgxsVvkr-M"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Catch the light in Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/be/02_HF_Quest_-_Catch_the_light.png/revision/latest?cb=20220514234927",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "c9e68ff8-0c3e-472e-85ee-ad88511e5030.png",
         "videoGuideUrl": "https://youtu.be/uCUHCMRM1Oo"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Collect Orange Light",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/9/9c/02_HF_Quest_-_Collect_Orange_Light.png/revision/latest?cb=20220514234933",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "3f2ac96d-2687-4f67-9b7f-adaa51a59524.png",
         "videoGuideUrl": "https://youtu.be/m92rALQldBM"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Rescue a Manta from Darkness",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/fb/02_HF_Quest_-_Rescue_a_Manta.png/revision/latest?cb=20220514234934",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
+        "visualGuideUrl": "e70f49b8-de40-4282-aa2d-21d52f81d6e7.png",
         "videoGuideUrl": "https://youtu.be/23gUb_G0mGI"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Recharge your light from a light bloom",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/08/02_HF_Quest_-_Recharge_from_a_Light_Bloom.png/revision/latest?cb=20220514234933",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "9c784138-cc6f-4859-bc49-66bcf15619d1.png",
         "videoGuideUrl": "https://youtu.be/yc6vJuqHko0"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Admire the sapling in Hidden Forest for a short while",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/8f/02_HF_Quest_-_Admire_the_sapling.png/revision/latest?cb=20220514234930",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "29429cfb-e1a3-4e69-a645-ab65df1da78d.png",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=152"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Find the candles at the end of the rainbow in the Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/6a/02_HF_Quest_-_Find_the_candles_at_the_end_of_the_rainbow.png/revision/latest?cb=20230626230709",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "e0140072-3fd0-45ec-b6ce-a100016a649d.png",
         "videoGuideUrl": "https://youtu.be/otI3wuLQKis"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Visit the Ancestor's Table of Belonging in Forest's Elevated Clearing",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/33/02_HF_Quest_-_Visit_the_Ancestors_Table.png/revision/latest?cb=20220514234933",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "3b86a279-2349-45c6-91d6-9f3ca9076b92.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive a Spirit's memories in Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/fa/Icon_flame.png/revision/latest/scale-to-width-down/24?cb=20230718033048",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/a7/Relive_A_Spirits_Memory.png/revision/latest?cb=20220403153847",
+        "iconUrl": "22d3b05c-31ac-46a8-8eb9-26cc94cbb489.png",
+        "visualGuideUrl": "f67cd363-5547-47c1-a896-0bac9eaa5334.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Shivering Trailblazer's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/35/ShiveringTrailblazer-1.png/revision/latest/scale-to-width-down/24?cb=20230718022822",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/c0/02_HF_Spirit_-_Shivering_Trailblazer.png/revision/latest?cb=20220514235708",
+        "iconUrl": "3f5a0d82-1e75-4456-b917-f22874b2536f.png",
+        "visualGuideUrl": "bfe13014-466d-4ef4-9ade-bc8240600947.png",
         "videoGuideUrl": "https://youtu.be/XN1u4PxlGrs"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Blushing Prospector's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/6f/BlushingProspector-1.png/revision/latest/scale-to-width-down/24?cb=20230718022710",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/b1/02_HF_Spirit_-_Blushing_Prospector.png/revision/latest?cb=20220514235717",
+        "iconUrl": "b8cbae01-c256-4a1f-bd2d-c7e01662a7fc.png",
+        "visualGuideUrl": "85d359e7-efb8-4132-9d8c-bbece64bbe2b.png",
         "videoGuideUrl": "https://youtu.be/5DNs9K-zeeI?t=344"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Hide'n'Seek Pioneer's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/2a/HideNSeekPioneer-1.png/revision/latest/scale-to-width-down/24?cb=20230718022800",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/b0/02_HF_Spirit_-_Hide-n-Seek_Pioneer.png/revision/latest?cb=20220514235717",
+        "iconUrl": "af254a01-b4ef-4306-b883-4b84a0e331ef.png",
+        "visualGuideUrl": "29e5e0a9-603f-4cd7-a1aa-d3f8949e75e1.png",
         "videoGuideUrl": "https://youtu.be/5DNs9K-zeeI?t=646"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Pouty Porter's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f7/PoutyPorter-1.png/revision/latest/scale-to-width-down/24?cb=20230718022811",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/2b/02_HF_Spirit_-_Pouty_Porter.png/revision/latest?cb=20220514235718",
+        "iconUrl": "d4903523-83fb-457c-8434-b1dc79e37647.png",
+        "visualGuideUrl": "09241ee1-0dac-4fcd-8697-c79232f60cf2.png",
         "videoGuideUrl": "https://youtu.be/5DNs9K-zeeI?t=555"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Apologetic Lumberjack's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/23/ApologeticLumberjack-1.png/revision/latest/scale-to-width-down/24?cb=20230718022653",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/44/02_HF_Spirit_-_Apologetic_Lumberjack.png/revision/latest?cb=20220514235716",
+        "iconUrl": "a2e0e643-9f24-4237-9288-010520b5f072.png",
+        "visualGuideUrl": "2af0fa97-431d-484c-8687-a2a05e63e2b8.png",
         "videoGuideUrl": "https://youtu.be/5DNs9K-zeeI?t=936"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Dismayed Hunter's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/7e/DismayedHunter-1.png/revision/latest/scale-to-width-down/24?cb=20230718022751",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/09/02_HF_Spirit_-_Dismayed_Hunter.png/revision/latest?cb=20220514235717",
+        "iconUrl": "7554c418-fdca-4d0d-9f26-196e4bf310e6.png",
+        "visualGuideUrl": "cbee9a8c-a67e-412b-88a9-cbc454f5355d.png",
         "videoGuideUrl": "https://youtu.be/5DNs9K-zeeI?t=825"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Whale Whisperer's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/fe/WhaleWhisperer-1.png/revision/latest/scale-to-width-down/24?cb=20230725195019",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/ec/02_HF_Spirit_-_Whale_Whisperer.png/revision/latest?cb=20220514235717",
+        "iconUrl": "bd8a88d7-358a-4e4a-a338-4ef8eece8078.png",
+        "visualGuideUrl": "6a09062e-c406-49fd-a78b-996b2ff6a0d2.png",
         "videoGuideUrl": "https://youtu.be/5DNs9K-zeeI?t=1108"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Tearful Light Miner's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/9/9c/TearfulLightMiner-1.png/revision/latest/scale-to-width-down/24?cb=20230718022832",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/a5/02_HF_Spirit_-_Tearful_Light_Miner.png/revision/latest?cb=20220514235714",
+        "iconUrl": "e78f725d-39cc-43d9-8802-61f531a37f26.png",
+        "visualGuideUrl": "d2db9f59-8b43-46f3-be6d-fe2ca9e03142.png",
         "videoGuideUrl": "https://youtu.be/-qlPyROfiew"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Provoking Performer's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/3e/Mimi-4117_02_provoking_performer_emote.png/revision/latest/scale-to-width-down/24?cb=20230718010619",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/de/02_HF_Seasonal_Spirit_-_Provoking_Performer.png/revision/latest?cb=20220515001822",
+        "iconUrl": "355c5a19-fda3-46d4-9022-0903dac10bff.png",
+        "visualGuideUrl": "aade6e10-222a-435e-aa89-6c550598e203.png",
         "videoGuideUrl": "https://youtu.be/Plpl2MGoZYo"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Laidback Pioneer's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/db/Mimi-4117_03_laidback_pioneer_emote.png/revision/latest/scale-to-width-down/24?cb=20230718010942",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/75/02_HF_Seasonal_Spirit_-_Laidback_Pioneer.png/revision/latest?cb=20220515001822",
+        "iconUrl": "01723d7b-94a5-439e-83dd-74c602fb2211.png",
+        "visualGuideUrl": "84202437-855f-48c5-9225-264fd08ca6b6.png",
         "videoGuideUrl": "https://youtu.be/rlMGDjpznZo"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Hairtousle Teen's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/24/Hair_tousle.png/revision/latest/scale-to-width-down/24?cb=20230718011248",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/ad/02_HF_Seasonal_Spirit_-_Hairtousle_Teen.png/revision/latest?cb=20220515000936",
+        "iconUrl": "31e22821-3eaf-49db-85fe-39e01a665fa9.png",
+        "visualGuideUrl": "fed53805-dfa6-499c-8477-28fdcb533d30.png",
         "videoGuideUrl": "https://www.youtube.com/watch?v=6TlBquksQa0"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Admiring Actor's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/6d/Emote-blow_kisses.png/revision/latest/scale-to-width-down/24?cb=20230718012855",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/44/02_HF_Seasonal_Spirit_-_Admiring_Actor.png/revision/latest?cb=20220515001822",
+        "iconUrl": "285a83a5-184f-479c-a9f6-96bbca2d690e.png",
+        "visualGuideUrl": "9dc8b768-1358-4f92-8725-cffe6cddb4df.png",
         "videoGuideUrl": "https://youtu.be/FpCci6gc0Kg"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Scolding Student's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d9/Assembly-scolding-emote.png/revision/latest/scale-to-width-down/24?cb=20230718010318",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/35/02_HF_Seasonal_Spirit_-_Scolding_Student.png/revision/latest?cb=20220515001822",
+        "iconUrl": "fb992513-8c34-4e7d-8732-b86af583fcb7.png",
+        "visualGuideUrl": "8b9ca501-b49c-4bd9-b0c4-938482d90f02.png",
         "videoGuideUrl": "https://youtu.be/vRy9eyVQTX0"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Daydream Forester's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/c0/Assembly-Daydream-emote.png/revision/latest/scale-to-width-down/24?cb=20230718010157",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/5a/02_HF_Seasonal_Spirit_-_Daydreaming_Forester.png/revision/latest?cb=20220515001807",
+        "iconUrl": "530b0b1e-432e-41b2-b710-10378adafcd4.png",
+        "visualGuideUrl": "fc0ddecc-82e4-4f2a-9768-1fa846aef306.png",
         "videoGuideUrl": "https://youtu.be/douhHwsYmJw"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Marching Adventurer's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/31/Assembly-march-emote.png/revision/latest/scale-to-width-down/24?cb=20230718010229",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/5b/02_HF_Seasonal_Spirit_-_Marching_Adventurer.png/revision/latest?cb=20220515001821",
+        "iconUrl": "b19b6ead-dadd-4215-9c49-a6744ba85f6d.png",
+        "visualGuideUrl": "21d6c6b3-f940-4811-b3b6-c284c114a612.png",
         "videoGuideUrl": "https://youtu.be/FIX2wsGwMRk"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Chuckling Scout's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/1/10/Assembly-chuckling-emote.png/revision/latest/scale-to-width-down/24?cb=20230718000030",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/ca/02_HF_Seasonal_Spirit_-_Chuckling_Scout.png/revision/latest?cb=20220515001617",
+        "iconUrl": "6529fb40-f34d-46ea-9e5e-b4a5ad344706.png",
+        "visualGuideUrl": "5e276e5a-5b58-4ed6-9631-9d19f3c0e423.png",
         "videoGuideUrl": "https://youtu.be/W5gAsEBSNas"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Baffled Botanist's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/7b/Assembly-Facepalm-emote.png/revision/latest/scale-to-width-down/24?cb=20230718010214",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d8/02_HF_Seasonal_Spirit_-_Baffled_Botanist.png/revision/latest?cb=20220515000945",
+        "iconUrl": "28e3ce26-61c9-4863-bf02-4fd59da2efc3.png",
+        "visualGuideUrl": "b8b63df2-aa70-4013-8a68-9b0198bca085.png",
         "videoGuideUrl": "https://youtu.be/ESYM7mzrZv8"
     },
     {
         "type": "Realm Quest",
         "realm": "Hidden Forest",
         "questName": "Relive Scaredy Cadet's memory from Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/63/Assembly-Scaredy-emote.png/revision/latest/scale-to-width-down/24?cb=20230718010243",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/1/1d/02_HF_Seasonal_Spirit_-_Scaredy_Cadet.png/revision/latest?cb=20220515001822",
+        "iconUrl": "6422769c-058b-49b2-95f6-fdf41e726958.png",
+        "visualGuideUrl": "1af9cc5f-1a7e-4392-a3a4-994cee872640.png",
         "videoGuideUrl": "https://youtu.be/ygMPERry2xs"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Meditate by Valley's ice rink",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/7d/03_VT_Quest_-_Meditate_at_ice_rink.png/revision/latest?cb=20230626234257",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "170a995f-7afc-428a-aca6-ae4fa20d2444.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Meditate high above the Valley's citadel",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/c2/03_VT_Quest_-_Meditate_at_Citadel.png/revision/latest?cb=20230625010857",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "87f27123-612e-4cfd-9b54-8185ff427c2c.png",
         "videoGuideUrl": "https://youtu.be/IfzG26KFFEw"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Meditate above Valley's citadel arch",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/0d/03_VT_Quest_-_Meditate_at_Citadel_Arch.png/revision/latest?cb=20230625010902",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "0b3bd8b7-140a-44dc-aa27-227333529514.png",
         "videoGuideUrl": "https://youtu.be/mjRDf1J5sZ8"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Meditate at the end of the race",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/db/03_VT_Quest_-_Meditate_at_race_end_by_rat-bones.png/revision/latest?cb=20230720202232",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "aa2ea6f6-b3eb-48b3-8ad5-d9e47446dee0.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Catch the light in Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d5/03_VT_Quest_-_Catch_the_Light.png/revision/latest?cb=20230222011121",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "1eb994ce-e868-4b88-8f5d-47870993532e.png",
         "videoGuideUrl": "https://youtu.be/tXf-oZ6F5CU"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Collect Blue Light",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/5b/03_VT_Quest_-_Collect_Blue_Light.png/revision/latest?cb=20230222011118",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "64fb94d9-24d2-4b2a-afb2-c2e0641a213f.png",
         "videoGuideUrl": "https://youtu.be/WPotQHMUuYw"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Admire the sapling in Valley of Triumph for a short while",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/8c/03_VT_Quest_-_Admire_the_sapling.png/revision/latest?cb=20230222011113",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "8a0234c6-1fc4-4ed1-aa3a-150083c61737.png",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=152"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Find the candles at the end of the rainbow in the Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/32/03_VT_Quest_-_Find_the_candles_at_the_end_of_the_rainbow.png/revision/latest?cb=20230626230712",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "e8e3a24a-d5b6-45a9-890b-a5a69423d7dc.png",
         "videoGuideUrl": "https://youtu.be/nAQKhaiwhjc"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Visit the Hotspring in the Village of Dreams",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/81/03_VT_Quest_-_Visit_the_Hotspring.png/revision/latest?cb=20230625010848",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "dd6b29c4-b91a-4a45-96ad-8238e406f78f.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Modest Dancer needs help with something in Village of Dreams",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/9/9a/03_VT_Quest_-_Modest_Dancer_needs_help_with_something_in_Village_of_Dreams_by_AL.png/revision/latest?cb=20240825202345",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "c5ec9f25-7719-4a7c-a426-00cb555e1685.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Modest Dancer needs help with something in Village of Dreams",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/3b/03_VT_Quest_-_Modest_Dancer_needs_help_with_something_in_Village_of_Dreams_%28Routine%29_by_AL.png/revision/latest?cb=20241024034410",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "d49b9342-03bb-49aa-b43e-41429a83b38b.png",
         "videoGuideUrl": "https://youtu.be/QG4LXuOi_A"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Frantic Stagehand needs help with something in Village Theater",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/2b/03_VT_Quest_-_Frantic_Stagehand_needs_help_with_something_in_Village_Theater_by_AL.png/revision/latest?cb=20240908051615",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "68772f69-79c8-41f7-bf50-65e7f086e5f5.png",
         "videoGuideUrl": "https://youtu.be/vnPwBwIPWvw"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Frantic Stagehand needs help with something in Village Theater",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4b/03_VT_Quest_-_Frantic_Stagehand_needs_help_with_something_in_Village_Theater_%28Teamwork%29_by_AL.png/revision/latest?cb=20241018024614",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "6c73bb00-2517-4bc9-9fa9-7d74c1950790.png",
         "videoGuideUrl": "https://youtu.be/JvgK2OF1wCI"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Mellow Musician needs help with something in Village Theater",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/26/03_VT_Quest_-_Mellow_Musician_needs_help_with_something_in_Village_Theater_by_AL.png/revision/latest?cb=20241018025729",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "33c66068-8adb-4a37-98d8-672c2623866b.png",
         "videoGuideUrl": "https://youtu.be/RvWiQaOQ_cs"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Forgetful Storyteller needs help with something in Village of Dreams",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/ed/03_VT_Quest_-_Forgetful_Storyteller_needs_help_with_something_in_Village_of_Dreams_by_AL.png/revision/latest?cb=20240828181052",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "5f0f0ff4-9a32-4bc6-a02c-5de0d56069f7.png",
         "videoGuideUrl": "https://youtu.be/A5xJtrT2GKY"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Forgetful Storyteller needs help with something in Village of Dreams",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/L8D86EHaBH0"
     },
@@ -627,7 +627,7 @@ export const questsData =[
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Forgetful Storyteller needs help recalling a story in Village of Dreams",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/SBInROxwJhI"
     },
@@ -635,623 +635,623 @@ export const questsData =[
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Forgetful Storyteller needs help recalling a story in Village of Dreams",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/54/03_VT_Quest_-_Forgetful_Storyteller_needs_help_recalling_a_story_in_Village_of_Dreams_by_AL.png/revision/latest?cb=20240923005057",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "fdaec4c9-8ed9-4499-be3c-5776608989f0.png",
         "videoGuideUrl": "https://youtu.be/B1j22PJR9UA"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Forgetful Storyteller needs help recalling a story in Village of Dreams",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/43/03_VT_Quest_-_Forgetful_Storyteller_needs_help_recalling_a_story_in_Village_of_Dreams_%28Mountain%29_by_AL.png/revision/latest?cb=20241018030759",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "d25f1209-f675-46b7-baea-055e0c9854c0.png",
         "videoGuideUrl": "https://youtu.be/V9JTJe_pYYk"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Practice with the skater in the Village of Dreams",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/a3/03_VT_Quest_-_Practice_with_the_Skater.jpg/revision/latest?cb=20230625033356",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
+        "visualGuideUrl": "949057f1-a0a4-4283-8410-548b81a78192.jpeg",
         "videoGuideUrl": "https://youtu.be/Qcc1irnw4e4"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Race down the slopes with the skater in the Village of Dreams",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/ad/03_VT_Quest_-_Race_down_the_Slopes.jpg/revision/latest?cb=20230625033355",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
+        "visualGuideUrl": "2f39e58f-6e1b-429f-8ec5-7c5e500ff983.jpeg",
         "videoGuideUrl": "https://youtu.be/7vB2SQ2t5dQ?t=222"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Race down the mountain with the skater in the Hermit Valley",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/03/03_VT_Quest_-_Race_down_the_Mountain.jpg/revision/latest?cb=20230625033358",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
+        "visualGuideUrl": "a8f86054-769d-4c84-8973-59e835824a2f.jpeg",
         "videoGuideUrl": "https://youtu.be/7vB2SQ2t5dQ?t=565"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Rehearse for a performance with the skater in the Coliseum",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/20/03_VT_Quest_-_Rehearse_for_a_Performance.jpg/revision/latest?cb=20230625033353",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
+        "visualGuideUrl": "2b6ceea6-9334-45c5-ab11-97d23cc304eb.jpeg",
         "videoGuideUrl": "https://youtu.be/7vB2SQ2t5dQ?t=968"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive a Spirit's memories in Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/fa/Icon_flame.png/revision/latest/scale-to-width-down/24?cb=20230718033048",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/a7/Relive_A_Spirits_Memory.png/revision/latest?cb=20220403153847",
+        "iconUrl": "22d3b05c-31ac-46a8-8eb9-26cc94cbb489.png",
+        "visualGuideUrl": "f67cd363-5547-47c1-a896-0bac9eaa5334.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive Confident Sightseer's memory from Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/c8/ConfidentSightseer-1.png/revision/latest/scale-to-width-down/24?cb=20230718023029",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/25/03_VT_Spirit_-_Confident_Sightseer.jpg/revision/latest?cb=20230625061015",
+        "iconUrl": "994c3182-8fb6-45ab-b6e2-f6f258f38e38.png",
+        "visualGuideUrl": "1466842b-aadb-46b0-b485-ecac9f7abfa0.jpeg",
         "videoGuideUrl": "https://youtu.be/DwhjSpV-BAw"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive Handstanding Thrillseeker's memory from Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/09/HandstandingThrillseeker-1.png/revision/latest/scale-to-width-down/24?cb=20230718023018",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d1/03_VT_Spirit_-_Handstanding_Thrillseeker.png/revision/latest?cb=20230222011202",
+        "iconUrl": "795268e6-e1ed-4d2a-8acc-a0e30ae77708.png",
+        "visualGuideUrl": "8995d073-e2ae-4ca5-b048-b947de64144b.png",
         "videoGuideUrl": "https://youtu.be/-sVP-uZXkaI?t=689"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive Manta Whisperer's memory from Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/38/MantaWhisperer-1.png/revision/latest/scale-to-width-down/24?cb=20230718023005",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/27/03_VT_Spirit_-_Manta_Whisperer.jpg/revision/latest?cb=20230625060954",
+        "iconUrl": "e8f000ee-54b3-41e4-bea0-ac88ab8dea38.png",
+        "visualGuideUrl": "25688191-6926-4b53-92c0-8c7bd3da346b.jpeg",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive Backflipping Champion's memory from Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/75/BackflippingChampion-1.png/revision/latest/scale-to-width-down/24?cb=20230718024515",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/9/98/03_VT_Spirit_-_Backflipping_Champion.jpg/revision/latest?cb=20230625061000",
+        "iconUrl": "b2cc3774-5688-437a-b4a1-10d2080a79ee.png",
+        "visualGuideUrl": "7ca8d849-c6dd-4658-9da8-99214bf6d955.jpeg",
         "videoGuideUrl": "https://youtu.be/VrC9HR4wA7A"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive Cheerful Spectator's memory from Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/df/CheerfulSpectator-1.png/revision/latest/scale-to-width-down/24?cb=20230718024617",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/73/03_VT_Spirit_-_Cheerful_Spectator.png/revision/latest?cb=20230625061040",
+        "iconUrl": "e0ef56a9-7ae2-42cd-befa-3ee0709bc0ed.png",
+        "visualGuideUrl": "d040aefb-7d4c-43cd-95d0-9ea36955cfe5.png",
         "videoGuideUrl": "https://youtu.be/-sVP-uZXkaI?t=1487"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive Bowing Medalist's memory from Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/b2/BowingMedalist-1.png/revision/latest/scale-to-width-down/24?cb=20230718024601",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/59/03_VT_Spirit_-_Bowing_Medalist.jpg/revision/latest?cb=20230625061011",
+        "iconUrl": "22cda5e4-025b-406c-9fe2-372684a460a1.png",
+        "visualGuideUrl": "be014bd0-b68b-43a5-8d76-4662d48c3924.jpeg",
         "videoGuideUrl": "https://youtu.be/2cSlZT8mbvA"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive Proud Victor's memory from Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/dc/ProudVictor-1.png/revision/latest/scale-to-width-down/24?cb=20230718022955",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/e7/03_VT_Spirit_-_Proud_Victor.jpg/revision/latest?cb=20230625061005",
+        "iconUrl": "ef7df6d4-667b-4418-8cb6-b48a9b093431.png",
+        "visualGuideUrl": "fa08a656-bf34-4952-a6a8-6a947c90f517.jpeg",
         "videoGuideUrl": "https://youtu.be/Sd5uNpaQrVU"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive Leaping Dancer's memory from Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/67/Mimi-4117_02_leaping_dancer_emote.png/revision/latest/scale-to-width-down/24?cb=20230718010636",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bf/03_VT_Seasonal_Spirit_-_Leaping_Dancer.jpg/revision/latest?cb=20230625064658",
+        "iconUrl": "f31453fc-299e-4d68-a554-4212a3060de9.png",
+        "visualGuideUrl": "a86733b6-d5f7-4be9-9b64-f0e8110920b7.jpeg",
         "videoGuideUrl": "https://www.youtube.com/watch?v=VTh2Qi8BQOM"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive Twirling Champion's memory from Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d0/Mimi-4117_03_twirling_champion_emote.png/revision/latest/scale-to-width-down/24?cb=20230718011002",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/1/1c/03_VT_Seasonal_Spirit_-_Twirling_Champion.jpg/revision/latest?cb=20230625064654",
+        "iconUrl": "b59a6a50-1dab-4509-b613-a87f5f1407e6.png",
+        "visualGuideUrl": "a81050b8-d3d3-45fe-90d7-dcac0f1dab89.jpeg",
         "videoGuideUrl": "https://www.youtube.com/watch?v=crKnfLTGvvM"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive Sparkler Parent's memory from Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/fd/Belonging_sparkler.png/revision/latest/scale-to-width-down/24?cb=20230718011315",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/60/03_VT_Seasonal_Spirit_-_Sparkler_Parent.jpg/revision/latest?cb=20230625064755",
+        "iconUrl": "64e9fad7-6439-4b12-b2fd-1c84f9ed2215.png",
+        "visualGuideUrl": "96f1486e-7541-4eed-8170-39b9abc4e72b.jpeg",
         "videoGuideUrl": "https://www.youtube.com/watch?v=rUjIYqEcG7M"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive Troupe Juggler's memory from Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/af/Emote-juggle.png/revision/latest/scale-to-width-down/24?cb=20230718012943",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/6a/03_VT_Seasonal_Spirit_-_Troupe_Juggler.jpg/revision/latest?cb=20230625064751",
+        "iconUrl": "7fdf23c7-f955-4bb2-8919-ee6dc47b2beb.png",
+        "visualGuideUrl": "27923da6-a893-441b-82e7-8e67d7b0648d.jpeg",
         "videoGuideUrl": "https://youtu.be/Z7NwT-3zZVs"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive Spinning Mentor's memory from Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/05/Season_of_Dreams_-_Spinning_mentor.png/revision/latest/scale-to-width-down/24?cb=20230718014417",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/c7/03_VT_Seasonal_Spirit_-_Spinning_Mentor.jpg/revision/latest?cb=20230625064704",
+        "iconUrl": "1f8bf880-ec95-4c58-8757-6a99c8df647d.png",
+        "visualGuideUrl": "90962eb1-9a97-4db0-bb13-f28e678adb81.jpeg",
         "videoGuideUrl": "https://youtu.be/IfbDJSE9U8c"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive Bearhug Hermit's memory from Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/9/9e/Season_of_Dreams_-_Bearhug_hermit.png/revision/latest/scale-to-width-down/24?cb=20230718014500",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/9/9d/03_VT_Seasonal_Spirit_-_Bearhug_Hermit.jpg/revision/latest?cb=20230625064701",
+        "iconUrl": "aac3e002-0f8a-46ed-84d2-4ac767559372.png",
+        "visualGuideUrl": "ea658f8b-f5e7-46a8-83d5-87bd80918547.jpeg",
         "videoGuideUrl": "https://youtu.be/98WLZSrH9fY"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive Peeking Postman's memory from Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/cb/Season_of_Dreams_-_Peeking_postman.png/revision/latest/scale-to-width-down/24?cb=20230718014443",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/b2/03_VT_Seasonal_Spirit_-_Peeking_Postman.png/revision/latest?cb=20230222011124",
+        "iconUrl": "05254878-7058-452b-b219-6700678be06a.png",
+        "visualGuideUrl": "19a5d872-12c0-4a78-b627-caaa9eaec448.png",
         "videoGuideUrl": "https://youtu.be/x7GGq7Ef_cQ"
     },
     {
         "type": "Realm Quest",
         "realm": "Valley of Triumph",
         "questName": "Relive Dancing Performer's memory from Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/26/Season_of_Dreams_-_Dancing_performer.png/revision/latest/scale-to-width-down/24?cb=20230718014432",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/26/03_VT_Seasonal_Spirit_-_Dancing_Performer.jpg/revision/latest?cb=20230625064758",
+        "iconUrl": "ad4d34ec-dad8-4bd0-9cfc-0c1484ff7292.png",
+        "visualGuideUrl": "ed6c5230-5e23-4f96-b07d-7cf12e32a560.jpeg",
         "videoGuideUrl": "https://youtu.be/oe6sjjiJrjw"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Meditate in the Broken Temple",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/07/04_GW_Quest_-_Meditate_at_Broken_Temple.png/revision/latest?cb=20230625205121",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "6083987f-ed5b-40e9-8b6f-4447fc405324.png",
         "videoGuideUrl": "https://youtu.be/XsjosT33GBA"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Meditate in the Graveyard",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/63/04_GW_Quest_-_Meditate_at_Graveyard.png/revision/latest?cb=20230625205125",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "c7e03049-72ff-4e9c-aec1-2e8df5188d4e.png",
         "videoGuideUrl": "https://youtu.be/5nZ0WZqshXE"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Meditate on the battlefield",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/65/04_GW_Quest_-_Meditate_at_Battlefield.png/revision/latest?cb=20230625205132",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "e9fae9e3-d430-4225-a153-e7e0d5e4cb57.png",
         "videoGuideUrl": "https://youtu.be/M5gtIczRupY"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Meditate on the boat (Shipwreck)",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/2f/04_GW_Quest_-_Meditate_at_Boat.png/revision/latest?cb=20230625205128",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "67238bda-5192-4891-838b-f4756049e7c9.png",
         "videoGuideUrl": "https://youtu.be/xLKpr4vyibs"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Meditate in the Forgotten Ark",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/6d/04_GW_Quest_-_Meditate_at_Forgotten_Ark.png/revision/latest?cb=20230625205123",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "106386f2-7fd9-4ea3-b6a4-a2829c673bda.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Catch the light in Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/1/1c/04_GW_Quest_-_Catch_the_light.png/revision/latest?cb=20230625205139",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "9b1def8e-efe8-436d-ac37-53788bebd675.png",
         "videoGuideUrl": "https://youtu.be/Bj6YBPoGFQE"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Collect Red Light",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/70/04_GW_Quest_-_Collect_Red_Light.png/revision/latest?cb=20230625205137",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "940766db-ccb7-4dd5-96be-a612c45a2a00.png",
         "videoGuideUrl": "https://youtu.be/lD_Z080b2EU"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Admire the sapling in Golden Wasteland for a short while",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/6f/04_GW_Quest_-_Admire_the_sapling.png/revision/latest?cb=20230626071331",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "7ad1a788-9319-4797-a682-c6a68fe93dfc.png",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg&t=209s"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Find the candles at the end of the rainbow in the Golden Wasteland (Forgotten Ark)",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/e5/04_GW_Quest_-_Find_the_candles_at_the_end_of_the_rainbow.png/revision/latest?cb=20230626230715",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "35c7c7ce-d175-4d0a-8092-0e901dfa1493.png",
         "videoGuideUrl": "https://youtu.be/rVcwi1pH-YA"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Visit the bonfire at the Wasteland's Graveyard",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f4/04_GW_Quest_-_Visit_the_Bonfire.png/revision/latest?cb=20230625205135",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "949dc86f-9dc9-4ce5-a669-bee5bdaedbe7.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Cackling Cannoneer needs help with something in Treasure Reef",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/3e/04_GW_Quest_-_Cackling_Cannoneer_needs_help_with_something_in_Treasure_Reef_by_AL.png/revision/latest?cb=20241019000419",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "ac6a7bee-85fb-4dd4-ba60-4207e0cd3060.png",
         "videoGuideUrl": "https://youtu.be/WJovZEhUHAc"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive a Spirit's memories in Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/fa/Icon_flame.png/revision/latest/scale-to-width-down/24?cb=20230718033048",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/a7/Relive_A_Spirits_Memory.png/revision/latest?cb=20220403153847",
+        "iconUrl": "22d3b05c-31ac-46a8-8eb9-26cc94cbb489.png",
+        "visualGuideUrl": "f67cd363-5547-47c1-a896-0bac9eaa5334.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Fainting Warrior's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/87/FaintingWarrior-1.png/revision/latest/scale-to-width-down/24?cb=20230718025339",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/b6/04_GW_Spirit_-_Fainting_Warrior.jpg/revision/latest?cb=20230625205141",
+        "iconUrl": "58ddac69-3ec4-4660-b4b3-212f65c442f4.png",
+        "visualGuideUrl": "99543ec8-73b1-4790-99e4-385da998cc14.jpeg",
         "videoGuideUrl": "https://youtu.be/X0dj10tnvpQ?t=154"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Frightened Refugee's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f9/FrightenedRefugee-1.png/revision/latest/scale-to-width-down/24?cb=20230718025328",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/42/04_GW_Spirit_-_Frightened_Refugee.jpg/revision/latest?cb=20230625205144",
+        "iconUrl": "739faaa5-b638-4429-91e6-286c979f97b4.png",
+        "visualGuideUrl": "6fe27907-7746-4759-835c-655c0907b764.jpeg",
         "videoGuideUrl": "https://youtu.be/jAW8PTC5qT8"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Courageous Soldier's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/9/9e/CourageousSoldier-1.png/revision/latest/scale-to-width-down/24?cb=20230718025348",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/ea/04_GW_Spirit_-_Courageous_Soldier.jpg/revision/latest?cb=20230625205142",
+        "iconUrl": "8a7d8bee-27b9-4db3-9eb2-d90e33873dce.png",
+        "visualGuideUrl": "a3f2dc34-29b7-4b6b-9e16-f73d4091d330.jpeg",
         "videoGuideUrl": "https://youtu.be/6fEGZrXCijQ"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Stealthy Survivor's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/StealthySurvivor-1.png/revision/latest/scale-to-width-down/24?cb=20230718025244",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/76/04_GW_Spirit_-_Stealthy_Survivor.jpg/revision/latest?cb=20230625205147",
+        "iconUrl": "77ba8301-c40d-419a-916b-277256f23c56.png",
+        "visualGuideUrl": "6be09015-0e00-41fc-a093-130cabdcda2d.jpeg",
         "videoGuideUrl": "https://m.youtube.com/watch?v=XqgBAzIfIsk&t=19s"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Saluting Captain's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/2b/SalutingCaptain-1.png/revision/latest/scale-to-width-down/24?cb=20230718025256",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/3d/04_GW_Spirit_-_Saluting_Captain.jpg/revision/latest?cb=20230625205150",
+        "iconUrl": "8372aaab-93bc-4218-9b26-2ac58bda6512.png",
+        "visualGuideUrl": "dcf70e7f-8e74-447c-bda9-785f2c72e244.jpeg",
         "videoGuideUrl": "https://youtu.be/X0dj10tnvpQ?t=665"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Lookout Scout's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/fa/LookoutScout-1.png/revision/latest/scale-to-width-down/24?cb=20230718025304",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/e1/04_GW_Spirit_-_Lookout_Scout.jpg/revision/latest?cb=20230625205153",
+        "iconUrl": "0c629bea-5e5a-4107-9f97-27852339184f.png",
+        "visualGuideUrl": "5686d73a-4124-4403-9883-ee71ccffb1fe.jpeg",
         "videoGuideUrl": "https://youtu.be/X0dj10tnvpQ?t=1105"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Saluting Protector's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/db/Mimi-4117_02_saluting_protector_emote.png/revision/latest/scale-to-width-down/24?cb=20230718010705",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/08/04_GW_Seasonal_Spirit_-_Saluting_Protector.jpg/revision/latest?cb=20230625221646",
+        "iconUrl": "b19afdf9-9fcf-4d08-a21e-70a843d33def.png",
+        "visualGuideUrl": "a76a310d-b8ee-4a49-8802-e966d115d1f4.jpeg",
         "videoGuideUrl": "https://www.youtube.com/watch?v=7mYtsn5_ff4"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Crab Whisperer's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/20/Mimi-4117_03_crab_whisperer_emote.png/revision/latest/scale-to-width-down/24?cb=20230718011019",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/52/04_GW_Seasonal_Spirit_-_Crab_Whisperer.jpg/revision/latest?cb=20230625221702",
+        "iconUrl": "ac958954-effa-4ad3-a002-d8301c513be0.png",
+        "visualGuideUrl": "3285cd66-d255-499c-8605-5a3230a91ce7.jpeg",
         "videoGuideUrl": "https://www.youtube.com/watch?v=5iqo_BiP1j0"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Pleaful Parent's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/ef/Belonging_crawl.png/revision/latest/scale-to-width-down/24?cb=20230718011403",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/38/04_GW_Seasonal_Spirit_-_Pleaful_Parent.jpg/revision/latest?cb=20230625221654",
+        "iconUrl": "a7c7f23d-2490-44e0-ac67-4b00cb41046d.png",
+        "visualGuideUrl": "f9f72b94-1f00-4470-84ec-41d69e5f765c.jpeg",
         "videoGuideUrl": "https://youtu.be/GjUfabmBwvE"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Respectful Pianist's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/2a/Emote-respect.png/revision/latest/scale-to-width-down/24?cb=20230718012959",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/1/1a/04_GW_Seasonal_Spirit_-_Respectful_Pianist.jpg/revision/latest?cb=20230625221652",
+        "iconUrl": "bdaa4c91-171c-4074-aff2-fba8dd057397.png",
+        "visualGuideUrl": "69521c04-9a5b-402e-b313-75fe4aeb0857.jpeg",
         "videoGuideUrl": "https://youtu.be/A5rrM_cZWI0"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Crab Walker's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/a0/Crab_walk_white_on_black.png/revision/latest/scale-to-width-down/24?cb=20230718013310",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/ed/04_GW_Seasonal_Spirit_-_Crab_Walker.jpg/revision/latest?cb=20230625221650",
+        "iconUrl": "2190ebae-d608-4d0e-bb59-5b0b4e74bad9.png",
+        "visualGuideUrl": "7e6921d6-c0e3-4cb8-92d0-6d0c32dde370.jpeg",
         "videoGuideUrl": "https://youtu.be/xhrGhAAAPXc"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Snoozing Carpenter's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/1/17/Fall_asleep_white_on_black.png/revision/latest/scale-to-width-down/24?cb=20230718013352",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f9/04_GW_Seasonal_Spirit_-_Snoozing_Carpenter.jpg/revision/latest?cb=20230625221656",
+        "iconUrl": "87d16bfd-95fc-405d-bc1c-c28ae19b74b2.png",
+        "visualGuideUrl": "c392e6d2-7083-440c-96ff-10a57c09dfa8.jpeg",
         "videoGuideUrl": "https://youtu.be/3ap3tbxOdFM"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Scarecrow Farmer's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/aa/Boo_white_on_black.png/revision/latest/scale-to-width-down/24?cb=20230718013342",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/e0/04_GW_Seasonal_Spirit_-_Scarecrow_Farmer.jpg/revision/latest?cb=20230625221657",
+        "iconUrl": "5aded506-611e-4fd5-8916-2685cc432115.png",
+        "visualGuideUrl": "5cf59ba1-4110-47c6-ad1f-240d11ad3cfc.jpeg",
         "videoGuideUrl": "https://youtu.be/il37sBlojXU"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Nodding Muralist's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/7f/Head_nod_white_on_black.png/revision/latest/scale-to-width-down/24?cb=20230718013423",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f6/04_GW_Seasonal_Spirit_-_Nodding_Muralist.jpg/revision/latest?cb=20230625221659",
+        "iconUrl": "3ade9710-707c-4e91-90ef-80660b7628a9.png",
+        "visualGuideUrl": "d521a16e-7308-4fe3-89e8-09d290107b61.jpeg",
         "videoGuideUrl": "https://youtu.be/PLP7r3UoIwo"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Indifferent Alchemist's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/b3/Shrug_white_on_black.png/revision/latest/scale-to-width-down/24?cb=20230718013437",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/ce/04_GW_Seasonal_Spirit_-_Indifferent_Alchemist.jpg/revision/latest?cb=20230625221648",
+        "iconUrl": "9917ee1d-afa3-471d-9076-48ae2b688cdf.png",
+        "visualGuideUrl": "30c435ad-72c8-4e09-90d0-a0833297fbf1.jpeg",
         "videoGuideUrl": "https://youtu.be/XpMexGi-YO4"
     },
     {
         "type": "Realm Quest",
         "realm": "Golden Wasteland",
         "questName": "Relive Playfighting Herbalist's memory from Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/b9/Play_fight_lvl_2_white_on_black.png/revision/latest/scale-to-width-down/24?cb=20230718013408",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/de/04_GW_Seasonal_Spirit_-_Playfighting_Herbalist.jpg/revision/latest?cb=20230625221700",
+        "iconUrl": "701581a2-4abf-4a00-afb7-2354125b80c2.png",
+        "visualGuideUrl": "5e62ede7-6e0b-411d-b504-19c463c89280.jpeg",
         "videoGuideUrl": "https://youtu.be/2C7nqLsQKDU"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Meditate at Vault's summit",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/48/05_VK_Quest_-_Meditate_at_summit.png/revision/latest?cb=20230626012135",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "4a739eea-6fec-4bd1-a406-cda1d193805f.png",
         "videoGuideUrl": "https://youtu.be/3cw9-gsh_EI"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Meditate at Vault's second floor",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/88/05_VK_Quest_-_Meditate_at_second_floor.png/revision/latest?cb=20230626012121",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "06a1b689-41ee-4ade-afd9-c2300204b563.png",
         "videoGuideUrl": "https://youtu.be/CiRzC_9vxqM"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Meditate at the Vault's entrance",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/08/05_VK_Quest_-_Meditate_at_entrance.png/revision/latest?cb=20230626012109",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "9ead0705-589c-4626-a875-5eaa0cf6f261.png",
         "videoGuideUrl": "https://youtu.be/B6XNxtCWca4"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Catch the light in the Vault of Knowledge",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/3e/05_VK_Quest_-_Catch_the_light.png/revision/latest?cb=20230626012157",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "f51d07b0-7c12-45bd-b4a8-d24a7334c2b7.png",
         "videoGuideUrl": "https://youtu.be/GIbVemllsZ0"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Collect Purple Light",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d9/05_VK_Quest_-_Collect_Purple_Light.jpg/revision/latest?cb=20230626012202",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "5842be55-5ecd-4937-9c59-c9dfa1793327.jpeg",
         "videoGuideUrl": "https://youtu.be/ZfaJrpCWctM"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Admire the sapling in Vault of Knowledge for a short while",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/a2/05_VK_Quest_-_Admire_the_sapling.png/revision/latest?cb=20230626012149",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "f096bd9c-c834-4757-b94c-7466924ccb88.png",
         "videoGuideUrl": "https://youtu.be/_HYCAJeQgJc"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Find the candles at the end of the rainbow in the Vault of Knowledge",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/59/05_VK_Quest_-_Find_the_candles_at_the_end_of_the_rainbow.png/revision/latest?cb=20230626230720",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "7bdf5853-7ddf-40c3-904c-f4fc19629708.png",
         "videoGuideUrl": "https://youtu.be/oiUQPs3E7GE"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Relive a Spirit's memories in Vault of Knowledge",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/fa/Icon_flame.png/revision/latest/scale-to-width-down/24?cb=20230718033048",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/a7/Relive_A_Spirits_Memory.png/revision/latest?cb=20220403153847",
+        "iconUrl": "22d3b05c-31ac-46a8-8eb9-26cc94cbb489.png",
+        "visualGuideUrl": "f67cd363-5547-47c1-a896-0bac9eaa5334.png",
         "videoGuideUrl": null
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Relive Polite Scholar's memory from Vault of Knowledge",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/3e/PoliteScholar-1.png/revision/latest/scale-to-width-down/24?cb=20230718025553",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/fb/05_VK_Spirit_-_Polite_Scholar.jpg/revision/latest?cb=20230626012223",
+        "iconUrl": "932f85fe-b5cc-4503-91f2-4cdd1b0a718f.png",
+        "visualGuideUrl": "975fa83d-8127-4439-a411-bc18637b02c0.jpeg",
         "videoGuideUrl": "https://youtu.be/Dqb5TXHNe2Y"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Relive Levitating Adept's memory from Vault of Knowledge",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f2/LevitatingAdept-1.png/revision/latest/scale-to-width-down/24?cb=20230718025524",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/64/05_VK_Spirit_-_Levitating_Adept.jpg/revision/latest?cb=20230626012206",
+        "iconUrl": "8a88436c-caa7-4613-83a9-f908d9de4d15.png",
+        "visualGuideUrl": "5c8a722b-fa89-42c6-a5df-239ffaa86acd.jpeg",
         "videoGuideUrl": "https://youtu.be/bvv34rDB9h8"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Relive Praying Acolyte's memory from Vault of Knowledge",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/75/PrayingAcolyte-1.png/revision/latest/scale-to-width-down/24?cb=20230718025607",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/1/1f/05_VK_Spirit_-_Praying_Acolyte.jpg/revision/latest?cb=20230626012219",
+        "iconUrl": "e8833437-2d23-49af-9a99-ee82e0cf4544.png",
+        "visualGuideUrl": "bb83b0c3-53e1-4568-885d-5bfe2dc9b244.jpeg",
         "videoGuideUrl": "https://youtu.be/dIgC51kuNKM?t=65"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Relive Memory Whisperer's memory from Vault of Knowledge",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/ea/MemoryWhisperer-1.png/revision/latest/scale-to-width-down/24?cb=20230718025538",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d4/05_VK_Spirit_-_Memory_Whisperer.jpg/revision/latest?cb=20230626012211",
+        "iconUrl": "59a3547b-66aa-4a73-96a9-385ebd35be68.png",
+        "visualGuideUrl": "88ba2e69-5253-41bf-864a-2f732646f890.jpeg",
         "videoGuideUrl": "https://youtu.be/dIgC51kuNKM?t=916"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Relive Meditating Monastic's memory from Vault of Knowledge",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/a5/Meditating-Monastic-1.png/revision/latest/scale-to-width-down/24?cb=20230718025516",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/8d/05_VK_Spirit_-_Meditating_Monastic.jpg/revision/latest?cb=20230626012214",
+        "iconUrl": "7cf0a015-980b-4110-bdaa-5b011646aba8.png",
+        "visualGuideUrl": "4a5d3f0f-b8b8-4621-97f7-4daa7dd8db81.jpeg",
         "videoGuideUrl": "https://youtu.be/dIgC51kuNKM?t=957"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Relive Greeting Shaman's memory from Vault of Knowledge",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/9/9a/Mimi-4117_02_greeting_shaman_emote.png/revision/latest/scale-to-width-down/24?cb=20230718010723",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/66/05_VK_Seasonal_Spirit_-_Greeting_Shaman.jpg/revision/latest?cb=20230626014453",
+        "iconUrl": "7bdecc73-5961-41c8-ba8a-5d88662fe4c2.png",
+        "visualGuideUrl": "7132ba1d-d79d-4756-b4ed-df19cc603124.jpeg",
         "videoGuideUrl": "https://www.youtube.com/watch?v=do0FvgzMOPI"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Relive Shushing Light Scholar's memory from Vault of Knowledge",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/88/Mimi-4117_03_shushing_light_scholar_emote.png/revision/latest/scale-to-width-down/24?cb=20230718011039",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/cc/05_VK_Seasonal_Spirit_-_Shushing_Light_Scholar.jpg/revision/latest?cb=20230626014457",
+        "iconUrl": "5b9ab7e9-102a-4044-a419-dc5552c55947.png",
+        "visualGuideUrl": "38f037b9-5eed-4036-a34c-488d65be8db6.jpeg",
         "videoGuideUrl": "https://youtu.be/09QH7xH003Q"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Relive Wise Grandparent's memory from Vault of Knowledge",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/36/Belonging_stance_think.png/revision/latest/scale-to-width-down/24?cb=20230718011230",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d0/05_VK_Seasonal_Spirit_-_Wise_Grandparent.jpg/revision/latest?cb=20230626014447",
+        "iconUrl": "699a24b1-3e65-4084-ab2d-b2f6457b404b.png",
+        "visualGuideUrl": "e819afb7-7690-44c9-81a7-cd6b0d436dfa.jpeg",
         "videoGuideUrl": "https://www.youtube.com/watch?v=0ZOM7_hfv9c"
     },
     {
         "type": "Realm Quest",
         "realm": "Vault of Knowledge",
         "questName": "Relive Thoughtful Director's memory from Vault of Knowledge",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/ad/Emote-thinking.png/revision/latest/scale-to-width-down/24?cb=20230718013016",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/ef/05_VK_Seasonal_Spirit_-_Thoughtful_Director.jpg/revision/latest?cb=20230626014450",
+        "iconUrl": "89877a4d-5788-4da0-98e1-e07274f2d0e0.png",
+        "visualGuideUrl": "ec07a6bf-3bfc-4dbc-bbbd-76dffb6e0653.jpeg",
         "videoGuideUrl": "https://youtu.be/h5SzQI60xz0"
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "Hold the hand of a friend",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/31/06_Social_Quest_-_Hold_the_hand_of_a_friend.png/revision/latest?cb=20230626041514",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "c0dee659-6752-4708-8b5d-18df006356c7.png",
         "videoGuideUrl": "https://youtu.be/tUWABu3t5Ic"
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "Hold hands in a group of 4 players",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/03/06_Social_Quest_-_Hold_hands_in_a_group.jpg/revision/latest?cb=20230626035931",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "778ea37c-7bf1-4e81-909b-f16844035f47.jpeg",
         "videoGuideUrl": "https://youtu.be/VexNzS7Vg-8"
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "Bow at a player",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/8e/06_Social_Quest_-_Bow_to_at_a_player.png/revision/latest?cb=20230626041500",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "8fcaed7a-9a86-47dd-97da-6ebb2bdb39fb.png",
         "videoGuideUrl": "https://youtu.be/tUWABu3t5Ic"
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "Follow a Friend",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/0d/06_Social_Quest_-_Follow_a_friend.png/revision/latest?cb=20230626041422",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "b9faf541-a2a0-4845-b45f-c7810956eb7a.png",
         "videoGuideUrl": null
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "High-Five a Friend",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/b9/06_Social_Quest_-_High-Five_a_friend.png/revision/latest?cb=20230626043244",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "4f10889f-fe24-4a3d-b42e-2ad0814466cf.png",
         "videoGuideUrl": "https://youtu.be/WfvksJzaNKo"
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "Wave to a Friend",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d1/06_Social_Quest_-_Wave_to_a_friend.png/revision/latest?cb=20230626041418",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "6a16efec-614a-4b41-8eac-7b57d98651ea.png",
         "videoGuideUrl": "https://youtu.be/g-Ts_WZY4VM"
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "Hug a Friend",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/3f/06_Social_Quest_-_Hug_a_friend.png/revision/latest?cb=20230626041351",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "f43d4daf-086f-484e-941a-b7b089b7f241.png",
         "videoGuideUrl": null
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "Use an Expression near a friend",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/34/06_Social_Quest_-_Use_an_expression.jpg/revision/latest?cb=20230626041333",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "a3f92e40-d738-4efa-834d-f1f82c01a2df.jpeg",
         "videoGuideUrl": "https://youtu.be/ZJGdxGuSQ8o"
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "Make a new acquaintance",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/ac/06_Social_Quest_-_Make_a_new_acquaintance.png/revision/latest?cb=20230626051810",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "f2f53d9f-7970-412e-90cf-7d49a9ce7f39.png",
         "videoGuideUrl": "https://youtu.be/8dxeUcmyc0o"
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "Sit at a bench with a stranger",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/ad/06_Social_Quest_-_Sit_on_a_bench.png/revision/latest?cb=20230626051749",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "1fb742c0-4a87-47c1-9991-d221dc180649.png",
         "videoGuideUrl": "https://youtu.be/dPGWTwv8kHo"
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "Open a 2-player door",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/JGQT0nGjFZg"
     },
@@ -1259,7 +1259,7 @@ export const questsData =[
         "type": "General Quest",
         "realm": "General",
         "questName": "Recharge someone's light",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/hcQFxBTJHCk"
     },
@@ -1267,15 +1267,15 @@ export const questsData =[
         "type": "General Quest",
         "realm": "General",
         "questName": "Send a gift to a friend",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/a5/06_Social_Quest_-_Send_a_gift.jpg/revision/latest?cb=20230626051731",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "d62d6803-f116-4e0e-93ca-e692326bacc6.jpeg",
         "videoGuideUrl": "https://youtu.be/DDmy1AUZ1II"
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "Forge a candle",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/mLhjvx19zzA"
     },
@@ -1283,7 +1283,7 @@ export const questsData =[
         "type": "General Quest",
         "realm": "General",
         "questName": "Light 20 candles",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/nwzGt7akrz4"
     },
@@ -1291,7 +1291,7 @@ export const questsData =[
         "type": "General Quest",
         "realm": "General",
         "questName": "Melt 10 Darkness",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/dTzxKKFnKSU"
     },
@@ -1299,7 +1299,7 @@ export const questsData =[
         "type": "General Quest",
         "realm": "General",
         "questName": "Collect 30 pieces of light",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/6_UgFcvJv98"
     },
@@ -1307,39 +1307,39 @@ export const questsData =[
         "type": "General Quest",
         "realm": "General",
         "questName": "Knock over 5 Dark Creature Crabs",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/1/1f/04_GW_Quest_-_Knock_over_crabs.png/revision/latest?cb=20221130002428",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
+        "visualGuideUrl": "1fdd3345-6b61-4967-a38f-f498ea5ed4ba.png",
         "videoGuideUrl": "https://youtu.be/xQDu0svYnu0"
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "Face the Dark Dragon",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/ec/04_GW_Quest_-_Face_the_Dark_Dragon.gif/revision/latest?cb=20230626065322",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
+        "visualGuideUrl": "6870bc2e-35cb-4460-acaa-4280a2974dc6.gif",
         "videoGuideUrl": "https://youtu.be/I2ZX-Y9zP8M"
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "Recharge your light from a jellyfish",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/e7/02_HF_Quest_-_Recharge_from_a_jellyfish.png/revision/latest?cb=20230626065316",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "e637dee4-600c-4ea1-86c0-3499c064b19e.png",
         "videoGuideUrl": "https://youtu.be/yHLgmEjdnzA"
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "Ride with a Manta",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/2/26/01_DP_Quest_-_Ride_a_manta_in_Prairie.png/revision/latest?cb=20220403152051",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
+        "visualGuideUrl": "6f91a007-05ea-4495-b292-fbe6a9f06ede.png",
         "videoGuideUrl": null
     },
     {
         "type": "General Quest",
         "realm": "General",
         "questName": "Meet a Spirit in (a given Realm) (deprecated)[2]",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/fa/Icon_flame.png/revision/latest/scale-to-width-down/24?cb=20230718033048",
+        "iconUrl": "22d3b05c-31ac-46a8-8eb9-26cc94cbb489.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/XCzYthoJdWA"
     },
@@ -1347,95 +1347,95 @@ export const questsData =[
         "type": "General Quest",
         "realm": "General",
         "questName": "Relive a Spirit's memories in (a given Realm)",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/fa/Icon_flame.png/revision/latest/scale-to-width-down/24?cb=20230718033048",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/a7/Relive_A_Spirits_Memory.png/revision/latest?cb=20220403153847",
+        "iconUrl": "22d3b05c-31ac-46a8-8eb9-26cc94cbb489.png",
+        "visualGuideUrl": "f67cd363-5547-47c1-a896-0bac9eaa5334.png",
         "videoGuideUrl": null
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Collect cyan light in Isle of Dawn",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/81/00_ID_Quest_-_Collect_Cyan_Light.png/revision/latest?cb=20230626063602",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "e2dcd016-e0a7-48d7-a53e-6e1fa8daf57c.png",
         "videoGuideUrl": "https://youtu.be/_G78MGSqH28?t=283"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Collect green light in Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/58/02_DP_Quest_-_Collect_Green_Light.png/revision/latest?cb=20220403152048",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "a60a5010-4c19-427c-b43e-c01826ec8296.png",
         "videoGuideUrl": "https://youtu.be/mzUVM4sqroI"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Collect orange light in Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/9/9c/02_HF_Quest_-_Collect_Orange_Light.png/revision/latest?cb=20220514234933",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "3f2ac96d-2687-4f67-9b7f-adaa51a59524.png",
         "videoGuideUrl": "https://youtu.be/m92rALQldBM"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Collect blue light in Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/5b/03_VT_Quest_-_Collect_Blue_Light.png/revision/latest?cb=20230222011118",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "64fb94d9-24d2-4b2a-afb2-c2e0641a213f.png",
         "videoGuideUrl": "https://youtu.be/WPotQHMUuYw"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Collect red light in Golden Wasteland",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/70/04_GW_Quest_-_Collect_Red_Light.png/revision/latest?cb=20230625205137",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "940766db-ccb7-4dd5-96be-a612c45a2a00.png",
         "videoGuideUrl": "https://youtu.be/lD_Z080b2EU"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Collect purple light in Vault of Knowledge",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d9/05_VK_Quest_-_Collect_Purple_Light.jpg/revision/latest?cb=20230626012202",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "5842be55-5ecd-4937-9c59-c9dfa1793327.jpeg",
         "videoGuideUrl": "https://youtu.be/ZfaJrpCWctM"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Complete the bookshelf scavenger hunt",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/dc/Icon_prop_bookcase.png/revision/latest/scale-to-width-down/24?cb=20240411213018",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/eb/02_HF_Quest_-_Bookshelf_scavenger_hunt.png/revision/latest?cb=20230626071345",
+        "iconUrl": "4b40c7b7-09bf-4989-ac33-df1dacd88c3b.png",
+        "visualGuideUrl": "6cab3efc-db4e-44c3-a999-ba8c0838eb54.png",
         "videoGuideUrl": "https://youtu.be/SZcdqqLAqqA"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Complete the torch scavenger hunt",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/af/Icon_prop_assembly_torch.png/revision/latest/scale-to-width-down/24?cb=20240411213050",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d4/02_HF_Quest_-_Torch_scavenger_hunt.png/revision/latest?cb=20230626071349",
+        "iconUrl": "9a78650d-0acb-43ff-9e40-5c0fed37218d.png",
+        "visualGuideUrl": "7f2534f1-215f-4818-beb5-73d888153e40.png",
         "videoGuideUrl": "https://youtu.be/-P4MA_oXlcs"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Complete the spotlight scavenger hunt",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/c6/Icon_prop_assembly_lamp.png/revision/latest/scale-to-width-down/24?cb=20230722212647",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/02_HF_Quest_-_Spotlight_scavenger_hunt.png/revision/latest?cb=20230626071354",
+        "iconUrl": "1f161242-019b-473c-9708-015d4a3378de.png",
+        "visualGuideUrl": "95a85326-aef5-4978-92f9-5680ad4b3f48.png",
         "videoGuideUrl": "https://youtu.be/e0p8e5Ckkts"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Complete the hoop scavenger hunt",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/4/4b/Icon_prop_assembly_hoop.png/revision/latest/scale-to-width-down/24?cb=20240411213106",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/61/02_HF_Quest_-_Hoop_scavenger_hunt.png/revision/latest?cb=20230626071357",
+        "iconUrl": "10743405-3bfe-45c0-ae23-bcf9f2918969.png",
+        "visualGuideUrl": "a4f026f4-0268-47fe-b988-e07bf1cdb6f5.png",
         "videoGuideUrl": "https://youtu.be/GHZz4GpOmcE"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Visit a shard of darkness fallen to the Kingdom of Sky",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
         "visualGuideUrl": null,
         "videoGuideUrl": null
     },
@@ -1443,7 +1443,7 @@ export const questsData =[
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Take a selfie with Hiking Grouch in Prairie Peaks",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/c8/Camera-Ray.png/revision/latest/scale-to-width-down/24?cb=20230731044835",
+        "iconUrl": "94bb4b07-43ac-4a21-b67a-d59497061bcb.png",
         "visualGuideUrl": null,
         "videoGuideUrl": null
     },
@@ -1451,7 +1451,7 @@ export const questsData =[
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Take a selfie with Crab Whisperer in Prairie Peaks",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/c8/Camera-Ray.png/revision/latest/scale-to-width-down/24?cb=20230731044835",
+        "iconUrl": "94bb4b07-43ac-4a21-b67a-d59497061bcb.png",
         "visualGuideUrl": null,
         "videoGuideUrl": null
     },
@@ -1459,7 +1459,7 @@ export const questsData =[
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Take a selfie with Cackling Cannoneer in Prairie Peaks",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/c8/Camera-Ray.png/revision/latest/scale-to-width-down/24?cb=20230731044835",
+        "iconUrl": "94bb4b07-43ac-4a21-b67a-d59497061bcb.png",
         "visualGuideUrl": null,
         "videoGuideUrl": null
     },
@@ -1467,7 +1467,7 @@ export const questsData =[
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Take a selfie with Troupe Greeter in Prairie Peaks",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/c8/Camera-Ray.png/revision/latest/scale-to-width-down/24?cb=20230731044835",
+        "iconUrl": "94bb4b07-43ac-4a21-b67a-d59497061bcb.png",
         "visualGuideUrl": null,
         "videoGuideUrl": null
     },
@@ -1475,127 +1475,127 @@ export const questsData =[
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Admire the sapling in Daylight Prairie for a short while",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/e4/01_DP_Quest_-_Admire_the_sapling.jpg/revision/latest?cb=20220403152049",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "8df0aa56-239f-4f6d-a7c4-68af8530c7c9.jpeg",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg&t=132s"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Admire the sapling in Hidden Forest for a short while",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/8f/02_HF_Quest_-_Admire_the_sapling.png/revision/latest?cb=20220514234930",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "29429cfb-e1a3-4e69-a645-ab65df1da78d.png",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg&t=157s"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Admire the sapling in Valley of Triumph for a short while",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/8/8c/03_VT_Quest_-_Admire_the_sapling.png/revision/latest?cb=20230222011113",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "8a0234c6-1fc4-4ed1-aa3a-150083c61737.png",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg&t=49s"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Admire the sapling in Golden Wasteland for a short while",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/6f/04_GW_Quest_-_Admire_the_sapling.png/revision/latest?cb=20230626071331",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "7ad1a788-9319-4797-a682-c6a68fe93dfc.png",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg&t=209s"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Admire the sapling in Vault of Knowledge for a short while",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/a2/05_VK_Quest_-_Admire_the_sapling.png/revision/latest?cb=20230626012149",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "f096bd9c-c834-4757-b94c-7466924ccb88.png",
         "videoGuideUrl": "https://youtu.be/_HYCAJeQgJc"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Find the candles at the end of the rainbow in the Daylight Prairie",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/61/01_DP_Quest_-_Find_the_candles_at_the_end_of_the_rainbow.png/revision/latest?cb=20230626230706",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "2f4abd7b-2b1b-473b-88f0-266107b71f59.png",
         "videoGuideUrl": "https://youtu.be/fCtpCZFJLmE"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Find the candles at the end of the rainbow in the Hidden Forest",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/6a/02_HF_Quest_-_Find_the_candles_at_the_end_of_the_rainbow.png/revision/latest?cb=20230626230709",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "e0140072-3fd0-45ec-b6ce-a100016a649d.png",
         "videoGuideUrl": "https://youtu.be/otI3wuLQKis"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Find the candles at the end of the rainbow in the Valley of Triumph",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/32/03_VT_Quest_-_Find_the_candles_at_the_end_of_the_rainbow.png/revision/latest?cb=20230626230712",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "e8e3a24a-d5b6-45a9-890b-a5a69423d7dc.png",
         "videoGuideUrl": "https://youtu.be/nAQKhaiwhjc"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Find the candles at the end of the rainbow in the Golden Wasteland (Forgotten Ark)",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/e/e5/04_GW_Quest_-_Find_the_candles_at_the_end_of_the_rainbow.png/revision/latest?cb=20230626230715",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "35c7c7ce-d175-4d0a-8092-0e901dfa1493.png",
         "videoGuideUrl": "https://youtu.be/rVcwi1pH-YA"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Find the candles at the end of the rainbow in the Vault of Knowledge",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/59/05_VK_Quest_-_Find_the_candles_at_the_end_of_the_rainbow.png/revision/latest?cb=20230626230720",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "7bdf5853-7ddf-40c3-904c-f4fc19629708.png",
         "videoGuideUrl": "https://youtu.be/oiUQPs3E7GE"
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Admire the rainbow in Sanctuary Islands for a short while",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/5d/01_DP_Quest_-_Admire_the_rainbow_in_Sanctuary.png/revision/latest?cb=20230626230725",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "b9b93a51-a8f9-4f53-ac03-6f1a49766d60.png",
         "videoGuideUrl": null
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Admire the rainbow in the Wind Paths for a short while",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/6/66/02_HF_Quest_-_Admire_the_rainbow_in_Wind_Paths.png/revision/latest?cb=20230626230729",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "a79546e0-8437-4982-8917-a59127e83bc4.png",
         "videoGuideUrl": null
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Admire the rainbow in Hermit Valley for a short while",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/70/03_VT_Quest_-_Admire_the_rainbow_in_Hermit.png/revision/latest?cb=20230626230734",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "ffe0835b-b512-4ec4-8f72-79f74e6ccb35.png",
         "videoGuideUrl": null
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Admire the rainbow in Treasure Reef for a short while",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/a/ad/04_GW_Quest_-_Admire_the_rainbow_in_Reef.png/revision/latest?cb=20230626230740",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "57ad97ca-1d90-41bb-93a0-2dab9901bb9a.png",
         "videoGuideUrl": null
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Admire the rainbow in Starlight Desert for a short while",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/ba/05_VK_Quest_-_Admire_the_rainbow_in_Desert.png/revision/latest?cb=20230626230745",
+        "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
+        "visualGuideUrl": "b52343af-b85a-4f2f-8fbe-036a72b75720.png",
         "videoGuideUrl": null
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Meditate at the anniversary celebration",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/PVybZ6BWAE4"
     },
@@ -1603,7 +1603,7 @@ export const questsData =[
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Change your hairstyle",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/JRqduT3PKoU"
     },
@@ -1611,7 +1611,7 @@ export const questsData =[
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Change your necklace",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/MxjrtvSYbdY"
     },
@@ -1619,7 +1619,7 @@ export const questsData =[
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Change your prop",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/ritSJYOtNtg"
     },
@@ -1627,7 +1627,7 @@ export const questsData =[
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Change your mask",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/jb1X2aLLMt4"
     },
@@ -1635,7 +1635,7 @@ export const questsData =[
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Change your pants",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/CwhW-7eDE0E"
     },
@@ -1643,7 +1643,7 @@ export const questsData =[
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "View a Shared Memory at a style runway shrine",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/HTkSXRWBIPE"
     },
@@ -1651,7 +1651,7 @@ export const questsData =[
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Record a Shared Memory at a style runway shrine",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/QzoyF79bvpc"
     },
@@ -1659,55 +1659,55 @@ export const questsData =[
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Meet Cinnamoroll on a hill in Aviary Village.",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/0f/Sky-%C3%97-Cinnamoroll-Pop-Up-Cafe-Quest-1-mimi4117-sam6917.png/revision/latest?cb=20240427195252",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "286ec45f-3a74-483a-81ac-86637768b6c3.png",
         "videoGuideUrl": null
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Smell flowers with Cinnamoroll in Aviary Village.",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/0e/Sky-%C3%97-Cinnamoroll-Pop-Up-Cafe-Quest-2-mimi4117-sam6917.png/revision/latest?cb=20240430003306",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "09c15284-6108-4d7d-9560-450c88a3555e.png",
         "videoGuideUrl": null
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Find Cinnamoroll peeking around Aviary Village.",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/d2/Sky-%C3%97-Cinnamoroll-Pop-Up-Cafe-Quest-3-mimi4117-sam6917.png/revision/latest?cb=20240430003308",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "d5904f8c-5162-4a25-93d8-e0b211fd7ef2.png",
         "videoGuideUrl": null
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Wake up Cinnamoroll in Aviary Village.",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/da/Sky-%C3%97-Cinnamoroll-Pop-Up-Cafe-Quest-4-mimi4117-sam6917.png/revision/latest?cb=20240430183854",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "e566f1a3-72a9-46ec-834b-a70ae3f852af.png",
         "videoGuideUrl": null
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Fly up to the tower with Cinnamoroll in Aviary Village.",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/79/Sky-%C3%97-Cinnamoroll-Pop-Up-Cafe-Quest-5-mimi4117-sam6917.png/revision/latest?cb=20240502010145",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "29cb284e-b99f-44ab-92c0-be67bd2152e8.png",
         "videoGuideUrl": null
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Splash in the water with Cinnamoroll in Aviary Village.",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
-        "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/9/92/Sky-%C3%97-Cinnamoroll-Pop-Up-Cafe-Quest-6-mimi4117-sam6917.png/revision/latest?cb=20240503073746",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "3386834b-f651-4c86-9272-8baa53bcfba9.png",
         "videoGuideUrl": null
     },
     {
         "type": "Seasonal/Event Quest",
         "realm": "Seasonal/Event",
         "questName": "Play any Tournament sport",
-        "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
+        "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
         "visualGuideUrl": null,
         "videoGuideUrl": "https://www.youtube.com/watch?v=f_CZ24gXpCk&list=PLl2dLrx-duQgedEYgPBHeLmbCV-ZooBo5"
     }
