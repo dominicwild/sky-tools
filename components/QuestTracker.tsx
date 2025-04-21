@@ -214,10 +214,7 @@ export default function QuestTracker() {
                                     </motion.div>
                                 ))}
 
-                                {/* Empty slots */}
-                                {Array.from({ length: 4 - selectedQuests.length }).map((_, index) => (
                                     <motion.div
-                                        key={`empty-${index}`}
                                         layout
                                         initial={{ opacity: 0, scale: 0.8 }}
                                         animate={{ opacity: 1, scale: 1 }}
@@ -232,7 +229,6 @@ export default function QuestTracker() {
                                     >
                                         <EmptyQuestSlot />
                                     </motion.div>
-                                ))}
                             </AnimatePresence>
                         </div>
                     </div>
