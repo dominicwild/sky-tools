@@ -112,7 +112,7 @@ export default function QuestSearch({
                         id="quest-search"
                         type="text"
                         placeholder="Search for quests..."
-                        className="pl-12 pr-4 py-6 bg-white/10 backdrop-blur-md border-none shadow-lg rounded-full text-white placeholder:text-white/50 focus:ring-2 focus:ring-white/30 focus:outline-none "
+                        className="pl-12 bg-blue-700/70 backdrop-blur-md !text-xl px-6 py-8 !ring-[#003C78] border-none shadow-lg rounded-full text-white placeholder:text-white/60"
                         value={searchQuery}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                         onFocus={() => setIsFocused(true)}
@@ -121,7 +121,7 @@ export default function QuestSearch({
                     />
                     {searchQuery && (
                         <button
-                            className="absolute right-4 top-4 text-white/70 hover:text-white"
+                            className="absolute right-4 top-4 text-white/70 hover:text-white cursor-pointer"
                             onClick={() => setSearchQuery("")}
                         >
                             <X className="h-5 w-5" />
