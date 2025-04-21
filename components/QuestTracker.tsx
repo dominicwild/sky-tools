@@ -32,10 +32,6 @@ export default function QuestTracker() {
         quest: Quest | null
     }>({ isOpen: false, quest: null })
 
-    // Reference to maintain consistent container height
-    const questContainerRef = useRef<HTMLDivElement>(null)
-    const [containerHeight, setContainerHeight] = useState<number | null>(null)
-
     const filteredQuests = useMemo(() => {
         if (!searchQuery.trim()) return []
 
@@ -50,20 +46,8 @@ export default function QuestTracker() {
             .slice(0, 8) // Limit results to 8 for better UX
     }, [searchQuery])
 
-    // Measure and set container height to prevent layout shifts
-    useEffect(() => {
-        if (questContainerRef.current) {
-            setContainerHeight(questContainerRef.current.offsetHeight)
-        }
-    }, [])
-
     const addQuest = (quest: Quest) => {
         if (selectedQuests.length < 4 && !selectedQuests.includes(quest)) {
-            // Capture current height before adding
-            if (questContainerRef.current) {
-                setContainerHeight(questContainerRef.current.offsetHeight)
-            }
-
             setSelectedQuests([...selectedQuests, quest])
             setSearchQuery("")
             const searchInput = document.getElementById("quest-search")
@@ -74,20 +58,10 @@ export default function QuestTracker() {
     }
 
     const removeQuest = (quest: Quest) => {
-        // Capture current height before removing
-        if (questContainerRef.current) {
-            setContainerHeight(questContainerRef.current.offsetHeight)
-        }
-
         setSelectedQuests(selectedQuests.filter((q) => q !== quest))
     }
 
     const clearSelectedQuests = () => {
-        // Capture current height before clearing
-        if (questContainerRef.current) {
-            setContainerHeight(questContainerRef.current.offsetHeight)
-        }
-
         setSelectedQuests([])
     }
 
@@ -106,18 +80,6 @@ export default function QuestTracker() {
     const closeVideoGuideDialog = () => {
         setVideoGuideDialog({ isOpen: false, quest: null })
     }
-
-    // Update container height when quests change
-    useEffect(() => {
-        // Use a timeout to allow the DOM to update first
-        const timer = setTimeout(() => {
-            if (questContainerRef.current) {
-                setContainerHeight(questContainerRef.current.offsetHeight)
-            }
-        }, 50)
-
-        return () => clearTimeout(timer)
-    }, [selectedQuests.length])
 
     return (
         <div className="min-h-0 flex flex-col items-center justify-start pt-[25vh] px-4 pb-8">
@@ -183,9 +145,7 @@ export default function QuestTracker() {
 
                     {/* Quest container with fixed height to prevent layout shifts */}
                     <div
-                        ref={questContainerRef}
                         className="relative w-full"
-                        style={containerHeight ? { minHeight: `${containerHeight}px` } : {}}
                     >
                         <div className="grid grid-cols-1 gap-4">
                             {/* Selected Quests */}
