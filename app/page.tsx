@@ -4,7 +4,7 @@ import {CloudEffect} from "@/components/CloudEffect";
 export default function Home() {
     return (
         <main className="relative">
-            <div className="fixed inset-0">
+            <div className="fixed inset-0 pointer-events-none">
                 <CloudEffect />
             </div>
 
