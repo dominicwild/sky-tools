@@ -227,7 +227,7 @@ export default function QuestTracker() {
                                         }}
                                         className="w-full"
                                     >
-                                        <EmptyQuestSlot />
+                                        {selectedQuests.length == 0 && <EmptyQuestSlot/>}
                                     </motion.div>
                             </AnimatePresence>
                         </div>
