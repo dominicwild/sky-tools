@@ -1,9 +1,12 @@
 import QuestTracker from "@/components/QuestTracker";
+import {CloudEffect} from "@/components/CloudEffect";
 
 export default function Home() {
     return (
         <main className="relative">
-            <div className="fixed inset-0 bg-gradient-to-b from-sky-400 via-sky-300 to-sky-200" />
+            <div className="fixed inset-0">
+                <CloudEffect />
+            </div>
 
             <div >
                 <QuestTracker />
