@@ -14,14 +14,14 @@ export default function VisualGuideDialog({ isOpen, quest, onClose }: Readonly<V
             <DialogTitle>
                 Visual Guide
             </DialogTitle>
-            <DialogContent className=" bg-black/80 backdrop-blur-lg border-none text-white">
+            <DialogContent className="max-w-[90vw] sm:max-w-[85vw] md:max-w-[80vw] bg-black/80 backdrop-blur-lg border-none text-white">
                 <div className="mt-4">
                     {quest?.visualGuideUrl ? (
                         <div className="flex justify-center">
                             <img
                                 src={getImageUrl(quest.visualGuideUrl)}
                                 alt="Visual guide"
-                                className="max-h-[70vh] object-contain rounded-lg"
+                                className="max-h-[80vh] object-contain rounded-lg"
                                 onError={(e) => {
                                     ;(e.target as HTMLImageElement).src = "/oh-no.png"
                                 }}
