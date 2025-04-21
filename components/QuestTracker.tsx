@@ -70,7 +70,7 @@ export default function QuestTracker() {
     }
 
     const closeVisualGuideDialog = () => {
-        setVisualGuideDialog({ isOpen: false, quest: null })
+        setVisualGuideDialog(state => ({ ...state, isOpen: false }))
     }
 
     const openVideoGuideDialog = (quest: Quest) => {
@@ -78,7 +78,7 @@ export default function QuestTracker() {
     }
 
     const closeVideoGuideDialog = () => {
-        setVideoGuideDialog({ isOpen: false, quest: null })
+        setVideoGuideDialog((state) => ({ ...state, isOpen: false }))
     }
 
     return (
