@@ -34,7 +34,7 @@ export default function QuestCard({ quest, onRemove, onOpenVisualGuide, onOpenVi
                             <div className="flex-1">
                                 <p className="font-medium text-white text-base">{quest.questName}</p>
                                 <div className="flex flex-wrap gap-2 mt-1.5 items-center">
-                                    <Badge className="text-xs bg-sky-500/80 text-white hover:bg-sky-500/90 border-none">
+                                    <Badge className="text-xs py-1 bg-sky-500/80 text-white hover:bg-sky-500/90 border-none">
                                         {quest.realm}
                                     </Badge>
 
@@ -43,7 +43,7 @@ export default function QuestCard({ quest, onRemove, onOpenVisualGuide, onOpenVi
                                         <Button
                                             size="sm"
                                             variant="outline"
-                                            className="h-6 px-2 py-0 bg-sky-500/80 hover:bg-sky-500 text-white hover:text-white border-none flex items-center gap-1.5"
+                                            className="h-6 px-2 py-0 bg-sky-800/80 hover:bg-sky-950 text-white hover:text-white border-none flex items-center gap-1.5 cursor-pointer"
                                             onClick={(e) => {
                                                 e.stopPropagation()
                                                 onOpenVideoGuide(quest)
