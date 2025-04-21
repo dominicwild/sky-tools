@@ -41,7 +41,7 @@ const FooterLink = (props: FootLinkProps) => {
 const Footer = () => {
     return (
         <footer
-            className={"relative z-20 bg-sky-800 min-h-32 flex items-center text-white/70 gap-x-2 justify-around px-[25%] py-4"}>
+            className={"relative z-20 bg-gradient-to-b from-sky-700 to-sky-800 min-h-32 flex items-center text-white/70 gap-x-2 justify-around px-[25%] py-6"}>
             <div className={"flex flex-col min-w-20 gap-y-2"}>
                 <div>
                     <div className={"flex items-center text-xl"}>

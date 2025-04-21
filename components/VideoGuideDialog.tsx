@@ -7,13 +7,14 @@ interface VideoGuideDialogProps {
     onClose: () => void
 }
 
-export default function VideoGuideDialog({ isOpen, quest, onClose }: VideoGuideDialogProps) {
+export default function VideoGuideDialog({isOpen, quest, onClose}: VideoGuideDialogProps) {
     return (
         <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-            <DialogTitle>
-             Video Guide
+            <DialogTitle className={"hidden"}>
+                Video Guide
             </DialogTitle>
-            <DialogContent className="max-w-[90vw] sm:max-w-[85vw] md:max-w-[80vw] bg-black/90 backdrop-blur-lg border-none text-white">
+            <DialogContent
+                className="max-w-[90vw] sm:max-w-[85vw] md:max-w-[80vw] bg-black/90 backdrop-blur-lg border-none text-white">
                 <div className="mt-4">
                     {quest?.videoGuideUrl ? (
                         <div className="aspect-video w-full rounded-lg overflow-hidden">

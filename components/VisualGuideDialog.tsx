@@ -8,13 +8,14 @@ interface VisualGuideDialogProps {
     onClose: () => void
 }
 
-export default function VisualGuideDialog({ isOpen, quest, onClose }: Readonly<VisualGuideDialogProps>) {
+export default function VisualGuideDialog({isOpen, quest, onClose}: Readonly<VisualGuideDialogProps>) {
     return (
         <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-            <DialogTitle>
+            <DialogTitle className={"hidden"}>
                 Visual Guide
             </DialogTitle>
-            <DialogContent className="max-w-[90vw] sm:max-w-[85vw] md:max-w-[80vw] bg-black/80 backdrop-blur-lg border-none text-white">
+            <DialogContent
+                className="max-w-[90vw] sm:max-w-[85vw] md:max-w-[80vw] bg-black/80 backdrop-blur-lg border-none text-white">
                 <div className="mt-4">
                     {quest?.visualGuideUrl ? (
                         <div className="flex justify-center">
