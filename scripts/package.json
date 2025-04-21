@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "processImages": "tsx src/processImages.ts"
+    "processImages": "tsx src/processImages.ts",
+    "addIds": "tsx src/giveUniqueIds.ts"
   },
   "author": "",
   "license": "ISC",

@@ -1,13 +1,13 @@
 import fs from 'fs/promises';
 import path from 'path';
-import axios from 'axios';
+import axios  from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 
 const INPUT_JSON_PATH = './skyData.json';
 const OUTPUT_JSON_PATH = './skyDataLocal.json';
 const IMAGE_OUTPUT_DIR = './downloaded_images';
 
-interface QuestItem {
+export interface QuestItem {
     type: string;
     realm: string;
     questName: string;
@@ -30,7 +30,7 @@ async function downloadAndSaveImage(url: string | null, outputDir: string): Prom
 
     try {
         console.log(`Attempting to download: ${url}`);
-        const response = await axios.get(url, {
+        const response = await axios.get<DataView<ArrayBufferLike>>(url, {
             responseType: 'arraybuffer',
             timeout: 15000,
             headers: {
@@ -63,7 +63,7 @@ async function downloadAndSaveImage(url: string | null, outputDir: string): Prom
         return uniqueFilename;
     } catch (error: any) {
         console.error(`Error downloading image from ${url}:`, error.message);
-        if (axios.isAxiosError(error)) {
+        if (error.response) {
             console.error('Axios Error Details:', error.response?.status, error.response?.statusText);
         }
         return null;

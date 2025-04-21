@@ -23,7 +23,7 @@ export default function VisualGuideDialog({ isOpen, quest, onClose }: Readonly<V
                                 alt="Visual guide"
                                 className="max-h-[70vh] object-contain rounded-lg"
                                 onError={(e) => {
-                                    ;(e.target as HTMLImageElement).src = "/sky-cotl-quest-journey.png"
+                                    ;(e.target as HTMLImageElement).src = "/oh-no.png"
                                 }}
                             />
                         </div>
