@@ -67,7 +67,6 @@ export default function QuestSearch({
         },
     }
 
-    // Function to highlight matching text
     const highlightMatch = (text: string, query: string) => {
         if (!query.trim()) return <span>{text}</span>
 
@@ -78,9 +77,9 @@ export default function QuestSearch({
             <>
                 {parts.map((part, i) =>
                         regex.test(part) ? (
-                            <span key={i} className="font-bold">
-              {part}
-            </span>
+                            <span key={i} className="font-bold bg-blue-200 text-blue-700">
+                              {part}
+                            </span>
                         ) : (
                             <span key={i}>{part}</span>
                         ),
@@ -144,7 +143,7 @@ export default function QuestSearch({
                                     <div className="space-y-1">
                                         {displayQuests.map((quest, index) => (
                                             <motion.div
-                                                key={index}
+                                                key={quest.type + quest.questName}
                                                 initial={{ opacity: 0, y: 10 }}
                                                 animate={{
                                                     opacity: 1,
