@@ -82,7 +82,7 @@ export default function QuestTracker() {
     }
 
     return (
-        <div className="min-h-0 flex flex-col items-center justify-start pt-[25vh] px-4 pb-8">
+        <div className="min-h-0 flex flex-col items-center justify-start px-4 pb-8">
             <div className="w-full max-w-3xl mx-auto flex flex-col items-center">
                 <motion.div
                     className="mb-8 text-center"
@@ -90,8 +90,13 @@ export default function QuestTracker() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                    <h1 className="text-4xl font-bold text-white mb-2 drop-shadow-md">Sky: Children of the Light</h1>
-                    <h2 className="text-2xl font-semibold text-white/90 drop-shadow-md">Daily Quest Tracker</h2>
+                    <img className={"relative"} src={"/sky-logo.png"}/>
+                    <h2 className="text-2xl font-semibold text-white/90 drop-shadow-2xl ">
+                        <span className={"bg-black/1 rounded-full"}>
+                        Daily Quest Tracker
+
+                        </span>
+                    </h2>
                 </motion.div>
 
                 <QuestSearch
