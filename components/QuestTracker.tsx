@@ -84,7 +84,6 @@ export default function QuestTracker() {
     return (
         <div className="min-h-0 flex flex-col items-center justify-start pt-[25vh] px-4 pb-8">
             <div className="w-full max-w-3xl mx-auto flex flex-col items-center">
-                {/* Title */}
                 <motion.div
                     className="mb-8 text-center"
                     initial={{ opacity: 0, y: -20 }}
