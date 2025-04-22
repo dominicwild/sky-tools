@@ -10,7 +10,7 @@ export type QuestValue = Record<string, number>
 
 export async function getTodaysQuests() {
     // Opt out of caching at the data fetch level
-    // noStore();
+    noStore();
 
     const key = getSkyDate();
     return client.hgetall(key)
