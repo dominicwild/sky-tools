@@ -18,5 +18,5 @@ export function getSkyDate() {
     const [{value: month}, , {value: day}, , {value: year}] = ptFormatter.formatToParts(now);
 
     const ptDate = new Date(`${year}-${month}-${day}T00:00:00-08:00`);
-    return `${ptDate.getFullYear()}-${ptDate.getMonth() + 1}-${ptDate.getDay()}`
+    return `${ptDate.getFullYear()}-${ptDate.getMonth() + 1}-${ptDate.getDate()}`
 }
