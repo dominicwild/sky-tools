@@ -1,9 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import {useState} from "react"
 import Image from "next/image"
-import { useRouter } from "next/navigation"
-import { motion, AnimatePresence } from "framer-motion"
+import {useRouter} from "next/navigation"
+import {motion, AnimatePresence} from "framer-motion"
 import {CloudEffect} from "@/components/CloudEffect";
 import type {Metadata} from "next";
 
@@ -27,7 +27,7 @@ export default function ErrorPage() {
     }
 
     const characterVariants = {
-        initial: { scale: 0.8, rotate: -5, opacity: 0 },
+        initial: {scale: 0.8, rotate: -5, opacity: 0},
         animate: {
             scale: 1,
             rotate: 0,
@@ -48,7 +48,7 @@ export default function ErrorPage() {
     }
 
     const containerVariants = {
-        initial: { y: 20, opacity: 0 },
+        initial: {y: 20, opacity: 0},
         animate: {
             y: 0,
             opacity: 1,
@@ -61,7 +61,7 @@ export default function ErrorPage() {
     }
 
     const textVariants = {
-        initial: { y: 20, opacity: 0 },
+        initial: {y: 20, opacity: 0},
         animate: {
             y: 0,
             opacity: 1,
@@ -73,9 +73,10 @@ export default function ErrorPage() {
     }
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-b from-sky-300 to-sky-400 bg-opacity-80 overflow-hidden">
+        <div
+            className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-b from-sky-300 to-sky-400 bg-opacity-80 overflow-hidden">
             <div className="fixed inset-0 pointer-events-none">
-                <CloudEffect />
+                <CloudEffect/>
             </div>
 
             <motion.div
@@ -90,6 +91,7 @@ export default function ErrorPage() {
                     initial="initial"
                     animate="animate"
                     whileHover="hover"
+                    whileTap="hover"
                 >
                     <Image
                         src="/oh-no-big.png"
@@ -99,7 +101,7 @@ export default function ErrorPage() {
                         className="object-contain"
                     />
 
-                    {Array.from({ length: 5 }).map((_, i) => (
+                    {Array.from({length: 5}).map((_, i) => (
                         <motion.div
                             key={i}
                             className="absolute text-3xl text-sky-700 filter drop-shadow-md"
@@ -108,7 +110,7 @@ export default function ErrorPage() {
                                 left: `${40 + i * 15}px`,
                                 transformOrigin: "center bottom",
                             }}
-                            initial={{ opacity: 0, y: 0 }}
+                            initial={{opacity: 0, y: 0}}
                             animate={{
                                 opacity: [0.7, 1, 0.7],
                                 y: [-5, -15, -5],
@@ -127,9 +129,10 @@ export default function ErrorPage() {
                     ))}
                 </motion.div>
 
-                <motion.h1 className="text-3xl font-bold text-white text-center mb-4 text-shadow" variants={textVariants}>
+                <motion.h1 className="text-3xl font-bold text-white text-center mb-4 text-shadow"
+                           variants={textVariants}>
                     Oh no! You broke it Sky kid.
-                    <br />
+                    <br/>
                     <span className="text-2xl mt-2 font-semibold inline-block">How&apos;d you do that!?</span>
                 </motion.h1>
 
@@ -142,14 +145,14 @@ export default function ErrorPage() {
                         <motion.div
                             key="loading-button"
                             className="relative"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.9 }}
-                            transition={{ duration: 0.3 }}
+                            initial={{opacity: 0, scale: 0.9}}
+                            animate={{opacity: 1, scale: 1}}
+                            exit={{opacity: 0, scale: 0.9}}
+                            transition={{duration: 0.3}}
                         >
                             <motion.div
                                 className="w-48 h-14 flex items-center justify-center relative"
-                                animate={{ y: [0, -5, 0] }}
+                                animate={{y: [0, -5, 0]}}
                                 transition={{
                                     duration: 1.5,
                                     repeat: Number.POSITIVE_INFINITY,
@@ -160,14 +163,14 @@ export default function ErrorPage() {
                                     <motion.path
                                         d="M 30,10 Q 40,0 60,10 Q 80,0 100,10 Q 120,0 140,10 Q 160,0 180,10 Q 190,20 180,30 Q 190,40 180,50 Q 160,60 140,50 Q 120,60 100,50 Q 80,60 60,50 Q 40,60 30,50 Q 20,40 30,30 Q 20,20 30,10 Z"
                                         fill="url(#cloudGradient)"
-                                        initial={{ pathLength: 0 }}
-                                        animate={{ pathLength: 1 }}
-                                        transition={{ duration: 1, ease: "easeInOut" }}
+                                        initial={{pathLength: 0}}
+                                        animate={{pathLength: 1}}
+                                        transition={{duration: 1, ease: "easeInOut"}}
                                     />
                                     <defs>
                                         <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stopColor="#7dd3fc" />
-                                            <stop offset="100%" stopColor="#38bdf8" />
+                                            <stop offset="0%" stopColor="#7dd3fc"/>
+                                            <stop offset="100%" stopColor="#38bdf8"/>
                                         </linearGradient>
                                     </defs>
                                 </svg>
@@ -218,9 +221,9 @@ export default function ErrorPage() {
 
                                 <motion.span
                                     className="absolute text-white font-medium text-sm bottom-[-24px] left-0 right-0 text-center"
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    transition={{ delay: 0.5 }}
+                                    initial={{opacity: 0}}
+                                    animate={{opacity: 1}}
+                                    transition={{delay: 0.5}}
                                 >
                                     Fixing the sky...
                                 </motion.span>
@@ -231,12 +234,12 @@ export default function ErrorPage() {
                             key="try-again-button"
                             onClick={handleRetry}
                             className="relative w-48 h-14 flex items-center justify-center cursor-pointer"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.9 }}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            transition={{ duration: 0.2 }}
+                            initial={{opacity: 0, scale: 0.9}}
+                            animate={{opacity: 1, scale: 1}}
+                            exit={{opacity: 0, scale: 0.9}}
+                            whileHover={{scale: 1.05}}
+                            whileTap={{scale: 0.95}}
+                            transition={{duration: 0.2}}
                         >
                             {/* Cloud shape background */}
                             <svg viewBox="0 0 200 60" className="absolute inset-0 w-full h-full">
@@ -245,14 +248,14 @@ export default function ErrorPage() {
                                     fill="url(#cloudGradient)"
                                     stroke="rgba(255, 255, 255, 0.5)"
                                     strokeWidth="2"
-                                    initial={{ pathLength: 0 }}
-                                    animate={{ pathLength: 1 }}
-                                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                                    initial={{pathLength: 0}}
+                                    animate={{pathLength: 1}}
+                                    transition={{duration: 0.8, ease: "easeInOut"}}
                                 />
                                 <defs>
                                     <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                        <stop offset="0%" stopColor="#7dd3fc" />
-                                        <stop offset="100%" stopColor="#38bdf8" />
+                                        <stop offset="0%" stopColor="#7dd3fc"/>
+                                        <stop offset="100%" stopColor="#38bdf8"/>
                                     </linearGradient>
                                 </defs>
                             </svg>
