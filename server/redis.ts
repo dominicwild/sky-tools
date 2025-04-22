@@ -17,9 +17,9 @@ export async function getTodaysQuests() {
 }
 
 export async function incrementQuest(id: number) {
-    // if (process.env.NODE_ENV !== 'production') {
-    //     return;
-    // }
+    if (process.env.NODE_ENV !== 'production') {
+        return;
+    }
     console.log("increment quest id", id)
     const key = getSkyDate();
     client.hincrby(key, id + "", 1)
