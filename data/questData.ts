@@ -1,6 +1,6 @@
 import {Quest} from "@/components/QuestTracker";
 
-export const questsData =[
+export const questsData = [
     {
         "type": "Realm Quest",
         "realm": "Daylight Prairie",
@@ -1926,5 +1926,23 @@ export const questsData =[
         "visualGuideUrl": null,
         "videoGuideUrl": "https://www.youtube.com/watch?v=f_CZ24gXpCk&list=PLl2dLrx-duQgedEYgPBHeLmbCV-ZooBo5",
         "id": 213
+    },
+    {
+        "type": "Realm Quest",
+        "realm": "Hidden Forest",
+        "questName": "Catch the 3 lights in the Forest Brook",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://youtu.be/9E_zrOSR8cg",
+        "id": 214
+    },
+    {
+        "type": "Realm Quest",
+        "realm": "Valley of Triumph",
+        "questName": "Catch the 3 lights during the Valley's sliding race",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://youtu.be/QwsLH-XB2k8",
+        "id": 215
     }
 ] satisfies Quest[]

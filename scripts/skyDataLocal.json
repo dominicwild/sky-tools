@@ -1710,5 +1710,21 @@
     "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
     "visualGuideUrl": null,
     "videoGuideUrl": "https://www.youtube.com/watch?v=f_CZ24gXpCk&list=PLl2dLrx-duQgedEYgPBHeLmbCV-ZooBo5"
+  },
+  {
+    "type": "Realm Quest",
+    "realm": "Hidden Forest",
+    "questName": "Catch the 3 lights in the Forest Brook",
+    "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/9E_zrOSR8cg"
+  },
+  {
+    "type": "Realm Quest",
+    "realm": "Valley of Triumph",
+    "questName": "Catch the 3 lights during the Valley's sliding race",
+    "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/QwsLH-XB2k8"
   }
 ]
