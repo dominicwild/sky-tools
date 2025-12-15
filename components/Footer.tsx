@@ -70,6 +70,32 @@ const Footer = () => {
                 <div className={"text-white/90 font-bold text-xl"}>
                     <div>
                         <span>
+                            Other Tools
+                        </span>
+                        <img
+                            className={"inline h-[1em] ml-2"}
+                            src={"/oreo-fist-bump-min.webp"}
+                            alt={"happy crab"}
+                        />
+                    </div>
+                    <div className={"h-[0.1rem] bg-blue-200/40 rounded-full mb-1"}/>
+                </div>
+                <FooterLink href={"https://sky-clock.netlify.app/"} target={"_blank"} rel="noopener noreferrer">
+                    Sky Clock
+                </FooterLink>
+                <FooterLink href={"https://sky-shards.pages.dev/"} target="_blank"
+                            rel="noopener noreferrer">
+                    Sky Shard Events
+                </FooterLink>
+                <FooterLink href={"https://sky-children-of-the-light.fandom.com/wiki/Fan-Made_Sky_Tools"}
+                            target="_blank" rel="noopener noreferrer">
+                    Other Tools
+                </FooterLink>
+            </div>
+            <div className={"flex flex-col min-w-20 gap-y-2"}>
+                <div className={"text-white/90 font-bold text-xl"}>
+                    <div>
+                        <span>
                             Credits
                         </span>
                         <img
