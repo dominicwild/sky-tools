@@ -1944,5 +1944,14 @@ export const questsData = [
         "visualGuideUrl": null,
         "videoGuideUrl": "https://youtu.be/QwsLH-XB2k8",
         "id": 215
+    },
+    {
+        "type": "Realm Quest",
+        "realm": "Valley of Triumph",
+        "questName": "Meditate overlooking the Frozen Lake",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "ice_rink_quest_meditate.jpeg",
+        "videoGuideUrl": null,
+        "id": 216
     }
 ] satisfies Quest[]
