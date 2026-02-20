@@ -1953,5 +1953,14 @@ export const questsData = [
         "visualGuideUrl": "ice_rink_quest_meditate.jpeg",
         "videoGuideUrl": null,
         "id": 216
+    },
+    {
+        "type": "Realm Quest",
+        "realm": "Golden Wasteland",
+        "questName": "Meditate in the Crab Fields",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "crab_meditate.jpeg",
+        "videoGuideUrl": null,
+        "id": 217
     }
 ] satisfies Quest[]
