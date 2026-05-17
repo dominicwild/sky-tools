@@ -38,6 +38,18 @@ const particles = Array.from({length: 8}, (_, i) => {
     }
 })
 
+function PortalGradient() {
+    return (
+        <defs>
+            <radialGradient id="portalGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                <stop offset="0%" stopColor="#fbbf24"/>
+                <stop offset="70%" stopColor="#f97316"/>
+                <stop offset="100%" stopColor="#ea580c"/>
+            </radialGradient>
+        </defs>
+    )
+}
+
 export default function NotFoundPage() {
     const [isSearching, setIsSearching] = useState(false)
     const [showStars, setShowStars] = useState(false)
@@ -257,13 +269,7 @@ export default function NotFoundPage() {
                                             ease: "easeInOut",
                                         }}
                                     />
-                                    <defs>
-                                        <radialGradient id="portalGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                                            <stop offset="0%" stopColor="#fbbf24"/>
-                                            <stop offset="70%" stopColor="#f97316"/>
-                                            <stop offset="100%" stopColor="#ea580c"/>
-                                        </radialGradient>
-                                    </defs>
+                                    <PortalGradient/>
                                 </svg>
 
                                 {/* Searching text */}
@@ -334,13 +340,7 @@ export default function NotFoundPage() {
                                     animate={{r: 30}}
                                     transition={{duration: 0.8, ease: "easeOut"}}
                                 />
-                                <defs>
-                                    <radialGradient id="portalGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                                        <stop offset="0%" stopColor="#fbbf24"/>
-                                        <stop offset="70%" stopColor="#f97316"/>
-                                        <stop offset="100%" stopColor="#ea580c"/>
-                                    </radialGradient>
-                                </defs>
+                                <PortalGradient/>
                             </svg>
 
                             {/* Button text */}

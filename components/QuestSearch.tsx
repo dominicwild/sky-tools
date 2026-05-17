@@ -5,10 +5,11 @@ import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
 import {ChangeEvent, useEffect, useState} from "react"
 import { questsData } from "@/data/questData"
-import {Quest} from "@/components/QuestTracker";
 import {Input} from "@/components/ui/input";
 import {Card, CardContent} from "@/components/ui/card";
 import {getImageUrl} from "@/util/helper";
+import type {Quest} from "@/lib/quest-types";
+import {isQuestSelected} from "@/lib/quest-selection";
 
 interface QuestSearchProps {
     searchQuery: string
@@ -16,6 +17,7 @@ interface QuestSearchProps {
     filteredQuests: Quest[]
     addQuest: (quest: Quest) => void
     selectedQuests: Quest[]
+    autoFocusOnLoad: boolean
 }
 
 export default function QuestSearch({
@@ -24,8 +26,9 @@ export default function QuestSearch({
                                         filteredQuests,
                                         addQuest,
                                         selectedQuests,
+                                        autoFocusOnLoad,
                                     }: Readonly<QuestSearchProps>) {
-    const [isFocused, setIsFocused] = useState(true)
+    const [isFocused, setIsFocused] = useState(autoFocusOnLoad)
 
     const displayQuests = searchQuery.trim() === "" && isFocused ? questsData.slice(0, 8) : filteredQuests
 
@@ -105,7 +108,7 @@ export default function QuestSearch({
                         value={searchQuery}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                         onFocus={() => setIsFocused(true)}
-                        autoFocus
+                        autoFocus={autoFocusOnLoad}
                         autoComplete="off"
                     />
                     {searchQuery && (
@@ -132,7 +135,7 @@ export default function QuestSearch({
                                     <div className="space-y-1">
                                         {displayQuests.map((quest, index) => (
                                             <motion.div
-                                                key={quest.id}
+                                                key={quest.id ?? quest.questName}
                                                 initial={{ opacity: 0, y: 10 }}
                                                 animate={{
                                                     opacity: 1,
@@ -163,9 +166,9 @@ export default function QuestSearch({
                                                         variant="ghost"
                                                         size="sm"
                                                         className="text-white/80 hover:text-white hover:bg-white/20 ml-2"
-                                                        disabled={selectedQuests.includes(quest) || selectedQuests.length >= 4}
+                                                        disabled={isQuestSelected(quest, selectedQuests) || selectedQuests.length >= 4}
                                                     >
-                                                        {selectedQuests.includes(quest) ? "Added" : "Add"}
+                                                        {isQuestSelected(quest, selectedQuests) ? "Added" : "Add"}
                                                     </Button>
                                                 </div>
                                             </motion.div>

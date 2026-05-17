@@ -3,9 +3,9 @@
 import { X, Video, Maximize } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Quest } from "./QuestTracker"
 import {Badge} from "@/components/ui/badge";
 import {getImageUrl} from "@/util/helper";
+import type {Quest} from "@/lib/quest-types";
 
 interface QuestCardProps {
     quest: Quest

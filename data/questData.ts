@@ -1,4 +1,4 @@
-import {Quest} from "@/components/QuestTracker";
+import type {Quest} from "@/lib/quest-types";
 
 export const questsData = [
     {

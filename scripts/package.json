@@ -7,7 +7,8 @@
     "syncQuests": "tsx src/extractQuestData.ts",
     "processImages": "tsx src/processImages.ts",
     "addIds": "tsx src/giveUniqueIds.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "fallow:dupes": "fallow dupes"
   },
   "author": "",
   "license": "ISC",

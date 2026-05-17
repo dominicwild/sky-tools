@@ -1,6 +1,6 @@
 import QuestTracker from "@/components/QuestTracker";
 import {CloudEffect} from "@/components/CloudEffect";
-import {getTodaysQuests} from "@/server/redis";
+import {getTodaysQuestDisplayData} from "@/server/redis";
 import {createPageMetadata, siteDescription} from "@/lib/seo";
 
 export const metadata = createPageMetadata(
@@ -10,7 +10,7 @@ export const metadata = createPageMetadata(
 );
 
 export default function Home() {
-    const todaysQuests = getTodaysQuests();
+    const todaysQuests = getTodaysQuestDisplayData();
     return (
         <main className="relative">
             <div className="fixed inset-0 pointer-events-none">

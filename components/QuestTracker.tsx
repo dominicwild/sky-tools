@@ -9,39 +9,18 @@ import {Button} from "@/components/ui/button";
 import QuestCard from "@/components/QuestCard";
 import EmptyQuestSlot from "@/components/EmptyQuestSlot";
 import {questsData} from "@/data/questData";
-import {incrementQuest, QuestValue} from "@/server/redis";
+import {incrementQuest} from "@/server/redis";
 import {getSkyDate} from "@/lib/utils";
-
-export type Quest = {
-    id: number,
-    type: string
-    realm: string
-    questName: string
-    iconUrl: string
-    visualGuideUrl: string | null
-    videoGuideUrl: string | null
-}
+import type {Quest} from "@/lib/quest-types";
+import {isQuestSelected} from "@/lib/quest-selection";
 
 interface QuestTrackerProps {
-    todaysQuests: Promise<QuestValue>
-}
-
-function getMostLikelyQuests(quests: QuestValue) {
-    const mostSelectedQuest = Object
-        .entries(quests)
-        .sort(([, inc], [, inc2]) => inc - inc2)
-
-    return mostSelectedQuest
-        .slice(0, 4)
-        .map(([questId]) => {
-            return questsData.find((quest) => quest.id === +questId);
-        })
-        .filter(quest => quest !== undefined)
+    todaysQuests: Promise<Quest[]>
 }
 
 export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>) {
     const todaysQuestsResolved = use(todaysQuests)
-    const [selectedQuests, setSelectedQuests] = useState<Quest[]>(() => getMostLikelyQuests(todaysQuestsResolved))
+    const [selectedQuests, setSelectedQuests] = useState<Quest[]>(todaysQuestsResolved)
     const [searchQuery, setSearchQuery] = useState("")
     const [visualGuideDialog, setVisualGuideDialog] = useState<{
         isOpen: boolean
@@ -67,6 +46,10 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
     }, [searchQuery])
 
     function trackQuestSelection(quest: Quest) {
+        if (quest.id === undefined) {
+            return;
+        }
+
         const todaysDate = getSkyDate();
         const selectedQuestData = localStorage.getItem(todaysDate);
 
@@ -83,7 +66,7 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
     }
 
     const addQuest = (quest: Quest) => {
-        if (selectedQuests.length < 4 && !selectedQuests.includes(quest)) {
+        if (selectedQuests.length < 4 && !isQuestSelected(quest, selectedQuests)) {
             trackQuestSelection(quest);
 
             setSelectedQuests([...selectedQuests, quest])
@@ -143,6 +126,7 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
                     filteredQuests={filteredQuests}
                     addQuest={addQuest}
                     selectedQuests={selectedQuests}
+                    autoFocusOnLoad={todaysQuestsResolved.length <= 2}
                 />
 
                 <VisualGuideDialog
@@ -188,7 +172,7 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
                             <AnimatePresence mode="popLayout">
                                 {selectedQuests.map((quest) => (
                                     <motion.div
-                                        key={quest.questName + quest.type}
+                                        key={quest.id ?? `${quest.questName}-${quest.type}`}
                                         layout
                                         initial={{opacity: 0, scale: 0.8}}
                                         animate={{opacity: 1, scale: 1}}

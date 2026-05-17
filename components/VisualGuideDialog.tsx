@@ -1,6 +1,6 @@
 import {Dialog, DialogContent, DialogTitle} from "@/components/ui/dialog"
-import {Quest} from "@/components/QuestTracker";
 import {getImageUrl} from "@/util/helper";
+import type {Quest} from "@/lib/quest-types";
 
 interface VisualGuideDialogProps {
     isOpen: boolean
@@ -15,7 +15,8 @@ export default function VisualGuideDialog({isOpen, quest, onClose}: Readonly<Vis
                 Visual Guide
             </DialogTitle>
             <DialogContent
-                className="max-w-[90vw] sm:max-w-[85vw] md:max-w-[80vw] bg-black/80 backdrop-blur-lg border-none text-white">
+                className="max-w-[90vw] sm:max-w-[85vw] md:max-w-[80vw] bg-black/80 backdrop-blur-lg border-none text-white"
+                onOpenAutoFocus={(event) => event.preventDefault()}>
                 <div className="mt-4">
                     {quest?.visualGuideUrl ? (
                         <div className="flex justify-center">
