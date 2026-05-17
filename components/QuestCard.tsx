@@ -24,7 +24,7 @@ export default function QuestCard({ quest, onRemove, onOpenVisualGuide, onOpenVi
                             {quest.iconUrl && (
                                 <img
                                     src={getImageUrl(quest.iconUrl)}
-                                    alt="Quest icon"
+                                    alt={`${quest.questName} quest icon`}
                                     className="w-6 h-6 mt-0.5"
                                     onError={(e) => {
                                         ;(e.target as HTMLImageElement).src = "/oh-no.png"
@@ -73,7 +73,7 @@ export default function QuestCard({ quest, onRemove, onOpenVisualGuide, onOpenVi
                             >
                                 <img
                                     src={getImageUrl(quest.visualGuideUrl)}
-                                    alt="Visual guide"
+                                    alt={`Visual guide for ${quest.questName}`}
                                     className="h-48 object-contain rounded-md"
                                     onError={(e) => {
                                         ;(e.target as HTMLImageElement).src = "/oh-no.png"

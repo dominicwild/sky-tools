@@ -3,6 +3,13 @@ import {CloudEffect} from "@/components/CloudEffect";
 import Link from "next/link";
 import {Button} from "@/components/ui/button";
 import {ArrowLeft} from "lucide-react";
+import {createPageMetadata} from "@/lib/seo";
+
+export const metadata = createPageMetadata(
+    "About",
+    "Learn what Sky Quest Tracker does, where its daily quest guide data comes from, and how to contribute updates.",
+    "/about",
+);
 
 const Page = () => {
     return (
@@ -11,11 +18,11 @@ const Page = () => {
                 <CloudEffect/>
             </div>
 
-            <div className={"min-h-screen flex flex-col items-center  relative"}>
+            <div className={"min-h-screen flex flex-col items-center relative pb-12"}>
                 <img
                     className={"h-[30vh] mb-4 mt-20"}
                     src={"/feast.webp"}
-                    alt={"sky kid eat"}
+                    alt={"Sky kid sharing a feast"}
                 />
                 <div
                     className={"relative z-10 w-[50%] bg-black/40 backdrop-blur-md rounded-2xl p-8 pt-4 items-center shadow-xl border border-white/30 text-white"}
@@ -40,18 +47,18 @@ const Page = () => {
                         </div>
                     </div>
                     <div className={"mb-4"}>
-                        <h1 className={"text-xl font-semibold mb-1"}>
+                        <h2 className={"text-xl font-semibold mb-1"}>
                             How do I use it?
-                        </h1>
+                        </h2>
                         <div>
                             To use this app just search for the daily quest you want on the home page! It is that easy!
                             Tap the visual guide or the video button to view the respective guides
                         </div>
                     </div>
                     <div className={"mb-4"}>
-                        <h1 className={"text-xl font-semibold mb-1"}>
+                        <h2 className={"text-xl font-semibold mb-1"}>
                             Did you make all these guides?
-                        </h1>
+                        </h2>
                         <div>
                             Nope! This content comes from the Sky Wiki, which in turn comes from the Sky Infographics
                             Discord. I just wrapped it up all nice and pretty. Credit goes wholly towards those who
@@ -59,9 +66,9 @@ const Page = () => {
                         </div>
                     </div>
                     <div>
-                        <h1 className={"text-xl font-semibold mb-1"}>
+                        <h2 className={"text-xl font-semibold mb-1"}>
                             I don't see a quest I searched for?
-                        </h1>
+                        </h2>
                         <div>
                             The information on this site is static. So it needs to be manually updated with the latest
                             information, also some visual and video guides are not present. If you want to contribute

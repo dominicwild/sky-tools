@@ -154,7 +154,7 @@ export default function QuestSearch({
                                                     {quest.iconUrl && (
                                                         <img
                                                             src={getImageUrl(quest.iconUrl)}
-                                                            alt="Quest icon"
+                                                            alt={`${quest.questName} quest icon`}
                                                             className="w-5 h-5"
                                                             onError={(e) => {
                                                                 ;(e.target as HTMLImageElement).src = "/oh-no.png"

@@ -23,7 +23,7 @@ export default function VideoGuideDialog({isOpen, quest, onClose}: VideoGuideDia
                                 src={quest.videoGuideUrl
                                     .replace("youtu.be/", "youtube.com/embed/")
                                     .replace("youtube.com/watch?v=", "youtube.com/embed/")}
-                                title="YouTube video player"
+                                title={`${quest.questName} video guide`}
                                 // These permissions are recommended when embedding YouTube videos
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen

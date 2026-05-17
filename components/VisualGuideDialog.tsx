@@ -21,7 +21,7 @@ export default function VisualGuideDialog({isOpen, quest, onClose}: Readonly<Vis
                         <div className="flex justify-center">
                             <img
                                 src={getImageUrl(quest.visualGuideUrl)}
-                                alt="Visual guide"
+                                alt={`Visual guide for ${quest.questName}`}
                                 className="max-h-[80vh] object-contain rounded-lg"
                                 onError={(e) => {
                                     ;(e.target as HTMLImageElement).src = "/oh-no.png"

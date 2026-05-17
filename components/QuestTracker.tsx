@@ -128,13 +128,13 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
                     animate={{opacity: 1, y: 0}}
                     transition={{duration: 0.6, ease: "easeOut"}}
                 >
-                    <img className={"relative"} src={"/sky-logo.png"}/>
-                    <h2 className="text-2xl font-semibold text-white/90 drop-shadow-2xl ">
+                    <img className={"relative"} src={"/sky-logo.png"} alt="Sky Quest Tracker"/>
+                    <h1 className="text-2xl font-semibold text-white/90 drop-shadow-2xl ">
                         <span className={"bg-black/1 rounded-full"}>
                         Daily Quest Tracker
 
                         </span>
-                    </h2>
+                    </h1>
                 </motion.div>
 
                 <QuestSearch
