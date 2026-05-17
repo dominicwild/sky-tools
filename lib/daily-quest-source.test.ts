@@ -1,8 +1,11 @@
 import {describe, expect, it} from "vitest";
 import {
     classifyAttachmentUrl,
+    createSkyHelperQuestMatchResponse,
+    normalizeQuestTitle,
     resolveDailyQuests,
     validateSkyHelperQuestResponse,
+    type SkyHelperQuestResponse,
 } from "./daily-quest-source";
 import type {Quest} from "./quest-types";
 
@@ -18,6 +21,13 @@ const localQuests: Quest[] = [
     createLocalQuest(231, "Call to 5 different players", "General"),
 ];
 
+const questTitleAliases = new Map([
+    [
+        "catch the light quest vault of knowledge",
+        "catch the light in the vault of knowledge",
+    ],
+]);
+
 describe("daily quest source", () => {
     it("parses a representative SkyHelper response", () => {
         const parsedResponse = validateSkyHelperQuestResponse(createRepresentativeResponse());
@@ -31,7 +41,10 @@ describe("daily quest source", () => {
 
     it("matches, merges media, keeps external quests, and infers the unmatched realm", () => {
         const parsedResponse = validateSkyHelperQuestResponse(createRepresentativeResponse());
-        const quests = resolveDailyQuests(parsedResponse, {}, localQuests);
+        expect(parsedResponse).not.toBeNull();
+
+        const questMatches = createQuestMatchResponse(parsedResponse);
+        const quests = resolveDailyQuests(questMatches, {}, localQuests);
 
         expect(quests).toHaveLength(4);
         expect(quests.map((quest) => quest.questName)).toEqual([
@@ -50,8 +63,8 @@ describe("daily quest source", () => {
         });
         expect(quests[3]).toMatchObject({
             id: 159,
-            visualGuideUrl: imageUrl,
-            videoGuideUrl: null,
+            visualGuideUrl: "local-image.png",
+            videoGuideUrl: "https://youtu.be/local-forge",
         });
     });
 
@@ -70,8 +83,9 @@ describe("daily quest source", () => {
                 },
             ],
         });
+        expect(parsedResponse).not.toBeNull();
 
-        const quests = resolveDailyQuests(parsedResponse, {
+        const quests = resolveDailyQuests(createQuestMatchResponse(parsedResponse), {
             "10": 2,
             "11": 9,
             "12": 4,
@@ -123,6 +137,23 @@ function createRepresentativeResponse() {
             },
         ],
     };
+}
+
+function createQuestMatchResponse(response: SkyHelperQuestResponse | null) {
+    if (!response) {
+        return null;
+    }
+
+    const localQuestsByTitle = new Map(
+        localQuests.map((quest) => [normalizeQuestTitle(quest.questName), quest.id ?? null]),
+    );
+
+    return createSkyHelperQuestMatchResponse(response, (title) => {
+        const normalizedTitle = normalizeQuestTitle(title);
+        const aliasTitle = questTitleAliases.get(normalizedTitle);
+
+        return localQuestsByTitle.get(aliasTitle ?? normalizedTitle) ?? null;
+    });
 }
 
 function createLocalQuest(id: number, questName: string, realm: string, videoGuideUrl: string | null = null): Quest {

@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "syncQuests": "tsx src/extractQuestData.ts",
+    "uploadQuestVideo": "tsx src/uploadQuestVideo.ts",
     "processImages": "tsx src/processImages.ts",
     "addIds": "tsx src/giveUniqueIds.ts",
     "typecheck": "tsc --noEmit",
@@ -19,6 +20,7 @@
     "@types/uuid": "^10.0.0",
     "domhandler": "^5.0.3",
     "tsx": "^4.19.3",
+    "uploadthing": "^7.7.4",
     "typescript": "^5.8.3"
   },
   "dependencies": {

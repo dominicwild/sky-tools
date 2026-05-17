@@ -5,23 +5,27 @@ import {getSkyDate} from "@/lib/utils";
 import {unstable_noStore as noStore} from 'next/cache';
 import {questsData} from "@/data/questData";
 import {
+    createSkyHelperQuestMatchResponse,
     resolveDailyQuests,
+    validateSkyHelperQuestMatchResponse,
     validateSkyHelperQuestResponse,
-    type SkyHelperQuestResponse,
+    type SkyHelperQuestMatchResponse,
 } from "@/lib/daily-quest-source";
 import type {Quest, QuestValue} from "@/lib/quest-types";
+import {createLocalQuestTitleIndex, getMatchingLocalQuestId} from "@/server/quest-title-matching";
 
 const client = new Redis(`rediss://default:${process.env.REDIS_TOKEN}@${process.env.REDIS_URL}:6379`);
 
 const SKY_HELPER_QUESTS_URL = "https://api.skyhelper.xyz/update/quests";
 const SKY_HELPER_CACHE_TTL_SECONDS = 60 * 60 * 36;
+const localQuestsByTitle = createLocalQuestTitleIndex(questsData);
 
 export async function getTodaysQuestDisplayData(): Promise<Quest[]> {
     noStore();
 
     const [userQuestCounts, skyHelperResponse] = await Promise.all([
         getTodaysQuests(),
-        getSkyHelperQuestResponse(),
+        getSkyHelperQuestMatchResponse(),
     ]);
 
     return resolveDailyQuests(skyHelperResponse, userQuestCounts, questsData);
@@ -46,12 +50,12 @@ export async function getTodaysQuests(): Promise<QuestValue> {
     )
 }
 
-async function getSkyHelperQuestResponse() {
-    const key = `sky-daily-api:${getSkyDate()}`;
+async function getSkyHelperQuestMatchResponse() {
+    const key = `sky-daily-api-matches:${getSkyDate()}`;
     const cachedResponse = await client.get(key);
 
     if (cachedResponse) {
-        return parseSkyHelperQuestResponse(cachedResponse);
+        return parseSkyHelperQuestMatchResponse(cachedResponse);
     }
 
     try {
@@ -62,22 +66,35 @@ async function getSkyHelperQuestResponse() {
         }
 
         const responseText = await response.text();
-        const parsedResponse = parseSkyHelperQuestResponse(responseText);
+        const parsedResponse = parseSkyHelperQuestApiResponse(responseText);
 
         if (!parsedResponse) {
             return null;
         }
 
-        await client.set(key, responseText, "EX", SKY_HELPER_CACHE_TTL_SECONDS);
-        return parsedResponse;
+        const questMatchResponse = createSkyHelperQuestMatchResponse(
+            parsedResponse,
+            (title) => getMatchingLocalQuestId(title, localQuestsByTitle),
+        );
+
+        await client.set(key, JSON.stringify(questMatchResponse), "EX", SKY_HELPER_CACHE_TTL_SECONDS);
+        return questMatchResponse;
     } catch {
         return null;
     }
 }
 
-function parseSkyHelperQuestResponse(responseText: string): SkyHelperQuestResponse | null {
+function parseSkyHelperQuestApiResponse(responseText: string) {
     try {
         return validateSkyHelperQuestResponse(JSON.parse(responseText));
+    } catch {
+        return null;
+    }
+}
+
+function parseSkyHelperQuestMatchResponse(responseText: string): SkyHelperQuestMatchResponse | null {
+    try {
+        return validateSkyHelperQuestMatchResponse(JSON.parse(responseText));
     } catch {
         return null;
     }

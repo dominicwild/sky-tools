@@ -2,13 +2,6 @@ import type {Quest, QuestValue} from "./quest-types";
 
 const QUEST_LIMIT = 4;
 
-const QUEST_TITLE_ALIASES = new Map([
-    [
-        "catch the light quest vault of knowledge",
-        "catch the light in the vault of knowledge",
-    ],
-]);
-
 const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".gif", ".webp", ".avif"]);
 const VIDEO_EXTENSIONS = new Set([".mp4", ".webm", ".mov"]);
 const NON_REAL_REALMS = new Set(["General", "Seasonal/Event"]);
@@ -35,6 +28,26 @@ type MergedSkyHelperQuest = {
     videoGuideUrl: string | null
 }
 
+type MatchedSkyHelperQuest = {
+    localQuestId: number
+    title: null
+    visualGuideUrl: string | null
+    videoGuideUrl: string | null
+}
+
+type ExternalSkyHelperQuest = {
+    localQuestId: null
+    title: string
+    visualGuideUrl: string | null
+    videoGuideUrl: string | null
+}
+
+export type SkyHelperQuestMatch = MatchedSkyHelperQuest | ExternalSkyHelperQuest
+
+export type SkyHelperQuestMatchResponse = {
+    quests: SkyHelperQuestMatch[]
+}
+
 export function normalizeQuestTitle(title: string) {
     return title
         .toLowerCase()
@@ -44,14 +57,16 @@ export function normalizeQuestTitle(title: string) {
 }
 
 export function validateSkyHelperQuestResponse(value: unknown): SkyHelperQuestResponse | null {
-    if (!isRecord(value) || !Array.isArray(value.quests)) {
+    const questRecords = getQuestRecords(value);
+
+    if (!questRecords) {
         return null;
     }
 
     const quests: SkyHelperQuest[] = [];
 
-    for (const quest of value.quests) {
-        if (!isRecord(quest) || typeof quest.title !== "string" || typeof quest.date !== "string") {
+    for (const quest of questRecords) {
+        if (typeof quest.title !== "string" || typeof quest.date !== "string") {
             return null;
         }
 
@@ -87,6 +102,49 @@ export function validateSkyHelperQuestResponse(value: unknown): SkyHelperQuestRe
     return {quests};
 }
 
+export function validateSkyHelperQuestMatchResponse(value: unknown): SkyHelperQuestMatchResponse | null {
+    const questRecords = getQuestRecords(value);
+
+    if (!questRecords) {
+        return null;
+    }
+
+    const quests: SkyHelperQuestMatch[] = [];
+
+    for (const quest of questRecords) {
+        const visualGuideUrl = quest.visualGuideUrl;
+        const videoGuideUrl = quest.videoGuideUrl;
+
+        if (!isStringOrNull(visualGuideUrl) || !isStringOrNull(videoGuideUrl)) {
+            return null;
+        }
+
+        if (typeof quest.localQuestId === "number" && Number.isInteger(quest.localQuestId) && quest.title === null) {
+            quests.push({
+                localQuestId: quest.localQuestId,
+                title: null,
+                visualGuideUrl,
+                videoGuideUrl,
+            });
+            continue;
+        }
+
+        if (quest.localQuestId === null && typeof quest.title === "string") {
+            quests.push({
+                localQuestId: null,
+                title: quest.title,
+                visualGuideUrl,
+                videoGuideUrl,
+            });
+            continue;
+        }
+
+        return null;
+    }
+
+    return {quests};
+}
+
 export function classifyAttachmentUrl(url: string): "image" | "video" | "unknown" {
     const pathname = getUrlPathname(url).toLowerCase();
     const extension = pathname.match(/\.[a-z0-9]+$/)?.[0];
@@ -104,6 +162,31 @@ export function classifyAttachmentUrl(url: string): "image" | "video" | "unknown
     }
 
     return "unknown";
+}
+
+export function createSkyHelperQuestMatchResponse(
+    skyHelperResponse: SkyHelperQuestResponse,
+    getLocalQuestId: (title: string) => number | null,
+): SkyHelperQuestMatchResponse {
+    return {
+        quests: mergeSkyHelperQuestMedia(skyHelperResponse.quests).map((quest) => {
+            const localQuestId = getLocalQuestId(quest.title);
+
+            if (localQuestId === null) {
+                return {
+                    ...quest,
+                    localQuestId,
+                };
+            }
+
+            return {
+                localQuestId,
+                title: null,
+                visualGuideUrl: quest.visualGuideUrl,
+                videoGuideUrl: quest.videoGuideUrl,
+            };
+        }),
+    };
 }
 
 export function getTopUserSelectedQuests(
@@ -128,7 +211,7 @@ export function getTopUserSelectedQuests(
 }
 
 export function resolveDailyQuests(
-    skyHelperResponse: SkyHelperQuestResponse | null,
+    skyHelperResponse: SkyHelperQuestMatchResponse | null,
     userQuestCounts: QuestValue,
     localQuests: Quest[],
 ) {
@@ -158,27 +241,32 @@ export function resolveDailyQuests(
     ];
 }
 
-function getSkyHelperDisplayQuests(response: SkyHelperQuestResponse, localQuests: Quest[]) {
-    const mergedApiQuests = mergeSkyHelperQuestMedia(response.quests);
-    const localQuestsByTitle = new Map(
-        localQuests.map((quest) => [normalizeQuestTitle(quest.questName), quest]),
+function getSkyHelperDisplayQuests(response: SkyHelperQuestMatchResponse, localQuests: Quest[]) {
+    const localQuestsById = new Map(
+        localQuests
+            .filter((quest): quest is Quest & { id: number } => quest.id !== undefined)
+            .map((quest) => [quest.id, quest]),
     );
 
-    const displayQuests = mergedApiQuests.map((apiQuest) => {
-        const matchedQuest = getMatchingLocalQuest(apiQuest.title, localQuestsByTitle);
+    const displayQuests = response.quests
+        .map((apiQuest) => {
+            if (apiQuest.localQuestId === null) {
+                return createExternalQuest(apiQuest);
+            }
 
-        if (!matchedQuest) {
-            return createExternalQuest(apiQuest);
-        }
+            const matchedQuest = localQuestsById.get(apiQuest.localQuestId);
 
-        const hasApiMedia = apiQuest.visualGuideUrl !== null || apiQuest.videoGuideUrl !== null;
+            if (!matchedQuest) {
+                return null;
+            }
 
-        return {
-            ...matchedQuest,
-            visualGuideUrl: hasApiMedia ? apiQuest.visualGuideUrl : matchedQuest.visualGuideUrl,
-            videoGuideUrl: hasApiMedia ? apiQuest.videoGuideUrl : matchedQuest.videoGuideUrl,
-        };
-    });
+            return {
+                ...matchedQuest,
+                visualGuideUrl: matchedQuest.visualGuideUrl ?? apiQuest.visualGuideUrl,
+                videoGuideUrl: matchedQuest.videoGuideUrl ?? apiQuest.videoGuideUrl,
+            };
+        })
+        .filter((quest): quest is Quest => quest !== null);
 
     const inferredRealm = getSingleMatchedRealm(displayQuests);
 
@@ -224,14 +312,7 @@ function mergeSkyHelperQuestMedia(apiQuests: SkyHelperQuest[]) {
     return [...mergedQuests.values()];
 }
 
-function getMatchingLocalQuest(title: string, localQuestsByTitle: Map<string, Quest>) {
-    const normalizedTitle = normalizeQuestTitle(title);
-    const aliasTitle = QUEST_TITLE_ALIASES.get(normalizedTitle);
-
-    return localQuestsByTitle.get(aliasTitle ?? normalizedTitle);
-}
-
-function createExternalQuest(apiQuest: MergedSkyHelperQuest): Quest {
+function createExternalQuest(apiQuest: ExternalSkyHelperQuest): Quest {
     return {
         type: "SkyHelper Quest",
         realm: "Unknown (?)",
@@ -270,4 +351,26 @@ function getUrlPathname(url: string) {
 
 function isRecord(value: unknown): value is Record<string, unknown> {
     return typeof value === "object" && value !== null;
+}
+
+function getQuestRecords(value: unknown) {
+    if (!isRecord(value) || !Array.isArray(value.quests)) {
+        return null;
+    }
+
+    const quests: Record<string, unknown>[] = [];
+
+    for (const quest of value.quests) {
+        if (!isRecord(quest)) {
+            return null;
+        }
+
+        quests.push(quest);
+    }
+
+    return quests;
+}
+
+function isStringOrNull(value: unknown): value is string | null {
+    return value === null || typeof value === "string";
 }
