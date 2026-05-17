@@ -76,7 +76,7 @@ export function CloudEffect() {
     return (
         <canvas
             ref={canvasRef}
-            className="absolute inset-0 bg-gradient-to-b from-sky-300 to-sky-400"
+            className="absolute inset-0 block h-full w-full bg-gradient-to-b from-sky-300 to-sky-400"
             style={{ WebkitTapHighlightColor: "transparent" }}
         />
     )
