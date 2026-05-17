@@ -8,12 +8,23 @@ const client = new Redis(`rediss://default:${process.env.REDIS_TOKEN}@${process.
 
 export type QuestValue = Record<string, number>
 
-export async function getTodaysQuests() {
+export async function getTodaysQuests(): Promise<QuestValue> {
     // Opt out of caching at the data fetch level
     noStore();
 
     const key = getSkyDate();
-    return client.hgetall(key)
+    const storedQuests = await client.hgetall(key)
+
+    return Object.fromEntries(
+        Object.entries(storedQuests).map(([questId, count]) => {
+            const parsedCount = Number(count)
+            if (!Number.isFinite(parsedCount)) {
+                throw new Error(`Invalid quest count for quest ${questId}`)
+            }
+
+            return [questId, parsedCount]
+        })
+    )
 }
 
 export async function incrementQuest(id: number) {

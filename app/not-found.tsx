@@ -5,6 +5,39 @@ import Image from "next/image"
 import Link from "next/link"
 import {motion, AnimatePresence} from "framer-motion"
 
+const seededValue = (index: number, salt: number) => ((index * 37 + salt * 17) % 100) / 100
+
+const trees = Array.from({length: 8}, (_, i) => ({
+    width: `${seededValue(i, 1) * 100 + 50}px`,
+    height: `${seededValue(i, 2) * 200 + 100}px`,
+    left: `${i * 12 + seededValue(i, 3) * 5}%`,
+}))
+
+const stars = Array.from({length: 30}, (_, i) => {
+    const size = seededValue(i, 4) * 3 + 1
+
+    return {
+        size: `${size}px`,
+        left: `${seededValue(i, 5) * 100}%`,
+        top: `${seededValue(i, 6) * 40}%`,
+        duration: 3 + seededValue(i, 7) * 3,
+        delay: seededValue(i, 8) * 2,
+    }
+})
+
+const particles = Array.from({length: 8}, (_, i) => {
+    const size = seededValue(i, 9) * 4 + 2
+
+    return {
+        size: `${size}px`,
+        top: `${30 + seededValue(i, 10) * 40}%`,
+        left: `${30 + seededValue(i, 11) * 40}%`,
+        x: seededValue(i, 12) * 10 - 5,
+        duration: 3 + seededValue(i, 13) * 2,
+        delay: seededValue(i, 14) * 2,
+    }
+})
+
 export default function NotFoundPage() {
     const [isSearching, setIsSearching] = useState(false)
     const [showStars, setShowStars] = useState(false)
@@ -29,14 +62,14 @@ export default function NotFoundPage() {
             className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-b from-emerald-800/80 to-emerald-950 overflow-hidden">
             <div className="absolute inset-0 overflow-hidden">
                 {/* Distant trees */}
-                {Array.from({length: 8}).map((_, i) => (
+                {trees.map((tree, i) => (
                     <motion.div
                         key={`tree-${i}`}
                         className="absolute bottom-0 bg-emerald-900/60 rounded-t-full blur-sm"
                         style={{
-                            width: `${Math.random() * 100 + 50}px`,
-                            height: `${Math.random() * 200 + 100}px`,
-                            left: `${i * 12 + Math.random() * 5}%`,
+                            width: tree.width,
+                            height: tree.height,
+                            left: tree.left,
                             zIndex: 1,
                         }}
                         initial={{y: 100, opacity: 0}}
@@ -50,15 +83,15 @@ export default function NotFoundPage() {
                 ))}
 
                 {showStars &&
-                    Array.from({length: 30}).map((_, i) => (
+                    stars.map((star, i) => (
                         <motion.div
                             key={`star-${i}`}
                             className="absolute rounded-full bg-yellow-100"
                             style={{
-                                width: `${Math.random() * 3 + 1}px`,
-                                height: `${Math.random() * 3 + 1}px`,
-                                left: `${Math.random() * 100}%`,
-                                top: `${Math.random() * 40}%`,
+                                width: star.size,
+                                height: star.size,
+                                left: star.left,
+                                top: star.top,
                             }}
                             initial={{opacity: 0}}
                             animate={{
@@ -66,8 +99,8 @@ export default function NotFoundPage() {
                                 scale: [0.8, 1.2, 0.8],
                             }}
                             transition={{
-                                duration: 3 + Math.random() * 3,
-                                delay: Math.random() * 2,
+                                duration: star.duration,
+                                delay: star.delay,
                                 repeat: Number.POSITIVE_INFINITY,
                                 ease: "easeInOut",
                             }}
@@ -117,27 +150,27 @@ export default function NotFoundPage() {
                     />
 
                     {/* Floating light particles around the character */}
-                    {Array.from({length: 8}).map((_, i) => (
+                    {particles.map((particle, i) => (
                         <motion.div
                             key={`particle-${i}`}
                             className="absolute rounded-full bg-red-600"
                             style={{
-                                width: `${Math.random() * 4 + 2}px`,
-                                height: `${Math.random() * 4 + 2}px`,
-                                top: `${30 + Math.random() * 40}%`,
-                                left: `${30 + Math.random() * 40}%`,
+                                width: particle.size,
+                                height: particle.size,
+                                top: particle.top,
+                                left: particle.left,
                                 filter: "blur(1px)",
                             }}
                             animate={{
                                 y: [0, -10, 0],
-                                x: [0, Math.random() * 10 - 5, 0],
+                                x: [0, particle.x, 0],
                                 opacity: [0.7, 0.8, 0.7],
                             }}
                             transition={{
-                                duration: 3 + Math.random() * 2,
+                                duration: particle.duration,
                                 repeat: Number.POSITIVE_INFINITY,
                                 ease: "easeInOut",
-                                delay: Math.random() * 2,
+                                delay: particle.delay,
                             }}
                         />
                     ))}

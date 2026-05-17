@@ -1726,5 +1726,149 @@
     "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
     "visualGuideUrl": null,
     "videoGuideUrl": "https://youtu.be/QwsLH-XB2k8"
+  },
+  {
+    "type": "Realm Quest",
+    "realm": "Daylight Prairie",
+    "questName": "Catch the 3 lights in Prairie Village",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/Iom-4eqqo0c"
+  },
+  {
+    "type": "Realm Quest",
+    "realm": "Daylight Prairie",
+    "questName": "Catch the wandering lights around the Bird Nest",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/w1LQDfF0fBs"
+  },
+  {
+    "type": "Realm Quest",
+    "realm": "Daylight Prairie",
+    "questName": "Fly with many butterflies in Butterfly Fields",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/uX8olVYuGU4"
+  },
+  {
+    "type": "Realm Quest",
+    "realm": "Daylight Prairie",
+    "questName": "Ride a giant manta in Sanctuary Islands",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/fQdBSuQ_frM"
+  },
+  {
+    "type": "Realm Quest",
+    "realm": "Hidden Forest",
+    "questName": "Catch the 3 lights in the big Treehouse",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/l8A0BnyXATU"
+  },
+  {
+    "type": "Realm Quest",
+    "realm": "Hidden Forest",
+    "questName": "Catch the 3 lights in The Wind Paths",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/5skZeqBRbmw"
+  },
+  {
+    "type": "Realm Quest",
+    "realm": "Valley of Triumph",
+    "questName": "Meditate overlooking the Frozen Lake",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+    "visualGuideUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/7d/03_VT_Quest_-_Meditate_at_ice_rink.png/revision/latest/scale-to-width-down/75?cb=20230626234257",
+    "videoGuideUrl": null
+  },
+  {
+    "type": "Realm Quest",
+    "realm": "Valley of Triumph",
+    "questName": "Catch the 3 lights in Valley's Citadel",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/2Z_YAF8SXsI"
+  },
+  {
+    "type": "Realm Quest",
+    "realm": "Valley of Triumph",
+    "questName": "Catch the wandering lights atop Hermit Valley",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/IuVIz1F8RU8"
+  },
+  {
+    "type": "Realm Quest",
+    "realm": "Golden Wasteland",
+    "questName": "Catch the 3 lights under the sea in Treasure Reef",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/HNF_-I52F_8"
+  },
+  {
+    "type": "Realm Quest",
+    "realm": "Golden Wasteland",
+    "questName": "Catch the wandering lights in the Graveyard",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/HPwEJftrru4"
+  },
+  {
+    "type": "Realm Quest",
+    "realm": "Vault of Knowledge",
+    "questName": "Catch the wandering lights in the Upper Vault",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/0NaC9D49ujM"
+  },
+  {
+    "type": "Realm Quest",
+    "realm": "Vault of Knowledge",
+    "questName": "Catch the wandering lights in the Vault's Repository",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/KBKvWX2Towo"
+  },
+  {
+    "type": "General Quest",
+    "realm": "General",
+    "questName": "Use expressions with players",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
+    "visualGuideUrl": null,
+    "videoGuideUrl": null
+  },
+  {
+    "type": "General Quest",
+    "realm": "General",
+    "questName": "Call to 5 different players",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/b/bb/Quest-player-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024407",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/exk2Y2Cshys"
+  },
+  {
+    "type": "General Quest",
+    "realm": "General",
+    "questName": "Pick up a Crab",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/f/f1/Quest-star-icon.png/revision/latest/scale-to-width-down/24?cb=20230808024346",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/Xn5jM2jMH94"
+  },
+  {
+    "type": "Seasonal/Event Quest",
+    "realm": "Seasonal/Event",
+    "questName": "Water the Sunflower at the Garden in Daylight Prairie",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/5/57/Bloom-ticket.png/revision/latest/scale-to-width-down/24?cb=20240224173757",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://youtu.be/jShS_oXJYLQ"
+  },
+  {
+    "type": "Seasonal/Event Quest",
+    "realm": "Seasonal/Event",
+    "questName": "Invite a Season of Migration spirit to adventure with you today",
+    "iconUrl": "https://static.wikia.nocookie.net/sky-children-of-the-light/images/7/72/Quest-icon.png/revision/latest/scale-to-width-down/24?cb=20230725210329",
+    "visualGuideUrl": null,
+    "videoGuideUrl": null
   }
 ]

@@ -25,17 +25,9 @@ export default function QuestSearch({
                                         addQuest,
                                         selectedQuests,
                                     }: Readonly<QuestSearchProps>) {
-    const [isFocused, setIsFocused] = useState(false)
+    const [isFocused, setIsFocused] = useState(true)
 
     const displayQuests = searchQuery.trim() === "" && isFocused ? questsData.slice(0, 8) : filteredQuests
-
-    useEffect(() => {
-        const searchInput = document.getElementById("quest-search")
-        if (searchInput) {
-            searchInput.focus()
-            setIsFocused(true)
-        }
-    }, [])
 
     const searchResultsVariants = {
         hidden: {

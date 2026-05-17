@@ -23,17 +23,17 @@ export type Quest = {
 }
 
 interface QuestTrackerProps {
-    todaysQuests: Promise<{} | QuestValue>
+    todaysQuests: Promise<QuestValue>
 }
 
-function getMostLikelyQuests(quests: Record<string, number> | {}) {
+function getMostLikelyQuests(quests: QuestValue) {
     const mostSelectedQuest = Object
         .entries(quests)
-        .sort(([_a, inc], [_b, inc2]) => inc - inc2)
+        .sort(([, inc], [, inc2]) => inc - inc2)
 
     return mostSelectedQuest
         .slice(0, 4)
-        .map(([questId, _]) => {
+        .map(([questId]) => {
             return questsData.find((quest) => quest.id === +questId);
         })
         .filter(quest => quest !== undefined)

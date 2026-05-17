@@ -40,7 +40,7 @@ const Page = () => {
                         <div>
                             This app tracks Sky daily quests. I mostly made it because tracking daily quests where you
                             must
-                            relive a specific spirit is very annoying. I'd go to Sky wiki CTRL+F and find the spirit and
+                            relive a specific spirit is very annoying. I&apos;d go to Sky wiki CTRL+F and find the spirit and
                             view the guide. The process was a bit clunky, so I made this site to track it faster, easier
                             and
                             using a nicer UI!
@@ -67,7 +67,7 @@ const Page = () => {
                     </div>
                     <div>
                         <h2 className={"text-xl font-semibold mb-1"}>
-                            I don't see a quest I searched for?
+                            I don&apos;t see a quest I searched for?
                         </h2>
                         <div>
                             The information on this site is static. So it needs to be manually updated with the latest
@@ -85,7 +85,7 @@ const Page = () => {
                             >
                                 email me at dom@dominicwild.com
                             </Link>
-                            &nbsp;as well, if it is easier and I'll add it when I have time! If you have any other ideas
+                            &nbsp;as well, if it is easier and I&apos;ll add it when I have time! If you have any other ideas
                             of suggestions on how to improve the site drop them my way or contribute them yourself.
                         </div>
                     </div>

@@ -1,27 +1,6 @@
 import React, {ReactNode} from 'react';
-import {Divide, Mail, Mailbox} from "lucide-react";
 import Link from 'next/link';
 import {LinkProps} from "next/dist/client/link";
-
-type Link = {
-    href: string,
-    text: string,
-}
-
-const links = [
-    {
-        href: "/about",
-        text: "About",
-    },
-    {
-        href: "/contact",
-        text: "Contact",
-    },
-    {
-        href: "/somewhere",
-        text: "Github",
-    },
-]
 
 type FootLinkProps = LinkProps & {
     children: ReactNode
