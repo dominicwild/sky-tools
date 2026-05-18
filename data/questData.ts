@@ -2124,5 +2124,14 @@ export const questsData = [
         "visualGuideUrl": "skyhelper-1505476137684435024.jpeg",
         "videoGuideUrl": "https://utfs.io/f/1tBsGxWZALfxIQ0bCxHAeWl2grHtEy4LP6QY1bXdCDic0pG8",
         "id": 235
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Daylight Prairie (?)",
+        "questName": "Help Bumbling Boatswain or Jolly Geologist find treasure in Prairie Peaks",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "skyhelper-1505844319599464521.png",
+        "videoGuideUrl": null,
+        "id": 236
     }
 ] satisfies Quest[]

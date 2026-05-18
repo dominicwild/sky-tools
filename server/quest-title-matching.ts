@@ -5,6 +5,18 @@ import type {Quest} from "@/lib/quest-types";
 
 const QUEST_TITLE_ALIASES = new Map([
     [
+        "days of bloom 2021 admire sapling quest daylight prairie",
+        "admire the sapling in daylight prairie for a short while",
+    ],
+    [
+        "daily quest guide bow at a player",
+        "bow at a player",
+    ],
+    [
+        "relive spirit quest daylight prairie exhausted dock worker",
+        "relive exhausted dock worker s memory from daylight prairie",
+    ],
+    [
         "catch the light quest vault of knowledge",
         "catch the light in the vault of knowledge",
     ],
