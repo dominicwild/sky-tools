@@ -2131,7 +2131,7 @@ export const questsData = [
         "questName": "Help Bumbling Boatswain or Jolly Geologist find treasure in Prairie Peaks",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
         "visualGuideUrl": "skyhelper-1505844319599464521.png",
-        "videoGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxVH1HyOnpiBtXyPQnRmNZWz6fI1q38gj9Feah",
         "id": 236
     }
 ] satisfies Quest[]
