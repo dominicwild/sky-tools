@@ -1,10 +1,10 @@
 import {Dialog, DialogContent, DialogDescription, DialogTitle} from "@/components/ui/dialog"
 import {getImageUrl} from "@/util/helper";
-import type {Quest} from "@/lib/quest-types";
+import type {GuideMedia} from "@/lib/quest-types";
 
 interface VisualGuideDialogProps {
     isOpen: boolean
-    quest: Quest | null
+    quest: GuideMedia | null
     onClose: () => void
 }
 

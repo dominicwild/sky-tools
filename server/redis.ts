@@ -6,12 +6,13 @@ import {unstable_noStore as noStore} from 'next/cache';
 import {questsData} from "@/data/questData";
 import {
     createSkyHelperQuestMatchResponse,
-    resolveDailyQuests,
+    resolveDailyQuestDisplayData,
     validateSkyHelperQuestMatchResponse,
     validateSkyHelperQuestResponse,
+    type DailyQuestDisplayData,
     type SkyHelperQuestMatchResponse,
 } from "@/lib/daily-quest-source";
-import type {Quest, QuestValue} from "@/lib/quest-types";
+import type {QuestValue} from "@/lib/quest-types";
 import {createLocalQuestTitleIndex, getMatchingLocalQuestId} from "@/server/quest-title-matching";
 
 const client = new Redis(`rediss://default:${process.env.REDIS_TOKEN}@${process.env.REDIS_URL}:6379`);
@@ -20,7 +21,7 @@ const SKY_HELPER_QUESTS_URL = "https://api.skyhelper.xyz/update/quests";
 const SKY_HELPER_CACHE_TTL_SECONDS = 60 * 60 * 36;
 const localQuestsByTitle = createLocalQuestTitleIndex(questsData);
 
-export async function getTodaysQuestDisplayData(): Promise<Quest[]> {
+export async function getTodaysQuestDisplayData(): Promise<DailyQuestDisplayData> {
     noStore();
 
     const [userQuestCounts, skyHelperResponse] = await Promise.all([
@@ -28,7 +29,7 @@ export async function getTodaysQuestDisplayData(): Promise<Quest[]> {
         getSkyHelperQuestMatchResponse(),
     ]);
 
-    return resolveDailyQuests(skyHelperResponse, userQuestCounts, questsData);
+    return resolveDailyQuestDisplayData(skyHelperResponse, userQuestCounts, questsData);
 }
 
 export async function getTodaysQuests(): Promise<QuestValue> {
@@ -55,7 +56,11 @@ async function getSkyHelperQuestMatchResponse() {
     const cachedResponse = await client.get(key);
 
     if (cachedResponse) {
-        return parseSkyHelperQuestMatchResponse(cachedResponse);
+        const parsedCachedResponse = parseSkyHelperQuestMatchResponse(cachedResponse);
+
+        if (parsedCachedResponse) {
+            return parsedCachedResponse;
+        }
     }
 
     try {

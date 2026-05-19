@@ -1,10 +1,10 @@
 import {Dialog, DialogContent, DialogDescription, DialogTitle} from "@/components/ui/dialog";
 import {isDirectVideoUrl} from "@/lib/video-guide-url";
-import type {Quest} from "@/lib/quest-types";
+import type {GuideMedia} from "@/lib/quest-types";
 
 interface VideoGuideDialogProps {
     isOpen: boolean
-    quest: Quest | null
+    quest: GuideMedia | null
     onClose: () => void
 }
 

@@ -8,27 +8,29 @@ import VideoGuideDialog from "@/components/VideoGuideDialog";
 import {Button} from "@/components/ui/button";
 import QuestCard from "@/components/QuestCard";
 import EmptyQuestSlot from "@/components/EmptyQuestSlot";
+import CandleGuideSection from "@/components/CandleGuideSection";
 import {questsData} from "@/data/questData";
 import {incrementQuest} from "@/server/redis";
 import {getSkyDate} from "@/lib/utils";
-import type {Quest} from "@/lib/quest-types";
+import type {DailyQuestDisplayData} from "@/lib/daily-quest-source";
+import type {GuideMedia, Quest} from "@/lib/quest-types";
 import {isQuestSelected} from "@/lib/quest-selection";
 
 interface QuestTrackerProps {
-    todaysQuests: Promise<Quest[]>
+    todaysQuests: Promise<DailyQuestDisplayData>
 }
 
 export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>) {
-    const todaysQuestsResolved = use(todaysQuests)
-    const [selectedQuests, setSelectedQuests] = useState<Quest[]>(todaysQuestsResolved)
+    const todaysQuestData = use(todaysQuests)
+    const [selectedQuests, setSelectedQuests] = useState<Quest[]>(todaysQuestData.quests)
     const [searchQuery, setSearchQuery] = useState("")
     const [visualGuideDialog, setVisualGuideDialog] = useState<{
         isOpen: boolean
-        quest: Quest | null
+        quest: GuideMedia | null
     }>({isOpen: false, quest: null})
     const [videoGuideDialog, setVideoGuideDialog] = useState<{
         isOpen: boolean
-        quest: Quest | null
+        quest: GuideMedia | null
     }>({isOpen: false, quest: null})
 
     const filteredQuests = useMemo(() => {
@@ -86,7 +88,7 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
         setSelectedQuests([])
     }
 
-    const openVisualGuideDialog = (quest: Quest) => {
+    const openVisualGuideDialog = (quest: GuideMedia) => {
         setVisualGuideDialog({isOpen: true, quest})
     }
 
@@ -94,7 +96,7 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
         setVisualGuideDialog(state => ({...state, isOpen: false}))
     }
 
-    const openVideoGuideDialog = (quest: Quest) => {
+    const openVideoGuideDialog = (quest: GuideMedia) => {
         setVideoGuideDialog({isOpen: true, quest})
     }
 
@@ -126,7 +128,7 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
                     filteredQuests={filteredQuests}
                     addQuest={addQuest}
                     selectedQuests={selectedQuests}
-                    autoFocusOnLoad={todaysQuestsResolved.length <= 2}
+                    autoFocusOnLoad={todaysQuestData.quests.length <= 2}
                 />
 
                 <VisualGuideDialog
@@ -212,6 +214,12 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
                             </AnimatePresence>
                         </div>
                     </div>
+
+                    <CandleGuideSection
+                        candleGuides={todaysQuestData.candleGuides}
+                        onOpenVisualGuide={openVisualGuideDialog}
+                        onOpenVideoGuide={openVideoGuideDialog}
+                    />
                 </div>
             </div>
         </div>

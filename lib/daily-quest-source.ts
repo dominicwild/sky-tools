@@ -5,6 +5,14 @@ const QUEST_LIMIT = 4;
 const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".gif", ".webp", ".avif"]);
 const VIDEO_EXTENSIONS = new Set([".mp4", ".webm", ".mov"]);
 const NON_REAL_REALMS = new Set(["General", "Seasonal/Event"]);
+const CANDLE_GUIDE_REALMS = [
+    "Isle of Dawn",
+    "Daylight Prairie",
+    "Hidden Forest",
+    "Valley of Triumph",
+    "Golden Wasteland",
+    "Vault of Knowledge",
+];
 
 export type SkyHelperMedia = {
     url: string
@@ -18,8 +26,12 @@ export type SkyHelperQuest = {
     images: SkyHelperMedia[]
 }
 
+export type SkyHelperGuideGroup = SkyHelperQuest
+
 export type SkyHelperQuestResponse = {
     quests: SkyHelperQuest[]
+    seasonalCandles: SkyHelperGuideGroup | null
+    rotatingCandles: SkyHelperGuideGroup | null
 }
 
 type MergedSkyHelperQuest = {
@@ -46,6 +58,22 @@ export type SkyHelperQuestMatch = MatchedSkyHelperQuest | ExternalSkyHelperQuest
 
 export type SkyHelperQuestMatchResponse = {
     quests: SkyHelperQuestMatch[]
+    candleGuides: CandleGuide[]
+}
+
+export type CandleGuideKind = "seasonal-candles" | "candle-cakes"
+
+export type CandleGuide = {
+    kind: CandleGuideKind
+    title: string
+    realm: string | null
+    visualGuideUrl: string | null
+    videoGuideUrl: string | null
+}
+
+export type DailyQuestDisplayData = {
+    quests: Quest[]
+    candleGuides: CandleGuide[]
 }
 
 export function normalizeQuestTitle(title: string) {
@@ -57,52 +85,37 @@ export function normalizeQuestTitle(title: string) {
 }
 
 export function validateSkyHelperQuestResponse(value: unknown): SkyHelperQuestResponse | null {
+    if (!isRecord(value)) {
+        return null;
+    }
+
     const questRecords = getQuestRecords(value);
 
     if (!questRecords) {
         return null;
     }
 
-    const quests: SkyHelperQuest[] = [];
+    const quests = parseGuideGroups(questRecords);
 
-    for (const quest of questRecords) {
-        if (typeof quest.title !== "string" || typeof quest.date !== "string") {
-            return null;
-        }
-
-        if (!Array.isArray(quest.images)) {
-            return null;
-        }
-
-        const images: SkyHelperMedia[] = [];
-        for (const image of quest.images) {
-            if (!isRecord(image) || typeof image.url !== "string" || typeof image.by !== "string") {
-                return null;
-            }
-
-            const source = image.source;
-            if (source !== undefined && typeof source !== "string") {
-                return null;
-            }
-
-            images.push({
-                url: image.url,
-                by: image.by,
-                source,
-            });
-        }
-
-        quests.push({
-            title: quest.title,
-            date: quest.date,
-            images,
-        });
+    if (!quests) {
+        return null;
     }
 
-    return {quests};
+    const seasonalCandles = parseOptionalGuideGroup(value.seasonal_candles);
+    const rotatingCandles = parseOptionalGuideGroup(value.rotating_candles);
+
+    if (seasonalCandles === undefined || rotatingCandles === undefined) {
+        return null;
+    }
+
+    return {quests, seasonalCandles, rotatingCandles};
 }
 
 export function validateSkyHelperQuestMatchResponse(value: unknown): SkyHelperQuestMatchResponse | null {
+    if (!isRecord(value)) {
+        return null;
+    }
+
     const questRecords = getQuestRecords(value);
 
     if (!questRecords) {
@@ -142,7 +155,14 @@ export function validateSkyHelperQuestMatchResponse(value: unknown): SkyHelperQu
         return null;
     }
 
-    return {quests};
+    const candleGuidesValue = value.candleGuides;
+    const candleGuides = parseCandleGuides(candleGuidesValue);
+
+    if (!candleGuides) {
+        return null;
+    }
+
+    return {quests, candleGuides};
 }
 
 export function classifyAttachmentUrl(url: string): "image" | "video" | "unknown" {
@@ -186,6 +206,7 @@ export function createSkyHelperQuestMatchResponse(
                 videoGuideUrl: quest.videoGuideUrl,
             };
         }),
+        candleGuides: createCandleGuides(skyHelperResponse),
     };
 }
 
@@ -239,6 +260,17 @@ export function resolveDailyQuests(
             QUEST_LIMIT - skyHelperQuests.length,
         ),
     ];
+}
+
+export function resolveDailyQuestDisplayData(
+    skyHelperResponse: SkyHelperQuestMatchResponse | null,
+    userQuestCounts: QuestValue,
+    localQuests: Quest[],
+): DailyQuestDisplayData {
+    return {
+        quests: resolveDailyQuests(skyHelperResponse, userQuestCounts, localQuests),
+        candleGuides: skyHelperResponse?.candleGuides ?? [],
+    };
 }
 
 function getSkyHelperDisplayQuests(response: SkyHelperQuestMatchResponse, localQuests: Quest[]) {
@@ -312,6 +344,47 @@ function mergeSkyHelperQuestMedia(apiQuests: SkyHelperQuest[]) {
     return [...mergedQuests.values()];
 }
 
+function createCandleGuides(response: SkyHelperQuestResponse): CandleGuide[] {
+    return [
+        createCandleGuide("seasonal-candles", response.seasonalCandles),
+        createCandleGuide("candle-cakes", response.rotatingCandles),
+    ].filter((guide): guide is CandleGuide => guide !== null);
+}
+
+function createCandleGuide(kind: CandleGuideKind, group: SkyHelperGuideGroup | null) {
+    if (!group) {
+        return null;
+    }
+
+    return {
+        kind,
+        title: group.title,
+        realm: getCandleGuideRealm(group.title),
+        ...getFirstMediaUrls(group.images),
+    };
+}
+
+function getFirstMediaUrls(mediaItems: SkyHelperMedia[]) {
+    const urls = {
+        visualGuideUrl: null as string | null,
+        videoGuideUrl: null as string | null,
+    };
+
+    for (const mediaItem of mediaItems) {
+        const mediaType = classifyAttachmentUrl(mediaItem.url);
+
+        if (mediaType === "image" && urls.visualGuideUrl === null) {
+            urls.visualGuideUrl = mediaItem.url;
+        }
+
+        if (mediaType === "video" && urls.videoGuideUrl === null) {
+            urls.videoGuideUrl = mediaItem.url;
+        }
+    }
+
+    return urls;
+}
+
 function createExternalQuest(apiQuest: ExternalSkyHelperQuest): Quest {
     return {
         type: "SkyHelper Quest",
@@ -339,6 +412,12 @@ function getSingleMatchedRealm(quests: Quest[]) {
 
 function removeVideoGuideSuffix(title: string) {
     return title.replace(/\s*-\s*video guide\s*$/i, "");
+}
+
+function getCandleGuideRealm(title: string) {
+    const normalizedTitle = normalizeQuestTitle(title);
+
+    return CANDLE_GUIDE_REALMS.find((realm) => normalizedTitle.includes(normalizeQuestTitle(realm))) ?? null;
 }
 
 function getUrlPathname(url: string) {
@@ -369,6 +448,111 @@ function getQuestRecords(value: unknown) {
     }
 
     return quests;
+}
+
+function parseOptionalGuideGroup(value: unknown) {
+    if (value === undefined || value === null) {
+        return null;
+    }
+
+    if (!isRecord(value)) {
+        return undefined;
+    }
+
+    return parseGuideGroup(value) ?? undefined;
+}
+
+function parseGuideGroups(records: Record<string, unknown>[]) {
+    const groups: SkyHelperGuideGroup[] = [];
+
+    for (const record of records) {
+        const group = parseGuideGroup(record);
+
+        if (!group) {
+            return null;
+        }
+
+        groups.push(group);
+    }
+
+    return groups;
+}
+
+function parseGuideGroup(record: Record<string, unknown>) {
+    if (typeof record.title !== "string" || typeof record.date !== "string" || !Array.isArray(record.images)) {
+        return null;
+    }
+
+    const images = parseMediaItems(record.images);
+
+    if (!images) {
+        return null;
+    }
+
+    return {
+        title: record.title,
+        date: record.date,
+        images,
+    };
+}
+
+function parseMediaItems(items: unknown[]) {
+    const mediaItems: SkyHelperMedia[] = [];
+
+    for (const item of items) {
+        if (!isRecord(item) || typeof item.url !== "string" || typeof item.by !== "string") {
+            return null;
+        }
+
+        const source = item.source;
+        if (source !== undefined && typeof source !== "string") {
+            return null;
+        }
+
+        mediaItems.push({
+            url: item.url,
+            by: item.by,
+            source,
+        });
+    }
+
+    return mediaItems;
+}
+
+function parseCandleGuides(value: unknown) {
+    if (!Array.isArray(value)) {
+        return null;
+    }
+
+    const candleGuides: CandleGuide[] = [];
+
+    for (const guide of value) {
+        if (!isRecord(guide) || !isCandleGuideKind(guide.kind) || typeof guide.title !== "string") {
+            return null;
+        }
+
+        const realm = guide.realm;
+        const visualGuideUrl = guide.visualGuideUrl;
+        const videoGuideUrl = guide.videoGuideUrl;
+
+        if (!isStringOrNull(realm) || !isStringOrNull(visualGuideUrl) || !isStringOrNull(videoGuideUrl)) {
+            return null;
+        }
+
+        candleGuides.push({
+            kind: guide.kind,
+            title: guide.title,
+            realm,
+            visualGuideUrl,
+            videoGuideUrl,
+        });
+    }
+
+    return candleGuides;
+}
+
+function isCandleGuideKind(value: unknown): value is CandleGuideKind {
+    return value === "seasonal-candles" || value === "candle-cakes";
 }
 
 function isStringOrNull(value: unknown): value is string | null {

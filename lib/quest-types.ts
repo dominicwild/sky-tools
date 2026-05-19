@@ -8,4 +8,6 @@ export type Quest = {
     videoGuideUrl: string | null
 }
 
+export type GuideMedia = Pick<Quest, "questName" | "visualGuideUrl" | "videoGuideUrl">
+
 export type QuestValue = Record<string, number>

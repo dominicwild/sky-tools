@@ -3,6 +3,7 @@ import {
     classifyAttachmentUrl,
     createSkyHelperQuestMatchResponse,
     normalizeQuestTitle,
+    resolveDailyQuestDisplayData,
     resolveDailyQuests,
     validateSkyHelperQuestResponse,
     type SkyHelperQuestResponse,
@@ -71,6 +72,43 @@ describe("daily quest source", () => {
     it("detects Discord image and video attachments before query strings", () => {
         expect(classifyAttachmentUrl(imageUrl)).toBe("image");
         expect(classifyAttachmentUrl(videoUrl)).toBe("video");
+    });
+
+    it("parses candle guide groups without adding them to daily quests", () => {
+        const parsedResponse = validateSkyHelperQuestResponse({
+            ...createRepresentativeResponse(),
+            seasonal_candles: {
+                title: "Seasonal Candle Location - Hidden Forest - Rotation 1",
+                date: "2026-05-19T00:00:00.000-07:00",
+                images: [{url: imageUrl, by: "@AL"}],
+            },
+            rotating_candles: {
+                title: "Rotating Treasure Candle Locations - Rotation 20 | Valley Of Triumph",
+                date: "2026-05-19T00:00:00.000-07:00",
+                images: [{url: videoUrl, by: "Clement"}],
+            },
+        });
+        expect(parsedResponse).not.toBeNull();
+
+        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), {}, localQuests);
+
+        expect(displayData.quests).toHaveLength(4);
+        expect(displayData.candleGuides).toEqual([
+            {
+                kind: "seasonal-candles",
+                title: "Seasonal Candle Location - Hidden Forest - Rotation 1",
+                realm: "Hidden Forest",
+                visualGuideUrl: imageUrl,
+                videoGuideUrl: null,
+            },
+            {
+                kind: "candle-cakes",
+                title: "Rotating Treasure Candle Locations - Rotation 20 | Valley Of Triumph",
+                realm: "Valley of Triumph",
+                visualGuideUrl: null,
+                videoGuideUrl: videoUrl,
+            },
+        ]);
     });
 
     it("falls back to top user-selected quests when SkyHelper gives fewer than four quests", () => {
