@@ -1,7 +1,7 @@
 "use client"
 
-import {use, useMemo, useState} from "react"
-import {AnimatePresence, motion} from "framer-motion"
+import {Suspense, use, useCallback, useEffect, useMemo, useRef, useState} from "react"
+import {AnimatePresence, motion} from "motion/react"
 import QuestSearch from "@/components/QuestSearch";
 import VisualGuideDialog from "./VisualGuideDialog";
 import VideoGuideDialog from "@/components/VideoGuideDialog";
@@ -17,13 +17,15 @@ import type {GuideMedia, Quest} from "@/lib/quest-types";
 import {isQuestSelected} from "@/lib/quest-selection";
 
 interface QuestTrackerProps {
-    todaysQuests: Promise<DailyQuestDisplayData>
+    initialQuestData: DailyQuestDisplayData
+    skyHelperQuestData: Promise<DailyQuestDisplayData>
 }
 
-export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>) {
-    const todaysQuestData = use(todaysQuests)
-    const [selectedQuests, setSelectedQuests] = useState<Quest[]>(todaysQuestData.quests)
+export default function QuestTracker({initialQuestData, skyHelperQuestData}: Readonly<QuestTrackerProps>) {
+    const [questData, setQuestData] = useState(initialQuestData)
+    const [selectedQuests, setSelectedQuests] = useState<Quest[]>(initialQuestData.quests)
     const [searchQuery, setSearchQuery] = useState("")
+    const hasEditedSelectedQuests = useRef(false)
     const [visualGuideDialog, setVisualGuideDialog] = useState<{
         isOpen: boolean
         quest: GuideMedia | null
@@ -46,6 +48,17 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
             })
             .slice(0, 8) // Limit results to 8 for better UX
     }, [searchQuery])
+
+    const applySkyHelperQuestData = useCallback((nextQuestData: DailyQuestDisplayData) => {
+        setQuestData(nextQuestData)
+        setSelectedQuests((currentSelectedQuests) => {
+            if (hasEditedSelectedQuests.current) {
+                return currentSelectedQuests
+            }
+
+            return nextQuestData.quests
+        })
+    }, [])
 
     function trackQuestSelection(quest: Quest) {
         if (quest.id === undefined) {
@@ -70,6 +83,7 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
     const addQuest = (quest: Quest) => {
         if (selectedQuests.length < 4 && !isQuestSelected(quest, selectedQuests)) {
             trackQuestSelection(quest);
+            hasEditedSelectedQuests.current = true
 
             setSelectedQuests([...selectedQuests, quest])
             setSearchQuery("")
@@ -81,10 +95,12 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
     }
 
     const removeQuest = (quest: Quest) => {
+        hasEditedSelectedQuests.current = true
         setSelectedQuests(selectedQuests.filter((q) => q !== quest))
     }
 
     const clearSelectedQuests = () => {
+        hasEditedSelectedQuests.current = true
         setSelectedQuests([])
     }
 
@@ -106,6 +122,13 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
 
     return (
         <div className="min-h-0 flex flex-col items-center justify-start px-4 pb-8">
+            <Suspense fallback={null}>
+                <SkyHelperQuestDataLoader
+                    questData={skyHelperQuestData}
+                    onResolve={applySkyHelperQuestData}
+                />
+            </Suspense>
+
             <div className="w-full max-w-3xl mx-auto flex flex-col items-center">
                 <motion.div
                     className="mb-8 text-center"
@@ -128,7 +151,7 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
                     filteredQuests={filteredQuests}
                     addQuest={addQuest}
                     selectedQuests={selectedQuests}
-                    autoFocusOnLoad={todaysQuestData.quests.length <= 2}
+                    autoFocusOnLoad={questData.quests.length <= 2}
                 />
 
                 <VisualGuideDialog
@@ -216,7 +239,7 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
                     </div>
 
                     <CandleGuideSection
-                        candleGuides={todaysQuestData.candleGuides}
+                        candleGuides={questData.candleGuides}
                         onOpenVisualGuide={openVisualGuideDialog}
                         onOpenVideoGuide={openVideoGuideDialog}
                     />
@@ -224,4 +247,20 @@ export default function QuestTracker({todaysQuests}: Readonly<QuestTrackerProps>
             </div>
         </div>
     )
+}
+
+function SkyHelperQuestDataLoader({
+    questData,
+    onResolve,
+}: Readonly<{
+    questData: Promise<DailyQuestDisplayData>
+    onResolve: (questData: DailyQuestDisplayData) => void
+}>) {
+    const resolvedQuestData = use(questData)
+
+    useEffect(() => {
+        onResolve(resolvedQuestData)
+    }, [onResolve, resolvedQuestData])
+
+    return null
 }

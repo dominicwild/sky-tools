@@ -1,0 +1,44 @@
+{
+  "$schema": "https://raw.githubusercontent.com/fallow-rs/fallow/main/schema.json",
+  "entry": [
+    "scripts/src/*.ts"
+  ],
+  "ignoreDependencies": [
+    "uploadthing"
+  ],
+  "ignoreExports": [
+    {
+      "file": "components/ui/badge.tsx",
+      "exports": [
+        "badgeVariants"
+      ]
+    },
+    {
+      "file": "components/ui/button.tsx",
+      "exports": [
+        "buttonVariants"
+      ]
+    },
+    {
+      "file": "components/ui/card.tsx",
+      "exports": [
+        "CardHeader",
+        "CardFooter",
+        "CardTitle",
+        "CardAction",
+        "CardDescription"
+      ]
+    },
+    {
+      "file": "components/ui/dialog.tsx",
+      "exports": [
+        "DialogClose",
+        "DialogFooter",
+        "DialogHeader",
+        "DialogOverlay",
+        "DialogPortal",
+        "DialogTrigger"
+      ]
+    }
+  ]
+}

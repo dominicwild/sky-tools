@@ -210,7 +210,7 @@ export function createSkyHelperQuestMatchResponse(
     };
 }
 
-export function getTopUserSelectedQuests(
+function getTopUserSelectedQuests(
     questCounts: QuestValue,
     localQuests: Quest[],
     excludedQuestIds = new Set<number>(),

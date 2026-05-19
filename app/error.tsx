@@ -3,16 +3,8 @@
 import {useState} from "react"
 import Image from "next/image"
 import {useRouter} from "next/navigation"
-import {motion, AnimatePresence} from "framer-motion"
+import {motion, AnimatePresence} from "motion/react"
 import {CloudEffect} from "@/components/CloudEffect";
-import type {Metadata} from "next";
-
-export const metadata: Metadata = {
-    title: "Sky Quest Tracker",
-    icons: {
-        icon: "/favicon.ico",
-    },
-};
 
 export default function ErrorPage() {
     const [isRetrying, setIsRetrying] = useState(false)

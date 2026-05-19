@@ -2,7 +2,7 @@
 
 import { Search, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "motion/react"
 import {ChangeEvent, useEffect, useState} from "react"
 import { questsData } from "@/data/questData"
 import {Input} from "@/components/ui/input";

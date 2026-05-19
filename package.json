@@ -10,7 +10,8 @@
     "test": "vitest",
     "test:run": "vitest run",
     "typecheck": "tsc --noEmit && npm --prefix scripts run typecheck",
-    "fallow:dupes": "fallow dupes"
+    "fallow:dupes": "fallow dupes",
+    "fallow:dead-code": "fallow dead-code"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.10",

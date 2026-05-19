@@ -21,15 +21,15 @@ const SKY_HELPER_QUESTS_URL = "https://api.skyhelper.xyz/update/quests";
 const SKY_HELPER_CACHE_TTL_SECONDS = 60 * 60 * 36;
 const localQuestsByTitle = createLocalQuestTitleIndex(questsData);
 
-export async function getTodaysQuestDisplayData(): Promise<DailyQuestDisplayData> {
+export async function getSkyHelperQuestDisplayData(userQuestCounts: Promise<QuestValue>): Promise<DailyQuestDisplayData> {
     noStore();
 
-    const [userQuestCounts, skyHelperResponse] = await Promise.all([
-        getTodaysQuests(),
+    const [resolvedUserQuestCounts, skyHelperResponse] = await Promise.all([
+        userQuestCounts,
         getSkyHelperQuestMatchResponse(),
     ]);
 
-    return resolveDailyQuestDisplayData(skyHelperResponse, userQuestCounts, questsData);
+    return resolveDailyQuestDisplayData(skyHelperResponse, resolvedUserQuestCounts, questsData);
 }
 
 export async function getTodaysQuests(): Promise<QuestValue> {
