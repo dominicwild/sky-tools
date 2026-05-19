@@ -2133,5 +2133,14 @@ export const questsData = [
         "visualGuideUrl": "skyhelper-1505844319599464521.png",
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxVH1HyOnpiBtXyPQnRmNZWz6fI1q38gj9Feah",
         "id": 236
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Hidden Forest (?)",
+        "questName": "Help Ceasing Commodore or Scolding Student find treasure in Hidden Forest",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "skyhelper-1506201600803213393.jpeg",
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxkrYOeuItpaCN85ewBFLi7PKqOWD1UhtmgYsx",
+        "id": 237
     }
 ] satisfies Quest[]

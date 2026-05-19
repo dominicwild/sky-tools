@@ -20,6 +20,14 @@ const QUEST_TITLE_ALIASES = new Map([
         "catch the light quest vault of knowledge",
         "catch the light in the vault of knowledge",
     ],
+    [
+        "catch the light quest hidden forest",
+        "catch the light in hidden forest",
+    ],
+    [
+        "relive spirit quest season of assembly scaredy cadet",
+        "relive scaredy cadet s memory from hidden forest",
+    ],
 ]);
 
 export function createLocalQuestTitleIndex(localQuests: Quest[]) {
