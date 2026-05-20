@@ -25,8 +25,20 @@ const QUEST_TITLE_ALIASES = new Map([
         "catch the light in hidden forest",
     ],
     [
+        "daily quest guide hug a friend",
+        "hug a friend",
+    ],
+    [
+        "catch the light quest valley of triumph",
+        "catch the light in valley of triumph",
+    ],
+    [
         "relive spirit quest season of assembly scaredy cadet",
         "relive scaredy cadet s memory from hidden forest",
+    ],
+    [
+        "relive spirit quest season of lightseekers twirling champion",
+        "relive twirling champion s memory from valley of triumph",
     ],
 ]);
 

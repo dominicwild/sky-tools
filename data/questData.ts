@@ -2142,5 +2142,14 @@ export const questsData = [
         "visualGuideUrl": "skyhelper-1506201600803213393.jpeg",
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxkrYOeuItpaCN85ewBFLi7PKqOWD1UhtmgYsx",
         "id": 237
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Daylight Prairie (?)",
+        "questName": "Help Anxious Angler or Grateful Shell Collector find treasure in Sanctuary Islands",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "skyhelper-1506565173786447982.jpeg",
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxjL6NPm0aFoTgjdbQ5McXBHJeyR1uqwOsmNSU",
+        "id": 238
     }
 ] satisfies Quest[]
