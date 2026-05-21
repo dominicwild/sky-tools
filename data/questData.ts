@@ -2151,5 +2151,14 @@ export const questsData = [
         "visualGuideUrl": "skyhelper-1506565173786447982.jpeg",
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxjL6NPm0aFoTgjdbQ5McXBHJeyR1uqwOsmNSU",
         "id": 238
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Daylight Prairie (?)",
+        "questName": "Help Cackling Cannoneer or Slumbering Shipwright find treasure in Prairie Village",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxL4WfgQBGijgD2RIoMS1lWZctQaYxL7Hdyezw",
+        "id": 239
     }
 ] satisfies Quest[]

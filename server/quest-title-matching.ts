@@ -33,6 +33,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "catch the light in valley of triumph",
     ],
     [
+        "catch the light quest golden wasteland",
+        "catch the light in golden wasteland",
+    ],
+    [
         "relive spirit quest season of assembly scaredy cadet",
         "relive scaredy cadet s memory from hidden forest",
     ],
