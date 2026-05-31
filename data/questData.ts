@@ -1941,7 +1941,7 @@ export const questsData = [
         "realm": "Valley of Triumph",
         "questName": "Catch the 3 lights during the Valley's sliding race",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": null,
+        "visualGuideUrl": "skyhelper-1510183129179230328.jpeg",
         "videoGuideUrl": "https://youtu.be/QwsLH-XB2k8",
         "id": 215
     },
@@ -2160,5 +2160,14 @@ export const questsData = [
         "visualGuideUrl": null,
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxL4WfgQBGijgD2RIoMS1lWZctQaYxL7Hdyezw",
         "id": 239
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Daylight Prairie (?)",
+        "questName": "Propose a kite design in Prairie Heights",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxOMvecewjtMfGsl8IQnzRgqC1FrcmWB0LZJHa",
+        "id": 240
     }
 ] satisfies Quest[]

@@ -37,6 +37,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "catch the light in golden wasteland",
     ],
     [
+        "catch the wandering lights along the lower valley track",
+        "catch the 3 lights during the valley s sliding race",
+    ],
+    [
         "relive spirit quest season of assembly scaredy cadet",
         "relive scaredy cadet s memory from hidden forest",
     ],
