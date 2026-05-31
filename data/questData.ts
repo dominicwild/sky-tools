@@ -2077,7 +2077,7 @@ export const questsData = [
         "questName": "Use expressions with players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": null,
-        "videoGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxfPEAJbUatsPdGbFzOSQVwCY6UfXJh4pRkAqH",
         "id": 230
     },
     {

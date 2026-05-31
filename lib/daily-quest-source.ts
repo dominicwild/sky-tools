@@ -319,6 +319,10 @@ function mergeSkyHelperQuestMedia(apiQuests: SkyHelperQuest[]) {
 
     for (const quest of apiQuests) {
         const title = removeVideoGuideSuffix(quest.title);
+        if (isGenericDailyQuestGuideTitle(title)) {
+            continue;
+        }
+
         const normalizedTitle = normalizeQuestTitle(title);
         const existingQuest = mergedQuests.get(normalizedTitle) ?? {
             title,
@@ -412,6 +416,10 @@ function getSingleMatchedRealm(quests: Quest[]) {
 
 function removeVideoGuideSuffix(title: string) {
     return title.replace(/\s*-\s*video guide\s*$/i, "");
+}
+
+function isGenericDailyQuestGuideTitle(title: string) {
+    return /^daily quest guide\s*-?\s*$/i.test(title);
 }
 
 function getCandleGuideRealm(title: string) {
