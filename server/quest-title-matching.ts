@@ -41,6 +41,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "catch the 3 lights during the valley s sliding race",
     ],
     [
+        "relieve a spirit s memory in golden wasteland",
+        "relive a spirit s memories in golden wasteland",
+    ],
+    [
         "relive spirit quest season of assembly scaredy cadet",
         "relive scaredy cadet s memory from hidden forest",
     ],
