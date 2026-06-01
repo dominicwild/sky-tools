@@ -21,6 +21,14 @@ const QUEST_TITLE_ALIASES = new Map([
         "catch the light in the vault of knowledge",
     ],
     [
+        "meditation quest guide vault of knowledge spirit mantas a k a vault entrance",
+        "meditate at the vault s entrance",
+    ],
+    [
+        "coloured light quest purple light in vault of knowledge",
+        "collect purple light",
+    ],
+    [
         "catch the light quest hidden forest",
         "catch the light in hidden forest",
     ],
