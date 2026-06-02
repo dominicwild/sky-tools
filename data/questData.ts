@@ -2169,5 +2169,14 @@ export const questsData = [
         "visualGuideUrl": null,
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxOMvecewjtMfGsl8IQnzRgqC1FrcmWB0LZJHa",
         "id": 240
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Daylight Prairie (?)",
+        "questName": "Meet up with Flight Guide in Prairie - Read a book together with Flight Guide",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfx8jes8Jv0CoVS4tyWFq951OIBdMpfnDRxAlmN",
+        "id": 241
     }
 ] satisfies Quest[]
