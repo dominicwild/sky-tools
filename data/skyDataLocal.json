@@ -2176,5 +2176,14 @@
     "visualGuideUrl": null,
     "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfx8jes8Jv0CoVS4tyWFq951OIBdMpfnDRxAlmN",
     "id": 241
+  },
+  {
+    "type": "SkyHelper Quest",
+    "realm": "Hidden Forest (?)",
+    "questName": "Tidy up the Ancestor's Table of Belonging in Hidden Forest's elevated clearing",
+    "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+    "visualGuideUrl": "skyhelper-1511638237956014110.jpeg",
+    "videoGuideUrl": null,
+    "id": 242
   }
 ]
