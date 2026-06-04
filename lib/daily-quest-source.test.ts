@@ -34,6 +34,7 @@ describe("daily quest source", () => {
         const parsedResponse = validateSkyHelperQuestResponse(createRepresentativeResponse());
 
         expect(parsedResponse?.quests).toHaveLength(5);
+        expect(parsedResponse?.sourceDate).toBe("2026-05-17T00:00:00.000-07:00");
         expect(parsedResponse?.quests[2]).toMatchObject({
             title: "Help Cackling Cannoneer or Star Collector find treasure in Starlight Desert - video guide",
             images: [{url: videoUrl, by: "@sky"}],
@@ -176,6 +177,7 @@ describe("daily quest source", () => {
 
 function createRepresentativeResponse() {
     return {
+        last_updated: "2026-05-17T00:00:00.000-07:00",
         quests: [
             {
                 title: "Call to 5 different players",

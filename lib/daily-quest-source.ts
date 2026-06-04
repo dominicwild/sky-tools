@@ -29,6 +29,7 @@ export type SkyHelperQuest = {
 export type SkyHelperGuideGroup = SkyHelperQuest
 
 export type SkyHelperQuestResponse = {
+    sourceDate: string
     quests: SkyHelperQuest[]
     seasonalCandles: SkyHelperGuideGroup | null
     rotatingCandles: SkyHelperGuideGroup | null
@@ -101,6 +102,11 @@ export function validateSkyHelperQuestResponse(value: unknown): SkyHelperQuestRe
         return null;
     }
 
+    const sourceDate = getSkyHelperSourceDate(value, quests);
+    if (!sourceDate) {
+        return null;
+    }
+
     const seasonalCandles = parseOptionalGuideGroup(value.seasonal_candles);
     const rotatingCandles = parseOptionalGuideGroup(value.rotating_candles);
 
@@ -108,7 +114,7 @@ export function validateSkyHelperQuestResponse(value: unknown): SkyHelperQuestRe
         return null;
     }
 
-    return {quests, seasonalCandles, rotatingCandles};
+    return {sourceDate, quests, seasonalCandles, rotatingCandles};
 }
 
 export function validateSkyHelperQuestMatchResponse(value: unknown): SkyHelperQuestMatchResponse | null {
@@ -484,6 +490,14 @@ function parseGuideGroups(records: Record<string, unknown>[]) {
     }
 
     return groups;
+}
+
+function getSkyHelperSourceDate(value: Record<string, unknown>, quests: SkyHelperQuest[]) {
+    if (typeof value.last_updated === "string") {
+        return value.last_updated;
+    }
+
+    return quests[0]?.date ?? null;
 }
 
 function parseGuideGroup(record: Record<string, unknown>) {

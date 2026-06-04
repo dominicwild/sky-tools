@@ -1,7 +1,7 @@
 "use server"
 
 import Redis from "ioredis"
-import {getSkyDate} from "@/lib/utils";
+import {getSkyDate, getSkyDateKeyFromIsoDate} from "@/lib/utils";
 import {unstable_noStore as noStore} from 'next/cache';
 import {questsData} from "@/data/questData";
 import {
@@ -19,7 +19,7 @@ const client = new Redis(`rediss://default:${process.env.REDIS_TOKEN}@${process.
 
 const SKY_HELPER_QUESTS_URL = "https://api.skyhelper.xyz/update/quests";
 const SKY_HELPER_CACHE_TTL_SECONDS = 60 * 60 * 36;
-const SKY_HELPER_MATCH_CACHE_VERSION = "v3";
+const SKY_HELPER_MATCH_CACHE_VERSION = "v4";
 const localQuestsByTitle = createLocalQuestTitleIndex(questsData);
 
 export async function getSkyHelperQuestDisplayData(userQuestCounts: Promise<QuestValue>): Promise<DailyQuestDisplayData> {
@@ -53,7 +53,8 @@ export async function getTodaysQuests(): Promise<QuestValue> {
 }
 
 async function getSkyHelperQuestMatchResponse() {
-    const key = `sky-daily-api-matches:${SKY_HELPER_MATCH_CACHE_VERSION}:${getSkyDate()}`;
+    const currentSkyDate = getSkyDate();
+    const key = `sky-daily-api-matches:${SKY_HELPER_MATCH_CACHE_VERSION}:${currentSkyDate}`;
     const cachedResponse = await client.get(key);
 
     if (cachedResponse) {
@@ -75,6 +76,10 @@ async function getSkyHelperQuestMatchResponse() {
         const parsedResponse = parseSkyHelperQuestApiResponse(responseText);
 
         if (!parsedResponse) {
+            return null;
+        }
+
+        if (getSkyDateKeyFromIsoDate(parsedResponse.sourceDate) !== currentSkyDate) {
             return null;
         }
 

@@ -6,8 +6,10 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function getSkyDate() {
-    const now = new Date();
+    return getSkyDateKey(new Date());
+}
 
+export function getSkyDateKey(date: Date) {
     const ptFormatter = new Intl.DateTimeFormat('en-US', {
         timeZone: 'America/Los_Angeles',
         year: 'numeric',
@@ -15,8 +17,17 @@ export function getSkyDate() {
         day: '2-digit'
     });
 
-    const [{value: month}, , {value: day}, , {value: year}] = ptFormatter.formatToParts(now);
+    const [{value: month}, , {value: day}, , {value: year}] = ptFormatter.formatToParts(date);
 
-    const ptDate = new Date(`${year}-${month}-${day}T00:00:00-08:00`);
-    return `${ptDate.getFullYear()}-${ptDate.getMonth() + 1}-${ptDate.getDate()}`
+    return `${Number(year)}-${Number(month)}-${Number(day)}`
+}
+
+export function getSkyDateKeyFromIsoDate(value: string) {
+    const date = new Date(value);
+
+    if (Number.isNaN(date.getTime())) {
+        return null;
+    }
+
+    return getSkyDateKey(date);
 }
