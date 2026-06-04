@@ -53,6 +53,18 @@ const QUEST_TITLE_ALIASES = new Map([
         "catch the 3 lights during the valley s sliding race",
     ],
     [
+        "days of rainbow 2021 daily quest rainbow location valley of triumph",
+        "find the candles at the end of the rainbow in the valley of triumph",
+    ],
+    [
+        "meditation quest guide valley of triumph ice rink meditate overlooking the frozen lake",
+        "meditate overlooking the frozen lake",
+    ],
+    [
+        "catch the wandering lights in the citadel",
+        "catch the 3 lights in valley s citadel",
+    ],
+    [
         "relieve a spirit s memory in golden wasteland",
         "relive a spirit s memories in golden wasteland",
     ],
