@@ -76,6 +76,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "relive spirit quest season of lightseekers twirling champion",
         "relive twirling champion s memory from valley of triumph",
     ],
+    [
+        "relive spirit quest season of lightseekers crab whisperer",
+        "relive crab whisperer s memory from golden wasteland",
+    ],
 ]);
 
 export function createLocalQuestTitleIndex(localQuests: Quest[]) {
