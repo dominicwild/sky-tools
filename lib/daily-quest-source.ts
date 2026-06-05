@@ -171,6 +171,19 @@ export function validateSkyHelperQuestMatchResponse(value: unknown): SkyHelperQu
     return {quests, candleGuides};
 }
 
+export function isSkyHelperQuestMatchResponseCurrent(
+    response: SkyHelperQuestMatchResponse,
+    localQuests: Quest[],
+) {
+    const localQuestIds = new Set(
+        localQuests
+            .map((quest) => quest.id)
+            .filter((id): id is number => typeof id === "number"),
+    );
+
+    return response.quests.every((quest) => quest.localQuestId === null || localQuestIds.has(quest.localQuestId));
+}
+
 export function classifyAttachmentUrl(url: string): "image" | "video" | "unknown" {
     const pathname = getUrlPathname(url).toLowerCase();
     const extension = pathname.match(/\.[a-z0-9]+$/)?.[0];

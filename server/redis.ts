@@ -6,6 +6,7 @@ import {unstable_noStore as noStore} from 'next/cache';
 import {questsData} from "@/data/questData";
 import {
     createSkyHelperQuestMatchResponse,
+    isSkyHelperQuestMatchResponseCurrent,
     resolveDailyQuestDisplayData,
     validateSkyHelperQuestMatchResponse,
     validateSkyHelperQuestResponse,
@@ -60,7 +61,7 @@ async function getSkyHelperQuestMatchResponse() {
     if (cachedResponse) {
         const parsedCachedResponse = parseSkyHelperQuestMatchResponse(cachedResponse);
 
-        if (parsedCachedResponse) {
+        if (parsedCachedResponse && isSkyHelperQuestMatchResponseCurrent(parsedCachedResponse, questsData)) {
             return parsedCachedResponse;
         }
     }

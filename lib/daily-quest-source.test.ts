@@ -2,6 +2,7 @@ import {describe, expect, it} from "vitest";
 import {
     classifyAttachmentUrl,
     createSkyHelperQuestMatchResponse,
+    isSkyHelperQuestMatchResponseCurrent,
     normalizeQuestTitle,
     resolveDailyQuestDisplayData,
     resolveDailyQuests,
@@ -139,6 +140,37 @@ describe("daily quest source", () => {
                 videoGuideUrl: null,
             },
         ]);
+    });
+
+    it("rejects cached match responses that reference removed local quest ids", () => {
+        const parsedResponse = validateSkyHelperQuestResponse({
+            quests: [
+                {
+                    title: "Forge a Candle",
+                    date: "2026-05-31T00:00:00.000-07:00",
+                    images: [],
+                },
+            ],
+        });
+        expect(parsedResponse).not.toBeNull();
+
+        const questMatches = createQuestMatchResponse(parsedResponse);
+        if (!questMatches) {
+            throw new Error("Expected quest matches");
+        }
+
+        expect(isSkyHelperQuestMatchResponseCurrent(questMatches, localQuests)).toBe(true);
+        expect(isSkyHelperQuestMatchResponseCurrent({
+            ...questMatches,
+            quests: [
+                {
+                    localQuestId: 243,
+                    title: null,
+                    visualGuideUrl: null,
+                    videoGuideUrl: null,
+                },
+            ],
+        }, localQuests)).toBe(false);
     });
 
     it("falls back to top user-selected quests when SkyHelper gives fewer than four quests", () => {
