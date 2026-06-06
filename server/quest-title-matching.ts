@@ -13,6 +13,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "bow at a player",
     ],
     [
+        "daily quest guide make a new acquaintance",
+        "make a new acquaintance",
+    ],
+    [
         "relive spirit quest daylight prairie exhausted dock worker",
         "relive exhausted dock worker s memory from daylight prairie",
     ],
@@ -23,6 +27,10 @@ const QUEST_TITLE_ALIASES = new Map([
     [
         "meditation quest guide vault of knowledge spirit mantas a k a vault entrance",
         "meditate at the vault s entrance",
+    ],
+    [
+        "meditation quest guide vault of knowledge vault second floor",
+        "meditate at vault s second floor",
     ],
     [
         "coloured light quest purple light in vault of knowledge",
@@ -79,6 +87,10 @@ const QUEST_TITLE_ALIASES = new Map([
     [
         "relive spirit quest season of lightseekers crab whisperer",
         "relive crab whisperer s memory from golden wasteland",
+    ],
+    [
+        "relive spirit quest vault of knowledge levitating adept",
+        "relive levitating adept s memory from vault of knowledge",
     ],
 ]);
 
