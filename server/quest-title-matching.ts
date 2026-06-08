@@ -33,6 +33,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "meditate at vault s second floor",
     ],
     [
+        "meditation quest hidden forest boneyard",
+        "meditate in forest s boneyard",
+    ],
+    [
         "coloured light quest purple light in vault of knowledge",
         "collect purple light",
     ],
