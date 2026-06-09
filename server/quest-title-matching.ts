@@ -9,6 +9,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "admire the sapling in daylight prairie for a short while",
     ],
     [
+        "days of bloom 2021 admire sapling quest valley of triumph",
+        "admire the sapling in valley of triumph for a short while",
+    ],
+    [
         "daily quest guide bow at a player",
         "bow at a player",
     ],
@@ -91,6 +95,10 @@ const QUEST_TITLE_ALIASES = new Map([
     [
         "relive spirit quest season of lightseekers twirling champion",
         "relive twirling champion s memory from valley of triumph",
+    ],
+    [
+        "relive spirit quest season of gratitude leaping dancer",
+        "relive leaping dancer s memory from valley of triumph",
     ],
     [
         "relive spirit quest season of lightseekers crab whisperer",
