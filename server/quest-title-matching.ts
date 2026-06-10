@@ -21,6 +21,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "make a new acquaintance",
     ],
     [
+        "daily quest guide face the dark dragon",
+        "face the dark dragon",
+    ],
+    [
         "relive spirit quest daylight prairie exhausted dock worker",
         "relive exhausted dock worker s memory from daylight prairie",
     ],
