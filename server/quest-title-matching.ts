@@ -13,6 +13,18 @@ const QUEST_TITLE_ALIASES = new Map([
         "admire the sapling in valley of triumph for a short while",
     ],
     [
+        "days of bloom 2021 admire sapling quest vault of knowledge",
+        "admire the sapling in vault of knowledge for a short while",
+    ],
+    [
+        "daily quest guide send a gift to a friend",
+        "send a gift to a friend",
+    ],
+    [
+        "daily quest guide wave to a friend",
+        "wave to a friend",
+    ],
+    [
         "daily quest guide bow at a player",
         "bow at a player",
     ],
