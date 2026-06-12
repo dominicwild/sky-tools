@@ -97,6 +97,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "catch the 3 lights in valley s citadel",
     ],
     [
+        "catch the wandering lights in prairie village",
+        "catch the 3 lights in prairie village",
+    ],
+    [
         "ride a manta quest in daylight prairie",
         "ride with a manta",
     ],

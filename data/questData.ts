@@ -2196,5 +2196,14 @@ export const questsData = [
         "visualGuideUrl": null,
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxjBNJaC0aFoTgjdbQ5McXBHJeyR1uqwOsmNSU",
         "id": 243
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Daylight Prairie (?)",
+        "questName": "Meet up with Flight Guide in Temple of the Prairie - Join Flight Guide and meditate to reminisce the Prairie",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfx4Xe0nPVto3kGfcuJsK7ULdNhOTRa1CZPqxME",
+        "id": 244
     }
 ] satisfies Quest[]
