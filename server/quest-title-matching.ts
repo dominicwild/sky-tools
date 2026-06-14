@@ -61,6 +61,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "collect purple light",
     ],
     [
+        "coloured light quest blue light in valley of triumph",
+        "collect blue light",
+    ],
+    [
         "catch the light quest hidden forest",
         "catch the light in hidden forest",
     ],
@@ -119,6 +123,10 @@ const QUEST_TITLE_ALIASES = new Map([
     [
         "relive spirit quest season of gratitude leaping dancer",
         "relive leaping dancer s memory from valley of triumph",
+    ],
+    [
+        "relive spirit quest valley of triumph proud victor",
+        "relive proud victor s memory from valley of triumph",
     ],
     [
         "relive spirit quest season of lightseekers crab whisperer",
