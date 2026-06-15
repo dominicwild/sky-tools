@@ -17,6 +17,18 @@ const QUEST_TITLE_ALIASES = new Map([
         "admire the sapling in vault of knowledge for a short while",
     ],
     [
+        "days of bloom 2021 admire sapling quest golden wasteland",
+        "admire the sapling in golden wasteland for a short while",
+    ],
+    [
+        "days of rainbow 2021 daily quest rainbow location golden wasteland",
+        "find the candles at the end of the rainbow in the golden wasteland forgotten ark",
+    ],
+    [
+        "coloured light quest red light in golden wasteland",
+        "collect red light",
+    ],
+    [
         "daily quest guide send a gift to a friend",
         "send a gift to a friend",
     ],
