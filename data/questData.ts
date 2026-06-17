@@ -1986,7 +1986,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Fly with many butterflies in Butterfly Fields",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": null,
+        "visualGuideUrl": "skyhelper-1516701295237398618.jpeg",
         "videoGuideUrl": "https://youtu.be/uX8olVYuGU4",
         "id": 220
     },

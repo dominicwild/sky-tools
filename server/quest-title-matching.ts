@@ -101,6 +101,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "catch the light in daylight prairie",
     ],
     [
+        "fly with many butterflies in the butterfly fields",
+        "fly with many butterflies in butterfly fields",
+    ],
+    [
         "catch the wandering lights along the lower valley track",
         "catch the 3 lights during the valley s sliding race",
     ],
