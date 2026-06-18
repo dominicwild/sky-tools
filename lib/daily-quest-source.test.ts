@@ -113,17 +113,20 @@ describe("daily quest source", () => {
         ]);
     });
 
-    it("ignores generic daily guide rows that are not quest titles", () => {
+    it.each([
+        ["generic daily guide rows", "Daily Quest Guide -", "2026-05-31T00:00:00.000-07:00", "Clement"],
+        ["SkyHelper title error rows", "[Quest Title Error]: Unknown", "2026-06-18T00:00:00.000-07:00", "@Ceverine"],
+    ])("ignores %s", (_caseName, ignoredTitle, date, author) => {
         const parsedResponse = validateSkyHelperQuestResponse({
             quests: [
                 {
-                    title: "Daily Quest Guide -",
-                    date: "2026-05-31T00:00:00.000-07:00",
-                    images: [{url: imageUrl, by: "Clement"}],
+                    title: ignoredTitle,
+                    date,
+                    images: [{url: imageUrl, by: author}],
                 },
                 {
                     title: "Forge a Candle",
-                    date: "2026-05-31T00:00:00.000-07:00",
+                    date,
                     images: [],
                 },
             ],

@@ -338,7 +338,7 @@ function mergeSkyHelperQuestMedia(apiQuests: SkyHelperQuest[]) {
 
     for (const quest of apiQuests) {
         const title = removeVideoGuideSuffix(quest.title);
-        if (isGenericDailyQuestGuideTitle(title)) {
+        if (isGenericDailyQuestGuideTitle(title) || isSkyHelperTitleError(title)) {
             continue;
         }
 
@@ -439,6 +439,10 @@ function removeVideoGuideSuffix(title: string) {
 
 function isGenericDailyQuestGuideTitle(title: string) {
     return /^daily quest guide\s*-?\s*$/i.test(title);
+}
+
+function isSkyHelperTitleError(title: string) {
+    return /^\[quest title error\]:/i.test(title);
 }
 
 function getCandleGuideRealm(title: string) {

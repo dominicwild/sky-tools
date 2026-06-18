@@ -89,6 +89,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "hug a friend",
     ],
     [
+        "daily quest guide recharge from a light bloom",
+        "recharge your light from a light bloom",
+    ],
+    [
         "catch the light quest valley of triumph",
         "catch the light in valley of triumph",
     ],
@@ -159,6 +163,10 @@ const QUEST_TITLE_ALIASES = new Map([
     [
         "relive spirit quest vault of knowledge levitating adept",
         "relive levitating adept s memory from vault of knowledge",
+    ],
+    [
+        "relive spirit quest season of assembly chuckling scout",
+        "relive chuckling scout s memory from hidden forest",
     ],
 ]);
 
