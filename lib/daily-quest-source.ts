@@ -338,7 +338,11 @@ function mergeSkyHelperQuestMedia(apiQuests: SkyHelperQuest[]) {
 
     for (const quest of apiQuests) {
         const title = removeVideoGuideSuffix(quest.title);
-        if (isGenericDailyQuestGuideTitle(title) || isSkyHelperTitleError(title)) {
+        if (
+            isGenericDailyQuestGuideTitle(title)
+            || isSkyHelperTitleError(title)
+            || isSkyHelperCandleGuideTitle(title)
+        ) {
             continue;
         }
 
@@ -443,6 +447,10 @@ function isGenericDailyQuestGuideTitle(title: string) {
 
 function isSkyHelperTitleError(title: string) {
     return /^\[quest title error\]:/i.test(title);
+}
+
+function isSkyHelperCandleGuideTitle(title: string) {
+    return /(?:seasonal|treasure) candle locations?/i.test(title);
 }
 
 function getCandleGuideRealm(title: string) {

@@ -116,6 +116,7 @@ describe("daily quest source", () => {
     it.each([
         ["generic daily guide rows", "Daily Quest Guide -", "2026-05-31T00:00:00.000-07:00", "Clement"],
         ["SkyHelper title error rows", "[Quest Title Error]: Unknown", "2026-06-18T00:00:00.000-07:00", "@Ceverine"],
+        ["candle guide rows", "Double Treasure Candle Locations - Golden Wasteland", "2026-06-19T00:00:00.000-07:00", "Clement"],
     ])("ignores %s", (_caseName, ignoredTitle, date, author) => {
         const parsedResponse = validateSkyHelperQuestResponse({
             quests: [
