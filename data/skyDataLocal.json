@@ -2203,5 +2203,14 @@
     "visualGuideUrl": null,
     "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfx4Xe0nPVto3kGfcuJsK7ULdNhOTRa1CZPqxME",
     "id": 244
+  },
+  {
+    "type": "SkyHelper Quest",
+    "realm": "Golden Wasteland (?)",
+    "questName": "Meet up with Cackling Cannoneer in Graveyard - launch Cackling Cannoneer",
+    "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+    "visualGuideUrl": "skyhelper-1517799605968830534.jpeg",
+    "videoGuideUrl": null,
+    "id": 245
   }
 ]
