@@ -97,6 +97,14 @@ const QUEST_TITLE_ALIASES = new Map([
         "recharge your light from a light bloom",
     ],
     [
+        "daily quest visit the polluted geyser in the sanctuary islands",
+        "visit the polluted geyser in sanctuary islands",
+    ],
+    [
+        "relive spirit quest season of sanctuary timid bookworm",
+        "relive timid bookworm s memory from daylight prairie",
+    ],
+    [
         "catch the light quest valley of triumph",
         "catch the light in valley of triumph",
     ],
