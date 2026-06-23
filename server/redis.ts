@@ -20,7 +20,7 @@ const client = new Redis(`rediss://default:${process.env.REDIS_TOKEN}@${process.
 
 const SKY_HELPER_QUESTS_URL = "https://api.skyhelper.xyz/update/quests";
 const SKY_HELPER_CACHE_TTL_SECONDS = 60 * 60 * 36;
-const SKY_HELPER_MATCH_CACHE_VERSION = "v18";
+const SKY_HELPER_MATCH_CACHE_VERSION = "v19";
 const localQuestsByTitle = createLocalQuestTitleIndex(questsData);
 
 export async function getSkyHelperQuestDisplayData(userQuestCounts: Promise<QuestValue>): Promise<DailyQuestDisplayData> {

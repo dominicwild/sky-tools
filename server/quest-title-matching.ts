@@ -21,6 +21,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "admire the sapling in golden wasteland for a short while",
     ],
     [
+        "days of bloom 2021 admire sapling quest hidden forest",
+        "admire the sapling in hidden forest for a short while",
+    ],
+    [
         "days of rainbow 2021 daily quest rainbow location golden wasteland",
         "find the candles at the end of the rainbow in the golden wasteland forgotten ark",
     ],

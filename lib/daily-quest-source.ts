@@ -379,7 +379,7 @@ function createCandleGuides(response: SkyHelperQuestResponse): CandleGuide[] {
 }
 
 function createCandleGuide(kind: CandleGuideKind, group: SkyHelperGuideGroup | null) {
-    if (!group) {
+    if (!group || isSkyHelperTitleError(group.title)) {
         return null;
     }
 

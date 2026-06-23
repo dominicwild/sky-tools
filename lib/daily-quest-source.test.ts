@@ -113,6 +113,41 @@ describe("daily quest source", () => {
         ]);
     });
 
+    it("ignores placeholder candle guide titles", () => {
+        const parsedResponse = validateSkyHelperQuestResponse({
+            quests: [
+                {
+                    title: "Forge a Candle",
+                    date: "2026-06-23T00:00:00.000-07:00",
+                    images: [],
+                },
+            ],
+            seasonal_candles: {
+                title: "[Quest Title Error]: Unknown",
+                date: "2026-06-23T00:00:00.000-07:00",
+                images: [{url: imageUrl, by: "@AL"}],
+            },
+            rotating_candles: {
+                title: "Rotating Treasure Candle Locations - Rotation 20 | Valley Of Triumph",
+                date: "2026-06-23T00:00:00.000-07:00",
+                images: [{url: imageUrl, by: "Clement"}],
+            },
+        });
+        expect(parsedResponse).not.toBeNull();
+
+        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), {}, localQuests);
+
+        expect(displayData.candleGuides).toEqual([
+            {
+                kind: "candle-cakes",
+                title: "Rotating Treasure Candle Locations - Rotation 20 | Valley Of Triumph",
+                realm: "Valley of Triumph",
+                visualGuideUrl: imageUrl,
+                videoGuideUrl: null,
+            },
+        ]);
+    });
+
     it.each([
         ["generic daily guide rows", "Daily Quest Guide -", "2026-05-31T00:00:00.000-07:00", "Clement"],
         ["SkyHelper title error rows", "[Quest Title Error]: Unknown", "2026-06-18T00:00:00.000-07:00", "@Ceverine"],
