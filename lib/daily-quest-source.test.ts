@@ -20,6 +20,7 @@ const localQuests: Quest[] = [
     createLocalQuest(12, "Fallback middle", "Hidden Forest"),
     createLocalQuest(132, "Catch the light in the Vault of Knowledge", "Vault of Knowledge"),
     createLocalQuest(159, "Forge a candle", "General", "https://youtu.be/local-forge"),
+    createLocalQuest(168, "Hold the hand of a friend", "General"),
     createLocalQuest(231, "Call to 5 different players", "General"),
 ];
 
@@ -27,6 +28,10 @@ const questTitleAliases = new Map([
     [
         "catch the light quest vault of knowledge",
         "catch the light in the vault of knowledge",
+    ],
+    [
+        "social quest guide hold a friend s hand",
+        "hold the hand of a friend",
     ],
 ]);
 
@@ -176,6 +181,30 @@ describe("daily quest source", () => {
                 localQuestId: 159,
                 title: null,
                 visualGuideUrl: null,
+                videoGuideUrl: null,
+            },
+        ]);
+    });
+
+    it("matches social quest guide wording through aliases", () => {
+        const parsedResponse = validateSkyHelperQuestResponse({
+            quests: [
+                {
+                    title: "Social Quest Guide - Hold a Friend’s Hand",
+                    date: "2026-06-24T00:00:00.000-07:00",
+                    images: [{url: imageUrl, by: "@asphyn_"}],
+                },
+            ],
+        });
+        expect(parsedResponse).not.toBeNull();
+
+        const questMatches = createQuestMatchResponse(parsedResponse);
+
+        expect(questMatches?.quests).toEqual([
+            {
+                localQuestId: 168,
+                title: null,
+                visualGuideUrl: imageUrl,
                 videoGuideUrl: null,
             },
         ]);

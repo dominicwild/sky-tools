@@ -49,6 +49,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "bow at a player",
     ],
     [
+        "social quest guide hold a friend s hand",
+        "hold the hand of a friend",
+    ],
+    [
         "visiting the social light area golden wasteland graveyard bonfire spitroast",
         "visit the bonfire at the wasteland s graveyard",
     ],
