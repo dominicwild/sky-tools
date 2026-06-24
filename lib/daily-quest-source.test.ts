@@ -241,7 +241,7 @@ describe("daily quest source", () => {
         }, localQuests)).toBe(false);
     });
 
-    it("falls back to top user-selected quests when SkyHelper gives fewer than four quests", () => {
+    it("does not fill missing SkyHelper quests from user-selected counts", () => {
         const parsedResponse = validateSkyHelperQuestResponse({
             quests: [
                 {
@@ -260,10 +260,10 @@ describe("daily quest source", () => {
             "159": 99,
         }, localQuests);
 
-        expect(quests.map((quest) => quest.id)).toEqual([159, 11, 12, 10]);
+        expect(quests.map((quest) => quest.id)).toEqual([159]);
     });
 
-    it("uses user-selected data entirely when SkyHelper data is unavailable", () => {
+    it("does not guess daily quests when SkyHelper data is unavailable", () => {
         const quests = resolveDailyQuests(null, {
             "10": 2,
             "11": 9,
@@ -271,7 +271,7 @@ describe("daily quest source", () => {
             "132": 1,
         }, localQuests);
 
-        expect(quests.map((quest) => quest.id)).toEqual([11, 12, 10, 132]);
+        expect(quests).toEqual([]);
     });
 });
 

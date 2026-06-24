@@ -229,56 +229,16 @@ export function createSkyHelperQuestMatchResponse(
     };
 }
 
-function getTopUserSelectedQuests(
-    questCounts: QuestValue,
-    localQuests: Quest[],
-    excludedQuestIds = new Set<number>(),
-    limit = QUEST_LIMIT,
-) {
-    return Object
-        .entries(questCounts)
-        .sort(([, countA], [, countB]) => countB - countA)
-        .map(([questId]) => {
-            const parsedQuestId = Number(questId);
-            if (!Number.isInteger(parsedQuestId) || excludedQuestIds.has(parsedQuestId)) {
-                return undefined;
-            }
-
-            return localQuests.find((quest) => quest.id === parsedQuestId);
-        })
-        .filter((quest): quest is Quest => quest !== undefined)
-        .slice(0, limit);
-}
-
 export function resolveDailyQuests(
     skyHelperResponse: SkyHelperQuestMatchResponse | null,
-    userQuestCounts: QuestValue,
+    _userQuestCounts: QuestValue,
     localQuests: Quest[],
 ) {
     if (!skyHelperResponse) {
-        return getTopUserSelectedQuests(userQuestCounts, localQuests);
+        return [];
     }
 
-    const skyHelperQuests = getSkyHelperDisplayQuests(skyHelperResponse, localQuests);
-    const selectedQuestIds = new Set(
-        skyHelperQuests
-            .map((quest) => quest.id)
-            .filter((questId): questId is number => questId !== undefined),
-    );
-
-    if (skyHelperQuests.length >= QUEST_LIMIT) {
-        return skyHelperQuests.slice(0, QUEST_LIMIT);
-    }
-
-    return [
-        ...skyHelperQuests,
-        ...getTopUserSelectedQuests(
-            userQuestCounts,
-            localQuests,
-            selectedQuestIds,
-            QUEST_LIMIT - skyHelperQuests.length,
-        ),
-    ];
+    return getSkyHelperDisplayQuests(skyHelperResponse, localQuests).slice(0, QUEST_LIMIT);
 }
 
 export function resolveDailyQuestDisplayData(
