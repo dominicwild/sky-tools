@@ -20,7 +20,10 @@ const client = new Redis(`rediss://default:${process.env.REDIS_TOKEN}@${process.
 
 const SKY_HELPER_QUESTS_URL = "https://api.skyhelper.xyz/update/quests";
 const SKY_HELPER_CACHE_TTL_SECONDS = 60 * 60 * 36;
-const SKY_HELPER_MATCH_CACHE_VERSION = "v20";
+const SKY_HELPER_MATCH_CACHE_VERSION = "v21";
+const SKY_HELPER_MISSING_QUEST_IDS_BY_DATE = new Map([
+    ["2026-6-24", [90]],
+]);
 const localQuestsByTitle = createLocalQuestTitleIndex(questsData);
 
 export async function getSkyHelperQuestDisplayData(userQuestCounts: Promise<QuestValue>): Promise<DailyQuestDisplayData> {
@@ -84,9 +87,12 @@ async function getSkyHelperQuestMatchResponse() {
             return null;
         }
 
-        const questMatchResponse = createSkyHelperQuestMatchResponse(
-            parsedResponse,
-            (title) => getMatchingLocalQuestId(title, localQuestsByTitle),
+        const questMatchResponse = addMissingSkyHelperQuestMatches(
+            currentSkyDate,
+            createSkyHelperQuestMatchResponse(
+                parsedResponse,
+                (title) => getMatchingLocalQuestId(title, localQuestsByTitle),
+            ),
         );
 
         await client.set(key, JSON.stringify(questMatchResponse), "EX", SKY_HELPER_CACHE_TTL_SECONDS);
@@ -94,6 +100,41 @@ async function getSkyHelperQuestMatchResponse() {
     } catch {
         return null;
     }
+}
+
+function addMissingSkyHelperQuestMatches(
+    currentSkyDate: string,
+    response: SkyHelperQuestMatchResponse,
+): SkyHelperQuestMatchResponse {
+    const missingQuestIds = SKY_HELPER_MISSING_QUEST_IDS_BY_DATE.get(currentSkyDate);
+    if (!missingQuestIds) {
+        return response;
+    }
+
+    const matchedQuestIds = new Set(
+        response.quests
+            .map((quest) => quest.localQuestId)
+            .filter((questId): questId is number => questId !== null),
+    );
+    const quests = [...response.quests];
+
+    for (const localQuestId of missingQuestIds) {
+        if (matchedQuestIds.has(localQuestId)) {
+            continue;
+        }
+
+        quests.push({
+            localQuestId,
+            title: null,
+            visualGuideUrl: null,
+            videoGuideUrl: null,
+        });
+    }
+
+    return {
+        ...response,
+        quests,
+    };
 }
 
 function parseSkyHelperQuestApiResponse(responseText: string) {
