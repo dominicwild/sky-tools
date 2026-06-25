@@ -118,6 +118,42 @@ describe("daily quest source", () => {
         ]);
     });
 
+    it("uses current candle guide quest rows before stale candle guide groups", () => {
+        const parsedResponse = validateSkyHelperQuestResponse({
+            quests: [
+                {
+                    title: "Forge a Candle",
+                    date: "2026-06-25T00:00:00.000-07:00",
+                    images: [],
+                },
+                {
+                    title: "Double Treasure Candle Locations - Vault of Knowledge",
+                    date: "2026-06-25T00:00:00.000-07:00",
+                    images: [{url: imageUrl, by: "Clement"}],
+                },
+            ],
+            rotating_candles: {
+                title: "Rotating Treasure Candle Locations - Rotation 20 | Valley Of Triumph",
+                date: "2026-06-18T07:00:00.000Z",
+                images: [{url: videoUrl, by: "Clement"}],
+            },
+        });
+        expect(parsedResponse).not.toBeNull();
+
+        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), {}, localQuests);
+
+        expect(displayData.quests.map((quest) => quest.questName)).toEqual(["Forge a candle"]);
+        expect(displayData.candleGuides).toEqual([
+            {
+                kind: "candle-cakes",
+                title: "Double Treasure Candle Locations - Vault of Knowledge",
+                realm: "Vault of Knowledge",
+                visualGuideUrl: imageUrl,
+                videoGuideUrl: null,
+            },
+        ]);
+    });
+
     it("ignores placeholder candle guide titles", () => {
         const parsedResponse = validateSkyHelperQuestResponse({
             quests: [

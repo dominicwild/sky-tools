@@ -188,6 +188,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "relive spirit quest season of assembly chuckling scout",
         "relive chuckling scout s memory from hidden forest",
     ],
+    [
+        "meet up with cackling cannoneer in graveyard get launched",
+        "meet up with cackling cannoneer in graveyard launch cackling cannoneer",
+    ],
 ]);
 
 export function createLocalQuestTitleIndex(localQuests: Quest[]) {

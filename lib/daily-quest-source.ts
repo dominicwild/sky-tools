@@ -332,10 +332,30 @@ function mergeSkyHelperQuestMedia(apiQuests: SkyHelperQuest[]) {
 }
 
 function createCandleGuides(response: SkyHelperQuestResponse): CandleGuide[] {
+    const questRowCandleGuides = createCandleGuidesFromQuestRows(response.quests);
+
     return [
-        createCandleGuide("seasonal-candles", response.seasonalCandles),
-        createCandleGuide("candle-cakes", response.rotatingCandles),
+        questRowCandleGuides.get("seasonal-candles") ?? createCandleGuide("seasonal-candles", response.seasonalCandles),
+        questRowCandleGuides.get("candle-cakes") ?? createCandleGuide("candle-cakes", response.rotatingCandles),
     ].filter((guide): guide is CandleGuide => guide !== null);
+}
+
+function createCandleGuidesFromQuestRows(quests: SkyHelperQuest[]) {
+    const guides = new Map<CandleGuideKind, CandleGuide>();
+
+    for (const quest of quests) {
+        const kind = getQuestRowCandleGuideKind(quest.title);
+        if (!kind || guides.has(kind)) {
+            continue;
+        }
+
+        const guide = createCandleGuide(kind, quest);
+        if (guide) {
+            guides.set(kind, guide);
+        }
+    }
+
+    return guides;
 }
 
 function createCandleGuide(kind: CandleGuideKind, group: SkyHelperGuideGroup | null) {
@@ -411,6 +431,18 @@ function isSkyHelperTitleError(title: string) {
 
 function isSkyHelperCandleGuideTitle(title: string) {
     return /(?:seasonal|treasure) candle locations?/i.test(title);
+}
+
+function getQuestRowCandleGuideKind(title: string): CandleGuideKind | null {
+    if (/seasonal candle locations?/i.test(title)) {
+        return "seasonal-candles";
+    }
+
+    if (/treasure candle locations?/i.test(title)) {
+        return "candle-cakes";
+    }
+
+    return null;
 }
 
 function getCandleGuideRealm(title: string) {
