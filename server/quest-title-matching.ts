@@ -33,6 +33,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "find the candles at the end of the rainbow in the vault of knowledge",
     ],
     [
+        "days of rainbow 2021 daily quest rainbow location daylight prairie",
+        "find the candles at the end of the rainbow in the daylight prairie",
+    ],
+    [
         "coloured light quest red light in golden wasteland",
         "collect red light",
     ],
@@ -171,6 +175,10 @@ const QUEST_TITLE_ALIASES = new Map([
     [
         "relive spirit quest season of gratitude greeting shaman",
         "relive greeting shaman s memory from vault of knowledge",
+    ],
+    [
+        "relive spirit quest season of gratitude stretching guru",
+        "relive stretching guru s memory from daylight prairie",
     ],
     [
         "relive spirit quest valley of triumph proud victor",
