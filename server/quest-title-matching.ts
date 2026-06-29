@@ -89,6 +89,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "meditate in forest s boneyard",
     ],
     [
+        "meditation quest guide hidden forest forest clearing",
+        "meditate at forest s clearing",
+    ],
+    [
         "coloured light quest purple light in vault of knowledge",
         "collect purple light",
     ],
@@ -141,12 +145,20 @@ const QUEST_TITLE_ALIASES = new Map([
         "find the candles at the end of the rainbow in the valley of triumph",
     ],
     [
+        "days of rainbow 2022 admire the rainbow in the wind paths",
+        "admire the rainbow in the wind paths for a short while",
+    ],
+    [
         "meditation quest guide valley of triumph ice rink meditate overlooking the frozen lake",
         "meditate overlooking the frozen lake",
     ],
     [
         "catch the wandering lights in the citadel",
         "catch the 3 lights in valley s citadel",
+    ],
+    [
+        "catch the wandering lights in the wind paths",
+        "catch the 3 lights in the wind paths",
     ],
     [
         "catch the wandering lights in prairie village",
