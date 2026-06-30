@@ -53,6 +53,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "bow at a player",
     ],
     [
+        "daily quest guide high five a friend",
+        "high five a friend",
+    ],
+    [
         "social quest guide hold a friend s hand",
         "hold the hand of a friend",
     ],

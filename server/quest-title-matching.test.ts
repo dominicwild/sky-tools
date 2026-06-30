@@ -13,6 +13,8 @@ const localQuests: Quest[] = [
     createQuest(21, "Relive Stretching Guru's memory from Daylight Prairie"),
     createQuest(195, "Admire the rainbow in the Wind Paths for a short while"),
     createQuest(223, "Catch the 3 lights in The Wind Paths"),
+    createQuest(150, "High-Five a Friend"),
+    createQuest(246, "Meet up with Cackling Cannoneer in Graveyard - Play a prank on Ceasing Commodore"),
 ];
 
 describe("quest title matching", () => {
@@ -22,6 +24,8 @@ describe("quest title matching", () => {
         ["Meditation Quest Guide Hidden Forest - Forest Clearing", 31],
         ["Days of Rainbow 2022 - Admire the Rainbow in the Wind Paths", 195],
         ["Catch the wandering lights in The Wind Paths", 223],
+        ["Daily Quest Guide - High-Five a Friend", 150],
+        ["Meet up with Cackling Cannoneer in Graveyard -  Play a prank on Ceasing Commodore", 246],
     ])("matches SkyHelper alias %s", (title, expectedId) => {
         expect(getMatchingLocalQuestId(title, createLocalQuestTitleIndex(localQuests))).toBe(expectedId);
     });

@@ -2214,5 +2214,14 @@ export const questsData = [
         "visualGuideUrl": "skyhelper-1517799605968830534.jpeg",
         "videoGuideUrl": null,
         "id": 245
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Golden Wasteland (?)",
+        "questName": "Meet up with Cackling Cannoneer in Graveyard - Play a prank on Ceasing Commodore",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "skyhelper-1521415362174914580.jpeg",
+        "videoGuideUrl": null,
+        "id": 246
     }
 ] satisfies Quest[]
