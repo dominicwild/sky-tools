@@ -94,6 +94,7 @@ Validation:
    npm run typecheck
    npm run lint
    npm run fallow:dupes
+   npm run fallow:dead-code
    npm run test:run
 2. Start the app for a smoke test without leaving a visible terminal window open, unless a sky-tools dev server is
    already running:
@@ -109,11 +110,32 @@ Commit and push:
 2. If changes are valid, commit only the relevant files with:
    chore: sync quest data
 3. Push the current branch.
-4. Final response must include:
+4. Confirm the pushed commit is deployed to production before final verification. Use GitHub deployment records when
+   available:
+   `gh api repos/dominicwild/sky-tools/deployments --jq '.[:5] | map({sha, environment, created_at, statuses_url})'`
+   and then check the newest matching deployment status for `state: "success"`.
+5. Use agent-browser to open the live site at https://sky.dominicwild.com. Compare the visible daily quests and candle
+   guides against the current SkyHelper API payload. This live-site/API comparison is the final verification point:
+    - If the live site matches the current SkyHelper payload, the sync is verified.
+    - If the live site does not match the current SkyHelper payload, debug the production problem before finishing.
+6. Final response must include:
     - what changed
     - validation results
+    - live-site/API verification result
     - whether a server/process remains running
     - any UploadThing upload or credential issue
+
+## SkyHelper Lag Handling
+
+Sky resets around 9am UK time, but reset timing can drift with daylight saving time and SkyHelper can lag behind the
+game. If SkyHelper returns a payload whose `last_updated`/quest `date` is older than the app's current Sky date:
+
+1. Do not treat yesterday's SkyHelper quests as today's quests.
+2. Wait 10 minutes, then fetch https://api.skyhelper.xyz/update/quests again.
+3. Repeat until SkyHelper returns the current Sky date or until six total checks have been made over roughly one hour.
+4. If the payload becomes current, continue the normal sync and live-site verification process.
+5. If the payload is still stale after six checks, stop and report that SkyHelper did not update within the one-hour
+   polling window. Do not invent fallback quests.
 
 ## UploadThing Setup
 
