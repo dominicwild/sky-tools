@@ -143,7 +143,7 @@ export default function QuestSearch({
                                                     transition: { delay: index * 0.05 },
                                                 }}
                                                 className="flex items-center justify-between p-3 rounded-xl hover:bg-sky-500/80 cursor-pointer transition-colors"
-                                                onClick={() => addQuest(quest)}
+                                                onPointerDown={() => addQuest(quest)}
                                             >
                                                 <div className="flex items-center gap-3 flex-1">
                                                     {quest.iconUrl && (
@@ -166,6 +166,10 @@ export default function QuestSearch({
                                                         variant="ghost"
                                                         size="sm"
                                                         className="text-white/80 hover:text-white hover:bg-white/20 ml-2"
+                                                        onPointerDown={(event) => {
+                                                            event.preventDefault()
+                                                            addQuest(quest)
+                                                        }}
                                                         disabled={isQuestSelected(quest, selectedQuests) || selectedQuests.length >= 4}
                                                     >
                                                         {isQuestSelected(quest, selectedQuests) ? "Added" : "Add"}

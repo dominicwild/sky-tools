@@ -81,16 +81,21 @@ export default function QuestTracker({initialQuestData, skyHelperQuestData}: Rea
     }
 
     const addQuest = (quest: Quest) => {
-        if (selectedQuests.length < 4 && !isQuestSelected(quest, selectedQuests)) {
-            trackQuestSelection(quest);
-            hasEditedSelectedQuests.current = true
+        hasEditedSelectedQuests.current = true
+        trackQuestSelection(quest);
 
-            setSelectedQuests([...selectedQuests, quest])
-            setSearchQuery("")
-            const searchInput = document.getElementById("quest-search")
-            if (searchInput) {
-                searchInput.focus()
+        setSelectedQuests((currentSelectedQuests) => {
+            if (currentSelectedQuests.length >= 4 || isQuestSelected(quest, currentSelectedQuests)) {
+                return currentSelectedQuests
             }
+
+            return [...currentSelectedQuests, quest]
+        })
+
+        setSearchQuery("")
+        const searchInput = document.getElementById("quest-search")
+        if (searchInput) {
+            searchInput.focus()
         }
     }
 
