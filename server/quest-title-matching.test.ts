@@ -10,6 +10,9 @@ vi.mock("@/lib/daily-quest-source", async () => import("../lib/daily-quest-sourc
 const localQuests: Quest[] = [
     createQuest(31, "Meditate at Forest's clearing"),
     createQuest(10, "Find the candles at the end of the rainbow in the Daylight Prairie"),
+    createQuest(41, "Find the candles at the end of the rainbow in the Hidden Forest"),
+    createQuest(37, "Collect Orange Light"),
+    createQuest(51, "Relive Tearful Light Miner's memory from Hidden Forest"),
     createQuest(21, "Relive Stretching Guru's memory from Daylight Prairie"),
     createQuest(195, "Admire the rainbow in the Wind Paths for a short while"),
     createQuest(223, "Catch the 3 lights in The Wind Paths"),
@@ -20,6 +23,9 @@ const localQuests: Quest[] = [
 describe("quest title matching", () => {
     it.each([
         ["Days of Rainbow 2021 - Daily Quest, Rainbow Location - Daylight Prairie", 10],
+        ["Days of Rainbow 2021 - Daily Quest, Rainbow Location - Hidden Forest", 41],
+        ["Coloured Light Quest - Orange Light in Hidden Forest", 37],
+        ["Relive Spirit Quest Hidden Forest - Tearful Light Miner", 51],
         ["Relive Spirit Quest Season of Gratitude  - Stretching Guru", 21],
         ["Meditation Quest Guide Hidden Forest - Forest Clearing", 31],
         ["Days of Rainbow 2022 - Admire the Rainbow in the Wind Paths", 195],

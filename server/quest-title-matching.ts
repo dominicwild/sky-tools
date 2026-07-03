@@ -37,8 +37,16 @@ const QUEST_TITLE_ALIASES = new Map([
         "find the candles at the end of the rainbow in the daylight prairie",
     ],
     [
+        "days of rainbow 2021 daily quest rainbow location hidden forest",
+        "find the candles at the end of the rainbow in the hidden forest",
+    ],
+    [
         "coloured light quest red light in golden wasteland",
         "collect red light",
+    ],
+    [
+        "coloured light quest orange light in hidden forest",
+        "collect orange light",
     ],
     [
         "daily quest guide send a gift to a friend",
@@ -211,6 +219,10 @@ const QUEST_TITLE_ALIASES = new Map([
     [
         "relive spirit quest season of assembly chuckling scout",
         "relive chuckling scout s memory from hidden forest",
+    ],
+    [
+        "relive spirit quest hidden forest tearful light miner",
+        "relive tearful light miner s memory from hidden forest",
     ],
     [
         "meet up with cackling cannoneer in graveyard get launched",
