@@ -1,4 +1,5 @@
 import type {Quest, QuestValue} from "./quest-types";
+import {getSkyDateKeyFromIsoDate} from "./utils";
 
 const QUEST_LIMIT = 4;
 
@@ -332,15 +333,15 @@ function mergeSkyHelperQuestMedia(apiQuests: SkyHelperQuest[]) {
 }
 
 function createCandleGuides(response: SkyHelperQuestResponse): CandleGuide[] {
-    const questRowCandleGuides = createCandleGuidesFromQuestRows(response.quests);
+    const questRowCandleGuides = createCandleGuidesFromQuestRows(response.quests, response.sourceDate);
 
     return [
-        questRowCandleGuides.get("seasonal-candles") ?? createCandleGuide("seasonal-candles", response.seasonalCandles),
-        questRowCandleGuides.get("candle-cakes") ?? createCandleGuide("candle-cakes", response.rotatingCandles),
+        questRowCandleGuides.get("seasonal-candles") ?? createCandleGuide("seasonal-candles", response.seasonalCandles, response.sourceDate),
+        questRowCandleGuides.get("candle-cakes") ?? createCandleGuide("candle-cakes", response.rotatingCandles, response.sourceDate),
     ].filter((guide): guide is CandleGuide => guide !== null);
 }
 
-function createCandleGuidesFromQuestRows(quests: SkyHelperQuest[]) {
+function createCandleGuidesFromQuestRows(quests: SkyHelperQuest[], sourceDate: string) {
     const guides = new Map<CandleGuideKind, CandleGuide>();
 
     for (const quest of quests) {
@@ -349,7 +350,7 @@ function createCandleGuidesFromQuestRows(quests: SkyHelperQuest[]) {
             continue;
         }
 
-        const guide = createCandleGuide(kind, quest);
+        const guide = createCandleGuide(kind, quest, sourceDate);
         if (guide) {
             guides.set(kind, guide);
         }
@@ -358,8 +359,8 @@ function createCandleGuidesFromQuestRows(quests: SkyHelperQuest[]) {
     return guides;
 }
 
-function createCandleGuide(kind: CandleGuideKind, group: SkyHelperGuideGroup | null) {
-    if (!group || isSkyHelperTitleError(group.title)) {
+function createCandleGuide(kind: CandleGuideKind, group: SkyHelperGuideGroup | null, sourceDate: string) {
+    if (!group || isSkyHelperTitleError(group.title) || !isCurrentGuideGroup(group, sourceDate)) {
         return null;
     }
 
@@ -369,6 +370,10 @@ function createCandleGuide(kind: CandleGuideKind, group: SkyHelperGuideGroup | n
         realm: getCandleGuideRealm(group.title),
         ...getFirstMediaUrls(group.images),
     };
+}
+
+function isCurrentGuideGroup(group: SkyHelperGuideGroup, sourceDate: string) {
+    return getSkyDateKeyFromIsoDate(group.date) === getSkyDateKeyFromIsoDate(sourceDate);
 }
 
 function getFirstMediaUrls(mediaItems: SkyHelperMedia[]) {

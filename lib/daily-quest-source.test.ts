@@ -86,12 +86,12 @@ describe("daily quest source", () => {
             ...createRepresentativeResponse(),
             seasonal_candles: {
                 title: "Seasonal Candle Location - Hidden Forest - Rotation 1",
-                date: "2026-05-19T00:00:00.000-07:00",
+                date: "2026-05-17T00:00:00.000-07:00",
                 images: [{url: imageUrl, by: "@AL"}],
             },
             rotating_candles: {
                 title: "Rotating Treasure Candle Locations - Rotation 20 | Valley Of Triumph",
-                date: "2026-05-19T00:00:00.000-07:00",
+                date: "2026-05-17T00:00:00.000-07:00",
                 images: [{url: videoUrl, by: "Clement"}],
             },
         });
@@ -168,24 +168,17 @@ describe("daily quest source", () => {
                 date: "2026-06-23T00:00:00.000-07:00",
                 images: [{url: imageUrl, by: "@AL"}],
             },
-            rotating_candles: {
-                title: "Rotating Treasure Candle Locations - Rotation 20 | Valley Of Triumph",
-                date: "2026-06-23T00:00:00.000-07:00",
-                images: [{url: imageUrl, by: "Clement"}],
-            },
+            rotating_candles: createCandleGroup(
+                "Rotating Treasure Candle Locations - Rotation 20 | Valley Of Triumph",
+                "2026-06-23T00:00:00.000-07:00",
+            ),
         });
         expect(parsedResponse).not.toBeNull();
 
         const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), {}, localQuests);
 
         expect(displayData.candleGuides).toEqual([
-            {
-                kind: "candle-cakes",
-                title: "Rotating Treasure Candle Locations - Rotation 20 | Valley Of Triumph",
-                realm: "Valley of Triumph",
-                visualGuideUrl: imageUrl,
-                videoGuideUrl: null,
-            },
+            createExpectedCandleCakeGuide("Rotating Treasure Candle Locations - Rotation 20 | Valley Of Triumph", "Valley of Triumph"),
         ]);
     });
 
@@ -219,6 +212,35 @@ describe("daily quest source", () => {
                 visualGuideUrl: null,
                 videoGuideUrl: null,
             },
+        ]);
+    });
+
+    it("ignores stale optional candle guide groups", () => {
+        const parsedResponse = validateSkyHelperQuestResponse({
+            last_updated: "2026-07-04T00:00:00.000-07:00",
+            quests: [
+                {
+                    title: "Forge a Candle",
+                    date: "2026-07-04T00:00:00.000-07:00",
+                    images: [],
+                },
+            ],
+            seasonal_candles: {
+                title: "Double Seasonal Candle Location - Daylight Prairie",
+                date: "2026-07-02T00:00:00.000-07:00",
+                images: [{url: imageUrl, by: "@AL"}],
+            },
+            rotating_candles: createCandleGroup(
+                "Rotating Treasure Candle Locations - Rotation 1 | Golden Wasteland",
+                "2026-07-04T00:00:00.000-07:00",
+            ),
+        });
+        expect(parsedResponse).not.toBeNull();
+
+        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), {}, localQuests);
+
+        expect(displayData.candleGuides).toEqual([
+            createExpectedCandleCakeGuide("Rotating Treasure Candle Locations - Rotation 1 | Golden Wasteland", "Golden Wasteland"),
         ]);
     });
 
@@ -359,6 +381,24 @@ function createQuestMatchResponse(response: SkyHelperQuestResponse | null) {
 
         return localQuestsByTitle.get(aliasTitle ?? normalizedTitle) ?? null;
     });
+}
+
+function createCandleGroup(title: string, date: string) {
+    return {
+        title,
+        date,
+        images: [{url: imageUrl, by: "Clement"}],
+    };
+}
+
+function createExpectedCandleCakeGuide(title: string, realm: string) {
+    return {
+        kind: "candle-cakes",
+        title,
+        realm,
+        visualGuideUrl: imageUrl,
+        videoGuideUrl: null,
+    };
 }
 
 function createLocalQuest(id: number, questName: string, realm: string, videoGuideUrl: string | null = null): Quest {
