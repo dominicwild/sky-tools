@@ -18,6 +18,7 @@ const localQuests: Quest[] = [
     createQuest(223, "Catch the 3 lights in The Wind Paths"),
     createQuest(150, "High-Five a Friend"),
     createQuest(246, "Meet up with Cackling Cannoneer in Graveyard - Play a prank on Ceasing Commodore"),
+    createQuest(141, "Relive Meditating Monastic's memory from Vault of Knowledge"),
 ];
 
 describe("quest title matching", () => {
@@ -32,6 +33,7 @@ describe("quest title matching", () => {
         ["Catch the wandering lights in The Wind Paths", 223],
         ["Daily Quest Guide - High-Five a Friend", 150],
         ["Meet up with Cackling Cannoneer in Graveyard -  Play a prank on Ceasing Commodore", 246],
+        ["Relive Spirit Quest Vault of Knowledge - Meditating Monastic", 141],
     ])("matches SkyHelper alias %s", (title, expectedId) => {
         expect(getMatchingLocalQuestId(title, createLocalQuestTitleIndex(localQuests))).toBe(expectedId);
     });
