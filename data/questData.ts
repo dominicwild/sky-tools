@@ -2223,5 +2223,14 @@ export const questsData = [
         "visualGuideUrl": "skyhelper-1521415362174914580.jpeg",
         "videoGuideUrl": null,
         "id": 246
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Valley of Triumph (?)",
+        "questName": "Meet up with Bearhug Hermit in Hermit Valley - Admire Shared Spaces with Bearhug Hermit",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfx5A5ZnUcLVIKOfwrjBApPa60QoFk8ihTnlDgU",
+        "id": 247
     }
 ] satisfies Quest[]
