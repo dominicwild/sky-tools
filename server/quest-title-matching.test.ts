@@ -19,6 +19,7 @@ const localQuests: Quest[] = [
     createQuest(150, "High-Five a Friend"),
     createQuest(246, "Meet up with Cackling Cannoneer in Graveyard - Play a prank on Ceasing Commodore"),
     createQuest(141, "Relive Meditating Monastic's memory from Vault of Knowledge"),
+    createQuest(113, "Relive Indifferent Alchemist's memory from Golden Wasteland"),
 ];
 
 describe("quest title matching", () => {
@@ -34,6 +35,7 @@ describe("quest title matching", () => {
         ["Daily Quest Guide - High-Five a Friend", 150],
         ["Meet up with Cackling Cannoneer in Graveyard -  Play a prank on Ceasing Commodore", 246],
         ["Relive Spirit Quest Vault of Knowledge - Meditating Monastic", 141],
+        ["Relive Spirit Quest Season of Enchantment  - Indifferent Alchemist", 113],
     ])("matches SkyHelper alias %s", (title, expectedId) => {
         expect(getMatchingLocalQuestId(title, createLocalQuestTitleIndex(localQuests))).toBe(expectedId);
     });

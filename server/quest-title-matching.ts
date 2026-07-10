@@ -205,6 +205,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "relive stretching guru s memory from daylight prairie",
     ],
     [
+        "relive spirit quest season of enchantment indifferent alchemist",
+        "relive indifferent alchemist s memory from golden wasteland",
+    ],
+    [
         "relive spirit quest valley of triumph proud victor",
         "relive proud victor s memory from valley of triumph",
     ],
