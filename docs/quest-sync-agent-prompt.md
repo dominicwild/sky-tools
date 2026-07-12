@@ -132,10 +132,12 @@ game. If SkyHelper returns a payload whose `last_updated`/quest `date` is older 
 
 1. Do not treat yesterday's SkyHelper quests as today's quests.
 2. Wait 10 minutes, then fetch https://api.skyhelper.xyz/update/quests again.
-3. Repeat until SkyHelper returns the current Sky date or until six total checks have been made over roughly one hour.
-4. If the payload becomes current, continue the normal sync and live-site verification process.
-5. If the payload is still stale after six checks, stop and report that SkyHelper did not update within the one-hour
-   polling window. Do not invent fallback quests.
+3. If SkyHelper is still stale, repeat the 10-minute wait-and-fetch cycle two more times.
+4. If SkyHelper is still stale after those three short-delay retries, wait one hour between each of three more
+   fetches.
+5. If the payload becomes current during any retry, continue the normal sync and live-site verification process.
+6. If the payload is still stale after all six retries, stop and report that SkyHelper did not update within the
+   extended polling window. Do not invent fallback quests.
 
 ## UploadThing Setup
 

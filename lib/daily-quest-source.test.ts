@@ -2,11 +2,14 @@ import {describe, expect, it} from "vitest";
 import {
     classifyAttachmentUrl,
     createSkyHelperQuestMatchResponse,
+    createThatSkyDailyGuidesQuestMatchResponse,
     isSkyHelperQuestMatchResponseCurrent,
     normalizeQuestTitle,
+    parseThatSkyDailyGuidesHtml,
     resolveDailyQuestDisplayData,
     resolveDailyQuests,
     validateSkyHelperQuestResponse,
+    type ThatSkyDailyGuidesResponse,
     type SkyHelperQuestResponse,
 } from "./daily-quest-source";
 import type {Quest} from "./quest-types";
@@ -20,7 +23,11 @@ const localQuests: Quest[] = [
     createLocalQuest(12, "Fallback middle", "Hidden Forest"),
     createLocalQuest(132, "Catch the light in the Vault of Knowledge", "Vault of Knowledge"),
     createLocalQuest(159, "Forge a candle", "General", "https://youtu.be/local-forge"),
+    createLocalQuest(160, "Light 20 candles", "General"),
+    createLocalQuest(222, "Catch the 3 lights in the big Treehouse", "Hidden Forest"),
+    createLocalQuest(230, "Use expressions with players", "General"),
     createLocalQuest(168, "Hold the hand of a friend", "General"),
+    createLocalQuest(39, "Recharge your light from a light bloom", "Hidden Forest"),
     createLocalQuest(231, "Call to 5 different players", "General"),
 ];
 
@@ -32,6 +39,14 @@ const questTitleAliases = new Map([
     [
         "social quest guide hold a friend s hand",
         "hold the hand of a friend",
+    ],
+    [
+        "recharge from a light bloom",
+        "recharge your light from a light bloom",
+    ],
+    [
+        "catch the wandering lights in the treehouse",
+        "catch the 3 lights in the big treehouse",
     ],
 ]);
 
@@ -331,6 +346,97 @@ describe("daily quest source", () => {
 
         expect(quests).toEqual([]);
     });
+
+    it("parses thatskyapplication daily guide HTML", () => {
+        const parsedResponse = parseThatSkyDailyGuidesHtml(`
+            <main>
+                <h1>Wednesday, 8 July 2026</h1>
+                <h2>Quests</h2>
+                <p>1.Light 20 candles</p>
+                <p>2.Catch the wandering lights in the Treehouse</p>
+                <p>3.Recharge from a light bloom</p>
+                <p>4.Use expressions with players</p>
+                <h2>Treasure candles</h2>
+            </main>
+        `);
+
+        expect(parsedResponse).toEqual({
+            sourceDate: "2026-07-08T12:00:00.000-07:00",
+            quests: [
+                "Light 20 candles",
+                "Catch the wandering lights in the Treehouse",
+                "Recharge from a light bloom",
+                "Use expressions with players",
+            ],
+        });
+    });
+
+    it("parses thatskyapplication daily guide Markdown", () => {
+        const parsedResponse = parseThatSkyDailyGuidesHtml(`
+            # Wednesday, 8 July 2026
+
+            ## Quests
+
+            1.Light 20 candles
+            2.Catch the wandering lights in the Treehouse
+            3.Recharge from a light bloom
+            4.Use expressions with players
+
+            ## Treasure candles
+        `);
+
+        expect(parsedResponse?.quests).toEqual([
+            "Light 20 candles",
+            "Catch the wandering lights in the Treehouse",
+            "Recharge from a light bloom",
+            "Use expressions with players",
+        ]);
+    });
+
+    it("rejects Cloudflare challenge pages from thatskyapplication", () => {
+        expect(parseThatSkyDailyGuidesHtml("<title>Just a moment...</title>")).toBeNull();
+    });
+
+    it("matches thatskyapplication daily guides to local quest data", () => {
+        const questMatches = createThatSkyQuestMatchResponse({
+            sourceDate: "2026-07-08T12:00:00.000-07:00",
+            quests: [
+                "Light 20 candles",
+                "Catch the wandering lights in the Treehouse",
+                "Recharge from a light bloom",
+                "Use expressions with players",
+            ],
+        });
+
+        const quests = resolveDailyQuests(questMatches, {}, localQuests);
+
+        expect(quests.map((quest) => quest.questName)).toEqual([
+            "Light 20 candles",
+            "Catch the 3 lights in the big Treehouse",
+            "Recharge your light from a light bloom",
+            "Use expressions with players",
+        ]);
+        expect(quests.map((quest) => quest.visualGuideUrl)).toEqual([
+            "local-image.png",
+            "local-image.png",
+            "local-image.png",
+            "local-image.png",
+        ]);
+    });
+
+    it("does not create external quests from unmatched thatskyapplication titles", () => {
+        const questMatches = createThatSkyQuestMatchResponse({
+            sourceDate: "2026-07-08T12:00:00.000-07:00",
+            quests: [
+                "Light 20 candles",
+                "Secondary source wording not in local data",
+            ],
+        });
+
+        const quests = resolveDailyQuests(questMatches, {}, localQuests);
+
+        expect(quests.map((quest) => quest.questName)).toEqual(["Light 20 candles"]);
+    });
 });
 
 function createRepresentativeResponse() {
@@ -376,6 +482,23 @@ function createQuestMatchResponse(response: SkyHelperQuestResponse | null) {
     );
 
     return createSkyHelperQuestMatchResponse(response, (title) => {
+        const normalizedTitle = normalizeQuestTitle(title);
+        const aliasTitle = questTitleAliases.get(normalizedTitle);
+
+        return localQuestsByTitle.get(aliasTitle ?? normalizedTitle) ?? null;
+    });
+}
+
+function createThatSkyQuestMatchResponse(response: ThatSkyDailyGuidesResponse | null) {
+    if (!response) {
+        return null;
+    }
+
+    const localQuestsByTitle = new Map(
+        localQuests.map((quest) => [normalizeQuestTitle(quest.questName), quest.id ?? null]),
+    );
+
+    return createThatSkyDailyGuidesQuestMatchResponse(response, (title) => {
         const normalizedTitle = normalizeQuestTitle(title);
         const aliasTitle = questTitleAliases.get(normalizedTitle);
 

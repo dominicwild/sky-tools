@@ -63,6 +63,11 @@ export type SkyHelperQuestMatchResponse = {
     candleGuides: CandleGuide[]
 }
 
+export type ThatSkyDailyGuidesResponse = {
+    sourceDate: string
+    quests: string[]
+}
+
 export type CandleGuideKind = "seasonal-candles" | "candle-cakes"
 
 export type CandleGuide = {
@@ -172,6 +177,22 @@ export function validateSkyHelperQuestMatchResponse(value: unknown): SkyHelperQu
     return {quests, candleGuides};
 }
 
+export function parseThatSkyDailyGuidesHtml(html: string): ThatSkyDailyGuidesResponse | null {
+    if (isCloudflareChallengePage(html)) {
+        return null;
+    }
+
+    const lines = getHtmlTextLines(html);
+    const sourceDate = getThatSkyDailyGuidesSourceDate(lines);
+    const quests = getThatSkyDailyGuideQuests(lines);
+
+    if (!sourceDate || quests.length === 0) {
+        return null;
+    }
+
+    return {sourceDate, quests};
+}
+
 export function isSkyHelperQuestMatchResponseCurrent(
     response: SkyHelperQuestMatchResponse,
     localQuests: Quest[],
@@ -227,6 +248,29 @@ export function createSkyHelperQuestMatchResponse(
             };
         }),
         candleGuides: createCandleGuides(skyHelperResponse),
+    };
+}
+
+export function createThatSkyDailyGuidesQuestMatchResponse(
+    response: ThatSkyDailyGuidesResponse,
+    getLocalQuestId: (title: string) => number | null,
+): SkyHelperQuestMatchResponse {
+    return {
+        quests: response.quests.flatMap((title) => {
+            const localQuestId = getLocalQuestId(title);
+
+            if (localQuestId === null) {
+                return [];
+            }
+
+            return {
+                localQuestId,
+                title: null,
+                visualGuideUrl: null,
+                videoGuideUrl: null,
+            };
+        }),
+        candleGuides: [],
     };
 }
 
@@ -462,6 +506,103 @@ function getUrlPathname(url: string) {
     } catch {
         return url.split("?")[0] ?? url;
     }
+}
+
+function isCloudflareChallengePage(html: string) {
+    return /<title>\s*Just a moment\.\.\.\s*<\/title>/i.test(html);
+}
+
+function getHtmlTextLines(html: string) {
+    return html
+        .replace(/<script[\s\S]*?<\/script>/gi, " ")
+        .replace(/<style[\s\S]*?<\/style>/gi, " ")
+        .replace(/<[^>]+>/g, "\n")
+        .split(/\r?\n/)
+        .map((line) => decodeBasicHtmlEntities(line).replace(/\s+/g, " ").trim().replace(/^#+\s*/, ""))
+        .filter(Boolean);
+}
+
+function decodeBasicHtmlEntities(value: string) {
+    return value
+        .replace(/&nbsp;/g, " ")
+        .replace(/&amp;/g, "&")
+        .replace(/&lt;/g, "<")
+        .replace(/&gt;/g, ">")
+        .replace(/&quot;/g, "\"")
+        .replace(/&#39;/g, "'");
+}
+
+function getThatSkyDailyGuidesSourceDate(lines: string[]) {
+    const dateLine = lines.find((line) => (
+        /^(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), \d{1,2} [A-Z][a-z]+ \d{4}$/.test(line)
+    ));
+
+    if (!dateLine) {
+        return null;
+    }
+
+    return toThatSkyDailyGuidesSourceDate(dateLine);
+}
+
+function toThatSkyDailyGuidesSourceDate(dateLine: string) {
+    const match = dateLine.match(/^\w+, (\d{1,2}) ([A-Z][a-z]+) (\d{4})$/);
+    if (!match) {
+        return null;
+    }
+
+    const [, day, monthName, year] = match;
+    const month = getMonthNumber(monthName);
+    if (!month) {
+        return null;
+    }
+
+    return `${year}-${month.toString().padStart(2, "0")}-${Number(day).toString().padStart(2, "0")}T12:00:00.000-07:00`;
+}
+
+function getMonthNumber(monthName: string) {
+    const monthNames = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
+    const index = monthNames.indexOf(monthName);
+
+    return index === -1 ? null : index + 1;
+}
+
+function getThatSkyDailyGuideQuests(lines: string[]) {
+    const questsStart = lines.findIndex((line) => line === "Quests");
+    if (questsStart === -1) {
+        return [];
+    }
+
+    const quests: string[] = [];
+
+    for (const line of lines.slice(questsStart + 1)) {
+        const questMatch = line.match(/^\d+\.\s*(.+)$/);
+        if (questMatch) {
+            quests.push(questMatch[1]);
+        }
+
+        if (quests.length === QUEST_LIMIT) {
+            return quests;
+        }
+
+        if (quests.length > 0 && /^[A-Z][A-Za-z ]+$/.test(line) && !questMatch) {
+            return quests;
+        }
+    }
+
+    return quests;
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {

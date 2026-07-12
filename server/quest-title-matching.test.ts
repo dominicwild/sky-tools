@@ -19,6 +19,10 @@ const localQuests: Quest[] = [
     createQuest(150, "High-Five a Friend"),
     createQuest(246, "Meet up with Cackling Cannoneer in Graveyard - Play a prank on Ceasing Commodore"),
     createQuest(141, "Relive Meditating Monastic's memory from Vault of Knowledge"),
+    createQuest(17, "Relive Slumbering Shipwright's memory from Daylight Prairie"),
+    createQuest(39, "Recharge your light from a light bloom"),
+    createQuest(222, "Catch the 3 lights in the big Treehouse"),
+    createQuest(221, "Ride a giant manta in Sanctuary Islands"),
     createQuest(113, "Relive Indifferent Alchemist's memory from Golden Wasteland"),
 ];
 
@@ -35,6 +39,10 @@ describe("quest title matching", () => {
         ["Daily Quest Guide - High-Five a Friend", 150],
         ["Meet up with Cackling Cannoneer in Graveyard -  Play a prank on Ceasing Commodore", 246],
         ["Relive Spirit Quest Vault of Knowledge - Meditating Monastic", 141],
+        ["Relive Spirit Quest Daylight Prairie - Slumbering Shipwright", 17],
+        ["Recharge from a light bloom", 39],
+        ["Catch the wandering lights in the Treehouse", 222],
+        ["https://discord.com/channels/575762611111592007/575827924343848960/1453303732572786822\n\n>  How to get to the Sanctuary Islands", 221],
         ["Relive Spirit Quest Season of Enchantment  - Indifferent Alchemist", 113],
     ])("matches SkyHelper alias %s", (title, expectedId) => {
         expect(getMatchingLocalQuestId(title, createLocalQuestTitleIndex(localQuests))).toBe(expectedId);

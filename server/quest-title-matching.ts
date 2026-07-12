@@ -77,12 +77,24 @@ const QUEST_TITLE_ALIASES = new Map([
         "make a new acquaintance",
     ],
     [
+        "recharge from a light bloom",
+        "recharge your light from a light bloom",
+    ],
+    [
+        "catch the wandering lights in the treehouse",
+        "catch the 3 lights in the big treehouse",
+    ],
+    [
         "daily quest guide face the dark dragon",
         "face the dark dragon",
     ],
     [
         "relive spirit quest daylight prairie exhausted dock worker",
         "relive exhausted dock worker s memory from daylight prairie",
+    ],
+    [
+        "relive spirit quest daylight prairie slumbering shipwright",
+        "relive slumbering shipwright s memory from daylight prairie",
     ],
     [
         "catch the light quest vault of knowledge",
@@ -127,6 +139,10 @@ const QUEST_TITLE_ALIASES = new Map([
     [
         "daily quest visit the polluted geyser in the sanctuary islands",
         "visit the polluted geyser in sanctuary islands",
+    ],
+    [
+        "https discord com channels 575762611111592007 575827924343848960 1453303732572786822 how to get to the sanctuary islands",
+        "ride a giant manta in sanctuary islands",
     ],
     [
         "relive spirit quest season of sanctuary timid bookworm",
