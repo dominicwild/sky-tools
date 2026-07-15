@@ -656,11 +656,18 @@ function parseGuideGroups(records: Record<string, unknown>[]) {
 }
 
 function getSkyHelperSourceDate(value: Record<string, unknown>, quests: SkyHelperQuest[]) {
-    if (typeof value.last_updated === "string") {
-        return value.last_updated;
-    }
+    return getLatestQuestDate(quests) ?? (typeof value.last_updated === "string" ? value.last_updated : null);
+}
 
-    return quests[0]?.date ?? null;
+function getLatestQuestDate(quests: SkyHelperQuest[]) {
+    const questDates = quests
+        .map((quest) => ({
+            date: quest.date,
+            time: new Date(quest.date).getTime(),
+        }))
+        .filter((quest): quest is { date: string; time: number } => Number.isFinite(quest.time));
+
+    return questDates.sort((left, right) => right.time - left.time)[0]?.date ?? null;
 }
 
 function parseGuideGroup(record: Record<string, unknown>) {

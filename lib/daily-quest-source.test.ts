@@ -62,6 +62,21 @@ describe("daily quest source", () => {
         });
     });
 
+    it("uses the latest quest row date when last_updated is stale", () => {
+        const parsedResponse = validateSkyHelperQuestResponse({
+            last_updated: "2026-07-14T08:00:00+01:00",
+            quests: [
+                {
+                    title: "Call to 5 different players",
+                    date: "2026-07-15T08:00:00+01:00",
+                    images: [],
+                },
+            ],
+        });
+
+        expect(parsedResponse?.sourceDate).toBe("2026-07-15T08:00:00+01:00");
+    });
+
     it("matches, merges media, keeps external quests, and infers the unmatched realm", () => {
         const parsedResponse = validateSkyHelperQuestResponse(createRepresentativeResponse());
         expect(parsedResponse).not.toBeNull();
