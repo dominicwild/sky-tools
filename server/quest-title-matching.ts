@@ -73,6 +73,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "visit the bonfire at the wasteland s graveyard",
     ],
     [
+        "visiting the social light area daylight prairie prairie cave",
+        "visit the cozy hideout in prairie caves",
+    ],
+    [
         "daily quest guide make a new acquaintance",
         "make a new acquaintance",
     ],

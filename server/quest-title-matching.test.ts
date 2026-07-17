@@ -25,6 +25,7 @@ const localQuests: Quest[] = [
     createQuest(221, "Ride a giant manta in Sanctuary Islands"),
     createQuest(113, "Relive Indifferent Alchemist's memory from Golden Wasteland"),
     createQuest(83, "Relive Saluting Protector's memory from Golden Wasteland"),
+    createQuest(11, "Visit the cozy hideout in Prairie Caves"),
 ];
 
 describe("quest title matching", () => {
@@ -46,6 +47,7 @@ describe("quest title matching", () => {
         ["https://discord.com/channels/575762611111592007/575827924343848960/1453303732572786822\n\n>  How to get to the Sanctuary Islands", 221],
         ["Relive Spirit Quest Season of Enchantment  - Indifferent Alchemist", 113],
         ["Relive Spirit Quest Season of Gratitude  - Saluting Protector", 83],
+        ["Visiting the Social Light Area - Daylight Prairie, Prairie Cave", 11],
     ])("matches SkyHelper alias %s", (title, expectedId) => {
         expect(getMatchingLocalQuestId(title, createLocalQuestTitleIndex(localQuests))).toBe(expectedId);
     });
