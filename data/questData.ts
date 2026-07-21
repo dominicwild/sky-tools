@@ -2250,5 +2250,14 @@ export const questsData = [
         "visualGuideUrl": "skyhelper-1528313350998593536.jpeg",
         "videoGuideUrl": null,
         "id": 249
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Vault of Knowledge (?)",
+        "questName": "Meet up with Pleading Child in Repository of Refuge - Help Pleading Child find their lost toy",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxI4aV28QHAeWl2grHtEy4LP6QY1bXdCDic0pG",
+        "id": 250
     }
 ] satisfies Quest[]
