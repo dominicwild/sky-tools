@@ -49,6 +49,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "collect orange light",
     ],
     [
+        "coloured light quest green light in daylight prairie",
+        "collect green light",
+    ],
+    [
         "daily quest guide send a gift to a friend",
         "send a gift to a friend",
     ],
@@ -99,6 +103,10 @@ const QUEST_TITLE_ALIASES = new Map([
     [
         "relive spirit quest daylight prairie slumbering shipwright",
         "relive slumbering shipwright s memory from daylight prairie",
+    ],
+    [
+        "relive spirit quest daylight prairie waving bellmaker",
+        "relive waving bellmaker s memory from daylight prairie",
     ],
     [
         "catch the light quest vault of knowledge",
