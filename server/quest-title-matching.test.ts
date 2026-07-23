@@ -28,6 +28,7 @@ const localQuests: Quest[] = [
     createQuest(113, "Relive Indifferent Alchemist's memory from Golden Wasteland"),
     createQuest(83, "Relive Saluting Protector's memory from Golden Wasteland"),
     createQuest(11, "Visit the cozy hideout in Prairie Caves"),
+    createQuest(35, "Relive Daydream Forester's memory from Hidden Forest"),
 ];
 
 describe("quest title matching", () => {
@@ -52,6 +53,7 @@ describe("quest title matching", () => {
         ["Relive Spirit Quest Season of Enchantment  - Indifferent Alchemist", 113],
         ["Relive Spirit Quest Season of Gratitude  - Saluting Protector", 83],
         ["Visiting the Social Light Area - Daylight Prairie, Prairie Cave", 11],
+        ["Relive Spirit Quest Season of Assembly  - Daydreaming Forester", 35],
     ])("matches SkyHelper alias %s", (title, expectedId) => {
         expect(getMatchingLocalQuestId(title, createLocalQuestTitleIndex(localQuests))).toBe(expectedId);
     });

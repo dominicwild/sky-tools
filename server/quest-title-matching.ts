@@ -265,6 +265,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "relive chuckling scout s memory from hidden forest",
     ],
     [
+        "relive spirit quest season of assembly daydreaming forester",
+        "relive daydream forester s memory from hidden forest",
+    ],
+    [
         "relive spirit quest hidden forest tearful light miner",
         "relive tearful light miner s memory from hidden forest",
     ],
