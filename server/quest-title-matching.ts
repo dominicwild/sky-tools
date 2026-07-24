@@ -225,6 +225,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "relive leaping dancer s memory from valley of triumph",
     ],
     [
+        "relive spirit quest season of belonging sparkler parent",
+        "relive sparkler parent s memory from valley of triumph",
+    ],
+    [
         "relive spirit quest season of gratitude greeting shaman",
         "relive greeting shaman s memory from vault of knowledge",
     ],
