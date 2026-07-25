@@ -129,6 +129,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "meditate at forest s clearing",
     ],
     [
+        "meditation quest guide golden wasteland the boat a k a the crab fields",
+        "meditate in the crab fields",
+    ],
+    [
         "coloured light quest purple light in vault of knowledge",
         "collect purple light",
     ],
@@ -275,6 +279,10 @@ const QUEST_TITLE_ALIASES = new Map([
     [
         "relive spirit quest hidden forest tearful light miner",
         "relive tearful light miner s memory from hidden forest",
+    ],
+    [
+        "relive spirit quest golden wasteland saluting captain",
+        "relive saluting captain s memory from golden wasteland",
     ],
     [
         "meet up with cackling cannoneer in graveyard get launched",

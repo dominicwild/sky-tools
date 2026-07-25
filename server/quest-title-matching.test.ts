@@ -30,6 +30,8 @@ const localQuests: Quest[] = [
     createQuest(11, "Visit the cozy hideout in Prairie Caves"),
     createQuest(35, "Relive Daydream Forester's memory from Hidden Forest"),
     createQuest(86, "Relive Sparkler Parent's memory from Valley of Triumph"),
+    createQuest(117, "Relive Saluting Captain's memory from Golden Wasteland"),
+    createQuest(217, "Meditate in the Crab Fields"),
 ];
 
 describe("quest title matching", () => {
@@ -56,6 +58,8 @@ describe("quest title matching", () => {
         ["Visiting the Social Light Area - Daylight Prairie, Prairie Cave", 11],
         ["Relive Spirit Quest Season of Assembly  - Daydreaming Forester", 35],
         ["Relive Spirit Quest Season of Belonging  - Sparkler Parent", 86],
+        ["Relive Spirit Quest Golden Wasteland - Saluting Captain", 117],
+        ["Meditation Quest Guide - Golden Wasteland - The Boat a.k.a The Crab Fields", 217],
     ])("matches SkyHelper alias %s", (title, expectedId) => {
         expect(getMatchingLocalQuestId(title, createLocalQuestTitleIndex(localQuests))).toBe(expectedId);
     });
