@@ -2259,5 +2259,14 @@ export const questsData = [
         "visualGuideUrl": null,
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxI4aV28QHAeWl2grHtEy4LP6QY1bXdCDic0pG",
         "id": 250
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Vault of Knowledge (?)",
+        "questName": "Meet up with Thoughtful Director in Vault Rest - Meditate with Thoughtful Director",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxBOoRNuAjyVNG4C9Pw0zTOWtbmprRDAUHo2Xc",
+        "id": 251
     }
 ] satisfies Quest[]
