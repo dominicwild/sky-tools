@@ -81,6 +81,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "visit the cozy hideout in prairie caves",
     ],
     [
+        "visiting the social light area valley of triumph village of dreams hotspring",
+        "visit the hotspring in the village of dreams",
+    ],
+    [
         "daily quest guide make a new acquaintance",
         "make a new acquaintance",
     ],
@@ -251,6 +255,10 @@ const QUEST_TITLE_ALIASES = new Map([
     [
         "relive spirit quest season of gratitude saluting protector",
         "relive saluting protector s memory from golden wasteland",
+    ],
+    [
+        "relive spirit quest season of dreams spinning mentor",
+        "relive spinning mentor s memory from valley of triumph",
     ],
     [
         "relive spirit quest valley of triumph proud victor",

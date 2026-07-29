@@ -32,6 +32,8 @@ const localQuests: Quest[] = [
     createQuest(86, "Relive Sparkler Parent's memory from Valley of Triumph"),
     createQuest(117, "Relive Saluting Captain's memory from Golden Wasteland"),
     createQuest(217, "Meditate in the Crab Fields"),
+    createQuest(70, "Visit the Hotspring in the Village of Dreams"),
+    createQuest(97, "Relive Spinning Mentor's memory from Valley of Triumph"),
 ];
 
 describe("quest title matching", () => {
@@ -60,6 +62,8 @@ describe("quest title matching", () => {
         ["Relive Spirit Quest Season of Belonging  - Sparkler Parent", 86],
         ["Relive Spirit Quest Golden Wasteland - Saluting Captain", 117],
         ["Meditation Quest Guide - Golden Wasteland - The Boat a.k.a The Crab Fields", 217],
+        ["Relive Spirit Quest Season of Dreams  - Spinning Mentor", 97],
+        ["Visiting the Social Light Area - Valley of Triumph, Village of Dreams, Hotspring", 70],
     ])("matches SkyHelper alias %s", (title, expectedId) => {
         expect(getMatchingLocalQuestId(title, createLocalQuestTitleIndex(localQuests))).toBe(expectedId);
     });
