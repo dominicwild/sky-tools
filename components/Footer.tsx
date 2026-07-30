@@ -38,6 +38,9 @@ const Footer = () => {
                 <FooterLink href={"/about"}>
                     About
                 </FooterLink>
+                <FooterLink href={"/calendar"}>
+                    Calendar
+                </FooterLink>
                 <FooterLink href={"mailto:dom@dominicwild.com"}>
                     Contact
                 </FooterLink>

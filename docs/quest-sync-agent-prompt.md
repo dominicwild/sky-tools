@@ -125,6 +125,65 @@ Commit and push:
     - whether a server/process remains running
     - any UploadThing upload or credential issue
 
+## Calendar Sync
+
+Keep `data/skyEvents.ts` aligned with announced Sky calendar content. Calendar dates are zero-padded Sky days in
+`America/Los_Angeles`. `endDay` is inclusive everywhere in this repo; convert source dates when writing data, never
+when reading it. `calendarCoverage.coverageThrough` marks the last browsable day, including expected travelling-spirit
+windows, while `calendarCoverage.checkedOn` records when confirmations were last checked.
+
+Trigger:
+
+1. Read `calendarCoverage` and today's Sky day.
+2. Run the calendar sync when `coverageThrough` is fewer than 45 days after today, or `checkedOn` is more than 30 days
+   before today.
+3. Otherwise, log `calendar coverage current` and move on.
+
+Calendar sync:
+
+1. Read `packages/utility/source/events/<year>/index.ts` in
+   https://github.com/thatskyapplication/thatskyapplication for the current and next year, then each event file it
+   references. Take `start` and `end` from its `skyDate(y, m, d)` calls. Give each new event a `SkyEventPalette` token
+   that no event appearing in the same displayed month already uses.
+2. Subtract one Sky day from every thatskyapplication event `end` before writing `endDay`, because that source's ranges
+   are end-exclusive and ours are inclusive.
+3. Read season windows from `packages/utility/source/kingdom/seasons/<slug>/index.ts`. Apply the same end conversion,
+   but confirm the exclusive convention in each file rather than assuming it.
+4. Derive the next travelling-spirit windows from `travellingSpiritSchedule`: the next visit is the last known visit
+   plus two weeks and lasts four days. Write unannounced visits as `confidence: "expected"` with the title
+   `Travelling Spirit`. Never invent a spirit name; the rotation order is not guessable.
+5. Read returning-spirit group windows from `RETURNING_DATES` in `packages/utility/source/models/spirits.ts`. Match
+   each numbered group to its spirit names by scanning spirit files for `visits: { returning: [<group number>] }`.
+   Add groups only once announced. Do not extrapolate an empty result: months with no returning group are valid.
+6. Cross-check every `confirmed` entry against the latest "This Month in Sky" post and the entry's own post on
+   https://www.thatskygame.com/news/. Official dates win. Log any discrepancy in `docs/automation-notes.md`.
+7. Re-verify every currently running event on every run. TGC can extend an event after announcing it, so a confirmed
+   end date is not immutable.
+8. Never add an event, season, travelling spirit, or returning-spirit group that no source states. Leave an
+   unconfirmed month empty rather than inventing content.
+9. Update `calendarCoverage` after the verification work, including expected travelling-spirit windows in
+   `coverageThrough`.
+10. Run the required validation, commit as `chore: sync calendar data`, push the current branch, and verify `/calendar`
+    on the live site using the same deployment and browser checks as the quest sync.
+
+Daily travelling-spirit top-up:
+
+1. On every quest sync, check whether the nearest `expected` travelling-spirit window now has an official announcement.
+2. If it does, set the announced spirit title, correct both `startDay` and `endDay` to the announced dates, and switch
+   `confidence` to `confirmed`. Do not only update the title: the announced window can differ from the extrapolation.
+3. If no announcement exists, leave the entry unchanged and log nothing.
+
+Calendar rules:
+
+1. Convert end-exclusive source ranges to inclusive `endDay` once, at write time. Do not apply the conversion again
+   elsewhere.
+2. Never invent spirit identities or any other unannounced content. Travelling-spirit windows are predictable, but
+   identities are not; returning-spirit groups are not predictable in either window or membership.
+3. Only events carry a `palette`. Season, travelling spirit, and returning-spirit group each use one fixed colour.
+   Do not give those kinds a palette.
+4. Pick an event palette once and keep it unchanged. No two events appearing in the same displayed month may share a
+   palette token.
+
 ## SkyHelper Lag Handling
 
 Sky resets around 9am UK time, but reset timing can drift with daylight saving time and SkyHelper can lag behind the

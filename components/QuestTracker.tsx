@@ -2,6 +2,8 @@
 
 import {Suspense, use, useCallback, useEffect, useMemo, useRef, useState} from "react"
 import {AnimatePresence, motion} from "motion/react"
+import Link from "next/link";
+import {CalendarDays} from "lucide-react";
 import QuestSearch from "@/components/QuestSearch";
 import VisualGuideDialog from "./VisualGuideDialog";
 import VideoGuideDialog from "@/components/VideoGuideDialog";
@@ -148,6 +150,13 @@ export default function QuestTracker({initialQuestData, skyHelperQuestData}: Rea
 
                         </span>
                     </h1>
+                    <Link
+                        href="/calendar"
+                        className="mt-3 inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-sky-950/60 px-4 py-2 text-sm font-medium text-white shadow-lg backdrop-blur-md transition-colors hover:bg-sky-950/80"
+                    >
+                        <CalendarDays className="h-4 w-4" />
+                        What&apos;s on in Sky
+                    </Link>
                 </motion.div>
 
                 <QuestSearch
