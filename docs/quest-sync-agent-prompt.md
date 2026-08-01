@@ -107,20 +107,22 @@ Validation:
 Commit and push:
 
 1. If there is no data/media/alias diff after the sync checks, do not commit or push.
-2. Production quest syncs must land on `master`. If the current branch is not `master`, create a separate `master`
-   worktree and make the production-bound sync there; do not ship unrelated feature-branch changes.
-3. If changes are valid, commit only the relevant files with:
+2. Before committing, run `git branch --show-current`. Production quest syncs must land on `master`; never push a
+   production-bound quest sync to the branch that happened to be open when the automation started.
+3. If the current branch is not `master`, create a separate `master` worktree and make the production-bound sync there;
+   do not ship unrelated feature-branch changes.
+4. If changes are valid, commit only the relevant files with:
    chore: sync quest data
-4. Push the current branch.
-5. Confirm the pushed commit is deployed to production before final verification. Use GitHub deployment records when
+5. Push the current branch.
+6. Confirm the pushed commit is deployed to production before final verification. Use GitHub deployment records when
    available:
    `gh api repos/dominicwild/sky-tools/deployments --jq '.[:5] | map({sha, environment, created_at, statuses_url})'`
    and then check the newest matching deployment status for `state: "success"`.
-6. Use agent-browser to open the live site at https://sky.dominicwild.com. Compare the visible daily quests and candle
+7. Use agent-browser to open the live site at https://sky.dominicwild.com. Compare the visible daily quests and candle
    guides against the current SkyHelper API payload. This live-site/API comparison is the final verification point:
     - If the live site matches the current SkyHelper payload, the sync is verified.
     - If the live site does not match the current SkyHelper payload, debug the production problem before finishing.
-7. Final response must include:
+8. Final response must include:
     - what changed
     - validation results
     - live-site/API verification result
