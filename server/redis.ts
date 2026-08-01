@@ -23,7 +23,7 @@ const client = new Redis(`rediss://default:${process.env.REDIS_TOKEN}@${process.
 const SKY_HELPER_QUESTS_URL = "https://api.skyhelper.xyz/update/quests";
 const THAT_SKY_DAILY_GUIDES_URL = "https://r.jina.ai/http://https://thatskyapplication.com/daily-guides";
 const SKY_HELPER_CACHE_TTL_SECONDS = 60 * 5;
-const SKY_HELPER_MATCH_CACHE_VERSION = "v48";
+const SKY_HELPER_MATCH_CACHE_VERSION = "v49";
 const localQuestsByTitle = createLocalQuestTitleIndex(questsData);
 
 export async function getSkyHelperQuestDisplayData(userQuestCounts: Promise<QuestValue>): Promise<DailyQuestDisplayData> {

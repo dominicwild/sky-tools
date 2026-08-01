@@ -169,6 +169,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "relive timid bookworm s memory from daylight prairie",
     ],
     [
+        "relive spirit quest season of sanctuary grateful shell collector",
+        "relive grateful shell collector s memory from daylight prairie",
+    ],
+    [
         "catch the light quest valley of triumph",
         "catch the light in valley of triumph",
     ],
