@@ -2277,5 +2277,14 @@ export const questsData = [
         "visualGuideUrl": null,
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxHNUeByaLuG6Z3bzioXWtq5HpgYVsBKdTEUDS",
         "id": 252
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Valley of Triumph",
+        "questName": "Meditation Quest Guide Valley of Triumph - Coliseum",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "skyhelper-1533742516506202203.jpeg",
+        "videoGuideUrl": null,
+        "id": 253
     }
 ] satisfies Quest[]
