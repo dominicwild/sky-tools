@@ -2,6 +2,8 @@
 
 import {Suspense, use, useCallback, useEffect, useMemo, useRef, useState} from "react"
 import {AnimatePresence, motion} from "motion/react"
+import Link from "next/link";
+import {CalendarDays} from "lucide-react";
 import QuestSearch from "@/components/QuestSearch";
 import VisualGuideDialog from "./VisualGuideDialog";
 import VideoGuideDialog from "@/components/VideoGuideDialog";
@@ -142,12 +144,19 @@ export default function QuestTracker({initialQuestData, skyHelperQuestData}: Rea
                     transition={{duration: 0.6, ease: "easeOut"}}
                 >
                     <img className={"relative"} src={"/sky-logo.png"} alt="Sky Quest Tracker"/>
-                    <h1 className="text-2xl font-semibold text-white/90 drop-shadow-2xl ">
-                        <span className={"bg-black/1 rounded-full"}>
-                        Daily Quest Tracker
-
-                        </span>
-                    </h1>
+                    <div className="relative">
+                        <h1 className="text-2xl font-semibold text-white/90 drop-shadow-2xl">
+                            <span className={"bg-black/1 rounded-full"}>Daily Quest Tracker</span>
+                        </h1>
+                        <Link
+                            href="/calendar"
+                            aria-label="Calendar"
+                            className="absolute right-0 top-1/2 inline-flex -translate-y-1/2 cursor-pointer items-center gap-1.5 rounded-full border border-white/15 bg-sky-950/60 px-2 py-1.5 text-sm font-medium text-white backdrop-blur-md transition-colors hover:bg-sky-950/80 sm:px-3"
+                        >
+                            <CalendarDays className="h-4 w-4" />
+                            <span className="hidden sm:inline">Calendar</span>
+                        </Link>
+                    </div>
                 </motion.div>
 
                 <QuestSearch

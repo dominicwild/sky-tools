@@ -12,6 +12,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         {
+            url: getCanonicalUrl("/calendar"),
+            lastModified,
+            changeFrequency: "weekly",
+            priority: 0.8,
+        },
+        {
             url: getCanonicalUrl("/about"),
             lastModified,
             changeFrequency: "monthly",

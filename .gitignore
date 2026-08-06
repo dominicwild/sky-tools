@@ -41,3 +41,6 @@ yarn-error.log*
 next-env.d.ts
 /scripts/downloaded_images/
 /scripts/node_modules/
+/.codex-logs/dev-server.out.log
+/.codex-logs/dev-server.err.log
+/docs/reference/

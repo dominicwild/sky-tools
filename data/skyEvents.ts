@@ -1,0 +1,235 @@
+import {SkyDay} from "@/lib/sky-day";
+
+export type SkyCalendarEntryKind = "event" | "season" | "travelling-spirit" | "returning-spirits";
+
+type SkyCalendarConfidence = "confirmed" | "expected";
+
+export type SkyEventPalette = "amber" | "coral" | "rose" | "teal";
+
+export type SkyCalendarImage = {url: string; alt: string};
+
+export type SkyCalendarLink = {url: string; label: string};
+
+type SkyCalendarEntryCommon = {
+    id: string;
+    title: string;
+    description: string;
+    startDay: SkyDay;
+    endDay: SkyDay;
+    confidence: SkyCalendarConfidence;
+    link: SkyCalendarLink | null;
+    image: SkyCalendarImage | null;
+    sourceUrl: string;
+    verifiedOn: SkyDay;
+};
+
+export type SkyCalendarEntry =
+    | (SkyCalendarEntryCommon & {kind: "event"; palette: SkyEventPalette})
+    | (SkyCalendarEntryCommon & {kind: "season" | "travelling-spirit" | "returning-spirits"});
+
+export const calendarCoverage = {
+    checkedOn: "2026-07-30",
+    coverageThrough: "2026-10-11",
+} as const;
+
+export const skyCalendarEntries: SkyCalendarEntry[] = [
+    {
+        id: "season-of-carnival-2026",
+        kind: "season",
+        title: "Season of Carnival",
+        description: "Season of Carnival is a themed season about a group of spirits building a travelling carnival. Players help through seasonal quests, then join Shared Space challenges: obstacle courses and mini-games designed by other players. It also brings new spirits, cosmetics and an adventure pass.",
+        startDay: "2026-04-17",
+        endDay: "2026-07-02",
+        confidence: "confirmed",
+        link: {url: "https://www.thatskygame.com/news/this-month-in-sky-april-2026-edition/", label: "This Month in Sky: April 2026"},
+        image: {url: "https://a.storyblok.com/f/108104/1920x1080/c0901f9234/s30_landscape-boatwide_sls_na_na_2603.png", alt: "Season of Carnival key art showing the travelling carnival boat sailing through the sky"},
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/kingdom/seasons/carnival/index.ts",
+        verifiedOn: "2026-07-30",
+    },
+    {
+        id: "radiance-event-2026-06",
+        kind: "event",
+        title: "Radiance Event",
+        description: "The Radiance Event is a short bonus event where plants that produce coloured dye do so more often and in every realm. It does not add cosmetics of its own, but makes it quicker to collect dye for recolouring outfits.",
+        startDay: "2026-06-19",
+        endDay: "2026-07-02",
+        confidence: "confirmed",
+        link: {url: "https://www.thatskygame.com/news/this-month-in-sky-june-2026-edition/", label: "This Month in Sky: June 2026"},
+        image: {url: "https://a.storyblok.com/f/108104/1920x1080/47781011e3/2_tmiscalendar_sls_2606.png", alt: "June 2026 events calendar graphic from That Sky Game, showing the Radiance Event window"},
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/events/miscellaneous.ts",
+        verifiedOn: "2026-07-30",
+        palette: "amber",
+    },
+    {
+        id: "double-seasonal-light-treasure-candles-2026-06",
+        kind: "event",
+        title: "2x Seasonal Light, Treasure Candles",
+        description: "This is a temporary boost rather than a full event. The realms and the day’s featured realm contain twice the usual Treasure Candles and Seasonal Candle Bunches. Players can find eight of each instead of four, helping them catch up on light and seasonal currency.",
+        startDay: "2026-06-19",
+        endDay: "2026-07-02",
+        confidence: "confirmed",
+        link: {url: "https://www.thatskygame.com/news/this-month-in-sky-june-2026-edition/", label: "This Month in Sky: June 2026"},
+        image: {url: "https://a.storyblok.com/f/108104/1920x1080/47781011e3/2_tmiscalendar_sls_2606.png", alt: "June 2026 events calendar graphic from That Sky Game, showing the double candles window"},
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/kingdom/treasure-candles.ts",
+        verifiedOn: "2026-07-30",
+        palette: "coral",
+    },
+    {
+        id: "returning-spirits-season-of-revival-2026-06",
+        kind: "returning-spirits",
+        title: "Returning Spirits: Season of Revival",
+        description: "Four spirits from the Season of Revival return together at Aviary Village. Players can buy cosmetics, expressions and wing buffs they missed. It works like a travelling spirit visit, but brings back several spirits from one season for longer.",
+        startDay: "2026-06-19",
+        endDay: "2026-07-02",
+        confidence: "confirmed",
+        link: {url: "https://www.thatskygame.com/news/this-month-in-sky-june-2026-edition/", label: "This Month in Sky: June 2026"},
+        image: {url: "https://static.wikia.nocookie.net/sky-children-of-the-light/images/1/14/Returning-spirits-June-2026.png/revision/latest?cb=20260615214327", alt: "Promo image of the four Season of Revival spirits gathered for their June 2026 returning-spirits visit"},
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/models/spirits.ts",
+        verifiedOn: "2026-07-30",
+    },
+    {
+        id: "travelling-spirit-greeting-shaman-2026-07",
+        kind: "travelling-spirit",
+        title: "Greeting Shaman",
+        description: "Greeting Shaman returns from the Season of Gratitude. It offers the Kung Fu expression, a mask and a large bell instrument. During its visit, players can find it at Home and Aviary Village and buy from it.",
+        startDay: "2026-07-02",
+        endDay: "2026-07-05",
+        confidence: "confirmed",
+        link: {url: "https://sky-children-of-the-light.fandom.com/wiki/Greeting_Shaman", label: "Greeting Shaman on the Sky wiki"},
+        image: {url: "https://static.wikia.nocookie.net/sky-children-of-the-light/images/3/3e/Gratitude-Spirit-Greeting-Shaman.png/revision/latest?cb=20230707060347", alt: "Portrait of the Greeting Shaman spirit"},
+        sourceUrl: "https://sky-children-of-the-light.fandom.com/wiki/Greeting_Shaman",
+        verifiedOn: "2026-07-30",
+    },
+    {
+        id: "sky-anniversary-2026",
+        kind: "event",
+        title: "Sky Anniversary",
+        description: "Sky Anniversary marks the game’s launch with rotating daily activities. Players can visit the in-game Office to meet thatgamecompany staff avatars and take part in the Sky Creator Awards. Sharing photos of an Office visit on social media can earn a limited item.",
+        startDay: "2026-07-03",
+        endDay: "2026-07-23",
+        confidence: "confirmed",
+        link: {url: "https://www.thatskygame.com/news/it-s-time-to-celebrate-sky-s-7th-anniversary-/", label: "Celebrate Sky’s 7th Anniversary"},
+        image: {url: "https://a.storyblok.com/f/108104/1920x1080/17b4d0f963/1_sls_7thanni_titleandgameplay1_slide1.png", alt: "Sky 7th Anniversary title art"},
+        sourceUrl: "https://www.thatskygame.com/news/this-month-in-sky-july-2026-edition/",
+        verifiedOn: "2026-07-30",
+        palette: "rose",
+    },
+    {
+        id: "travelling-spirit-light-whisperer-2026-07",
+        kind: "travelling-spirit",
+        title: "Light Whisperer",
+        description: "Light Whisperer returns from the Season of Flight. It offers the Baby Manta call, plus an outfit, hair, a hair accessory and a cape. During its visit, players can find it at Home and Aviary Village and buy from it.",
+        startDay: "2026-07-16",
+        endDay: "2026-07-19",
+        confidence: "confirmed",
+        link: {url: "https://sky-children-of-the-light.fandom.com/wiki/Light_Whisperer", label: "Light Whisperer on the Sky wiki"},
+        image: {url: "https://static.wikia.nocookie.net/sky-children-of-the-light/images/d/db/Flight-Spirit-Light-Whisperer.png/revision/latest?cb=20240302065943", alt: "Portrait of the Light Whisperer spirit"},
+        sourceUrl: "https://sky-children-of-the-light.fandom.com/wiki/Light_Whisperer",
+        verifiedOn: "2026-07-30",
+    },
+    {
+        id: "season-of-dear-van-gogh-2026",
+        kind: "season",
+        title: "Season of Dear Van Gogh",
+        description: "Dear Van Gogh is an interactive season inspired by Vincent van Gogh’s paintings and his letters with his brother Theo. Players explore landscapes based on his artwork and use a brushstroke mechanic together to add colour back into the world. It includes quests, spirits and an adventure pass.",
+        startDay: "2026-07-17",
+        endDay: "2026-10-01",
+        confidence: "confirmed",
+        link: {url: "https://www.thatskygame.com/dearvangogh/", label: "Season of Dear Van Gogh"},
+        image: {url: "https://www.thatskygame.com/images/vangogh/pillar-world-scene.jpg", alt: "In-game scene inspired by Van Gogh's Wheatfield paintings, from the Dear Van Gogh season page"},
+        sourceUrl: "https://sky-children-of-the-light.fandom.com/wiki/Dear_Van_Gogh",
+        verifiedOn: "2026-07-30",
+    },
+    {
+        id: "travelling-spirit-confetti-cousin-2026-07",
+        kind: "travelling-spirit",
+        title: "Confetti Cousin",
+        description: "Confetti Cousin returns from the Season of Belonging. It offers the Confetti expression, a hairstyle and a cape. During its visit, players can find it at Home and Aviary Village and buy from it.",
+        startDay: "2026-07-30",
+        endDay: "2026-08-02",
+        confidence: "confirmed",
+        link: {url: "https://sky-children-of-the-light.fandom.com/wiki/Confetti_Cousin", label: "Confetti Cousin on the Sky wiki"},
+        image: {url: "https://static.wikia.nocookie.net/sky-children-of-the-light/images/0/06/Belonging-Spirit-Confetti-Cousin.png/revision/latest?cb=20230928200102", alt: "Portrait of the Confetti Cousin spirit"},
+        sourceUrl: "https://sky-children-of-the-light.fandom.com/wiki/Confetti_Cousin",
+        verifiedOn: "2026-07-30",
+    },
+    {
+        id: "days-of-sunlight-2026",
+        kind: "event",
+        title: "Days of Sunlight",
+        description: "Days of Sunlight is Sky’s annual summer event. Spirits from the Season of Assembly gather at a sunny lakeside area for water-themed activities, including surfing, fishing for light and helping baby jellyfish. It brings summer-themed cosmetics and shop items.",
+        startDay: "2026-07-31",
+        endDay: "2026-08-20",
+        confidence: "confirmed",
+        link: {url: "https://www.thatskygame.com/news/this-month-in-sky-july-2026-edition/", label: "This Month in Sky: July 2026"},
+        image: {url: "https://static.wikia.nocookie.net/sky-children-of-the-light/images/c/c3/Days-of-Sunlight-promo-image-2026.jpg/revision/latest/scale-to-width-down/1200?cb=20260726185109", alt: "Days of Sunlight 2026 promotional artwork"},
+        sourceUrl: "https://www.thatskygame.com/news/this-month-in-sky-july-2026-edition/",
+        verifiedOn: "2026-07-30",
+        palette: "teal",
+    },
+    {
+        id: "travelling-spirit-2026-08-13",
+        kind: "travelling-spirit",
+        title: "Travelling Spirit",
+        description: "A travelling spirit is a spirit from a past season who returns for four days (Thursday to Sunday) to sell the cosmetics, expression and a wing buff they originally offered during their own season, paid for with non-seasonal currency instead of seasonal candles. Which spirit is coming isn't announced until a day or two before they arrive, so this slot is a placeholder until then.",
+        startDay: "2026-08-13",
+        endDay: "2026-08-16",
+        confidence: "expected",
+        link: {url: "https://thatgamecompany.helpshift.com/hc/en/17-sky-children-of-the-light/faq/609-what-is-a-traveling-spirit/", label: "What is a travelling spirit?"},
+        image: null,
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/schedule.ts",
+        verifiedOn: "2026-07-30",
+    },
+    {
+        id: "travelling-spirit-2026-08-27",
+        kind: "travelling-spirit",
+        title: "Travelling Spirit",
+        description: "A travelling spirit is a spirit from a past season who returns for four days (Thursday to Sunday) to sell the cosmetics, expression and a wing buff they originally offered during their own season, paid for with non-seasonal currency instead of seasonal candles. Which spirit is coming isn't announced until a day or two before they arrive, so this slot is a placeholder until then.",
+        startDay: "2026-08-27",
+        endDay: "2026-08-30",
+        confidence: "expected",
+        link: {url: "https://thatgamecompany.helpshift.com/hc/en/17-sky-children-of-the-light/faq/609-what-is-a-traveling-spirit/", label: "What is a travelling spirit?"},
+        image: null,
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/schedule.ts",
+        verifiedOn: "2026-07-30",
+    },
+    {
+        id: "travelling-spirit-2026-09-10",
+        kind: "travelling-spirit",
+        title: "Travelling Spirit",
+        description: "A travelling spirit is a spirit from a past season who returns for four days (Thursday to Sunday) to sell the cosmetics, expression and a wing buff they originally offered during their own season, paid for with non-seasonal currency instead of seasonal candles. Which spirit is coming isn't announced until a day or two before they arrive, so this slot is a placeholder until then.",
+        startDay: "2026-09-10",
+        endDay: "2026-09-13",
+        confidence: "expected",
+        link: {url: "https://thatgamecompany.helpshift.com/hc/en/17-sky-children-of-the-light/faq/609-what-is-a-traveling-spirit/", label: "What is a travelling spirit?"},
+        image: null,
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/schedule.ts",
+        verifiedOn: "2026-07-30",
+    },
+    {
+        id: "travelling-spirit-2026-09-24",
+        kind: "travelling-spirit",
+        title: "Travelling Spirit",
+        description: "A travelling spirit is a spirit from a past season who returns for four days (Thursday to Sunday) to sell the cosmetics, expression and a wing buff they originally offered during their own season, paid for with non-seasonal currency instead of seasonal candles. Which spirit is coming isn't announced until a day or two before they arrive, so this slot is a placeholder until then.",
+        startDay: "2026-09-24",
+        endDay: "2026-09-27",
+        confidence: "expected",
+        link: {url: "https://thatgamecompany.helpshift.com/hc/en/17-sky-children-of-the-light/faq/609-what-is-a-traveling-spirit/", label: "What is a travelling spirit?"},
+        image: null,
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/schedule.ts",
+        verifiedOn: "2026-07-30",
+    },
+    {
+        id: "travelling-spirit-2026-10-08",
+        kind: "travelling-spirit",
+        title: "Travelling Spirit",
+        description: "A travelling spirit is a spirit from a past season who returns for four days (Thursday to Sunday) to sell the cosmetics, expression and a wing buff they originally offered during their own season, paid for with non-seasonal currency instead of seasonal candles. Which spirit is coming isn't announced until a day or two before they arrive, so this slot is a placeholder until then.",
+        startDay: "2026-10-08",
+        endDay: "2026-10-11",
+        confidence: "expected",
+        link: {url: "https://thatgamecompany.helpshift.com/hc/en/17-sky-children-of-the-light/faq/609-what-is-a-traveling-spirit/", label: "What is a travelling spirit?"},
+        image: null,
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/schedule.ts",
+        verifiedOn: "2026-07-30",
+    },
+];
