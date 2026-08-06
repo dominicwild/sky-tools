@@ -335,10 +335,10 @@ route — and no date logic split between server and client.
 
 Add a `## Calendar Sync` section to `docs/quest-sync-agent-prompt.md`, so the existing daily run owns it.
 
-**Trigger.** Do not key off a day of the month, because a missed run would silently skip a month. Run the calendar sync
-when `calendarCoverage.coverageThrough` is fewer than 45 days after today, or when `calendarCoverage.checkedOn` is more
-than 30 days before today. Otherwise log "calendar coverage current" and move on. This is self-healing and observable
-from the data file itself.
+**Trigger.** Run the calendar sync on every daily quest-sync run. Verify the current and next calendar sources, every
+currently running event, and the nearest expected travelling-spirit window. If the data is unchanged, log "calendar
+verified current" and do not modify or commit calendar files. This keeps the calendar accurate without using coverage
+or a confirmation age as a reason to skip a daily source check.
 
 **Steps.**
 

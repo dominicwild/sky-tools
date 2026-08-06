@@ -138,10 +138,10 @@ windows, while `calendarCoverage.checkedOn` records when confirmations were last
 
 Trigger:
 
-1. Read `calendarCoverage` and today's Sky day.
-2. Run the calendar sync when `coverageThrough` is fewer than 45 days after today, or `checkedOn` is more than 30 days
-   before today.
-3. Otherwise, log `calendar coverage current` and move on.
+1. Run the calendar sync on every daily quest-sync run.
+2. Fetch and verify the current and next calendar sources, including every currently running event and the nearest
+   expected travelling-spirit window.
+3. If the calendar data is unchanged, log `calendar verified current` and do not modify or commit calendar files.
 
 Calendar sync:
 
@@ -165,7 +165,7 @@ Calendar sync:
    end date is not immutable.
 8. Never add an event, season, travelling spirit, or returning-spirit group that no source states. Leave an
    unconfirmed month empty rather than inventing content.
-9. Update `calendarCoverage` after the verification work, including expected travelling-spirit windows in
+9. When calendar data changes, update `calendarCoverage`, including expected travelling-spirit windows in
    `coverageThrough`.
 10. Run the required validation, commit as `chore: sync calendar data`, push the current branch, and verify `/calendar`
     on the live site using the same deployment and browser checks as the quest sync.
