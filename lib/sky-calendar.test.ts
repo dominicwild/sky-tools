@@ -1,5 +1,5 @@
-import {SkyCalendarEntry, SkyCalendarEntryKind} from "@/data/skyEvents";
-import {getMonthWeeks, SkyDay} from "./sky-day";
+import {SkyCalendarEntry, SkyCalendarEntryKind, SkyCalendarImage, SkyCalendarLink} from "@/data/skyEvents";
+import {getMonthWeeks, SkyDay, SkyMonth} from "./sky-day";
 import {getEntryProgress, getEntryTiming, getMonthEntries, getTracks, getWeekSegments} from "./sky-calendar";
 import {describe, expect, it} from "vitest";
 
@@ -13,10 +13,12 @@ type EntryWindow = {
 type EntryDetails = {
     id: string;
     title: string;
+    description: string;
     startDay: SkyDay;
     endDay: SkyDay;
     confidence: "confirmed";
-    detailUrl: string;
+    link: SkyCalendarLink;
+    image: SkyCalendarImage | null;
     sourceUrl: string;
     verifiedOn: SkyDay;
 };
@@ -25,10 +27,12 @@ function createEntry({id, kind, startDay, endDay}: EntryWindow): SkyCalendarEntr
     const entry: EntryDetails = {
         id,
         title: id,
+        description: "Test calendar entry.",
         startDay,
         endDay,
         confidence: "confirmed",
-        detailUrl: "https://example.com/detail",
+        link: {url: "https://example.com/detail", label: "Example detail"},
+        image: null,
         sourceUrl: "https://example.com/source",
         verifiedOn: "2026-01-01",
     };
@@ -38,6 +42,10 @@ function createEntry({id, kind, startDay, endDay}: EntryWindow): SkyCalendarEntr
     }
 
     return {...entry, kind};
+}
+
+function getEntriesForMonth(entries: SkyCalendarEntry[], month: SkyMonth) {
+    return getMonthEntries(entries, month, getMonthWeeks(month));
 }
 
 describe("Sky calendar", () => {
@@ -50,7 +58,7 @@ describe("Sky calendar", () => {
             createEntry({id: "fifth", kind: "event", startDay: "2026-07-05", endDay: "2026-07-06"}),
             createEntry({id: "reused", kind: "event", startDay: "2026-07-07", endDay: "2026-07-08"}),
         ];
-        const segments = getWeekSegments(getMonthEntries(entries, "2026-07"), getMonthWeeks("2026-07"));
+        const segments = getWeekSegments(getEntriesForMonth(entries, "2026-07"), getMonthWeeks("2026-07"));
         const longRows = segments.filter((segment) => segment.entry.id === "long").map((segment) => segment.row);
         const firstWeekRows = segments.filter((segment) => segment.weekIndex === 0).map((segment) => segment.row);
         const reusedSegment = segments.find((segment) => segment.entry.id === "reused");
@@ -62,7 +70,7 @@ describe("Sky calendar", () => {
 
     it("splits windows at week boundaries with the correct columns and edges", () => {
         const entry = createEntry({id: "crosses-week", kind: "event", startDay: "2026-07-03", endDay: "2026-07-08"});
-        const segments = getWeekSegments(getMonthEntries([entry], "2026-07"), getMonthWeeks("2026-07"));
+        const segments = getWeekSegments(getEntriesForMonth([entry], "2026-07"), getMonthWeeks("2026-07"));
 
         expect(segments).toEqual([
             {
@@ -101,15 +109,74 @@ describe("Sky calendar", () => {
         expect(getEntryProgress(entry, "2026-07-31")).toEqual({dayNumber: 1, totalDays: 1, daysRemaining: 0});
     });
 
-    it("only shows season bars in their start and end months", () => {
+    it("clips entries to the full grid across a month boundary", () => {
+        const entry = createEntry({id: "crosses-month", kind: "event", startDay: "2026-07-29", endDay: "2026-08-02"});
+        const julyWeeks = getMonthWeeks("2026-07");
+        const augustWeeks = getMonthWeeks("2026-08");
+
+        expect(getEntriesForMonth([entry], "2026-07")).toEqual([
+            {entry, startDay: "2026-07-29", endDay: "2026-08-02"},
+        ]);
+        expect(getEntriesForMonth([entry], "2026-08")).toEqual([
+            {entry, startDay: "2026-07-29", endDay: "2026-08-02"},
+        ]);
+        expect(getWeekSegments(getMonthEntries([entry], "2026-07", julyWeeks), julyWeeks)).toEqual([
+            {
+                entry,
+                weekIndex: 4,
+                startColumn: 3,
+                endColumn: 7,
+                startsWindow: true,
+                endsWindow: true,
+                row: 0,
+            },
+        ]);
+        expect(getWeekSegments(getMonthEntries([entry], "2026-08", augustWeeks), augustWeeks)).toEqual([
+            {
+                entry,
+                weekIndex: 0,
+                startColumn: 3,
+                endColumn: 7,
+                startsWindow: true,
+                endsWindow: true,
+                row: 0,
+            },
+        ]);
+    });
+
+    it("assigns separate rows to entries that overlap in a grid lead-in week", () => {
+        const entries = [
+            createEntry({id: "crosses-grid", kind: "event", startDay: "2026-07-29", endDay: "2026-08-02"}),
+            createEntry({id: "starts-in-month", kind: "event", startDay: "2026-08-01", endDay: "2026-08-04"}),
+        ];
+        const weeks = getMonthWeeks("2026-08");
+        const firstWeekSegments = getWeekSegments(getMonthEntries(entries, "2026-08", weeks), weeks).filter(
+            (segment) => segment.weekIndex === 0
+        );
+
+        expect(firstWeekSegments.map((segment) => ({id: segment.entry.id, row: segment.row}))).toEqual([
+            {id: "crosses-grid", row: 0},
+            {id: "starts-in-month", row: 1},
+        ]);
+    });
+
+    it("only shows season bars in their start and end months and clips them to the grid", () => {
         const season = createEntry({id: "season", kind: "season", startDay: "2026-06-20", endDay: "2026-10-10"});
 
-        expect(getMonthEntries([season], "2026-06")).toEqual([
-            {entry: season, startDay: "2026-06-20", endDay: "2026-06-30"},
+        expect(getEntriesForMonth([season], "2026-06")).toEqual([
+            {entry: season, startDay: "2026-06-20", endDay: "2026-07-05"},
         ]);
-        expect(getMonthEntries([season], "2026-07")).toEqual([]);
-        expect(getMonthEntries([season], "2026-10")).toEqual([
-            {entry: season, startDay: "2026-10-01", endDay: "2026-10-10"},
+        expect(getEntriesForMonth([season], "2026-07")).toEqual([]);
+        expect(getEntriesForMonth([season], "2026-10")).toEqual([
+            {entry: season, startDay: "2026-09-28", endDay: "2026-10-10"},
+        ]);
+    });
+
+    it("does not extend a season into grid days before it starts", () => {
+        const season = createEntry({id: "season", kind: "season", startDay: "2026-06-30", endDay: "2026-07-10"});
+
+        expect(getEntriesForMonth([season], "2026-07")).toEqual([
+            {entry: season, startDay: "2026-06-30", endDay: "2026-07-10"},
         ]);
     });
 
@@ -163,7 +230,7 @@ describe("Sky calendar", () => {
     });
 
     it("returns no entries or segments for an empty month", () => {
-        const monthEntries = getMonthEntries([], "2026-07");
+        const monthEntries = getEntriesForMonth([], "2026-07");
 
         expect(monthEntries).toEqual([]);
         expect(getWeekSegments(monthEntries, getMonthWeeks("2026-07"))).toEqual([]);

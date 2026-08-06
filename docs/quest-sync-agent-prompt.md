@@ -183,6 +183,14 @@ Calendar rules:
    Do not give those kinds a palette.
 4. Pick an event palette once and keep it unchanged. No two events appearing in the same displayed month may share a
    palette token.
+5. Every entry carries a plain-English `description` (two to four sentences a new player understands: what it is and
+   what it means for them in game terms).
+6. `link` must be genuinely useful to a player and fetch-verified before it is written: official thatskygame.com pages
+   first, then ad-free fan resources such as thatskyapplication.com, and the fandom wiki only as a last resort. Its
+   `label` must concisely name the destination. Write `null` rather than a broken, empty or ad-riddled page.
+   `sourceUrl` is provenance only and is never shown to users.
+7. `image` is representative art (spirit portrait, event banner, season key art) with alt text, fetch-verified as a
+   real image; `null` when nothing verifiable exists.
 
 ## SkyHelper Lag Handling
 

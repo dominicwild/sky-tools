@@ -1,5 +1,16 @@
 @import "tailwindcss";
+
 @import "tw-animate-css";
+
+@keyframes today-sparkle {
+    0%, 100% {
+        opacity: 0.65;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
 
 @custom-variant dark (&:is(.dark *));
 

@@ -20,8 +20,8 @@ export default function CalendarView({today, weeks, weekSegments, tracks, hasEnt
     const [selectedEntry, setSelectedEntry] = useState<SkyCalendarEntry | null>(null);
     const [openingElement, setOpeningElement] = useState<HTMLElement | null>(null);
 
-    function selectEntry(entry: SkyCalendarEntry) {
-        setOpeningElement(document.activeElement instanceof HTMLElement ? document.activeElement : null);
+    function selectEntry(entry: SkyCalendarEntry, opener: HTMLElement) {
+        setOpeningElement(opener);
         setSelectedEntry(entry);
     }
 

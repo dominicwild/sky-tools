@@ -45,14 +45,26 @@ export type SkyCalendarConfidence = "confirmed" | "expected";
 // Every other kind derives its colour from its kind. See Colour below.
 export type SkyEventPalette = "amber" | "coral" | "rose" | "teal";
 
+export type SkyCalendarImage = {
+    url: string;                    // hotlinked representative art
+    alt: string;
+};
+
+export type SkyCalendarLink = {
+    url: string;
+    label: string;
+};
+
 type SkyCalendarEntryCommon = {
     id: string;                     // stable slug, e.g. "days-of-sunlight-2026"
     title: string;
+    description: string;            // plain English: what this is and what it means for a player
     startDay: SkyDay;               // first day the content is live
     endDay: SkyDay;                 // last day the content is live, inclusive
     confidence: SkyCalendarConfidence;
-    detailUrl: string;              // wiki or official post for "read more"
-    sourceUrl: string;              // what we verified the dates against
+    link: SkyCalendarLink | null;   // one genuinely useful labelled page, or nothing; see Links below
+    image: SkyCalendarImage | null; // null when no verifiable image exists
+    sourceUrl: string;              // provenance for the sync agent; never shown to users
     verifiedOn: SkyDay;
 };
 
@@ -68,6 +80,20 @@ export const calendarCoverage = {
 
 `endDay` is inclusive and is the single convention used everywhere in the app. Source data must be converted on the way
 in, never on the way out.
+
+## Links and content
+
+Every user-facing link must earn its place: a player clicks it expecting to learn something. `link` follows a
+strict preference order — official thatskygame.com posts first, then ad-free fan resources such as
+thatskyapplication.com, and the fandom wiki only as a last resort (it is ad-riddled and its stub pages are sometimes
+empty). Every URL is fetch-verified before it enters the data file, and `null` beats a useless link. Its `label` must
+concisely name its destination. `sourceUrl` is provenance for the sync agent and appears nowhere in the UI — a raw
+GitHub file means nothing to a player.
+
+`description` is two to four plain-English sentences for someone who has never played Sky: what the thing is and what
+it means for them in game terms. `image` is representative art (spirit portrait, event banner, season key art),
+hotlinked from an official post or an ad-free fan host, with alt text; entries without a verifiable image carry `null`
+rather than a placeholder.
 
 `calendarCoverage` exists so the sync agent has a deterministic trigger and so the UI knows how far forward navigation
 may go. Storing it in the data file keeps one source of truth for "how far ahead do we actually know". `coverageThrough`
@@ -172,14 +198,21 @@ Page structure, reusing the visual language already in the app:
 The grid:
 
 - Each week is its own `grid-cols-7`. A day-number row sits at the top, then as many bar rows as that week needs.
+- Entries clip to the GRID range, not the month: the first week's lead-in days and the last week's lead-out days show
+  the bars that genuinely cover them, so a window running 29 July – 2 August is visible in both months' edge cells.
 - Entries are split into per-week segments, because a window crossing a week boundary has to stop and restart on the
   next row. Each segment is placed with `gridColumn: start / end + 1`.
+- The month panel keeps a consistent presence: a sparse month must not collapse into a stub. Reserve room for at least
+  three bar rows per week band so September with one travelling spirit is the same calm panel as a packed July.
 - Segments carry a rounded edge only where the window genuinely begins or ends, and a flat edge where it continues into
   the next week, so a long window reads as continuous rather than as several separate things.
 - Every segment repeats the entry's icon and label, as TGC's calendar does, so a bar is identifiable on whichever row the
   reader is looking at.
-- Confirmed versus expected is carried by a solid versus dashed border plus an "Expected" badge, so the distinction
-  survives for anyone who cannot rely on colour. Today's cell is highlighted.
+- Expected entries read as clearly provisional without shouting: grid bars keep their hatch and dashed-circle glyph,
+  while cards render as a Sky night-sky surface that dissolves to genuine transparency at the bottom-right corner,
+  communicating that they have not yet materialised. The quiet glass Expected badge appears everywhere. Confirmed
+  entries carry no marker at all; confirmed is the assumed state.
+  Today's cell is highlighted.
 
 ### Stacking
 
@@ -231,10 +264,16 @@ season's progress bar lives here permanently, including in the months where it h
 always one glance away. Between seasons, before the next is announced, the section says no season is live rather than
 being hidden or filled by guesswork.
 
-Clicking a bar or a sidebar entry opens a detail dialog reusing `components/ui/dialog.tsx`, showing title, track, full
-date range, progress, the confidence, and links to the detail and source URLs. Use the dialog rather than a hover
-popover: only `@radix-ui/react-dialog` is installed, hover does not exist on touch, and one interaction serves both
-layouts.
+Clicking a bar or a sidebar entry opens a detail dialog reusing `components/ui/dialog.tsx`. Use the dialog rather than
+a hover popover: only `@radix-ui/react-dialog` is installed, hover does not exist on touch, and one interaction serves
+both layouts.
+
+The dialog is a small content page, not a metadata readout. It shows: the entry's image when present; the title with
+the kind badge; the description; the full date range with the duration ("31 Jul – 20 Aug · 21 days"); and for live
+entries the stylised progress treatment ("Day 14 of 77" sitting under the bar's left end, "63 days left" at the bar's
+filled end — never a raw text line). State is carried by badges, not sentences: an "Ended" badge for finished entries,
+the expected treatment for unannounced ones, and nothing at all for confirmed — no "Confirmed" badge, no "this event
+has finished" prose. One labelled link when `link` exists, and no source link ever.
 
 ## Mobile layout
 
@@ -266,7 +305,11 @@ The calendar has to feel like the rest of the site, which is heavily styled. It 
 - Progress bars glow at the filled end, echoing the light motif the site already leans on with `/light.webp` in the
   footer.
 - Live entries get a subtle pulse, and bars lift slightly on hover using the `motion` package already in use in
-  `QuestTracker`. Keep motion restrained; the grid should be calm to read.
+  `QuestTracker`. Hover lift is a pure transform (translate) — the element's box must not change size or shape, and
+  nothing layout-affecting, no blur and no shadow may animate per frame; hovering across a busy week has to stay at
+  full frame rate. Keep motion restrained; the grid should be calm to read.
+- The back button sits on its own dark glass backdrop, like the calendar panel, so it stays legible when a white cloud
+  drifts behind it.
 - Every clickable element needs `cursor-pointer`, consistent with `QuestCard` and the candle guide cards.
 
 ## Getting there from the quest page
@@ -274,9 +317,9 @@ The calendar has to feel like the rest of the site, which is heavily styled. It 
 The calendar is a separate page with a back button, not a modal. A modal would fight month navigation, linking and
 mobile scrolling.
 
-- A small pill button with a `CalendarDays` icon and the label "What's on in Sky", placed directly beneath the "Daily
-  Quest Tracker" heading in `components/QuestTracker.tsx`. Discoverable without competing with the search box, and the
-  home page stays a quest tool.
+- A compact "Calendar" button with a `CalendarDays` icon, sitting to the RIGHT of the "Daily Quest Tracker" heading in
+  `components/QuestTracker.tsx`. The heading stays centred and the button adds zero vertical height — the home page's
+  vertical rhythm is untouched. One word, small icon, small button.
 - A "Calendar" link in the `Links` column of `components/Footer.tsx`, using the existing `FooterLink`.
 - A `/calendar` entry in `app/sitemap.ts`, `changeFrequency: "weekly"`.
 - Page metadata via `createPageMetadata` from `lib/seo.ts`, matching how `/about` does it.
@@ -334,8 +377,8 @@ leave the entry alone and log nothing.
 **Sources register.** Add thatskyapplication to `docs/event-information-sources.md`: what it is good for (structured
 event, season and spirit-visit windows in Sky time), its freshness check (compare against official news, and treat the
 repository's default branch as current), and the note that `packages/utility` is MIT licensed. We take factual dates
-only and copy no code, but the calendar page should still carry a credit line linking thatskygame.com news and
-thatskyapplication.
+only and copy no code. Credit lives in the site Footer's Credits column (thatskyapplication alongside the existing
+credits), never as a line on the calendar page itself.
 
 ## Gotchas
 

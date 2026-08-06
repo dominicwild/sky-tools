@@ -1,9 +1,7 @@
 import {SkyCalendarEntry, SkyCalendarEntryKind} from "@/data/skyEvents";
 import {
-    addSkyDays,
     compareSkyDays,
     differenceInSkyDays,
-    getMonthWeeks,
     getSkyMonth,
     SkyDay,
     SkyMonth,
@@ -121,12 +119,6 @@ function getTrackEntry(entries: SkyCalendarEntry[]): SkyCalendarTrackEntry {
     return {state: "available", entry};
 }
 
-function getMonthEndDay(month: SkyMonth): SkyDay {
-    const daysInMonth = getMonthWeeks(month).flat().filter((day) => day.inMonth).length;
-
-    return addSkyDays(`${month}-01`, daysInMonth - 1);
-}
-
 function getLaterSkyDay(left: SkyDay, right: SkyDay): SkyDay {
     return compareSkyDays(left, right) > 0 ? left : right;
 }
@@ -200,9 +192,12 @@ export function getTracks(entries: SkyCalendarEntry[], today: SkyDay): SkyCalend
     });
 }
 
-export function getMonthEntries(entries: SkyCalendarEntry[], month: SkyMonth): SkyCalendarMonthEntry[] {
-    const monthStartDay = `${month}-01`;
-    const monthEndDay = getMonthEndDay(month);
+export function getMonthEntries(
+    entries: SkyCalendarEntry[],
+    month: SkyMonth,
+    weeks: readonly SkyCalendarWeek[]
+): SkyCalendarMonthEntry[] {
+    const gridRange = {startDay: weeks[0][0].day, endDay: weeks[weeks.length - 1][6].day};
 
     return entries
         .filter((entry) => {
@@ -210,12 +205,12 @@ export function getMonthEntries(entries: SkyCalendarEntry[], month: SkyMonth): S
                 return false;
             }
 
-            return entriesOverlap(entry, {startDay: monthStartDay, endDay: monthEndDay});
+            return entriesOverlap(entry, gridRange);
         })
         .map((entry) => ({
             entry,
-            startDay: getLaterSkyDay(entry.startDay, monthStartDay),
-            endDay: getEarlierSkyDay(entry.endDay, monthEndDay),
+            startDay: getLaterSkyDay(entry.startDay, gridRange.startDay),
+            endDay: getEarlierSkyDay(entry.endDay, gridRange.endDay),
         }))
         .sort(compareMonthEntriesByStart);
 }

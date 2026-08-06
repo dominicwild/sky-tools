@@ -44,7 +44,7 @@ export default async function CalendarPage({
     const month = resolveMonth((await searchParams).month, currentMonth, coverageMonth);
 
     const weeks = getMonthWeeks(month);
-    const monthEntries = getMonthEntries(skyCalendarEntries, month);
+    const monthEntries = getMonthEntries(skyCalendarEntries, month, weeks);
     const weekSegments = getWeekSegments(monthEntries, weeks);
     const tracks = getTracks(skyCalendarEntries, today);
 
@@ -60,14 +60,18 @@ export default async function CalendarPage({
             </div>
 
             <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 pb-16 pt-8 text-white">
-                <Button asChild variant="ghost" className="mb-4 w-fit cursor-pointer text-white hover:bg-white/10 hover:text-white">
+                <Button
+                    asChild
+                    variant="ghost"
+                    className="mb-4 w-fit cursor-pointer border border-white/15 bg-sky-950/60 text-white backdrop-blur-md hover:bg-sky-950/80 hover:text-white"
+                >
                     <Link href="/">
                         <ArrowLeft />
                         Back to tracking quests
                     </Link>
                 </Button>
 
-                <header className="mb-6 flex items-center justify-between gap-4">
+                <header className="mb-6 hidden items-center justify-between gap-4 lg:flex">
                     <MonthNavButton
                         href={previousDisabled ? null : `/calendar?month=${previousMonth}`}
                         label="Previous month"
@@ -76,7 +80,6 @@ export default async function CalendarPage({
                     </MonthNavButton>
 
                     <div className="text-center">
-                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/60">This month in Sky</p>
                         <h1 className="text-2xl font-semibold drop-shadow-sm sm:text-3xl">{formatSkyMonth(month)}</h1>
                     </div>
 
@@ -92,28 +95,6 @@ export default async function CalendarPage({
                     tracks={tracks}
                     hasEntries={monthEntries.length > 0}
                 />
-
-                <p className="mt-10 text-center text-sm text-white/60">
-                    Dates cross-checked against{" "}
-                    <Link
-                        href="https://www.thatskygame.com/news/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cursor-pointer underline underline-offset-4 hover:text-white"
-                    >
-                        thatskygame.com news
-                    </Link>{" "}
-                    and the{" "}
-                    <Link
-                        href="https://github.com/thatskyapplication/thatskyapplication"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cursor-pointer underline underline-offset-4 hover:text-white"
-                    >
-                        thatskyapplication
-                    </Link>{" "}
-                    project.
-                </p>
             </div>
         </main>
     );
@@ -126,7 +107,13 @@ function MonthNavButton({
 }: Readonly<{href: string | null; label: string; children: React.ReactNode}>) {
     if (href === null) {
         return (
-            <Button variant="ghost" size="icon" disabled aria-label={label} className="text-white">
+            <Button
+                variant="ghost"
+                size="icon"
+                disabled
+                aria-label={label}
+                className="border border-white/15 bg-sky-950/50 text-white"
+            >
                 {children}
             </Button>
         );

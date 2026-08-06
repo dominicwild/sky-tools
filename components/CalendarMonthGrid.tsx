@@ -1,21 +1,23 @@
 "use client";
 
-import {motion} from "motion/react";
+import {CircleDashed, Sparkle} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {EntryIcon} from "@/components/CalendarIcons";
-import {getEntryColorClasses} from "@/lib/calendar-presentation";
+import {expectedHatchStyle, getEntryColorClasses} from "@/lib/calendar-presentation";
 import {getEntryTiming, type SkyCalendarWeek, type SkyCalendarWeekSegment} from "@/lib/sky-calendar";
 import type {SkyDay} from "@/lib/sky-day";
 import type {SkyCalendarEntry} from "@/data/skyEvents";
 
 const weekdayLabels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
+const minimumBarRows = 3;
+
 interface CalendarMonthGridProps {
     weeks: SkyCalendarWeek[];
     weekSegments: SkyCalendarWeekSegment[];
     today: SkyDay;
     hasEntries: boolean;
-    onSelectEntry: (entry: SkyCalendarEntry) => void;
+    onSelectEntry: (entry: SkyCalendarEntry, opener: HTMLElement) => void;
 }
 
 export default function CalendarMonthGrid({
@@ -70,9 +72,10 @@ function WeekRow({
     weekIndex: number;
     segments: SkyCalendarWeekSegment[];
     today: SkyDay;
-    onSelectEntry: (entry: SkyCalendarEntry) => void;
+    onSelectEntry: (entry: SkyCalendarEntry, opener: HTMLElement) => void;
 }>) {
-    const barRowCount = segments.reduce((max, segment) => Math.max(max, segment.row + 1), 0);
+    const usedRows = segments.reduce((max, segment) => Math.max(max, segment.row + 1), 0);
+    const barRowCount = Math.max(usedRows, minimumBarRows);
 
     return (
         <div
@@ -87,12 +90,24 @@ function WeekRow({
                     <div key={day.day} className="flex justify-center pb-1" style={{gridColumn: dayIndex + 1, gridRow: 1}}>
                         <span
                             className={cn(
-                                "inline-flex h-6 w-6 items-center justify-center rounded-full text-sm",
+                                "relative inline-flex h-6 w-6 items-center justify-center rounded-full text-sm",
                                 day.inMonth ? "text-white/85" : "text-white/30",
-                                isToday && "bg-white/20 font-semibold text-white ring-2 ring-white"
+                                isToday && day.inMonth && "font-bold text-white"
                             )}
                         >
-                            {dayNumber}
+                            {isToday && day.inMonth && (
+                                <span
+                                    aria-hidden
+                                    className="absolute left-1/2 top-1/2 h-12 w-12 -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(circle,rgba(255,255,255,0.35),transparent_70%)] blur-sm"
+                                />
+                            )}
+                            <span className="relative z-10">{dayNumber}</span>
+                            {isToday && day.inMonth && (
+                                <Sparkle
+                                    aria-hidden
+                                    className="absolute -right-[5px] -top-[5px] z-10 h-3.5 w-3.5 fill-white text-white drop-shadow-[0_0_5px_rgba(190,220,255,0.9)] motion-safe:animate-[today-sparkle_2.5s_ease-in-out_infinite] motion-reduce:opacity-100"
+                                />
+                            )}
                         </span>
                     </div>
                 );
@@ -114,7 +129,7 @@ function BarSegment({
     segment,
     today,
     onSelect,
-}: Readonly<{segment: SkyCalendarWeekSegment; today: SkyDay; onSelect: (entry: SkyCalendarEntry) => void}>) {
+}: Readonly<{segment: SkyCalendarWeekSegment; today: SkyDay; onSelect: (entry: SkyCalendarEntry, opener: HTMLElement) => void}>) {
     const {entry} = segment;
     const colorClasses = getEntryColorClasses(entry);
     const isExpected = entry.confidence === "expected";
@@ -123,39 +138,35 @@ function BarSegment({
     const roundingRight = segment.endsWindow ? "rounded-r-full" : "rounded-r-none";
 
     return (
-        <motion.button
+        <button
             type="button"
-            onClick={() => onSelect(entry)}
-            whileHover={{y: -2}}
-            transition={{type: "spring", stiffness: 400, damping: 25}}
+            onClick={(event) => onSelect(entry, event.currentTarget)}
             title={entry.title}
             style={{gridColumn: `${segment.startColumn} / ${segment.endColumn + 1}`, gridRow: segment.row + 2}}
             className={cn(
-                "relative flex h-7 min-w-0 cursor-pointer items-center gap-1.5 overflow-hidden border px-2 text-white shadow-sm",
+                "relative flex h-7 min-w-0 cursor-pointer items-center gap-1.5 overflow-hidden border px-2 text-white shadow-sm transition-[filter,border-color,background-color] duration-150 ease-out hover:brightness-110 hover:border-white/50",
                 colorClasses.bar,
-                colorClasses.border,
-                isExpected ? "border-dashed" : "border-solid",
+                isExpected ? "border-solid border-white/20" : cn("border-solid", colorClasses.border),
                 roundingLeft,
                 roundingRight
             )}
         >
-            {isLive && (
+            {isExpected && (
                 <span
                     aria-hidden
-                    className={cn(
-                        "pointer-events-none absolute inset-0 animate-pulse ring-2 ring-inset ring-white/25",
-                        roundingLeft,
-                        roundingRight
-                    )}
+                    style={expectedHatchStyle}
+                    className={cn("pointer-events-none absolute inset-0 z-0", roundingLeft, roundingRight)}
                 />
             )}
-            <EntryIcon kind={entry.kind} className="h-3.5 w-3.5 shrink-0 drop-shadow-sm" />
-            <span className="min-w-0 flex-1 truncate text-xs font-medium drop-shadow-sm">{entry.title}</span>
-            {isExpected && (
-                <span className="shrink-0 rounded-full border border-dashed border-white/70 px-1.5 text-[10px] leading-tight">
-                    Expected
-                </span>
+            <EntryIcon kind={entry.kind} className="relative z-10 h-3.5 w-3.5 shrink-0 drop-shadow-sm" />
+            <span className="relative z-10 min-w-0 flex-1 truncate text-xs font-medium drop-shadow-sm">{entry.title}</span>
+            {isExpected && <CircleDashed aria-hidden className="relative z-10 h-3.5 w-3.5 shrink-0 text-amber-100" />}
+            {isLive && (
+                <Sparkle
+                    aria-hidden
+                    className="relative z-10 h-[13px] w-[13px] shrink-0 fill-white text-white drop-shadow-[0_0_4px_rgba(190,220,255,0.85)]"
+                />
             )}
-        </motion.button>
+        </button>
     );
 }

@@ -44,6 +44,18 @@ describe("Sky calendar data", () => {
         expect(new Set(ids)).toHaveLength(ids.length);
     });
 
+    it("provides usable player-facing content", () => {
+        for (const entry of skyCalendarEntries) {
+            expect(entry.description).not.toHaveLength(0);
+            expect(entry.link === null || entry.link.url.startsWith("https://")).toBe(true);
+            expect(entry.link === null || entry.link.label.length > 0).toBe(true);
+            expect(entry.image === null || entry.image.url.startsWith("https://")).toBe(true);
+            expect(entry.image === null || entry.image.alt.length > 0).toBe(true);
+            expect(entry.link?.url).not.toBe("https://sky-children-of-the-light.fandom.com/wiki/Radiance_Event");
+            expect(entry.link?.url).not.toBe("https://sky-children-of-the-light.fandom.com/wiki/Seasonal_Light");
+        }
+    });
+
     it("assigns distinct palettes to events shown in the same month", () => {
         const events = skyCalendarEntries.filter((entry) => entry.kind === "event");
 

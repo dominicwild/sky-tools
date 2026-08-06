@@ -1,6 +1,7 @@
+import type {CSSProperties} from "react";
 import type {SkyCalendarEntry, SkyCalendarEntryKind, SkyEventPalette} from "@/data/skyEvents";
 import type {SkyCalendarEntryProgress, SkyCalendarTrackKind} from "@/lib/sky-calendar";
-import type {SkyDay, SkyMonth} from "@/lib/sky-day";
+import {differenceInSkyDays, type SkyDay, type SkyMonth} from "@/lib/sky-day";
 
 type SkyCalendarColor = "gold" | "violet" | "indigo" | SkyEventPalette;
 
@@ -137,7 +138,7 @@ function formatSkyDayShort(day: SkyDay): string {
     return `${Number(date)} ${shortMonthNames[Number(month) - 1]}`;
 }
 
-export function formatSkyDayRange(startDay: SkyDay, endDay: SkyDay): string {
+function formatSkyDayRange(startDay: SkyDay, endDay: SkyDay): string {
     if (startDay === endDay) {
         return formatSkyDayShort(startDay);
     }
@@ -145,13 +146,22 @@ export function formatSkyDayRange(startDay: SkyDay, endDay: SkyDay): string {
     return `${formatSkyDayShort(startDay)} – ${formatSkyDayShort(endDay)}`;
 }
 
-export function formatLiveProgress(progress: SkyCalendarEntryProgress): string {
-    const remaining =
-        progress.daysRemaining === 0
-            ? "last day today"
-            : `${progress.daysRemaining} ${progress.daysRemaining === 1 ? "day" : "days"} left`;
+export function formatSkyDayRangeWithDuration(startDay: SkyDay, endDay: SkyDay): string {
+    const totalDays = differenceInSkyDays(startDay, endDay) + 1;
 
-    return `Day ${progress.dayNumber} of ${progress.totalDays}, ${remaining}`;
+    return `${formatSkyDayRange(startDay, endDay)} · ${totalDays} ${totalDays === 1 ? "day" : "days"}`;
+}
+
+export function formatProgressDayLabel(progress: SkyCalendarEntryProgress): string {
+    return `Day ${progress.dayNumber} of ${progress.totalDays}`;
+}
+
+export function formatDaysRemaining(progress: SkyCalendarEntryProgress): string {
+    if (progress.daysRemaining === 0) {
+        return "Last day today";
+    }
+
+    return `${progress.daysRemaining} ${progress.daysRemaining === 1 ? "day" : "days"} left`;
 }
 
 export function formatDaysUntil(daysUntil: number): string {
@@ -165,3 +175,9 @@ export function formatDaysUntil(daysUntil: number): string {
 export function getProgressPercent(progress: SkyCalendarEntryProgress): number {
     return Math.round((progress.dayNumber / progress.totalDays) * 100);
 }
+
+// A diagonal hatch overlaid on expected bars: a distinct "provisional" fill that keeps the gradient tint visible beneath.
+export const expectedHatchStyle: CSSProperties = {
+    backgroundImage:
+        "repeating-linear-gradient(-45deg, rgba(255,255,255,0.16) 0, rgba(255,255,255,0.16) 1.5px, transparent 1.5px, transparent 7px)",
+};
