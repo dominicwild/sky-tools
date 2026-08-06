@@ -17,7 +17,6 @@ interface QuestSearchProps {
     filteredQuests: Quest[]
     addQuest: (quest: Quest) => void
     selectedQuests: Quest[]
-    autoFocusOnLoad: boolean
 }
 
 export default function QuestSearch({
@@ -26,9 +25,8 @@ export default function QuestSearch({
                                         filteredQuests,
                                         addQuest,
                                         selectedQuests,
-                                        autoFocusOnLoad,
                                     }: Readonly<QuestSearchProps>) {
-    const [isFocused, setIsFocused] = useState(autoFocusOnLoad)
+    const [isFocused, setIsFocused] = useState(false)
 
     const displayQuests = searchQuery.trim() === "" && isFocused ? questsData.slice(0, 8) : filteredQuests
 
@@ -108,7 +106,6 @@ export default function QuestSearch({
                         value={searchQuery}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                         onFocus={() => setIsFocused(true)}
-                        autoFocus={autoFocusOnLoad}
                         autoComplete="off"
                     />
                     {searchQuery && (

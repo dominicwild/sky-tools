@@ -156,7 +156,6 @@ export default function QuestTracker({initialQuestData, skyHelperQuestData}: Rea
                     filteredQuests={filteredQuests}
                     addQuest={addQuest}
                     selectedQuests={selectedQuests}
-                    autoFocusOnLoad={questData.quests.length <= 2}
                 />
 
                 <VisualGuideDialog
