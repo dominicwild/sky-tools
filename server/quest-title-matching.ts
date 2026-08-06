@@ -304,6 +304,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "meet up with cackling cannoneer in graveyard get launched",
         "meet up with cackling cannoneer in graveyard launch cackling cannoneer",
     ],
+    [
+        "meditation quest daylight prairie bird nest shrine",
+        "meditate at prairie s bird nest shrine",
+    ],
 ]);
 
 export function createLocalQuestTitleIndex(localQuests: Quest[]) {

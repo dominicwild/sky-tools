@@ -24,7 +24,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Meditate at Prairie's bird nest shrine",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "59170acc-45eb-46dd-b916-8b3e51ee847d.png",
+        "visualGuideUrl": "skyhelper-1534825319884787722.jpeg",
         "videoGuideUrl": "https://youtu.be/OXLBHrmCTmU",
         "id": 2
     },
@@ -1212,7 +1212,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Admire the sapling in Vault of Knowledge for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "f096bd9c-c834-4757-b94c-7466924ccb88.png",
+        "visualGuideUrl": "skyhelper-1534470791175864402.jpeg",
         "videoGuideUrl": "https://youtu.be/_HYCAJeQgJc",
         "id": 134
     },
@@ -1437,7 +1437,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Forge a candle",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1505479982200393768.jpeg",
+        "visualGuideUrl": "skyhelper-1534470949150265414.jpeg",
         "videoGuideUrl": "https://youtu.be/mLhjvx19zzA",
         "id": 159
     },
@@ -1977,7 +1977,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Catch the wandering lights around the Bird Nest",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1518522519810871377.jpeg",
+        "visualGuideUrl": "skyhelper-1534825018003820694.jpeg",
         "videoGuideUrl": "https://youtu.be/w1LQDfF0fBs",
         "id": 219
     },
@@ -2247,7 +2247,7 @@ export const questsData = [
         "realm": "Valley of Triumph (?)",
         "questName": "Daily Quest Guide - Sit on a Bench with a Stranger",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1528313350998593536.jpeg",
+        "visualGuideUrl": "skyhelper-1534469830323736757.jpeg",
         "videoGuideUrl": null,
         "id": 249
     },
@@ -2286,5 +2286,14 @@ export const questsData = [
         "visualGuideUrl": "skyhelper-1533742516506202203.jpeg",
         "videoGuideUrl": null,
         "id": 253
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Daylight Prairie",
+        "questName": "Meet up with Admiring Actor in Bird Nest - Learn how to play the instrument with Admiring Actor",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": null,
+        "id": 254
     }
 ] satisfies Quest[]
