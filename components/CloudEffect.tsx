@@ -11,6 +11,34 @@ interface CloudParticle {
     blur: number
 }
 
+interface CloudSprite {
+    canvas: HTMLCanvasElement
+    half: number
+}
+
+function createCloudSprite(particle: CloudParticle): CloudSprite {
+    const padding = Math.ceil(3 * particle.blur) + 2
+    const half = Math.ceil(particle.radius) + padding
+    const size = 2 * half
+    const canvas = document.createElement("canvas")
+
+    canvas.width = size
+    canvas.height = size
+
+    const ctx = canvas.getContext("2d")
+    if (!ctx) {
+        throw new Error("Unable to create a canvas context for a cloud sprite")
+    }
+
+    ctx.filter = `blur(${particle.blur}px)`
+    ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`
+    ctx.beginPath()
+    ctx.arc(half, half, particle.radius, 0, Math.PI * 2)
+    ctx.fill()
+
+    return { canvas, half }
+}
+
 export function CloudEffect() {
     const canvasRef = useRef<HTMLCanvasElement>(null)
 
@@ -43,17 +71,20 @@ export function CloudEffect() {
             })
         }
 
+        const sprites = particles.map(createCloudSprite)
+
+        let animationFrame: number | undefined
+
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-            particles.forEach((particle) => {
-                ctx.save()
-                ctx.filter = `blur(${particle.blur}px)`
-                ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`
-                ctx.beginPath()
-                ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2)
-                ctx.fill()
-                ctx.restore()
+            particles.forEach((particle, index) => {
+                const sprite = sprites[index]
+                if (!sprite) {
+                    throw new Error("A cloud sprite is missing")
+                }
+
+                ctx.drawImage(sprite.canvas, particle.x - sprite.half, particle.y - sprite.half)
 
                 particle.x += particle.speed
 
@@ -63,13 +94,17 @@ export function CloudEffect() {
                 }
             })
 
-            requestAnimationFrame(animate)
+            animationFrame = requestAnimationFrame(animate)
         }
 
         animate()
 
         return () => {
             window.removeEventListener("resize", resizeCanvas)
+
+            if (animationFrame !== undefined) {
+                cancelAnimationFrame(animationFrame)
+            }
         }
     }, [])
 
