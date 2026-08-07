@@ -149,6 +149,14 @@ const QUEST_TITLE_ALIASES = new Map([
         "catch the light in hidden forest",
     ],
     [
+        "relive spirit quest hidden forest pouty porter",
+        "relive pouty porter s memory from hidden forest",
+    ],
+    [
+        "tidy up the ancestor s table of belonging in hidden forest s elevated clearing",
+        "visit the ancestor s table of belonging in forest s elevated clearing",
+    ],
+    [
         "daily quest guide hug a friend",
         "hug a friend",
     ],

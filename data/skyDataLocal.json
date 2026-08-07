@@ -328,7 +328,7 @@
     "realm": "Hidden Forest",
     "questName": "Catch the light in Hidden Forest",
     "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-    "visualGuideUrl": "c9e68ff8-0c3e-472e-85ee-ad88511e5030.png",
+    "visualGuideUrl": "skyhelper-1535183790953996348.jpeg",
     "videoGuideUrl": "https://youtu.be/uCUHCMRM1Oo",
     "id": 36
   },
@@ -382,7 +382,7 @@
     "realm": "Hidden Forest",
     "questName": "Visit the Ancestor's Table of Belonging in Forest's Elevated Clearing",
     "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-    "visualGuideUrl": "3b86a279-2349-45c6-91d6-9f3ca9076b92.png",
+    "visualGuideUrl": "skyhelper-1535184251228782612.jpeg",
     "videoGuideUrl": null,
     "id": 42
   },
@@ -427,7 +427,7 @@
     "realm": "Hidden Forest",
     "questName": "Relive Pouty Porter's memory from Hidden Forest",
     "iconUrl": "d4903523-83fb-457c-8434-b1dc79e37647.png",
-    "visualGuideUrl": "09241ee1-0dac-4fcd-8697-c79232f60cf2.png",
+    "visualGuideUrl": "skyhelper-1535184042943717436.jpeg",
     "videoGuideUrl": "https://youtu.be/5DNs9K-zeeI?t=555",
     "id": 47
   },
@@ -1336,7 +1336,7 @@
     "realm": "General",
     "questName": "Bow at a player",
     "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-    "visualGuideUrl": "8fcaed7a-9a86-47dd-97da-6ebb2bdb39fb.png",
+    "visualGuideUrl": "skyhelper-1535184576870219796.jpeg",
     "videoGuideUrl": "https://youtu.be/tUWABu3t5Ic",
     "id": 148
   },
@@ -2176,15 +2176,6 @@
     "visualGuideUrl": null,
     "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfx8jes8Jv0CoVS4tyWFq951OIBdMpfnDRxAlmN",
     "id": 241
-  },
-  {
-    "type": "SkyHelper Quest",
-    "realm": "Hidden Forest (?)",
-    "questName": "Tidy up the Ancestor's Table of Belonging in Hidden Forest's elevated clearing",
-    "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-    "visualGuideUrl": "skyhelper-1511638237956014110.jpeg",
-    "videoGuideUrl": null,
-    "id": 242
   },
   {
     "type": "SkyHelper Quest",
