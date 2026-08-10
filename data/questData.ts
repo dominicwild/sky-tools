@@ -2293,7 +2293,7 @@ export const questsData = [
         "questName": "Meet up with Thoughtful Director in Repository of Refuge - Join the session and play a song for Bereft Veteran",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
         "visualGuideUrl": null,
-        "videoGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxI4JNrxiHAeWl2grHtEy4LP6QY1bXdCDic0pG",
         "id": 255
     }
 ] satisfies Quest[]
