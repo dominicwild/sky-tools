@@ -110,7 +110,11 @@ Commit and push:
 2. Before committing, run `git branch --show-current`. Production quest syncs must land on `master`; never push a
    production-bound quest sync to the branch that happened to be open when the automation started.
 3. If the current branch is not `master`, create a separate `master` worktree and make the production-bound sync there;
-   do not ship unrelated feature-branch changes.
+   do not ship unrelated feature-branch changes. Immediately after entering any worktree that is not the primary
+   worktree, copy `.env`, `AGENTS.md`, and `scripts/src/uploadQuestVideo.ts` into it from the primary worktree (the
+   first entry of `git worktree list`). These files are local-only by design and never appear in a fresh worktree on
+   their own; their absence in a worktree is normal and is not a missing-credential or missing-helper problem. Never
+   commit any of them: automation files and `AGENTS.md` must stay out of the repository.
 4. If changes are valid, commit only the relevant files with:
    chore: sync quest data
 5. Push the current branch.
@@ -214,14 +218,22 @@ game. If SkyHelper returns a payload whose `last_updated`/quest `date` is older 
 
 UploadThing video uploads use `UPLOADTHING_TOKEN`, not OAuth.
 
-1. Store the token in `.env` as:
+1. The token always exists on this machine. Its canonical home is the primary worktree's `.env` (the first entry of
+   `git worktree list`). Because `.env` is gitignored, secondary worktrees and fresh checkouts never contain it — that
+   is expected, not a missing credential. If the current directory lacks `.env`, copy it from the primary worktree and
+   continue. Never report the token as missing, skip a video upload, or send a missing-token email without first
+   reading the primary worktree's `.env`.
+2. The token is stored in `.env` as:
    `UPLOADTHING_TOKEN=...`
-2. `.env` is ignored by git through `.env*`; do not commit UploadThing credentials.
-3. The automation should load this repo's `.env` before uploading videos and should prefer it over any already-set
-   shell environment value.
-4. Use the repo-local `scripts` UploadThing helper instead of writing one-off upload code.
-5. The helper uploads with `UTApi.uploadFiles`, not the frontend dropzone flow.
-6. Save the returned `ufsUrl` into `data/questData.ts` as `videoGuideUrl`.
+3. `.env` is ignored by git through `.env*`; do not commit UploadThing credentials.
+4. The automation should load `.env` before uploading videos and should prefer it over any already-set shell
+   environment value.
+5. Use the helper `scripts/src/uploadQuestVideo.ts` instead of writing one-off upload code. The helper is a local-only
+   file that lives in the primary worktree and is never committed; if it is absent from the current worktree, copy it
+   from the primary worktree. It reads the current worktree's `.env` and automatically falls through to the primary
+   worktree's `.env`, so it works from any worktree once copied.
+6. The helper uploads with `UTApi.uploadFiles`, not the frontend dropzone flow.
+7. Save the returned `ufsUrl` into `data/questData.ts` as `videoGuideUrl`.
 
 The current app supports direct `.mp4`, `.webm`, `.mov`, `utfs.io`, and `*.ufs.sh` URLs in `videoGuideUrl`, so no player
 change is required when UploadThing returns a browser-playable video URL.
