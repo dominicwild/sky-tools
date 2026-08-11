@@ -31,7 +31,7 @@ export default function CandleGuideSection({
     return (
         <section className="mt-8 pt-2">
             <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/35 text-sky-900 ring-1 ring-sky-900/15">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/35 text-sky-900 ring-1 ring-sky-900/15 dark:bg-white/70">
                     <Flame className="h-4 w-4"/>
                 </div>
                 <div>

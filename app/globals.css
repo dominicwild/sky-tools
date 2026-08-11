@@ -146,11 +146,16 @@
 
 .sky-gradient-night {
   background-image: var(--sky-night-gradient);
+}
+
+.sky-gradient-night,
+.night-fade {
   opacity: 0;
   transition: opacity 1100ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-.dark .sky-gradient-night {
+.dark .sky-gradient-night,
+.dark .night-fade {
   opacity: 1;
 }
 
@@ -159,7 +164,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sky-gradient-night {
+  .sky-gradient-night,
+  .night-fade {
     transition: none;
   }
 }

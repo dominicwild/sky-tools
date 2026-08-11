@@ -20,9 +20,10 @@ const FooterLink = (props: FootLinkProps) => {
 const Footer = () => {
     return (
         <footer
-            className={"relative z-20 grid min-h-32 grid-cols-3 items-start gap-x-3 bg-gradient-to-b from-sky-700 to-sky-800 dark:from-[#0d1f47] dark:to-[#081234] px-6 py-6 text-white/70 sm:px-12 md:grid-cols-[repeat(3,max-content)] md:justify-around md:gap-x-0 lg:px-[25%]"}>
+            className={"relative z-20 grid min-h-32 grid-cols-3 items-start gap-x-3 bg-gradient-to-b from-sky-700 to-sky-800 px-6 py-6 text-white/70 sm:px-12 md:grid-cols-[repeat(3,max-content)] md:justify-around md:gap-x-0 lg:px-[25%]"}>
+            <div className={"night-fade absolute inset-0 bg-gradient-to-b from-[#0d1f47] to-[#081234]"}/>
             <div className={"contents"}>
-                <div className={"col-start-1 row-start-1 min-w-0"}>
+                <div className={"relative col-start-1 row-start-1 min-w-0"}>
                     <div>
                         <div className={"flex items-center text-xl"}>
                             <span className={"text-white/90 font-bold text-xl"}>
@@ -37,7 +38,7 @@ const Footer = () => {
                         <div className={"h-[0.1rem] bg-blue-200/40 rounded-full mb-1"}/>
                     </div>
                 </div>
-                <div className={"col-start-1 row-start-2 flex min-w-0 flex-col gap-y-2"}>
+                <div className={"relative col-start-1 row-start-2 flex min-w-0 flex-col gap-y-2"}>
                     <FooterLink href={"/about"}>
                         About
                     </FooterLink>
@@ -53,7 +54,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className={"contents"}>
-                <div className={"col-start-2 row-start-1 min-w-0 text-white/90 font-bold text-xl"}>
+                <div className={"relative col-start-2 row-start-1 min-w-0 text-white/90 font-bold text-xl"}>
                     <div>
                         <span>
                             Other Tools
@@ -66,7 +67,7 @@ const Footer = () => {
                     </div>
                     <div className={"h-[0.1rem] bg-blue-200/40 rounded-full mb-1"}/>
                 </div>
-                <div className={"col-start-2 row-start-2 flex min-w-0 flex-col gap-y-2"}>
+                <div className={"relative col-start-2 row-start-2 flex min-w-0 flex-col gap-y-2"}>
                     <FooterLink href={"https://sky-clock.netlify.app/"} target={"_blank"} rel="noopener noreferrer">
                         Sky Clock
                     </FooterLink>
@@ -81,7 +82,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className={"contents"}>
-                <div className={"col-start-3 row-start-1 min-w-0 text-white/90 font-bold text-xl"}>
+                <div className={"relative col-start-3 row-start-1 min-w-0 text-white/90 font-bold text-xl"}>
                     <div>
                         <span>
                             Credits
@@ -94,7 +95,7 @@ const Footer = () => {
                     </div>
                     <div className={"h-[0.1rem] bg-blue-200/40 rounded-full mb-1"}/>
                 </div>
-                <div className={"col-start-3 row-start-2 flex min-w-0 flex-col gap-y-2"}>
+                <div className={"relative col-start-3 row-start-2 flex min-w-0 flex-col gap-y-2"}>
                     <FooterLink href={"https://discord.gg/thatskygame"} target={"_blank"} rel="noopener noreferrer">
                         Sky Discord
                     </FooterLink>
