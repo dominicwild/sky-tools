@@ -2,8 +2,11 @@ import type {Metadata} from "next";
 import {Nunito} from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import {ThemeToggle} from "@/components/ThemeToggle";
 import {Analytics} from "@vercel/analytics/react"
 import {siteDescription, siteName, siteUrl} from "@/lib/seo";
+
+const themeScript = `(()=>{let s=null;try{s=localStorage.getItem('theme');}catch(e){}const d=s?s==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.classList.toggle('dark',d);})();`;
 
 export const metadata: Metadata = {
     metadataBase: siteUrl,
@@ -74,10 +77,11 @@ export default function RootLayout({
     };
 
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
         <body
-            className={`${nunito.variable} antialiased min-h-screen bg-gradient-to-b from-sky-300 to-sky-400`}
+            className={`${nunito.variable} antialiased min-h-screen sky-backdrop`}
         >
+        <script dangerouslySetInnerHTML={{__html: themeScript}}/>
         <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -85,6 +89,8 @@ export default function RootLayout({
             }}
         />
         <Analytics/>
+
+        <ThemeToggle/>
 
         {children}
 

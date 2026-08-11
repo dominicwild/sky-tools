@@ -66,7 +66,7 @@ export default function ErrorPage() {
 
     return (
         <div
-            className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-b from-sky-300 to-sky-400 bg-opacity-80 overflow-hidden">
+            className="min-h-screen flex flex-col items-center justify-center p-4 sky-backdrop bg-opacity-80 overflow-hidden">
             <div className="fixed inset-0 pointer-events-none">
                 <CloudEffect/>
             </div>

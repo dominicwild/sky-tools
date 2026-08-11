@@ -35,10 +35,10 @@ export default function CandleGuideSection({
                     <Flame className="h-4 w-4"/>
                 </div>
                 <div>
-                    <p className="text-xs font-semibold uppercase text-sky-950/70">
+                    <p className="text-xs font-semibold uppercase text-sky-950/70 dark:text-white/65">
                         Today&apos;s Light
                     </p>
-                    <h3 className="text-xl font-semibold text-sky-950/85 drop-shadow-sm">
+                    <h3 className="text-xl font-semibold text-sky-950/85 drop-shadow-sm dark:text-white/90">
                         Candle Locations
                     </h3>
                 </div>

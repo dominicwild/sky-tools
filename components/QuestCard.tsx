@@ -16,7 +16,7 @@ interface QuestCardProps {
 
 export default function QuestCard({ quest, onRemove, onOpenVisualGuide, onOpenVideoGuide }: Readonly<QuestCardProps>) {
     return (
-        <Card className="bg-sky-700/80 backdrop-blur-md border-none shadow-lg overflow-hidden rounded-2xl hover:shadow-xl transition-shadow">
+        <Card className="theme-surface bg-sky-700/80 backdrop-blur-md border-none shadow-lg overflow-hidden rounded-2xl hover:shadow-xl">
             <CardContent className="p-4">
                 <div className="flex flex-col">
                     <div className="flex items-start justify-between mb-3">

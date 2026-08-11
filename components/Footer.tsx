@@ -20,7 +20,7 @@ const FooterLink = (props: FootLinkProps) => {
 const Footer = () => {
     return (
         <footer
-            className={"relative z-20 grid min-h-32 grid-cols-3 items-start gap-x-3 bg-gradient-to-b from-sky-700 to-sky-800 px-6 py-6 text-white/70 sm:px-12 md:grid-cols-[repeat(3,max-content)] md:justify-around md:gap-x-0 lg:px-[25%]"}>
+            className={"relative z-20 grid min-h-32 grid-cols-3 items-start gap-x-3 bg-gradient-to-b from-sky-700 to-sky-800 dark:from-[#0d1f47] dark:to-[#081234] px-6 py-6 text-white/70 sm:px-12 md:grid-cols-[repeat(3,max-content)] md:justify-around md:gap-x-0 lg:px-[25%]"}>
             <div className={"contents"}>
                 <div className={"col-start-1 row-start-1 min-w-0"}>
                     <div>

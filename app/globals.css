@@ -127,5 +127,43 @@
   }
   body {
     @apply bg-background text-foreground;
+    transition: color 0.4s ease;
   }
+}
+
+:root {
+  --sky-night-gradient:
+    radial-gradient(120% 55% at 50% 100%, rgba(84, 110, 190, 0.30), transparent 60%),
+    linear-gradient(to bottom, #191b4d 0%, #142a63 42%, #122a60 68%, #0d2150 100%);
+}
+
+@layer components {
+  .sky-backdrop,
+  .sky-gradient-day {
+    @apply bg-gradient-to-b from-sky-300 to-sky-400;
+  }
+}
+
+.sky-gradient-night {
+  background-image: var(--sky-night-gradient);
+  opacity: 0;
+  transition: opacity 1100ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.dark .sky-gradient-night {
+  opacity: 1;
+}
+
+.theme-surface {
+  transition: background-color 500ms ease, color 500ms ease, border-color 500ms ease, box-shadow 150ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sky-gradient-night {
+    transition: none;
+  }
+}
+
+.dark .sky-backdrop {
+  background-image: var(--sky-night-gradient);
 }
