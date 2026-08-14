@@ -28,7 +28,7 @@ export type SkyCalendarEntry =
     | (SkyCalendarEntryCommon & {kind: "season" | "travelling-spirit" | "returning-spirits"});
 
 export const calendarCoverage = {
-    checkedOn: "2026-07-30",
+    checkedOn: "2026-08-14",
     coverageThrough: "2026-10-11",
 } as const;
 
@@ -168,6 +168,20 @@ export const skyCalendarEntries: SkyCalendarEntry[] = [
         palette: "teal",
     },
     {
+        id: "radiance-event-2026-08",
+        kind: "event",
+        title: "Radiance Event",
+        description: "The Radiance Event is a short bonus event where white and magenta coloured light appear more often. It makes it quicker to collect dye for recolouring outfits, but does not add cosmetics of its own.",
+        startDay: "2026-08-14",
+        endDay: "2026-08-27",
+        confidence: "confirmed",
+        link: {url: "https://www.thatskygame.com/news/this-month-in-sky-august-2026-edition/", label: "This Month in Sky: August 2026"},
+        image: null,
+        sourceUrl: "https://www.thatskygame.com/news/this-month-in-sky-august-2026-edition/",
+        verifiedOn: "2026-08-14",
+        palette: "amber",
+    },
+    {
         id: "travelling-spirit-2026-08-13",
         kind: "travelling-spirit",
         title: "Travelling Spirit",
@@ -179,6 +193,33 @@ export const skyCalendarEntries: SkyCalendarEntry[] = [
         image: null,
         sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/schedule.ts",
         verifiedOn: "2026-07-30",
+    },
+    {
+        id: "summer-camping-2026",
+        kind: "event",
+        title: "Summer Camping Event",
+        description: "The Summer Camping Event lets players create and share campsites, relax around a bonfire and enjoy the scenery. It is a limited event that takes place after Days of Sunlight, with its own activities and atmosphere.",
+        startDay: "2026-08-28",
+        endDay: "2026-09-10",
+        confidence: "confirmed",
+        link: {url: "https://www.thatskygame.com/news/this-month-in-sky-august-2026-edition/", label: "This Month in Sky: August 2026"},
+        image: null,
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/events/2026/summer-camping.ts",
+        verifiedOn: "2026-08-14",
+        palette: "coral",
+    },
+    {
+        id: "returning-spirits-season-of-nine-coloured-deer-2026-08",
+        kind: "returning-spirits",
+        title: "Returning Spirits: Season of the Nine-Coloured Deer",
+        description: "Four spirits from the Season of the Nine-Coloured Deer return together for a limited visit. Players can buy cosmetics, expressions and wing buffs they missed, much like a travelling spirit visit but with several spirits available at once.",
+        startDay: "2026-08-28",
+        endDay: "2026-09-10",
+        confidence: "confirmed",
+        link: {url: "https://www.thatskygame.com/news/this-month-in-sky-august-2026-edition/", label: "This Month in Sky: August 2026"},
+        image: null,
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/models/spirits.ts",
+        verifiedOn: "2026-08-14",
     },
     {
         id: "travelling-spirit-2026-08-27",
