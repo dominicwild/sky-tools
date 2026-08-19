@@ -137,6 +137,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "meditate in the crab fields",
     ],
     [
+        "meditation quest golden wasteland forgotten ark",
+        "meditate in the forgotten ark",
+    ],
+    [
         "coloured light quest purple light in vault of knowledge",
         "collect purple light",
     ],
@@ -267,6 +271,10 @@ const QUEST_TITLE_ALIASES = new Map([
     [
         "relive spirit quest season of enchantment scarecrow farmer",
         "relive scarecrow farmer s memory from golden wasteland",
+    ],
+    [
+        "relive spirit quest season of enchantment crab walker",
+        "relive crab walker s memory from golden wasteland",
     ],
     [
         "relive spirit quest season of gratitude saluting protector",
