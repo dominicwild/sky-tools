@@ -1221,7 +1221,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Find the candles at the end of the rainbow in the Vault of Knowledge",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "7bdf5853-7ddf-40c3-904c-f4fc19629708.png",
+        "visualGuideUrl": "skyhelper-1539896454662062090.jpeg",
         "videoGuideUrl": "https://youtu.be/oiUQPs3E7GE",
         "id": 135
     },
@@ -1293,7 +1293,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Relive Shushing Light Scholar's memory from Vault of Knowledge",
         "iconUrl": "5b9ab7e9-102a-4044-a419-dc5552c55947.png",
-        "visualGuideUrl": "38f037b9-5eed-4036-a34c-488d65be8db6.jpeg",
+        "visualGuideUrl": "skyhelper-1539896198943739954.jpeg",
         "videoGuideUrl": "https://youtu.be/09QH7xH003Q",
         "id": 143
     },
@@ -1437,7 +1437,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Forge a candle",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1534470949150265414.jpeg",
+        "visualGuideUrl": "skyhelper-1539895865450176553.jpeg",
         "videoGuideUrl": "https://youtu.be/mLhjvx19zzA",
         "id": 159
     },
@@ -1743,7 +1743,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Find the candles at the end of the rainbow in the Vault of Knowledge",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "7bdf5853-7ddf-40c3-904c-f4fc19629708.png",
+        "visualGuideUrl": "skyhelper-1539896454662062090.jpeg",
         "videoGuideUrl": "https://youtu.be/oiUQPs3E7GE",
         "id": 193
     },

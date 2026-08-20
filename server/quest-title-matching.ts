@@ -293,6 +293,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "relive crab whisperer s memory from golden wasteland",
     ],
     [
+        "relive spirit quest season of lightseekers shushing light scholar",
+        "relive shushing light scholar s memory from vault of knowledge",
+    ],
+    [
         "relive spirit quest vault of knowledge levitating adept",
         "relive levitating adept s memory from vault of knowledge",
     ],
