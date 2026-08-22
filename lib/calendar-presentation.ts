@@ -166,7 +166,7 @@ export function formatDaysRemaining(progress: SkyCalendarEntryProgress): string 
 
 export function formatDaysRemainingShort(progress: SkyCalendarEntryProgress): string {
     if (progress.daysRemaining === 0) {
-        return "Last day";
+        return "Today";
     }
 
     return `${progress.daysRemaining}d`;
