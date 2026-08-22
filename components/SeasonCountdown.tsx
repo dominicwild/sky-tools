@@ -4,7 +4,7 @@ import {useSyncExternalStore} from "react";
 import {skyCalendarEntries} from "@/data/skyEvents";
 import {getCurrentSkyDay, type SkyDay} from "@/lib/sky-day";
 import {getEntryTiming, type SkyCalendarEntryProgress} from "@/lib/sky-calendar";
-import {formatDaysRemaining} from "@/lib/calendar-presentation";
+import {formatDaysRemaining, formatDaysRemainingShort} from "@/lib/calendar-presentation";
 
 type LiveSeason = {
     title: string;
@@ -46,11 +46,12 @@ export default function SeasonCountdown() {
     return (
         <div
             title={`Days left until ${title} ends`}
-            className="absolute left-0 top-1/2 inline-flex -translate-y-1/2 items-center gap-1 text-xs text-white/70 sm:gap-1.5 sm:rounded-full sm:border sm:border-white/15 sm:bg-sky-950/60 sm:px-3 sm:py-1.5 sm:text-sm sm:backdrop-blur-md"
+            className="absolute left-0 top-1/2 hidden -translate-y-1/2 items-center gap-1 text-xs text-white/70 min-[360px]:inline-flex sm:gap-1.5 sm:rounded-full sm:border sm:border-white/15 sm:bg-sky-950/60 sm:px-3 sm:py-1.5 sm:text-sm sm:backdrop-blur-md"
         >
-            <img className="h-4 w-4 sm:h-5 sm:w-5" src={icon.url} alt={icon.alt} />
-            <span className="hidden sm:inline">{formatDaysRemaining(progress)}</span>
-            <span className="sm:hidden">{progress.daysRemaining === 0 ? "Last day" : `${progress.daysRemaining}d`}</span>
+            <img className="h-4 w-4 sm:h-5 sm:w-5" src={icon.url} alt="" />
+            <span aria-hidden className="hidden sm:inline">{formatDaysRemaining(progress)}</span>
+            <span aria-hidden className="sm:hidden">{formatDaysRemainingShort(progress)}</span>
+            <span className="sr-only">{`${title}: ${formatDaysRemaining(progress)}`}</span>
         </div>
     );
 }
