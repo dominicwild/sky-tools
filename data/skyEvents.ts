@@ -25,7 +25,8 @@ type SkyCalendarEntryCommon = {
 
 export type SkyCalendarEntry =
     | (SkyCalendarEntryCommon & {kind: "event"; palette: SkyEventPalette})
-    | (SkyCalendarEntryCommon & {kind: "season" | "travelling-spirit" | "returning-spirits"});
+    | (SkyCalendarEntryCommon & {kind: "season"; icon: SkyCalendarImage})
+    | (SkyCalendarEntryCommon & {kind: "travelling-spirit" | "returning-spirits"});
 
 export const calendarCoverage = {
     checkedOn: "2026-08-14",
@@ -42,6 +43,7 @@ export const skyCalendarEntries: SkyCalendarEntry[] = [
         endDay: "2026-07-02",
         confidence: "confirmed",
         link: {url: "https://www.thatskygame.com/news/this-month-in-sky-april-2026-edition/", label: "This Month in Sky: April 2026"},
+        icon: {url: "/season-of-carnival-icon.webp", alt: "Season of Carnival emblem"},
         image: {url: "https://a.storyblok.com/f/108104/1920x1080/c0901f9234/s30_landscape-boatwide_sls_na_na_2603.png", alt: "Season of Carnival key art showing the travelling carnival boat sailing through the sky"},
         sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/kingdom/seasons/carnival/index.ts",
         verifiedOn: "2026-07-30",
@@ -136,6 +138,7 @@ export const skyCalendarEntries: SkyCalendarEntry[] = [
         endDay: "2026-10-01",
         confidence: "confirmed",
         link: {url: "https://www.thatskygame.com/dearvangogh/", label: "Season of Dear Van Gogh"},
+        icon: {url: "/season-dear-van-gogh-icon.webp", alt: "Season of Dear Van Gogh emblem"},
         image: {url: "https://www.thatskygame.com/images/vangogh/pillar-world-scene.jpg", alt: "In-game scene inspired by Van Gogh's Wheatfield paintings, from the Dear Van Gogh season page"},
         sourceUrl: "https://sky-children-of-the-light.fandom.com/wiki/Dear_Van_Gogh",
         verifiedOn: "2026-07-30",

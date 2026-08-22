@@ -41,6 +41,10 @@ function createEntry({id, kind, startDay, endDay}: EntryWindow): SkyCalendarEntr
         return {...entry, kind, palette: "amber"};
     }
 
+    if (kind === "season") {
+        return {...entry, kind, icon: {url: "https://example.com/icon.webp", alt: "Season icon"}};
+    }
+
     return {...entry, kind};
 }
 
