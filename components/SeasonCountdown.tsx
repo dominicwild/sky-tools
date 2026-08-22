@@ -44,7 +44,7 @@ export default function SeasonCountdown() {
     const {title, icon, progress} = liveSeason;
 
     return (
-        <div className="group absolute left-0 top-1/2 hidden -translate-y-1/2 items-center gap-0.5 text-xs text-white/70 min-[360px]:inline-flex sm:gap-1.5 sm:rounded-full sm:border sm:border-white/15 sm:bg-sky-950/60 sm:px-3 sm:py-1.5 sm:text-sm sm:backdrop-blur-md">
+        <div className="group absolute left-0 top-1/2 z-10 hidden -translate-y-1/2 items-center gap-0.5 text-xs text-white/70 min-[360px]:inline-flex sm:gap-1.5 sm:rounded-full sm:border sm:border-white/15 sm:bg-sky-950/60 sm:px-3 sm:py-1.5 sm:text-sm sm:backdrop-blur-md">
             <img className="h-3.5 w-3.5 sm:h-5 sm:w-5" src={icon.url} alt="" />
             <span aria-hidden className="hidden sm:inline">{formatDaysRemaining(progress)}</span>
             <span aria-hidden className="sm:hidden">{formatDaysRemainingShort(progress)}</span>
