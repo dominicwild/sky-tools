@@ -655,7 +655,7 @@ export const questsData = [
         "questName": "Modest Dancer needs help with something in Village of Dreams",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
         "visualGuideUrl": "d49b9342-03bb-49aa-b43e-41429a83b38b.png",
-        "videoGuideUrl": "https://youtu.be/QG4LXuOi_A",
+        "videoGuideUrl": null,
         "id": 72
     },
     {
@@ -979,7 +979,7 @@ export const questsData = [
         "questName": "Admire the sapling in Golden Wasteland for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": "7ad1a788-9319-4797-a682-c6a68fe93dfc.png",
-        "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg&t=209s",
+        "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=209",
         "id": 108
     },
     {
@@ -1051,7 +1051,7 @@ export const questsData = [
         "questName": "Relive Stealthy Survivor's memory from Golden Wasteland",
         "iconUrl": "77ba8301-c40d-419a-916b-277256f23c56.png",
         "visualGuideUrl": "skyhelper-1534097421032751164.jpeg",
-        "videoGuideUrl": "https://m.youtube.com/watch?v=XqgBAzIfIsk&t=19s",
+        "videoGuideUrl": "https://youtu.be/XqgBAzIfIsk?t=19",
         "id": 116
     },
     {
@@ -1663,7 +1663,7 @@ export const questsData = [
         "questName": "Admire the sapling in Daylight Prairie for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": "8df0aa56-239f-4f6d-a7c4-68af8530c7c9.jpeg",
-        "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg&t=132s",
+        "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=132",
         "id": 184
     },
     {
@@ -1672,7 +1672,7 @@ export const questsData = [
         "questName": "Admire the sapling in Hidden Forest for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": "29429cfb-e1a3-4e69-a645-ab65df1da78d.png",
-        "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg&t=157s",
+        "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=157",
         "id": 185
     },
     {
@@ -1681,7 +1681,7 @@ export const questsData = [
         "questName": "Admire the sapling in Valley of Triumph for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": "8a0234c6-1fc4-4ed1-aa3a-150083c61737.png",
-        "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg&t=49s",
+        "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=49",
         "id": 186
     },
     {
@@ -1690,7 +1690,7 @@ export const questsData = [
         "questName": "Admire the sapling in Golden Wasteland for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": "7ad1a788-9319-4797-a682-c6a68fe93dfc.png",
-        "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg&t=209s",
+        "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=209",
         "id": 187
     },
     {
@@ -1924,7 +1924,7 @@ export const questsData = [
         "questName": "Play any Tournament sport",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
         "visualGuideUrl": null,
-        "videoGuideUrl": "https://www.youtube.com/watch?v=f_CZ24gXpCk&list=PLl2dLrx-duQgedEYgPBHeLmbCV-ZooBo5",
+        "videoGuideUrl": "https://youtu.be/f_CZ24gXpCk",
         "id": 213
     },
     {

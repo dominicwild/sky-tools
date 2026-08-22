@@ -187,7 +187,7 @@ export default function CalendarTracks({tracks, today, onSelectEntry}: Readonly<
         <div className="flex flex-col gap-6">
             <ConfirmedCloudDefs />
             {tracks.map((track) => {
-                const hasNothing = track.live.length === 0 && track.upcoming.state === "empty";
+                const hasNothing = track.live.length === 0 && track.upcoming.length === 0;
 
                 return (
                     <section key={track.kind} className="flex flex-col gap-3">
@@ -205,9 +205,9 @@ export default function CalendarTracks({tracks, today, onSelectEntry}: Readonly<
                                 {track.live.map((entry) => (
                                     <TrackEntryCard key={entry.id} entry={entry} today={today} onSelect={onSelectEntry} />
                                 ))}
-                                {track.upcoming.state === "available" && (
-                                    <TrackEntryCard entry={track.upcoming.entry} today={today} onSelect={onSelectEntry} />
-                                )}
+                                {track.upcoming.map((entry) => (
+                                    <TrackEntryCard key={entry.id} entry={entry} today={today} onSelect={onSelectEntry} />
+                                ))}
                             </div>
                         )}
                     </section>

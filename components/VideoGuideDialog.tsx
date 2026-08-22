@@ -53,4 +53,5 @@ function getYouTubeEmbedUrl(url: string) {
     return url
         .replace("youtu.be/", "youtube.com/embed/")
         .replace("youtube.com/watch?v=", "youtube.com/embed/")
+        .replace(/([?&])t=(\d+)s?/, "$1start=$2")
 }

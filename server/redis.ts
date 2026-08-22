@@ -24,7 +24,11 @@ const SKY_HELPER_QUESTS_URL = "https://api.skyhelper.xyz/update/quests";
 const THAT_SKY_DAILY_GUIDES_URL = "https://r.jina.ai/http://https://thatskyapplication.com/daily-guides";
 const SKY_HELPER_CACHE_TTL_SECONDS = 60 * 5;
 const SKY_HELPER_MATCH_CACHE_VERSION = "v52";
+const MAX_QUEST_FIELDS_PER_DAY = 50;
+const MAX_QUEST_COUNT = 500;
+const QUEST_COUNT_TTL_SECONDS = 60 * 60 * 24 * 2;
 const localQuestsByTitle = createLocalQuestTitleIndex(questsData);
+const validQuestIds = new Set(questsData.map((quest) => quest.id).filter((questId): questId is number => questId !== undefined));
 
 export async function getSkyHelperQuestDisplayData(userQuestCounts: Promise<QuestValue>): Promise<DailyQuestDisplayData> {
     noStore();
@@ -141,7 +145,23 @@ export async function incrementQuest(id: number) {
     if (process.env.NODE_ENV !== 'production') {
         return;
     }
-    console.log("increment quest id", id)
+
+    if (!validQuestIds.has(id)) {
+        return;
+    }
+
     const key = getSkyDate();
-    client.hincrby(key, id + "", 1)
+    const field = String(id);
+    const isNewField = (await client.hexists(key, field)) === 0;
+
+    if (isNewField && (await client.hlen(key)) >= MAX_QUEST_FIELDS_PER_DAY) {
+        return;
+    }
+
+    const nextCount = await client.hincrby(key, field, 1);
+    if (nextCount > MAX_QUEST_COUNT) {
+        await client.hset(key, field, MAX_QUEST_COUNT);
+    }
+
+    await client.expire(key, QUEST_COUNT_TTL_SECONDS, "NX");
 }
