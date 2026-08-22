@@ -163,7 +163,5 @@ export async function incrementQuest(id: number) {
         await client.hset(key, field, MAX_QUEST_COUNT);
     }
 
-    if (isNewField) {
-        await client.expire(key, QUEST_COUNT_TTL_SECONDS);
-    }
+    await client.expire(key, QUEST_COUNT_TTL_SECONDS, "NX");
 }
