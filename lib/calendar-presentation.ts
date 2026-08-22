@@ -164,6 +164,14 @@ export function formatDaysRemaining(progress: SkyCalendarEntryProgress): string 
     return `${progress.daysRemaining} ${progress.daysRemaining === 1 ? "day" : "days"} left`;
 }
 
+export function formatDaysRemainingShort(progress: SkyCalendarEntryProgress): string {
+    if (progress.daysRemaining === 0) {
+        return "Today";
+    }
+
+    return `${progress.daysRemaining}d`;
+}
+
 export function formatDaysUntil(daysUntil: number): string {
     if (daysUntil === 1) {
         return "Starts tomorrow";

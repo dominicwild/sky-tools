@@ -1,3 +1,5 @@
+import {existsSync} from "node:fs";
+import {join} from "node:path";
 import {describe, expect, it} from "vitest";
 import {calendarCoverage, skyCalendarEntries} from "./skyEvents";
 
@@ -51,6 +53,9 @@ describe("Sky calendar data", () => {
             expect(entry.link === null || entry.link.label.length > 0).toBe(true);
             expect(entry.image === null || entry.image.url.startsWith("https://")).toBe(true);
             expect(entry.image === null || entry.image.alt.length > 0).toBe(true);
+            expect(entry.kind !== "season" || entry.icon.url.startsWith("/")).toBe(true);
+            expect(entry.kind !== "season" || entry.icon.alt.length > 0).toBe(true);
+            expect(entry.kind !== "season" || existsSync(join(process.cwd(), "public", entry.icon.url))).toBe(true);
             expect(entry.link?.url).not.toBe("https://sky-children-of-the-light.fandom.com/wiki/Radiance_Event");
             expect(entry.link?.url).not.toBe("https://sky-children-of-the-light.fandom.com/wiki/Seasonal_Light");
         }

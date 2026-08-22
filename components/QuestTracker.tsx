@@ -5,6 +5,7 @@ import {AnimatePresence, motion} from "motion/react"
 import Link from "next/link";
 import {CalendarDays} from "lucide-react";
 import QuestSearch from "@/components/QuestSearch";
+import SeasonCountdown from "@/components/SeasonCountdown";
 import VisualGuideDialog from "./VisualGuideDialog";
 import VideoGuideDialog from "@/components/VideoGuideDialog";
 import {Button} from "@/components/ui/button";
@@ -145,6 +146,7 @@ export default function QuestTracker({initialQuestData, skyHelperQuestData}: Rea
                 >
                     <img className={"relative"} src={"/sky-logo.png"} alt="Sky Quest Tracker"/>
                     <div className="relative">
+                        <SeasonCountdown />
                         <h1 className="text-2xl font-semibold text-white/90 drop-shadow-2xl">
                             <span className={"bg-black/1 rounded-full"}>Daily Quest Tracker</span>
                         </h1>
