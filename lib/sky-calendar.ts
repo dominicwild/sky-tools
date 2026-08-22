@@ -7,16 +7,14 @@ import {
     SkyMonth,
 } from "./sky-day";
 
-export type SkyCalendarTrackKind = "travelling-spirit" | "events" | "season";
+const UPCOMING_TRACK_LIMIT = 4;
 
-export type SkyCalendarTrackEntry =
-    | {state: "available"; entry: SkyCalendarEntry}
-    | {state: "empty"};
+export type SkyCalendarTrackKind = "travelling-spirit" | "events" | "season";
 
 export type SkyCalendarTrack = {
     kind: SkyCalendarTrackKind;
     live: SkyCalendarEntry[];
-    upcoming: SkyCalendarTrackEntry;
+    upcoming: SkyCalendarEntry[];
 };
 
 export type SkyCalendarMonthEntry = {
@@ -109,16 +107,6 @@ function compareMonthEntriesByStart(left: SkyCalendarMonthEntry, right: SkyCalen
     return left.entry.id.localeCompare(right.entry.id);
 }
 
-function getTrackEntry(entries: SkyCalendarEntry[]): SkyCalendarTrackEntry {
-    const entry = entries[0];
-
-    if (entry === undefined) {
-        return {state: "empty"};
-    }
-
-    return {state: "available", entry};
-}
-
 function getLaterSkyDay(left: SkyDay, right: SkyDay): SkyDay {
     return compareSkyDays(left, right) > 0 ? left : right;
 }
@@ -187,7 +175,7 @@ export function getTracks(entries: SkyCalendarEntry[], today: SkyDay): SkyCalend
         return {
             kind: track.kind,
             live: liveEntries,
-            upcoming: getTrackEntry(upcomingEntries),
+            upcoming: upcomingEntries.slice(0, UPCOMING_TRACK_LIMIT),
         };
     });
 }

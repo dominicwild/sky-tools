@@ -194,17 +194,17 @@ describe("Sky calendar", () => {
             {
                 kind: "travelling-spirit",
                 live: [entries[0]],
-                upcoming: {state: "available", entry: entries[1]},
+                upcoming: [entries[1]],
             },
             {
                 kind: "events",
                 live: [entries[2]],
-                upcoming: {state: "available", entry: entries[3]},
+                upcoming: [entries[3]],
             },
             {
                 kind: "season",
                 live: [entries[4]],
-                upcoming: {state: "available", entry: entries[5]},
+                upcoming: [entries[5]],
             },
         ]);
     });
@@ -219,13 +219,25 @@ describe("Sky calendar", () => {
         expect(getTracks(entries, "2026-06-21")[1].live).toEqual(entries);
     });
 
+    it("keeps simultaneous upcoming entries and limits each track to four", () => {
+        const entries = [
+            createEntry({id: "same-start-long", kind: "event", startDay: "2026-07-08", endDay: "2026-07-20"}),
+            createEntry({id: "same-start-short", kind: "event", startDay: "2026-07-08", endDay: "2026-07-10"}),
+            createEntry({id: "third", kind: "event", startDay: "2026-07-12", endDay: "2026-07-15"}),
+            createEntry({id: "fourth", kind: "event", startDay: "2026-07-16", endDay: "2026-07-19"}),
+            createEntry({id: "fifth", kind: "event", startDay: "2026-07-20", endDay: "2026-07-23"}),
+        ];
+
+        expect(getTracks(entries, "2026-07-05")[1].upcoming).toEqual(entries.slice(0, 4));
+    });
+
     it("keeps empty tracks visible", () => {
         const event = createEntry({id: "event", kind: "event", startDay: "2026-07-01", endDay: "2026-07-10"});
 
         expect(getTracks([event], "2026-07-05")[0]).toEqual({
             kind: "travelling-spirit",
             live: [],
-            upcoming: {state: "empty"},
+            upcoming: [],
         });
     });
 

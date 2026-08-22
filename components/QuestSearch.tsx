@@ -58,15 +58,16 @@ export default function QuestSearch({
     }
 
     const highlightMatch = (text: string, query: string) => {
-        if (!query.trim()) return <span>{text}</span>
+        const trimmedQuery = query.trim()
+        if (!trimmedQuery) return <span>{text}</span>
 
-        const regex = new RegExp(`(${query.trim()})`, "gi")
-        const parts = text.split(regex)
+        const escapedQuery = trimmedQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+        const parts = text.split(new RegExp(`(${escapedQuery})`, "gi"))
 
         return (
             <>
                 {parts.map((part, i) =>
-                        regex.test(part) ? (
+                    i % 2 === 1 ? (
                             <span key={i} className="font-bold bg-blue-200 text-blue-700">
                               {part}
                             </span>

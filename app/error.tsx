@@ -1,21 +1,20 @@
 "use client"
 
-import {useState} from "react"
+import {useEffect, useState} from "react"
 import Image from "next/image"
-import {useRouter} from "next/navigation"
 import {motion, AnimatePresence} from "motion/react"
 import {CloudEffect} from "@/components/CloudEffect";
 
-export default function ErrorPage() {
+export default function ErrorPage({error, reset}: { error: Error & { digest?: string }; reset: () => void }) {
     const [isRetrying, setIsRetrying] = useState(false)
-    const router = useRouter()
+
+    useEffect(() => {
+        console.error(error);
+    }, [error])
 
     const handleRetry = () => {
         setIsRetrying(true)
-        setTimeout(() => {
-            router.refresh()
-            setIsRetrying(false)
-        }, 1000)
+        reset()
     }
 
     const characterVariants = {
