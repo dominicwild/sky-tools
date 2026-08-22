@@ -181,6 +181,27 @@ Daily travelling-spirit top-up:
    `confidence` to `confirmed`. Do not only update the title: the announced window can differ from the extrapolation.
 3. If no announcement exists, leave the entry unchanged and log nothing.
 
+Season countdown upkeep:
+
+The homepage header shows a countdown badge for the live season (`components/SeasonCountdown.tsx`). It reads the live
+`kind: "season"` entry from `data/skyEvents.ts` and renders that entry's `icon` — a field required on season entries
+only, pointing at an emblem image committed under `public/`.
+
+1. When adding a new season entry, also add its emblem: take the season's `iconUrl` from
+   `src/assets/seasons/seasons.jsonc` in https://github.com/Silverfeelin/SkyGame-Data, download it to
+   `public/season-<season-slug>-icon.webp`, and set
+   `icon: {url: "/season-<season-slug>-icon.webp", alt: "<Season title> emblem"}` on the entry. The wiki serves these
+   files as WebP even when the URL ends in `.png`, so keep the `.webp` extension. If SkyGame-Data does not carry the
+   season yet, take the emblem from the season's page on the fandom wiki instead.
+2. Typecheck fails if a season entry lacks `icon`, and `data/skyEvents.test.ts` fails unless `icon.url` starts with
+   `/`, the alt text is non-empty, and the file exists in `public/`. Do not commit a season entry until all three
+   pass.
+3. When the current season ends, the countdown needs no change: the badge disappears on its own between seasons and
+   reappears when the next season's entry becomes live. An absent badge between seasons is correct, not a bug. Leave
+   past seasons' icons in `public/`.
+4. During live-site verification while a season is live, confirm the homepage badge shows that season's emblem with a
+   plausible "N days left", and that hovering it shows "Days left until <Season title> ends".
+
 Calendar rules:
 
 1. Convert end-exclusive source ranges to inclusive `endDay` once, at write time. Do not apply the conversion again
