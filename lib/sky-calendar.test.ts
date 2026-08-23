@@ -223,7 +223,7 @@ describe("Sky calendar", () => {
         expect(getTracks(entries, "2026-06-21")[1].live).toEqual(entries);
     });
 
-    it("keeps simultaneous upcoming entries and limits each track to four", () => {
+    it("keeps simultaneous upcoming events and limits the events track to four", () => {
         const entries = [
             createEntry({id: "same-start-long", kind: "event", startDay: "2026-07-08", endDay: "2026-07-20"}),
             createEntry({id: "same-start-short", kind: "event", startDay: "2026-07-08", endDay: "2026-07-10"}),
@@ -233,6 +233,21 @@ describe("Sky calendar", () => {
         ];
 
         expect(getTracks(entries, "2026-07-05")[1].upcoming).toEqual(entries.slice(0, 4));
+    });
+
+    it("shows only the next upcoming travelling spirit and season", () => {
+        const entries = [
+            createEntry({id: "ts-1", kind: "travelling-spirit", startDay: "2026-07-10", endDay: "2026-07-13"}),
+            createEntry({id: "ts-2", kind: "travelling-spirit", startDay: "2026-07-24", endDay: "2026-07-27"}),
+            createEntry({id: "ts-3", kind: "travelling-spirit", startDay: "2026-08-07", endDay: "2026-08-10"}),
+            createEntry({id: "season-1", kind: "season", startDay: "2026-07-20", endDay: "2026-08-30"}),
+            createEntry({id: "season-2", kind: "season", startDay: "2026-09-01", endDay: "2026-10-10"}),
+        ];
+
+        const tracks = getTracks(entries, "2026-07-05");
+
+        expect(tracks[0].upcoming).toEqual([entries[0]]);
+        expect(tracks[2].upcoming).toEqual([entries[3]]);
     });
 
     it("keeps empty tracks visible", () => {
