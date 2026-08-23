@@ -7,8 +7,6 @@ import {
     SkyMonth,
 } from "./sky-day";
 
-const UPCOMING_TRACK_LIMIT = 4;
-
 export type SkyCalendarTrackKind = "travelling-spirit" | "events" | "season";
 
 export type SkyCalendarTrack = {
@@ -54,14 +52,15 @@ export type SkyCalendarEntryTiming =
 type SkyCalendarTrackDefinition = {
     kind: SkyCalendarTrackKind;
     entryKinds: readonly SkyCalendarEntryKind[];
+    upcomingLimit: number;
 };
 
 type RowAssignedMonthEntry = SkyCalendarMonthEntry & {row: number};
 
 const trackDefinitions: readonly SkyCalendarTrackDefinition[] = [
-    {kind: "travelling-spirit", entryKinds: ["travelling-spirit"]},
-    {kind: "events", entryKinds: ["event", "returning-spirits"]},
-    {kind: "season", entryKinds: ["season"]},
+    {kind: "travelling-spirit", entryKinds: ["travelling-spirit"], upcomingLimit: 1},
+    {kind: "events", entryKinds: ["event", "returning-spirits"], upcomingLimit: 4},
+    {kind: "season", entryKinds: ["season"], upcomingLimit: 1},
 ];
 
 function getEntryDuration(entry: {startDay: SkyDay; endDay: SkyDay}): number {
@@ -175,7 +174,7 @@ export function getTracks(entries: SkyCalendarEntry[], today: SkyDay): SkyCalend
         return {
             kind: track.kind,
             live: liveEntries,
-            upcoming: upcomingEntries.slice(0, UPCOMING_TRACK_LIMIT),
+            upcoming: upcomingEntries.slice(0, track.upcomingLimit),
         };
     });
 }
