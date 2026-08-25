@@ -305,6 +305,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "relive meditating monastic s memory from vault of knowledge",
     ],
     [
+        "relive spirit quest vault of knowledge polite scholar",
+        "relive polite scholar s memory from vault of knowledge",
+    ],
+    [
         "relive spirit quest season of assembly chuckling scout",
         "relive chuckling scout s memory from hidden forest",
     ],
@@ -327,6 +331,10 @@ const QUEST_TITLE_ALIASES = new Map([
     [
         "meditation quest daylight prairie bird nest shrine",
         "meditate at prairie s bird nest shrine",
+    ],
+    [
+        "meditation quest guide vault of knowledge vault summit a k a vault temple",
+        "meditate at vault s summit",
     ],
 ]);
 
