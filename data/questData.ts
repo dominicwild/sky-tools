@@ -6,7 +6,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Meditate in Prairie's butterfly field",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "48e166fd-c49e-429b-a473-4a525f48301b.png",
+        "visualGuideUrl": "skyhelper-1542069466710409256.jpeg",
         "videoGuideUrl": null,
         "id": 0
     },
@@ -60,7 +60,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Catch the light in Daylight Prairie",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "37dbc00e-1692-4e34-9d82-cbcfbea0fa73.png",
+        "visualGuideUrl": "skyhelper-1542069128347648131.jpeg",
         "videoGuideUrl": "https://youtu.be/ik6eeSghJ-w",
         "id": 6
     },
@@ -1437,7 +1437,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Forge a candle",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1539895865450176553.jpeg",
+        "visualGuideUrl": "skyhelper-1542068743289442304.jpeg",
         "videoGuideUrl": "https://youtu.be/mLhjvx19zzA",
         "id": 159
     },

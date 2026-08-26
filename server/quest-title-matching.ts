@@ -333,6 +333,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "meditate at prairie s bird nest shrine",
     ],
     [
+        "meditation quest guide daylight prairie butterfly fields",
+        "meditate in prairie s butterfly field",
+    ],
+    [
         "meditation quest guide vault of knowledge vault summit a k a vault temple",
         "meditate at vault s summit",
     ],
