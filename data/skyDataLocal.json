@@ -301,7 +301,7 @@
     "realm": "Hidden Forest",
     "questName": "Meditate in Forest's boneyard",
     "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-    "visualGuideUrl": "b1617a4b-75de-42a1-b3e7-295596aee6d6.png",
+    "visualGuideUrl": "skyhelper-1542438408012439604.jpeg",
     "videoGuideUrl": "https://youtu.be/B8E7gWkP9aQ",
     "id": 33
   },
@@ -328,7 +328,7 @@
     "realm": "Hidden Forest",
     "questName": "Catch the light in Hidden Forest",
     "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-    "visualGuideUrl": "skyhelper-1535183790953996348.jpeg",
+    "visualGuideUrl": "skyhelper-1542437636327739432.jpeg",
     "videoGuideUrl": "https://youtu.be/uCUHCMRM1Oo",
     "id": 36
   },
@@ -346,7 +346,7 @@
     "realm": "Hidden Forest",
     "questName": "Rescue a Manta from Darkness",
     "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-    "visualGuideUrl": "e70f49b8-de40-4282-aa2d-21d52f81d6e7.png",
+    "visualGuideUrl": "skyhelper-1542437822181539900.jpeg",
     "videoGuideUrl": "https://youtu.be/23gUb_G0mGI",
     "id": 38
   },
@@ -2293,5 +2293,14 @@
     "visualGuideUrl": null,
     "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxI4JNrxiHAeWl2grHtEy4LP6QY1bXdCDic0pG",
     "id": 255
+  },
+  {
+    "type": "SkyHelper Quest",
+    "realm": "Hidden Forest",
+    "questName": "Meet up with Oddball Outcast in Boneyard - Introduce Oddball Outcast to a big surprise by activating the temple bridge",
+    "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+    "visualGuideUrl": null,
+    "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxP0yPJ8GOnu2HOZTbF9YKL70VtXSwCIyE6ipA",
+    "id": 256
   }
 ]

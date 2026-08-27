@@ -153,6 +153,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "catch the light in hidden forest",
     ],
     [
+        "rescue manta quest",
+        "rescue a manta from darkness",
+    ],
+    [
         "relive spirit quest hidden forest pouty porter",
         "relive pouty porter s memory from hidden forest",
     ],
