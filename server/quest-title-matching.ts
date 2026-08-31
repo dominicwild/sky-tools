@@ -113,6 +113,14 @@ const QUEST_TITLE_ALIASES = new Map([
         "relive waving bellmaker s memory from daylight prairie",
     ],
     [
+        "relive spirit quest season of belonging confetti cousin",
+        "relive confetti cousin s memory from daylight prairie",
+    ],
+    [
+        "meditation quest guide daylight prairie koi pond",
+        "meditate by prairie s koi pond",
+    ],
+    [
         "catch the light quest vault of knowledge",
         "catch the light in the vault of knowledge",
     ],
