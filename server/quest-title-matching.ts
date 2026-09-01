@@ -173,6 +173,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "visit the ancestor s table of belonging in forest s elevated clearing",
     ],
     [
+        "relive spirit quest season of belonging hairtousle teen",
+        "relive hairtousle teen s memory from hidden forest",
+    ],
+    [
         "daily quest guide hug a friend",
         "hug a friend",
     ],

@@ -384,7 +384,7 @@ export const questsData = [
         "realm": "Hidden Forest",
         "questName": "Visit the Ancestor's Table of Belonging in Forest's Elevated Clearing",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1535184251228782612.jpeg",
+        "visualGuideUrl": "skyhelper-1544246059444731964.jpeg",
         "videoGuideUrl": null,
         "id": 42
     },
@@ -492,7 +492,7 @@ export const questsData = [
         "realm": "Hidden Forest",
         "questName": "Relive Hairtousle Teen's memory from Hidden Forest",
         "iconUrl": "31e22821-3eaf-49db-85fe-39e01a665fa9.png",
-        "visualGuideUrl": "fed53805-dfa6-499c-8477-28fdcb533d30.png",
+        "visualGuideUrl": "skyhelper-1544246362227474463.jpeg",
         "videoGuideUrl": "https://www.youtube.com/watch?v=6TlBquksQa0",
         "id": 54
     },
@@ -1437,7 +1437,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Forge a candle",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1542068743289442304.jpeg",
+        "visualGuideUrl": "skyhelper-1544245644858757130.jpeg",
         "videoGuideUrl": "https://youtu.be/mLhjvx19zzA",
         "id": 159
     },
@@ -2077,7 +2077,7 @@ export const questsData = [
         "questName": "Use expressions with players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": null,
-        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxBKODimUAjyVNG4C9Pw0zTOWtbmprRDAUHo2X",
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfx2hszyMwNyMsHK60uirYqwxOhvRD91AfJknBG",
         "id": 230
     },
     {
