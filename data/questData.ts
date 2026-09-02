@@ -825,7 +825,7 @@ export const questsData = [
         "realm": "Valley of Triumph",
         "questName": "Relive Bowing Medalist's memory from Valley of Triumph",
         "iconUrl": "22cda5e4-025b-406c-9fe2-372684a460a1.png",
-        "visualGuideUrl": "be014bd0-b68b-43a5-8d76-4662d48c3924.jpeg",
+        "visualGuideUrl": "skyhelper-1544617813111742516.jpeg",
         "videoGuideUrl": "https://youtu.be/2cSlZT8mbvA",
         "id": 91
     },
@@ -1941,7 +1941,7 @@ export const questsData = [
         "realm": "Valley of Triumph",
         "questName": "Catch the 3 lights during the Valley's sliding race",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1510183129179230328.jpeg",
+        "visualGuideUrl": "skyhelper-1544617491123281961.jpeg",
         "videoGuideUrl": "https://youtu.be/QwsLH-XB2k8",
         "id": 215
     },
@@ -1950,7 +1950,7 @@ export const questsData = [
         "realm": "Valley of Triumph",
         "questName": "Meditate overlooking the Frozen Lake",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "ice_rink_quest_meditate.jpeg",
+        "visualGuideUrl": "skyhelper-1544617162214350858.jpeg",
         "videoGuideUrl": null,
         "id": 216
     },

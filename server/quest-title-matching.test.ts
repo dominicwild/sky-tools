@@ -36,6 +36,7 @@ const localQuests: Quest[] = [
     createQuest(217, "Meditate in the Crab Fields"),
     createQuest(70, "Visit the Hotspring in the Village of Dreams"),
     createQuest(97, "Relive Spinning Mentor's memory from Valley of Triumph"),
+    createQuest(91, "Relive Bowing Medalist's memory from Valley of Triumph"),
     createQuest(143, "Relive Shushing Light Scholar's memory from Vault of Knowledge"),
     createQuest(38, "Rescue a Manta from Darkness"),
 ];
@@ -69,6 +70,7 @@ describe("quest title matching", () => {
         ["Relive Spirit Quest Golden Wasteland - Saluting Captain", 117],
         ["Meditation Quest Guide - Golden Wasteland - The Boat a.k.a The Crab Fields", 217],
         ["Relive Spirit Quest Season of Dreams  - Spinning Mentor", 97],
+        ["Relive Spirit Quest Valley of Triumph - Bowing Medalist", 91],
         ["Visiting the Social Light Area - Valley of Triumph, Village of Dreams, Hotspring", 70],
         ["Relive Spirit Quest Season of Lightseekers - Shushing Light Scholar", 143],
         ["Rescue Manta Quest", 38],
