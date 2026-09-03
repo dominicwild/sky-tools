@@ -229,6 +229,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "admire the rainbow in the wind paths for a short while",
     ],
     [
+        "days of rainbow 2022 admire the rainbow in the treasure reef",
+        "admire the rainbow in treasure reef for a short while",
+    ],
+    [
         "meditation quest guide valley of triumph ice rink meditate overlooking the frozen lake",
         "meditate overlooking the frozen lake",
     ],

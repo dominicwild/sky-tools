@@ -1392,7 +1392,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Make a new acquaintance",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "f2f53d9f-7970-412e-90cf-7d49a9ce7f39.png",
+        "visualGuideUrl": "skyhelper-1544974399831019520.jpeg",
         "videoGuideUrl": "https://youtu.be/8dxeUcmyc0o",
         "id": 154
     },
@@ -1779,7 +1779,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Admire the rainbow in Treasure Reef for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "57ad97ca-1d90-41bb-93a0-2dab9901bb9a.png",
+        "visualGuideUrl": "skyhelper-1544974549991297054.jpeg",
         "videoGuideUrl": null,
         "id": 197
     },
@@ -2094,7 +2094,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Pick up a Crab",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1512360048494514186.jpeg",
+        "visualGuideUrl": "skyhelper-1544974222030274580.jpeg",
         "videoGuideUrl": "https://youtu.be/Xn5jM2jMH94",
         "id": 232
     },
@@ -2304,5 +2304,14 @@ export const questsData = [
         "visualGuideUrl": null,
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxP0yPJ8GOnu2HOZTbF9YKL70VtXSwCIyE6ipA",
         "id": 256
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Golden Wasteland",
+        "questName": "Meet up with Anxious Angler in Treasure Reef - Catch a fish 🐟",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfx3f5xI78ayA5W71HLtjIduUkJsBThwpODP6Vf",
+        "id": 257
     }
 ] satisfies Quest[]
