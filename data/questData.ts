@@ -1185,7 +1185,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Meditate at the Vault's entrance",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1536272437849890877.jpeg",
+        "visualGuideUrl": "skyhelper-1545330132590272582.jpeg",
         "videoGuideUrl": "https://youtu.be/B6XNxtCWca4",
         "id": 131
     },
@@ -1203,7 +1203,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Collect Purple Light",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1510905179921453177.jpeg",
+        "visualGuideUrl": "skyhelper-1545330352690692196.jpeg",
         "videoGuideUrl": "https://youtu.be/ZfaJrpCWctM",
         "id": 133
     },
@@ -1302,7 +1302,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Relive Wise Grandparent's memory from Vault of Knowledge",
         "iconUrl": "699a24b1-3e65-4084-ab2d-b2f6457b404b.png",
-        "visualGuideUrl": "e819afb7-7690-44c9-81a7-cd6b0d436dfa.jpeg",
+        "visualGuideUrl": "skyhelper-1545330720531292210.jpeg",
         "videoGuideUrl": "https://www.youtube.com/watch?v=0ZOM7_hfv9c",
         "id": 144
     },

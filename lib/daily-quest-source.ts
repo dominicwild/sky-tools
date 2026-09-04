@@ -303,25 +303,7 @@ export function resolveDailyQuests(
         return getTopUserSelectedQuests(userQuestCounts, localQuests);
     }
 
-    const skyHelperQuests = getSkyHelperDisplayQuests(skyHelperResponse, localQuests);
-    const selectedQuestIds = new Set(
-        skyHelperQuests
-            .map((quest) => quest.id)
-            .filter((questId): questId is number => questId !== undefined),
-    );
-    if (skyHelperQuests.length >= QUEST_LIMIT) {
-        return skyHelperQuests.slice(0, QUEST_LIMIT);
-    }
-
-    return [
-        ...skyHelperQuests,
-        ...getTopUserSelectedQuests(
-            userQuestCounts,
-            localQuests,
-            selectedQuestIds,
-            QUEST_LIMIT - skyHelperQuests.length,
-        ),
-    ];
+    return getSkyHelperDisplayQuests(skyHelperResponse, localQuests).slice(0, QUEST_LIMIT);
 }
 
 export function resolveDailyQuestDisplayData(

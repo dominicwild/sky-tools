@@ -117,6 +117,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "relive confetti cousin s memory from daylight prairie",
     ],
     [
+        "relive spirit quest season of belonging wise grandparent",
+        "relive wise grandparent s memory from vault of knowledge",
+    ],
+    [
         "meditation quest guide daylight prairie koi pond",
         "meditate by prairie s koi pond",
     ],
