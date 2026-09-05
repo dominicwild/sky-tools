@@ -87,7 +87,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Admire the sapling in Daylight Prairie for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "8df0aa56-239f-4f6d-a7c4-68af8530c7c9.jpeg",
+        "visualGuideUrl": "skyhelper-1545694130603040818.jpeg",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=131",
         "id": 9
     },
@@ -105,7 +105,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Visit the cozy hideout in Prairie Caves",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "ea9bfd68-d91d-4bda-8440-58d6df4393e2.png",
+        "visualGuideUrl": "skyhelper-1545694870109163600.jpeg",
         "videoGuideUrl": null,
         "id": 11
     },
@@ -1338,7 +1338,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Bow at a player",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1540982936378277918.jpeg",
+        "visualGuideUrl": "skyhelper-1545694369615454249.jpeg",
         "videoGuideUrl": "https://youtu.be/tUWABu3t5Ic",
         "id": 148
     },
@@ -1662,7 +1662,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Admire the sapling in Daylight Prairie for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "8df0aa56-239f-4f6d-a7c4-68af8530c7c9.jpeg",
+        "visualGuideUrl": "skyhelper-1545694130603040818.jpeg",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=132",
         "id": 184
     },
@@ -1986,7 +1986,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Fly with many butterflies in Butterfly Fields",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1516701295237398618.jpeg",
+        "visualGuideUrl": "skyhelper-1545694563371589712.jpeg",
         "videoGuideUrl": "https://youtu.be/uX8olVYuGU4",
         "id": 220
     },

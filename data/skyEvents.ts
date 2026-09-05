@@ -29,7 +29,7 @@ export type SkyCalendarEntry =
     | (SkyCalendarEntryCommon & {kind: "travelling-spirit" | "returning-spirits"});
 
 export const calendarCoverage = {
-    checkedOn: "2026-08-14",
+    checkedOn: "2026-09-05",
     coverageThrough: "2026-10-11",
 } as const;
 
@@ -249,6 +249,20 @@ export const skyCalendarEntries: SkyCalendarEntry[] = [
         image: null,
         sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/schedule.ts",
         verifiedOn: "2026-07-30",
+    },
+    {
+        id: "days-of-moonlight-2026",
+        kind: "event",
+        title: "Days of Moonlight",
+        description: "Days of Moonlight is a limited celebration at Crescent Oasis in the Kingdom of the Nine-Colored Deer. Players can help spirits to unlock event stickers, create murals and enjoy mooncakes with friends. It also brings a small set of event activities and cosmetics for the duration.",
+        startDay: "2026-09-19",
+        endDay: "2026-10-09",
+        confidence: "confirmed",
+        link: {url: "https://www.thatskygame.com/news/this-month-in-sky-september-2026-edition/", label: "This Month in Sky: September 2026"},
+        image: null,
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/events/2026/days-of-moonlight.ts",
+        verifiedOn: "2026-09-05",
+        palette: "amber",
     },
     {
         id: "travelling-spirit-2026-09-24",
