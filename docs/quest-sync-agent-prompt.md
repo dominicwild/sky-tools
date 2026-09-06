@@ -31,7 +31,7 @@ Wiki sync:
     - data/skyDataLocal.json
     - scripts/skyData.json
     - scripts/skyDataLocal.json
-    - public/skyImages/*
+    - skyImages/* (served to the site through jsDelivr, deliberately outside public/ so Vercel never ships them)
 4. Do not commit raw temporary files, downloaded videos, credentials, or ad hoc scratch output.
 
 SkyHelper sync:
@@ -52,13 +52,13 @@ SkyHelper sync:
     - realm: inferred from matched daily quests when there is exactly one clear realm, otherwise "Unknown (?)"
     - questName: SkyHelper title with the "- video guide" suffix removed
     - iconUrl: the existing default diamond quest icon, currently 9857649b-3859-413b-941c-dee139045b1d.png
-    - visualGuideUrl: local filename in public/skyImages when an image exists, otherwise null
+    - visualGuideUrl: local filename in skyImages when an image exists, otherwise null
     - videoGuideUrl: UploadThing `ufsUrl` for the compressed hosted video when a video exists and UploadThing
       credentials
       are available. If upload is blocked, preserve any existing videoGuideUrl on matched quests, use null for new
       quests, and report the blocker
     - id: next available numeric id with no duplicate ids
-7. Download new SkyHelper image attachments into public/skyImages. Store only the local filename in questData.ts.
+7. Download new SkyHelper image attachments into skyImages. Store only the local filename in questData.ts.
 8. Mirror data/questData.ts changes into data/skyDataLocal.json and scripts/skyDataLocal.json. Do not add
    SkyHelper-only rows to scripts/skyData.json because that file is the raw wiki source.
 9. For video attachments:

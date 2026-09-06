@@ -13,7 +13,7 @@ const RAW_DATA_PATH = path.join(SCRIPT_DIR, "skyData.json");
 const SCRIPT_LOCAL_DATA_PATH = path.join(SCRIPT_DIR, "skyDataLocal.json");
 const APP_LOCAL_DATA_PATH = path.join(ROOT_DIR, "data/skyDataLocal.json");
 const APP_QUEST_DATA_PATH = path.join(ROOT_DIR, "data/questData.ts");
-const IMAGE_OUTPUT_DIR = path.join(ROOT_DIR, "public/skyImages");
+const IMAGE_OUTPUT_DIR = path.join(ROOT_DIR, "skyImages");
 const FALLBACK_HTML_PATH = path.join(SCRIPT_DIR, "mainQuestPage.html");
 
 type QuestType = "Realm Quest" | "General Quest" | "Seasonal/Event Quest";
