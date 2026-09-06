@@ -29,7 +29,7 @@ export type SkyCalendarEntry =
     | (SkyCalendarEntryCommon & {kind: "travelling-spirit" | "returning-spirits"});
 
 export const calendarCoverage = {
-    checkedOn: "2026-09-05",
+    checkedOn: "2026-09-06",
     coverageThrough: "2026-10-11",
 } as const;
 
@@ -249,6 +249,20 @@ export const skyCalendarEntries: SkyCalendarEntry[] = [
         image: null,
         sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/schedule.ts",
         verifiedOn: "2026-07-30",
+    },
+    {
+        id: "double-seasonal-candles-treasure-candles-2026-09",
+        kind: "event",
+        title: "2x Seasonal Candles & Treasure Candles",
+        description: "This limited bonus doubles the Seasonal Candle Bunches and Treasure Candles available each day. Players can collect eight of each instead of four, making it easier to earn seasonal currency and regular candle wax.",
+        startDay: "2026-09-11",
+        endDay: "2026-09-24",
+        confidence: "confirmed",
+        link: {url: "https://www.thatskygame.com/news/this-month-in-sky-september-2026-edition/", label: "This Month in Sky: September 2026"},
+        image: null,
+        sourceUrl: "https://www.thatskygame.com/news/this-month-in-sky-september-2026-edition/",
+        verifiedOn: "2026-09-06",
+        palette: "rose",
     },
     {
         id: "days-of-moonlight-2026",

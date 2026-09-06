@@ -294,7 +294,7 @@ export const questsData = [
         "realm": "Hidden Forest",
         "questName": "Meditate above the Forest's brook",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "f2784b0e-3e34-4133-9f3c-7f4b7d650250.png",
+        "visualGuideUrl": "skyhelper-1546056844785754233.jpeg",
         "videoGuideUrl": "https://youtu.be/Yb5DSLxVn44",
         "id": 32
     },
@@ -1716,7 +1716,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Find the candles at the end of the rainbow in the Hidden Forest",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "e0140072-3fd0-45ec-b6ce-a100016a649d.png",
+        "visualGuideUrl": "skyhelper-1546056241829257276.jpeg",
         "videoGuideUrl": "https://youtu.be/otI3wuLQKis",
         "id": 190
     },
@@ -2085,7 +2085,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Call to 5 different players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1541707621570977862.jpeg",
+        "visualGuideUrl": "skyhelper-1546055907769851924.jpeg",
         "videoGuideUrl": "https://youtu.be/exk2Y2Cshys",
         "id": 231
     },

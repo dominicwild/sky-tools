@@ -141,6 +141,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "meditate in forest s boneyard",
     ],
     [
+        "meditation quest hidden forest forest s brook",
+        "meditate above the forest s brook",
+    ],
+    [
         "meditation quest guide hidden forest forest clearing",
         "meditate at forest s clearing",
     ],
