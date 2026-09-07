@@ -636,7 +636,7 @@ export const questsData = [
         "realm": "Valley of Triumph",
         "questName": "Visit the Hotspring in the Village of Dreams",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1539170966997835826.jpeg",
+        "visualGuideUrl": "skyhelper-1546420087261503540.jpeg",
         "videoGuideUrl": null,
         "id": 70
     },
@@ -888,7 +888,7 @@ export const questsData = [
         "realm": "Valley of Triumph",
         "questName": "Relive Bearhug Hermit's memory from Valley of Triumph",
         "iconUrl": "aac3e002-0f8a-46ed-84d2-4ac767559372.png",
-        "visualGuideUrl": "ea658f8b-f5e7-46a8-83d5-87bd80918547.jpeg",
+        "visualGuideUrl": "skyhelper-1546419699338711050.jpeg",
         "videoGuideUrl": "https://youtu.be/98WLZSrH9fY",
         "id": 98
     },
@@ -1365,7 +1365,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Wave to a Friend",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1543880478053109781.jpeg",
+        "visualGuideUrl": "skyhelper-1546419385412096020.jpeg",
         "videoGuideUrl": "https://youtu.be/g-Ts_WZY4VM",
         "id": 151
     },
@@ -1437,7 +1437,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Forge a candle",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1544245644858757130.jpeg",
+        "visualGuideUrl": "skyhelper-1546419122424913973.jpeg",
         "videoGuideUrl": "https://youtu.be/mLhjvx19zzA",
         "id": 159
     },

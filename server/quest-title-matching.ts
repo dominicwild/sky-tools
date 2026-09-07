@@ -317,6 +317,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "relive spinning mentor s memory from valley of triumph",
     ],
     [
+        "relive spirit quest season of dreams bearhug hermit",
+        "relive bearhug hermit s memory from valley of triumph",
+    ],
+    [
         "relive spirit quest valley of triumph proud victor",
         "relive proud victor s memory from valley of triumph",
     ],
