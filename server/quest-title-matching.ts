@@ -217,6 +217,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "catch the light in golden wasteland",
     ],
     [
+        "meet up with anxious angler in golden wasteland catch a fish",
+        "meet up with anxious angler in treasure reef catch a fish",
+    ],
+    [
         "catch the light quest daylight prairie",
         "catch the light in daylight prairie",
     ],
