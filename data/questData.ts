@@ -1221,7 +1221,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Find the candles at the end of the rainbow in the Vault of Knowledge",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1539896454662062090.jpeg",
+        "visualGuideUrl": "skyhelper-1547143320818421810.jpeg",
         "videoGuideUrl": "https://youtu.be/oiUQPs3E7GE",
         "id": 135
     },
@@ -1743,7 +1743,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Find the candles at the end of the rainbow in the Vault of Knowledge",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1539896454662062090.jpeg",
+        "visualGuideUrl": "skyhelper-1547143320818421810.jpeg",
         "videoGuideUrl": "https://youtu.be/oiUQPs3E7GE",
         "id": 193
     },
@@ -2077,7 +2077,7 @@ export const questsData = [
         "questName": "Use expressions with players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": null,
-        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfx2hszyMwNyMsHK60uirYqwxOhvRD91AfJknBG",
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxT55dVTHro4QbKP5RwsenJjDVgtEyUv7LzirS",
         "id": 230
     },
     {
