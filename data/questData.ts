@@ -1392,7 +1392,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Make a new acquaintance",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1544974399831019520.jpeg",
+        "visualGuideUrl": "skyhelper-1547503999811584030.jpeg",
         "videoGuideUrl": "https://youtu.be/8dxeUcmyc0o",
         "id": 154
     },
@@ -1491,7 +1491,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Recharge your light from a jellyfish",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "e637dee4-600c-4ea1-86c0-3499c064b19e.png",
+        "visualGuideUrl": "skyhelper-1547504685726961684.jpeg",
         "videoGuideUrl": "https://youtu.be/yHLgmEjdnzA",
         "id": 165
     },
@@ -1995,7 +1995,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Ride a giant manta in Sanctuary Islands",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": null,
+        "visualGuideUrl": "skyhelper-1547504402003136532.jpeg",
         "videoGuideUrl": "https://youtu.be/fQdBSuQ_frM",
         "id": 221
     },

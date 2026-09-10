@@ -89,6 +89,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "make a new acquaintance",
     ],
     [
+        "daily quest guide recharge from a jellyfish",
+        "recharge your light from a jellyfish",
+    ],
+    [
         "recharge from a light bloom",
         "recharge your light from a light bloom",
     ],

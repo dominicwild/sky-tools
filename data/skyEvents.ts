@@ -29,7 +29,7 @@ export type SkyCalendarEntry =
     | (SkyCalendarEntryCommon & {kind: "travelling-spirit" | "returning-spirits"});
 
 export const calendarCoverage = {
-    checkedOn: "2026-09-06",
+    checkedOn: "2026-09-10",
     coverageThrough: "2026-10-11",
 } as const;
 
