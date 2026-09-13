@@ -59,6 +59,7 @@ describe("quest title matching", () => {
         ["Catch the wandering lights in The Wind Paths", 223],
         ["Daily Quest Guide - High-Five a Friend", 150],
         ["Meet up with Anxious Angler in Golden Wasteland - Catch a fish", 257],
+        ["Map of the Treasure Reef (Surface)", 257],
         ["Meet up with Cackling Cannoneer in Graveyard -  Play a prank on Ceasing Commodore", 246],
         ["Relive Spirit Quest Vault of Knowledge - Meditating Monastic", 141],
         ["Relive Spirit Quest Daylight Prairie - Slumbering Shipwright", 17],

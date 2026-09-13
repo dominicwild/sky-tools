@@ -373,6 +373,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "meet up with cackling cannoneer in graveyard launch cackling cannoneer",
     ],
     [
+        "map of the treasure reef surface",
+        "meet up with anxious angler in treasure reef catch a fish",
+    ],
+    [
         "meditation quest daylight prairie bird nest shrine",
         "meditate at prairie s bird nest shrine",
     ],
