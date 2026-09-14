@@ -1176,7 +1176,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Meditate at Vault's second floor",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "06a1b689-41ee-4ade-afd9-c2300204b563.png",
+        "visualGuideUrl": "skyhelper-1548961767537905714.jpeg",
         "videoGuideUrl": "https://youtu.be/CiRzC_9vxqM",
         "id": 130
     },
@@ -1257,7 +1257,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Relive Praying Acolyte's memory from Vault of Knowledge",
         "iconUrl": "e8833437-2d23-49af-9a99-ee82e0cf4544.png",
-        "visualGuideUrl": "bb83b0c3-53e1-4568-885d-5bfe2dc9b244.jpeg",
+        "visualGuideUrl": "skyhelper-1548961614697463849.jpeg",
         "videoGuideUrl": "https://youtu.be/dIgC51kuNKM?t=65",
         "id": 139
     },
@@ -1365,7 +1365,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Wave to a Friend",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1546419385412096020.jpeg",
+        "visualGuideUrl": "skyhelper-1548961977387323432.jpeg",
         "videoGuideUrl": "https://youtu.be/g-Ts_WZY4VM",
         "id": 151
     },
@@ -1437,7 +1437,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Forge a candle",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1546419122424913973.jpeg",
+        "visualGuideUrl": "skyhelper-1548961389094371388.jpeg",
         "videoGuideUrl": "https://youtu.be/mLhjvx19zzA",
         "id": 159
     },

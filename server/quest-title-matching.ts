@@ -349,6 +349,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "relive meditating monastic s memory from vault of knowledge",
     ],
     [
+        "relive spirit quest vault of knowledge praying acolyte",
+        "relive praying acolyte s memory from vault of knowledge",
+    ],
+    [
         "relive spirit quest vault of knowledge polite scholar",
         "relive polite scholar s memory from vault of knowledge",
     ],
