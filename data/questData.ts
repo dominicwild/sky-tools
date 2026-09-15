@@ -60,7 +60,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Catch the light in Daylight Prairie",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1542069128347648131.jpeg",
+        "visualGuideUrl": "skyhelper-1549318590958936074.jpeg",
         "videoGuideUrl": "https://youtu.be/ik6eeSghJ-w",
         "id": 6
     },
@@ -69,7 +69,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Collect Green Light",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "a60a5010-4c19-427c-b43e-c01826ec8296.png",
+        "visualGuideUrl": "skyhelper-1549319074172117023.jpeg",
         "videoGuideUrl": "https://youtu.be/mzUVM4sqroI",
         "id": 7
     },
@@ -2077,7 +2077,7 @@ export const questsData = [
         "questName": "Use expressions with players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": null,
-        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxT55dVTHro4QbKP5RwsenJjDVgtEyUv7LzirS",
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxd1lbgkhJuDCOg6fxHh74VI2qy5KvPoBsiE8c",
         "id": 230
     },
     {
