@@ -313,6 +313,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "relive indifferent alchemist s memory from golden wasteland",
     ],
     [
+        "relive spirit quest season of enchantment nodding muralist",
+        "relive nodding muralist s memory from golden wasteland",
+    ],
+    [
         "relive spirit quest season of enchantment scarecrow farmer",
         "relive scarecrow farmer s memory from golden wasteland",
     ],
@@ -403,7 +407,7 @@ export function createLocalQuestTitleIndex(localQuests: Quest[]) {
 }
 
 export function getMatchingLocalQuestId(title: string, localQuestsByTitle: Map<string, Quest>) {
-    const normalizedTitle = normalizeQuestTitle(title);
+    const normalizedTitle = normalizeQuestTitle(title).replace(/\s+by$/, "");
     const aliasTitle = QUEST_TITLE_ALIASES.get(normalizedTitle);
     const matchedQuest = localQuestsByTitle.get(aliasTitle ?? normalizedTitle);
 

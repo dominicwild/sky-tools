@@ -1140,7 +1140,7 @@ export const questsData = [
         "realm": "Golden Wasteland",
         "questName": "Relive Nodding Muralist's memory from Golden Wasteland",
         "iconUrl": "3ade9710-707c-4e91-90ef-80660b7628a9.png",
-        "visualGuideUrl": "d521a16e-7308-4fe3-89e8-09d290107b61.jpeg",
+        "visualGuideUrl": "skyhelper-1550404977069924382.jpeg",
         "videoGuideUrl": "https://youtu.be/PLP7r3UoIwo",
         "id": 126
     },
@@ -1338,7 +1338,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Bow at a player",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1545694369615454249.jpeg",
+        "visualGuideUrl": "skyhelper-1550404428777914440.jpeg",
         "videoGuideUrl": "https://youtu.be/tUWABu3t5Ic",
         "id": 148
     },
@@ -1689,7 +1689,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Admire the sapling in Golden Wasteland for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "7ad1a788-9319-4797-a682-c6a68fe93dfc.png",
+        "visualGuideUrl": "skyhelper-1550404616863227994.jpeg",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=209",
         "id": 187
     },
