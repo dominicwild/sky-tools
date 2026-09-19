@@ -1167,7 +1167,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Meditate at Vault's summit",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1541707887347499088.jpeg",
+        "visualGuideUrl": "skyhelper-1550768197165129818.jpeg",
         "videoGuideUrl": "https://youtu.be/3cw9-gsh_EI",
         "id": 129
     },
@@ -1239,7 +1239,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Relive Polite Scholar's memory from Vault of Knowledge",
         "iconUrl": "932f85fe-b5cc-4503-91f2-4cdd1b0a718f.png",
-        "visualGuideUrl": "skyhelper-1541708110706507786.jpeg",
+        "visualGuideUrl": "skyhelper-1550767734940246076.jpeg",
         "videoGuideUrl": "https://youtu.be/Dqb5TXHNe2Y",
         "id": 137
     },
@@ -2058,7 +2058,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Catch the wandering lights in the Upper Vault",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": null,
+        "visualGuideUrl": "skyhelper-1550767948979896390.jpeg",
         "videoGuideUrl": "https://youtu.be/0NaC9D49ujM",
         "id": 228
     },
