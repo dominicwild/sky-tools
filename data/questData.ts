@@ -51,7 +51,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Meditate by Prairie's koi pond",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1543880928806309950.jpeg",
+        "visualGuideUrl": "skyhelper-1551129475499036682.jpeg",
         "videoGuideUrl": "https://youtu.be/2oH89Ygc1Ao",
         "id": 5
     },
@@ -96,7 +96,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Find the candles at the end of the rainbow in the Daylight Prairie",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1543880721750294578.jpeg",
+        "visualGuideUrl": "skyhelper-1551128965677326466.jpeg",
         "videoGuideUrl": "https://youtu.be/fCtpCZFJLmE",
         "id": 10
     },
@@ -1707,7 +1707,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Find the candles at the end of the rainbow in the Daylight Prairie",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1543880721750294578.jpeg",
+        "visualGuideUrl": "skyhelper-1551128965677326466.jpeg",
         "videoGuideUrl": "https://youtu.be/fCtpCZFJLmE",
         "id": 189
     },
@@ -1968,7 +1968,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Catch the 3 lights in Prairie Village",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": null,
+        "visualGuideUrl": "skyhelper-1551129229737852998.jpeg",
         "videoGuideUrl": "https://youtu.be/Iom-4eqqo0c",
         "id": 218
     },
