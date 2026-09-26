@@ -163,6 +163,21 @@
   transition: background-color 500ms ease, color 500ms ease, border-color 500ms ease, box-shadow 150ms ease;
 }
 
+.quest-search-empty {
+  --quest-search-sky: linear-gradient(120deg, rgba(13, 111, 164, .93), rgba(63, 163, 202, .82));
+  box-shadow: 0 12px 22px -18px rgba(8, 47, 73, .45);
+  background:
+    radial-gradient(ellipse 100px 53px at 3% 110%, rgba(230, 247, 255, .3) 70%, transparent 72%),
+    radial-gradient(ellipse 120px 45px at 18% 115%, rgba(230, 247, 255, .16) 70%, transparent 72%),
+    radial-gradient(ellipse 100px 70px at 103% 120%, rgba(230, 247, 255, .28) 70%, transparent 72%),
+    radial-gradient(ellipse 80px 50px at 88% 125%, rgba(230, 247, 255, .12) 70%, transparent 72%),
+    var(--quest-search-sky);
+}
+
+.dark .quest-search-empty {
+  --quest-search-sky: linear-gradient(120deg, rgba(20, 44, 87, .95), rgba(36, 67, 117, .92));
+}
+
 @media (prefers-reduced-motion: reduce) {
   .sky-gradient-night,
   .night-fade {

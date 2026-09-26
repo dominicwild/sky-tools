@@ -10,6 +10,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import {getImageUrl} from "@/util/helper";
 import type {Quest} from "@/lib/quest-types";
 import {isQuestSelected} from "@/lib/quest-selection";
+import {cn} from "@/lib/utils";
 
 interface QuestSearchProps {
     searchQuery: string
@@ -29,6 +30,7 @@ export default function QuestSearch({
     const [isFocused, setIsFocused] = useState(false)
 
     const displayQuests = searchQuery.trim() === "" && isFocused ? questsData.slice(0, 8) : filteredQuests
+    const hasNoResults = displayQuests.length === 0
 
     const searchResultsVariants = {
         hidden: {
@@ -94,16 +96,19 @@ export default function QuestSearch({
     }, [isFocused])
 
     return (
-        <div id="search-container" className="relative w-full max-w-2xl mb-12 transition-all duration-300 z-30">
+        <div id="search-container" className={cn(
+            "relative w-full max-w-2xl mb-12 transition-all duration-300 z-30",
+            isFocused && hasNoResults && "mb-[116px]",
+        )}>
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="relative">
                 <div className="absolute inset-0 bg-white/20 rounded-full blur-xl"></div>
                 <div className="relative">
-                    <Search className="absolute left-4 top-4 h-5 w-5 text-white/70" />
+                    <Search className="pointer-events-none absolute left-4 top-1/2 z-10 h-5 w-5 -translate-y-1/2 text-white/70" />
                     <Input
                         id="quest-search"
                         type="text"
                         placeholder="Search for quests..."
-                        className="theme-surface pl-12 bg-blue-700/70 backdrop-blur-md !text-xl px-6 py-8 !ring-[#003C78] border-none shadow-lg rounded-full text-white placeholder:text-white/60"
+                        className="theme-surface bg-blue-700/70 backdrop-blur-md !text-xl pl-12 pr-14 py-8 !ring-[#003C78] border-none shadow-lg rounded-full text-white placeholder:text-white/60"
                         value={searchQuery}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                         onFocus={() => setIsFocused(true)}
@@ -111,7 +116,9 @@ export default function QuestSearch({
                     />
                     {searchQuery && (
                         <button
-                            className="absolute right-4 top-4 text-white/70 hover:text-white cursor-pointer"
+                            type="button"
+                            aria-label="Clear search"
+                            className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center text-white/70 hover:text-white cursor-pointer"
                             onClick={() => setSearchQuery("")}
                         >
                             <X className="h-5 w-5" />
@@ -120,7 +127,7 @@ export default function QuestSearch({
                 </div>
 
                 <AnimatePresence>
-                    {displayQuests.length > 0 && isFocused && (
+                    {isFocused && (
                         <motion.div
                             className="absolute z-30 mt-3 w-full"
                             initial="hidden"
@@ -128,8 +135,18 @@ export default function QuestSearch({
                             exit="exit"
                             variants={searchResultsVariants}
                         >
-                            <Card className="bg-sky-600/90 backdrop-blur-md border-none shadow-xl overflow-hidden rounded-2xl">
-                                <CardContent className="p-2">
+                            <Card className={cn(
+                                "bg-sky-600/90 backdrop-blur-md border-none shadow-xl overflow-hidden rounded-2xl",
+                                hasNoResults && "quest-search-empty rounded-3xl",
+                            )}>
+                                <CardContent className={cn("p-2", hasNoResults && "p-0")}>
+                                    {hasNoResults && (
+                                        <div role="status" className="relative flex h-[84px] items-center justify-center text-[15px] font-medium text-white">
+                                            <span aria-hidden="true" className="absolute left-[15%] top-4 font-serif text-[15px] leading-none text-[#ffefcb]">✦</span>
+                                            <p className="relative pb-0.5">No quest found.</p>
+                                            <span aria-hidden="true" className="absolute right-[17%] top-6 font-serif text-[9px] leading-none text-[#ffefcb]/65">✦</span>
+                                        </div>
+                                    )}
                                     <div className="space-y-1">
                                         {displayQuests.map((quest, index) => (
                                             <motion.div
