@@ -17,7 +17,7 @@ const CANDLE_GUIDE_REALMS = [
 
 export type SkyHelperMedia = {
     url: string
-    by: string
+    by?: string
     source?: string
 }
 
@@ -712,19 +712,23 @@ function parseMediaItems(items: unknown[]) {
     const mediaItems: SkyHelperMedia[] = [];
 
     for (const item of items) {
-        if (!isRecord(item) || typeof item.url !== "string" || typeof item.by !== "string") {
+        if (!isRecord(item) || typeof item.url !== "string") {
             return null;
         }
 
+        const by = item.by;
         const source = item.source;
-        if (source !== undefined && typeof source !== "string") {
+        if (
+            (by !== undefined && typeof by !== "string") ||
+            (source !== undefined && typeof source !== "string")
+        ) {
             return null;
         }
 
         mediaItems.push({
             url: item.url,
-            by: item.by,
-            source,
+            ...(by === undefined ? {} : {by}),
+            ...(source === undefined ? {} : {source}),
         });
     }
 

@@ -62,6 +62,23 @@ describe("daily quest source", () => {
         });
     });
 
+    it("accepts a candle attachment without attribution", () => {
+        const parsedResponse = validateSkyHelperQuestResponse({
+            quests: [{
+                title: "Forge a Candle",
+                date: "2026-09-28T08:00:00+01:00",
+                images: [{url: imageUrl, by: "@Ceverine"}],
+            }],
+            rotating_candles: {
+                title: "Rotating Treasure Candle Locations - Golden Wasteland",
+                date: "2026-09-28T08:00:00+01:00",
+                images: [{url: imageUrl}],
+            },
+        });
+
+        expect(parsedResponse?.rotatingCandles?.images).toEqual([{url: imageUrl}]);
+    });
+
     it("uses the latest quest row date when last_updated is stale", () => {
         const parsedResponse = validateSkyHelperQuestResponse({
             last_updated: "2026-07-14T08:00:00+01:00",
