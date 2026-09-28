@@ -400,6 +400,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "meditation quest guide vault of knowledge vault summit a k a vault temple",
         "meditate at vault s summit",
     ],
+    [
+        "meditation quest guide golden wasteland broken temple",
+        "meditate in the broken temple",
+    ],
 ]);
 
 export function createLocalQuestTitleIndex(localQuests: Quest[]) {

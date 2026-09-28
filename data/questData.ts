@@ -960,7 +960,7 @@ export const questsData = [
         "realm": "Golden Wasteland",
         "questName": "Catch the light in Golden Wasteland",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1546783479746924605.jpeg",
+        "visualGuideUrl": "skyhelper-1554043507444940910.jpeg",
         "videoGuideUrl": "https://youtu.be/Bj6YBPoGFQE",
         "id": 106
     },
@@ -1437,7 +1437,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Forge a candle",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1548961389094371388.jpeg",
+        "visualGuideUrl": "skyhelper-1554043187004309504.jpeg",
         "videoGuideUrl": "https://youtu.be/mLhjvx19zzA",
         "id": 159
     },
@@ -2077,7 +2077,7 @@ export const questsData = [
         "questName": "Use expressions with players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": null,
-        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxd1lbgkhJuDCOg6fxHh74VI2qy5KvPoBsiE8c",
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxuIUq5hEfPQgDXI7TRMbCYOxvf48JWyoHiGl0",
         "id": 230
     },
     {
