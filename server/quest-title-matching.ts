@@ -404,6 +404,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "meditation quest guide golden wasteland broken temple",
         "meditate in the broken temple",
     ],
+    [
+        "catch the wandering lights in the vault s repository",
+        "catch the wandering lights in the vault s repository",
+    ],
 ]);
 
 export function createLocalQuestTitleIndex(localQuests: Quest[]) {

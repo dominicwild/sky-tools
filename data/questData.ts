@@ -1185,7 +1185,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Meditate at the Vault's entrance",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1545330132590272582.jpeg",
+        "visualGuideUrl": "skyhelper-1554394336588734505.jpeg",
         "videoGuideUrl": "https://youtu.be/B6XNxtCWca4",
         "id": 131
     },
@@ -1374,7 +1374,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Hug a Friend",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1536273385909387275.jpeg",
+        "visualGuideUrl": "skyhelper-1554394130736488478.jpeg",
         "videoGuideUrl": null,
         "id": 152
     },
@@ -2313,5 +2313,14 @@ export const questsData = [
         "visualGuideUrl": "skyhelper-1548601836267774013.jpeg",
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxKXnTvliYyQRVqPJXbG3BoW4A2LilxO1Tu8h6",
         "id": 257
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Vault of Knowledge",
+        "questName": "Catch the wandering lights in the Vault's Repository",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": "skyhelper-1554394562930282567.jpeg",
+        "videoGuideUrl": null,
+        "id": 258
     }
 ] satisfies Quest[]
