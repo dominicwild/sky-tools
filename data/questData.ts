@@ -420,7 +420,7 @@ export const questsData = [
         "realm": "Hidden Forest",
         "questName": "Relive Hide'n'Seek Pioneer's memory from Hidden Forest",
         "iconUrl": "af254a01-b4ef-4306-b883-4b84a0e331ef.png",
-        "visualGuideUrl": "29e5e0a9-603f-4cd7-a1aa-d3f8949e75e1.png",
+        "visualGuideUrl": "skyhelper-1555115944450465862.jpeg",
         "videoGuideUrl": "https://youtu.be/5DNs9K-zeeI?t=646",
         "id": 46
     },
@@ -1671,7 +1671,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Admire the sapling in Hidden Forest for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "29429cfb-e1a3-4e69-a645-ab65df1da78d.png",
+        "visualGuideUrl": "skyhelper-1555115750203859045.jpeg",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=157",
         "id": 185
     },
@@ -2085,7 +2085,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Call to 5 different players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1546055907769851924.jpeg",
+        "visualGuideUrl": "skyhelper-1555115517222715453.jpeg",
         "videoGuideUrl": "https://youtu.be/exk2Y2Cshys",
         "id": 231
     },
