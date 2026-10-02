@@ -1338,7 +1338,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Bow at a player",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1550404428777914440.jpeg",
+        "visualGuideUrl": "skyhelper-1555489142979174530.jpeg",
         "videoGuideUrl": "https://youtu.be/tUWABu3t5Ic",
         "id": 148
     },
@@ -2322,5 +2322,14 @@ export const questsData = [
         "visualGuideUrl": "skyhelper-1554394562930282567.jpeg",
         "videoGuideUrl": null,
         "id": 258
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Valley of Triumph",
+        "questName": "Meet up with Forgetful Storyteller in Village of Dreams - Bring the gift to Modest Dancer",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxiWnRw5mJstEIGXPRcjYSZQCUaOwxNMk6b02o",
+        "id": 259
     }
 ] satisfies Quest[]
