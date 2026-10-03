@@ -1365,7 +1365,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Wave to a Friend",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1551496277471141918.jpeg",
+        "visualGuideUrl": "skyhelper-1555847367813763124.jpeg",
         "videoGuideUrl": "https://youtu.be/g-Ts_WZY4VM",
         "id": 151
     },
@@ -1779,7 +1779,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Admire the rainbow in Treasure Reef for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1544974549991297054.jpeg",
+        "visualGuideUrl": "skyhelper-1555847605819281530.jpeg",
         "videoGuideUrl": null,
         "id": 197
     },
@@ -2040,7 +2040,7 @@ export const questsData = [
         "realm": "Golden Wasteland",
         "questName": "Catch the 3 lights under the sea in Treasure Reef",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": null,
+        "visualGuideUrl": "skyhelper-1555847851467210833.jpeg",
         "videoGuideUrl": "https://youtu.be/HNF_-I52F_8",
         "id": 226
     },
@@ -2094,7 +2094,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Pick up a Crab",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1548600727897907351.jpeg",
+        "visualGuideUrl": "skyhelper-1555848305861459988.jpeg",
         "videoGuideUrl": "https://youtu.be/Xn5jM2jMH94",
         "id": 232
     },

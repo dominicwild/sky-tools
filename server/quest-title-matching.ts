@@ -101,6 +101,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "catch the 3 lights in the big treehouse",
     ],
     [
+        "catch the wandering lights under the sea in treasure reef",
+        "catch the 3 lights under the sea in treasure reef",
+    ],
+    [
         "daily quest guide face the dark dragon",
         "face the dark dragon",
     ],
