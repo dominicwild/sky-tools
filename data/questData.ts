@@ -1194,7 +1194,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Catch the light in the Vault of Knowledge",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "6e8621f96443b91e.jpeg",
+        "visualGuideUrl": "skyhelper-1556207180749742090.jpeg",
         "videoGuideUrl": "https://youtu.be/GIbVemllsZ0",
         "id": 132
     },
@@ -1248,7 +1248,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Relive Levitating Adept's memory from Vault of Knowledge",
         "iconUrl": "8a88436c-caa7-4613-83a9-f908d9de4d15.png",
-        "visualGuideUrl": "1ec795a0a3da57a3.jpeg",
+        "visualGuideUrl": "skyhelper-1556207350145220628.jpeg",
         "videoGuideUrl": "https://youtu.be/bvv34rDB9h8",
         "id": 138
     },
@@ -2077,7 +2077,7 @@ export const questsData = [
         "questName": "Use expressions with players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": null,
-        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxuIUq5hEfPQgDXI7TRMbCYOxvf48JWyoHiGl0",
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxBeZn1fAjyVNG4C9Pw0zTOWtbmprRDAUHo2Xc",
         "id": 230
     },
     {
