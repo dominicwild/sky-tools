@@ -44,6 +44,7 @@ const localQuests: Quest[] = [
     createQuest(91, "Relive Bowing Medalist's memory from Valley of Triumph"),
     createQuest(143, "Relive Shushing Light Scholar's memory from Vault of Knowledge"),
     createQuest(38, "Rescue a Manta from Darkness"),
+    createQuest(4, "Meditate at Prairie's faerie ring"),
     createQuest(258, "Catch the wandering lights in the Vault's Repository"),
 ];
 
@@ -86,6 +87,7 @@ describe("quest title matching", () => {
         ["Visiting the Social Light Area - Valley of Triumph, Village of Dreams, Hotspring", 70],
         ["Relive Spirit Quest Season of Lightseekers - Shushing Light Scholar", 143],
         ["Rescue Manta Quest", 38],
+        ["Meditation Quest Guide Daylight Prairie - Faerie Ring a.k.a Prairie Village", 4],
         ["Catch the wandering lights in the Vault's Repository", 258],
     ])("matches SkyHelper alias %s", (title, expectedId) => {
         expect(getMatchingLocalQuestId(title, createLocalQuestTitleIndex(localQuests))).toBe(expectedId);

@@ -42,7 +42,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Meditate at Prairie's faerie ring",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "35e0b8ec-26c1-4efa-8750-0913653e299d.png",
+        "visualGuideUrl": "skyhelper-1556566735002271764.jpeg",
         "videoGuideUrl": null,
         "id": 4
     },
@@ -1437,7 +1437,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Forge a candle",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1554043187004309504.jpeg",
+        "visualGuideUrl": "skyhelper-1556565758593736734.jpeg",
         "videoGuideUrl": "https://youtu.be/mLhjvx19zzA",
         "id": 159
     },

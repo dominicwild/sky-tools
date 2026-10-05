@@ -237,6 +237,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "catch the light in daylight prairie",
     ],
     [
+        "meditation quest guide daylight prairie faerie ring a k a prairie village",
+        "meditate at prairie s faerie ring",
+    ],
+    [
         "fly with many butterflies in the butterfly fields",
         "fly with many butterflies in butterfly fields",
     ],
