@@ -339,7 +339,7 @@ export const questsData = [
         "realm": "Hidden Forest",
         "questName": "Collect Orange Light",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1538807498667204628.jpeg",
+        "visualGuideUrl": "skyhelper-1556946862500487168.jpeg",
         "videoGuideUrl": "https://youtu.be/m92rALQldBM",
         "id": 37
     },
@@ -348,7 +348,7 @@ export const questsData = [
         "realm": "Hidden Forest",
         "questName": "Rescue a Manta from Darkness",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1549689736636145744.jpeg",
+        "visualGuideUrl": "skyhelper-1556946684070858762.jpeg",
         "videoGuideUrl": "https://youtu.be/23gUb_G0mGI",
         "id": 38
     },
@@ -357,7 +357,7 @@ export const questsData = [
         "realm": "Hidden Forest",
         "questName": "Recharge your light from a light bloom",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "9c784138-cc6f-4859-bc49-66bcf15619d1.png",
+        "visualGuideUrl": "skyhelper-1556946449013538866.jpeg",
         "videoGuideUrl": "https://youtu.be/yc6vJuqHko0",
         "id": 39
     },
@@ -1320,7 +1320,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Hold the hand of a friend",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1548229735887278165.jpeg",
+        "visualGuideUrl": "skyhelper-1556946201318916148.jpeg",
         "videoGuideUrl": "https://youtu.be/tUWABu3t5Ic",
         "id": 146
     },
