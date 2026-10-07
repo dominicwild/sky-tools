@@ -5,6 +5,10 @@ import type {Quest} from "@/lib/quest-types";
 
 const QUEST_TITLE_ALIASES = new Map([
     [
+        "daily quest guide relive a spirit s memory",
+        "relive a spirit s memories in a given realm",
+    ],
+    [
         "days of bloom 2021 admire sapling quest daylight prairie",
         "admire the sapling in daylight prairie for a short while",
     ],
