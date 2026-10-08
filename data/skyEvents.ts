@@ -29,7 +29,7 @@ export type SkyCalendarEntry =
     | (SkyCalendarEntryCommon & {kind: "travelling-spirit" | "returning-spirits"});
 
 export const calendarCoverage = {
-    checkedOn: "2026-10-04",
+    checkedOn: "2026-10-08",
     coverageThrough: "2026-12-31",
 } as const;
 
@@ -294,15 +294,15 @@ export const skyCalendarEntries: SkyCalendarEntry[] = [
     {
         id: "travelling-spirit-2026-10-08",
         kind: "travelling-spirit",
-        title: "Travelling Spirit",
-        description: "A travelling spirit is a spirit from a past season who returns for four days (Thursday to Sunday) to sell the cosmetics, expression and a wing buff they originally offered during their own season, paid for with non-seasonal currency instead of seasonal candles. Which spirit is coming isn't announced until a day or two before they arrive, so this slot is a placeholder until then.",
+        title: "Talented Builder",
+        description: "Talented Builder returns from the Season of Flight. It offers the Voilà expression, an outfit, a hairstyle, a neck accessory and a music sheet. During its visit, players can find it at Home and Aviary Village and buy from it.",
         startDay: "2026-10-08",
         endDay: "2026-10-11",
-        confidence: "expected",
-        link: {url: "https://thatgamecompany.helpshift.com/hc/en/17-sky-children-of-the-light/faq/609-what-is-a-traveling-spirit/", label: "What is a travelling spirit?"},
+        confidence: "confirmed",
+        link: {url: "https://www.thatskygame.com/news/this-month-in-sky-october-2026-edition/", label: "This Month in Sky: October 2026"},
         image: null,
-        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/schedule.ts",
-        verifiedOn: "2026-07-30",
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/kingdom/seasons/flight/talented-builder.ts",
+        verifiedOn: "2026-10-08",
     },
     {
         id: "radiance-event-2026-10",
