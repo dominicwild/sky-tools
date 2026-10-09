@@ -1167,7 +1167,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Meditate at Vault's summit",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1550768197165129818.jpeg",
+        "visualGuideUrl": "skyhelper-1558015746976522300.jpeg",
         "videoGuideUrl": "https://youtu.be/3cw9-gsh_EI",
         "id": 129
     },
@@ -1221,7 +1221,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Find the candles at the end of the rainbow in the Vault of Knowledge",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1547143320818421810.jpeg",
+        "visualGuideUrl": "skyhelper-1558015195568148490.jpeg",
         "videoGuideUrl": "https://youtu.be/oiUQPs3E7GE",
         "id": 135
     },
@@ -1365,7 +1365,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Wave to a Friend",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1555847367813763124.jpeg",
+        "visualGuideUrl": "skyhelper-1558015011828535306.jpeg",
         "videoGuideUrl": "https://youtu.be/g-Ts_WZY4VM",
         "id": 151
     },
@@ -1743,7 +1743,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Find the candles at the end of the rainbow in the Vault of Knowledge",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1547143320818421810.jpeg",
+        "visualGuideUrl": "skyhelper-1558015195568148490.jpeg",
         "videoGuideUrl": "https://youtu.be/oiUQPs3E7GE",
         "id": 193
     },
@@ -2058,7 +2058,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Catch the wandering lights in the Upper Vault",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1550767948979896390.jpeg",
+        "visualGuideUrl": "skyhelper-1558015428129857576.jpeg",
         "videoGuideUrl": "https://youtu.be/0NaC9D49ujM",
         "id": 228
     },
