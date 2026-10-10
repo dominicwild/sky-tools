@@ -51,7 +51,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Meditate by Prairie's koi pond",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1551129475499036682.jpeg",
+        "visualGuideUrl": "skyhelper-1558378248336048278.jpeg",
         "videoGuideUrl": "https://youtu.be/2oH89Ygc1Ao",
         "id": 5
     },
@@ -2077,7 +2077,7 @@ export const questsData = [
         "questName": "Use expressions with players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": null,
-        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxBeZn1fAjyVNG4C9Pw0zTOWtbmprRDAUHo2Xc",
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxmcJJerPPIqCk3FhpjnE2YJ7UXiQNywVMtlmA",
         "id": 230
     },
     {
@@ -2331,5 +2331,14 @@ export const questsData = [
         "visualGuideUrl": null,
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxiWnRw5mJstEIGXPRcjYSZQCUaOwxNMk6b02o",
         "id": 259
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Daylight Prairie",
+        "questName": "Meet up with Nightbird Whisperer in Prairie Village - Deep call the butterflies with Nightbird Whisperer",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxkrTXSQ1tpaCN85ewBFLi7PKqOWD1UhtmgYsx",
+        "id": 260
     }
 ] satisfies Quest[]
