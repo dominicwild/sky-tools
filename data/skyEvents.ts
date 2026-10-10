@@ -29,7 +29,7 @@ export type SkyCalendarEntry =
     | (SkyCalendarEntryCommon & {kind: "travelling-spirit" | "returning-spirits"});
 
 export const calendarCoverage = {
-    checkedOn: "2026-10-08",
+    checkedOn: "2026-10-10",
     coverageThrough: "2026-12-31",
 } as const;
 
@@ -42,11 +42,11 @@ export const skyCalendarEntries: SkyCalendarEntry[] = [
         startDay: "2026-04-17",
         endDay: "2026-07-02",
         confidence: "confirmed",
-        link: {url: "https://www.thatskygame.com/news/this-month-in-sky-april-2026-edition/", label: "This Month in Sky: April 2026"},
+        link: {url: "https://www.thatskygame.com/news/this-month-in-sky-june-2026-edition/", label: "This Month in Sky: June 2026"},
         icon: {url: "/season-of-carnival-icon.webp", alt: "Season of Carnival emblem"},
         image: {url: "https://a.storyblok.com/f/108104/1920x1080/c0901f9234/s30_landscape-boatwide_sls_na_na_2603.png", alt: "Season of Carnival key art showing the travelling carnival boat sailing through the sky"},
         sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/kingdom/seasons/carnival/index.ts",
-        verifiedOn: "2026-07-30",
+        verifiedOn: "2026-10-10",
     },
     {
         id: "radiance-event-2026-06",
