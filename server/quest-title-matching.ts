@@ -5,6 +5,10 @@ import type {Quest} from "@/lib/quest-types";
 
 const QUEST_TITLE_ALIASES = new Map([
     [
+        "relive spirit quest hidden forest shivering trailblazer",
+        "relive shivering trailblazer s memory from hidden forest",
+    ],
+    [
         "daily quest guide relive a spirit s memory",
         "relive a spirit s memories in a given realm",
     ],
