@@ -5,6 +5,10 @@ import type {Quest} from "@/lib/quest-types";
 
 const QUEST_TITLE_ALIASES = new Map([
     [
+        "daily quest guide sit on a bench with a stranger",
+        "sit at a bench with a stranger",
+    ],
+    [
         "relive spirit quest hidden forest shivering trailblazer",
         "relive shivering trailblazer s memory from hidden forest",
     ],

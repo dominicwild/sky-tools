@@ -1212,7 +1212,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Admire the sapling in Vault of Knowledge for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1534470791175864402.jpeg",
+        "visualGuideUrl": "skyhelper-1559828945728438312.jpeg",
         "videoGuideUrl": "https://youtu.be/_HYCAJeQgJc",
         "id": 134
     },
@@ -1248,7 +1248,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Relive Levitating Adept's memory from Vault of Knowledge",
         "iconUrl": "8a88436c-caa7-4613-83a9-f908d9de4d15.png",
-        "visualGuideUrl": "skyhelper-1556207350145220628.jpeg",
+        "visualGuideUrl": "skyhelper-1559829606276665434.jpeg",
         "videoGuideUrl": "https://youtu.be/bvv34rDB9h8",
         "id": 138
     },
@@ -1401,7 +1401,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Sit at a bench with a stranger",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "1fb742c0-4a87-47c1-9991-d221dc180649.png",
+        "visualGuideUrl": "skyhelper-1559829168005578773.jpeg",
         "videoGuideUrl": "https://youtu.be/dPGWTwv8kHo",
         "id": 155
     },
@@ -1518,7 +1518,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Relive a Spirit's memories in (a given Realm)",
         "iconUrl": "22d3b05c-31ac-46a8-8eb9-26cc94cbb489.png",
-        "visualGuideUrl": "skyhelper-1557300708120989716.jpeg",
+        "visualGuideUrl": "skyhelper-1559829365846450197.jpeg",
         "videoGuideUrl": null,
         "id": 168
     },
@@ -1698,7 +1698,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Admire the sapling in Vault of Knowledge for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "f096bd9c-c834-4757-b94c-7466924ccb88.png",
+        "visualGuideUrl": "skyhelper-1559828945728438312.jpeg",
         "videoGuideUrl": "https://youtu.be/_HYCAJeQgJc",
         "id": 188
     },
@@ -2232,15 +2232,6 @@ export const questsData = [
         "visualGuideUrl": null,
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxx02zJbKG1Zibh7JMrPz3ypk6HXAoxQm2uY9T",
         "id": 248
-    },
-    {
-        "type": "SkyHelper Quest",
-        "realm": "Valley of Triumph (?)",
-        "questName": "Daily Quest Guide - Sit on a Bench with a Stranger",
-        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1534469830323736757.jpeg",
-        "videoGuideUrl": null,
-        "id": 249
     },
     {
         "type": "SkyHelper Quest",
