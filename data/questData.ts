@@ -1338,7 +1338,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Bow at a player",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1557661000625422416.jpeg",
+        "visualGuideUrl": "skyhelper-1560193279742447668.jpeg",
         "videoGuideUrl": "https://youtu.be/tUWABu3t5Ic",
         "id": 148
     },
@@ -1968,7 +1968,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Catch the 3 lights in Prairie Village",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1551129229737852998.jpeg",
+        "visualGuideUrl": "skyhelper-1560194200522457179.jpeg",
         "videoGuideUrl": "https://youtu.be/Iom-4eqqo0c",
         "id": 218
     },
@@ -2331,5 +2331,14 @@ export const questsData = [
         "visualGuideUrl": null,
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxkrTXSQ1tpaCN85ewBFLi7PKqOWD1UhtmgYsx",
         "id": 260
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Daylight Prairie",
+        "questName": "Meet up with Nightbird Whisperer in Prairie Village - Deep call the butterflies in the cave with Jolly Geologist",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxUaV5w7yInIhUGtqvOap5AN3CLlBwJkEX2jfe",
+        "id": 261
     }
 ] satisfies Quest[]

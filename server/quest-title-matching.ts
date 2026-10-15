@@ -5,6 +5,10 @@ import type {Quest} from "@/lib/quest-types";
 
 const QUEST_TITLE_ALIASES = new Map([
     [
+        "meet up with nightbird whisperer in prairie village deep call the butterflies in the cave with jolly geologist video guide",
+        "meet up with nightbird whisperer in prairie village deep call the butterflies in the cave with jolly geologist",
+    ],
+    [
         "daily quest guide sit on a bench with a stranger",
         "sit at a bench with a stranger",
     ],
