@@ -5,6 +5,10 @@ import type {Quest} from "@/lib/quest-types";
 
 const QUEST_TITLE_ALIASES = new Map([
     [
+        "relive spirit quest hidden forest blushing prospector",
+        "relive blushing prospector s memory from hidden forest",
+    ],
+    [
         "meet up with nightbird whisperer in prairie village deep call the butterflies in the cave with jolly geologist video guide",
         "meet up with nightbird whisperer in prairie village deep call the butterflies in the cave with jolly geologist",
     ],
