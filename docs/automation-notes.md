@@ -1,5 +1,13 @@
 # Automation notes
 
+## 2026-10-17
+
+- Wiki dry run parsed 222 quests and found no additions; 260 local quests retained.
+- SkyHelper is current for 17 October and supplies three real quests. Refreshed Bearhug Hermit and Hotspring image guides, and compressed/uploaded the expressions video (979,838 bytes); existing aliases, wiki wording and IDs retained. UploadThing succeeded using the worktree .env. Video attribution: @sky; source https://discord.com/channels/575762611111592007/575827924343848960/1445691997389197343; attachment 1560919389979803718.
+- calendar verified current. Read every referenced 2026 event file, checked the absent 2027 index, verified Pearl’s exclusive end (1 January, inclusive 31 December), and scanned all seasonal spirit files for upcoming travelling/returning visits. The official October news post still confirms Pearl, Mischief and the expected 22–25 October visit; no new spirit identity or returning group is announced. The upstream Cinnamoroll file explicitly says its end date is unrevealed, so its provisional end is not published locally.
+- Typecheck, lint, duplication and dead-code checks passed; all 98 tests passed. JSON mirrors, unique IDs and local image references verified.
+- Local agent-browser smoke test passed: three current quests, expressions search, playable 12.26-second uploaded video, loaded Valley seasonal candle image and October calendar. Pearl’s emblem/countdown shows 75 days left.
+
 ## 2026-10-12
 
 - Wiki dry run parsed 222 quests and found no additions; 260 local quests retained.
