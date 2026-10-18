@@ -1059,7 +1059,7 @@ export const questsData = [
         "realm": "Golden Wasteland",
         "questName": "Relive Saluting Captain's memory from Golden Wasteland",
         "iconUrl": "8372aaab-93bc-4218-9b26-2ac58bda6512.png",
-        "visualGuideUrl": "dcf70e7f-8e74-447c-bda9-785f2c72e244.jpeg",
+        "visualGuideUrl": "skyhelper-1561279615006154772.jpeg",
         "videoGuideUrl": "https://youtu.be/X0dj10tnvpQ?t=665",
         "id": 117
     },
@@ -1392,7 +1392,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Make a new acquaintance",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1549689605970993262.jpeg",
+        "visualGuideUrl": "skyhelper-1561280060709666877.jpeg",
         "videoGuideUrl": "https://youtu.be/8dxeUcmyc0o",
         "id": 154
     },
@@ -1437,7 +1437,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Forge a candle",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1559101447537299556.jpeg",
+        "visualGuideUrl": "skyhelper-1561279056396419103.jpeg",
         "videoGuideUrl": "https://youtu.be/mLhjvx19zzA",
         "id": 159
     },
@@ -1959,7 +1959,7 @@ export const questsData = [
         "realm": "Golden Wasteland",
         "questName": "Meditate in the Crab Fields",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "crab_meditate.jpeg",
+        "visualGuideUrl": "skyhelper-1561279302035570779.jpeg",
         "videoGuideUrl": null,
         "id": 217
     },

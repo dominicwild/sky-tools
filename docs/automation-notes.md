@@ -1,5 +1,13 @@
 # Automation notes
 
+## 2026-10-18
+
+- Wiki dry run parsed 222 quests and found no additions; 260 local quests retained.
+- SkyHelper is current for 18 October. Refreshed image guides for forging a candle, Crab Fields meditation, Saluting Captain and making a new acquaintance. Existing aliases resolve all four titles; wiki wording, IDs and videos retained. No video attachments or UploadThing issues.
+- calendar verified current. Read all referenced 2026 event files and the absent 2027 index, confirmed Pearl’s exclusive 1 January end against the season model and official October news, and scanned all seasonal spirit files for upcoming travelling/returning visits. No identity is announced for 22–25 October and no upcoming returning group is listed. Official news still confirms Pearl through 31 December and Mischief for 23 October–12 November. Cinnamoroll’s end remains explicitly unrevealed upstream, so no provisional range was published.
+- Typecheck, lint, duplication and dead-code checks passed; all 98 tests passed. JSON mirrors, unique IDs and local image references verified.
+- Local agent-browser checks confirm four current quests, Saluting search, the Saluting Captain video dialog and October calendar. Pearl’s emblem/countdown shows 74 days left. New image URLs require the push before jsDelivr can serve them.
+
 ## 2026-10-17
 
 - Wiki dry run parsed 222 quests and found no additions; 260 local quests retained.
