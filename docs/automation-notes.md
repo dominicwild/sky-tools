@@ -1,5 +1,13 @@
 # Automation notes
 
+## 2026-10-19
+
+- Wiki dry run parsed 222 quests and found no additions; 260 local quests retained.
+- SkyHelper is current for 19 October. Refreshed image guides for calling to five players, purple light, Wise Grandparent and reliving a spirit’s memories. Existing aliases resolve all four titles; wiki wording, IDs and videos retained. No video attachments or UploadThing issues.
+- calendar verified current. Read all referenced 2026 event files and the absent 2027 index, confirmed Pearl’s exclusive 1 January end against the season model and official October news, and scanned 205 seasonal spirit/source files. No identity is announced for 22–25 October and no upcoming returning group is listed. Pearl remains live through 31 December and Mischief runs 23 October–12 November. Cinnamoroll’s end remains explicitly unrevealed upstream, so no provisional range was published.
+- Typecheck, lint, duplication and dead-code checks passed; all 98 tests passed. Lint reports one existing navigation warning in app/not-found.tsx. JSON mirrors, unique IDs, local image references and preserved quest fields verified.
+- Local agent-browser smoke checks confirm four current quests, Wise Grandparent search/video dialog, a loaded Vault seasonal candle image and the October calendar. Pearl’s emblem/countdown shows 73 days left. New image URLs require the push before jsDelivr can serve them.
+
 ## 2026-10-18
 
 - Wiki dry run parsed 222 quests and found no additions; 260 local quests retained.

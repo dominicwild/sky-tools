@@ -1203,7 +1203,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Collect Purple Light",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1545330352690692196.jpeg",
+        "visualGuideUrl": "skyhelper-1561641571471065148.jpeg",
         "videoGuideUrl": "https://youtu.be/ZfaJrpCWctM",
         "id": 133
     },
@@ -1302,7 +1302,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Relive Wise Grandparent's memory from Vault of Knowledge",
         "iconUrl": "699a24b1-3e65-4084-ab2d-b2f6457b404b.png",
-        "visualGuideUrl": "skyhelper-1545330720531292210.jpeg",
+        "visualGuideUrl": "skyhelper-1561641830695833640.jpeg",
         "videoGuideUrl": "https://www.youtube.com/watch?v=0ZOM7_hfv9c",
         "id": 144
     },
@@ -1518,7 +1518,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Relive a Spirit's memories in (a given Realm)",
         "iconUrl": "22d3b05c-31ac-46a8-8eb9-26cc94cbb489.png",
-        "visualGuideUrl": "skyhelper-1559829365846450197.jpeg",
+        "visualGuideUrl": "skyhelper-1561642052179992576.jpeg",
         "videoGuideUrl": null,
         "id": 168
     },
@@ -2085,7 +2085,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Call to 5 different players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1559465155878723694.jpeg",
+        "visualGuideUrl": "skyhelper-1561641326573912064.jpeg",
         "videoGuideUrl": "https://youtu.be/exk2Y2Cshys",
         "id": 231
     },
