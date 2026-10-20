@@ -1,5 +1,13 @@
 # Automation notes
 
+## 2026-10-20
+
+- Wiki dry run parsed 222 quests and found no additions. Refreshed Prairie rainbow, butterfly flight and waving image guides; retained wiki wording, existing IDs and videos. Added the distinct Nightbird Whisperer manta task as SkyHelper quest ID 262, bringing the local total to 261 quests.
+- Compressed and uploaded the Nightbird video successfully (5,978,165 bytes) using the worktree .env. Attribution: @sky; original media attachment 1562014125066944602 (DQ_DP_NW_Manta.mov); SkyHelper provides no source URL. No UploadThing credential or upload issue.
+- calendar verified current. Read all referenced 2026 event files, checked the absent 2027 index and scanned seasonal spirit files for travelling and returning visits. Confirmed Pearl’s exclusive 1 January end against the season model and official October news; no extension or upcoming spirit identity is announced. Mischief remains 23 October–12 November. Cinnamoroll’s end is explicitly unrevealed upstream, so its provisional range remains unpublished.
+- Typecheck, lint, duplication and dead-code checks passed; all 98 tests passed. Lint retains one existing navigation warning in app/not-found.tsx. JSON mirrors, unique IDs, local image files and the full diff verified.
+- Local agent-browser checks confirm four current quests, Nightbird search, the loaded 51.03-second hosted video, seasonal candle image and October calendar. Pearl’s emblem/countdown shows 72 days left. SkyHelper’s quests and both candle groups are dated 20 October, although its last_updated field remains 19 October; the app correctly uses quest dates. New quest images need the push before jsDelivr serves them.
+
 ## 2026-10-19
 
 - Wiki dry run parsed 222 quests and found no additions; 260 local quests retained.

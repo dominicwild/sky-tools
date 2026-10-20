@@ -96,7 +96,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Find the candles at the end of the rainbow in the Daylight Prairie",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1551128965677326466.jpeg",
+        "visualGuideUrl": "skyhelper-1562013816613638258.jpeg",
         "videoGuideUrl": "https://youtu.be/fCtpCZFJLmE",
         "id": 10
     },
@@ -1365,7 +1365,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Wave to a Friend",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1558015011828535306.jpeg",
+        "visualGuideUrl": "skyhelper-1562014460347031562.jpeg",
         "videoGuideUrl": "https://youtu.be/g-Ts_WZY4VM",
         "id": 151
     },
@@ -1707,7 +1707,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Find the candles at the end of the rainbow in the Daylight Prairie",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1551128965677326466.jpeg",
+        "visualGuideUrl": "skyhelper-1562013816613638258.jpeg",
         "videoGuideUrl": "https://youtu.be/fCtpCZFJLmE",
         "id": 189
     },
@@ -1986,7 +1986,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Fly with many butterflies in Butterfly Fields",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1545694563371589712.jpeg",
+        "visualGuideUrl": "skyhelper-1562013647562215545.jpeg",
         "videoGuideUrl": "https://youtu.be/uX8olVYuGU4",
         "id": 220
     },
@@ -2340,5 +2340,14 @@ export const questsData = [
         "visualGuideUrl": null,
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxUaV5w7yInIhUGtqvOap5AN3CLlBwJkEX2jfe",
         "id": 261
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Daylight Prairie",
+        "questName": "Meet up with Nightbird Whisperer in Prairie Village - Bring Nightbird Whisperer to the manta",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxjJjTau0aFoTgjdbQ5McXBHJeyR1uqwOsmNSU",
+        "id": 262
     }
 ] satisfies Quest[]
