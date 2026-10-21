@@ -1,5 +1,11 @@
 # Automation notes
 
+## 2026-10-21
+
+- Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 21 October and supplies three real quests. Refreshed Hidden Forest sapling, bowing and reliving a spirit’s memories image guides, retaining wiki wording, existing aliases, IDs and videos. Updated both sapling entries consistently. No video attachments or UploadThing issues.
+- Calendar sources now announce Scarecrow Farmer for 22–25 October. Confirmed that window from its spirit file and official October news; changed the expected entry to confirmed and added the next expected visit, 5–8 November, from the two-week schedule. Read all referenced 2026 event files, checked the absent 2027 index and scanned 221 seasonal/event/model files. Pearl remains live through 31 December and Mischief remains 23 October–12 November. No upcoming returning group is listed; Cinnamoroll’s end is still explicitly unrevealed, so its provisional range remains unpublished.
+- Typecheck, lint, duplication and dead-code checks passed; all 98 tests passed. Lint retains one existing navigation warning in app/not-found.tsx. Verified both JSON mirrors, 261 unique IDs, local image files and preserved quest fields.
+
 ## 2026-10-20
 
 - Wiki dry run parsed 222 quests and found no additions. Refreshed Prairie rainbow, butterfly flight and waving image guides; retained wiki wording, existing IDs and videos. Added the distinct Nightbird Whisperer manta task as SkyHelper quest ID 262, bringing the local total to 261 quests.

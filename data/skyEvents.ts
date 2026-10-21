@@ -29,7 +29,7 @@ export type SkyCalendarEntry =
     | (SkyCalendarEntryCommon & {kind: "travelling-spirit" | "returning-spirits"});
 
 export const calendarCoverage = {
-    checkedOn: "2026-10-10",
+    checkedOn: "2026-10-21",
     coverageThrough: "2026-12-31",
 } as const;
 
@@ -349,14 +349,27 @@ export const skyCalendarEntries: SkyCalendarEntry[] = [
     {
         id: "travelling-spirit-2026-10-22",
         kind: "travelling-spirit",
-        title: "Travelling Spirit",
-        description: "A travelling spirit is a spirit from a past season who returns for four days to sell the cosmetics, expression and wing buff they originally offered. The spirit’s identity has not been announced yet, so this entry marks the official visit window only.",
+        title: "Scarecrow Farmer",
+        description: "Scarecrow Farmer returns from the Season of Enchantment. It offers the Boo expression, a mask, a hairstyle and a wing buff. During its four-day visit, players can find it at Home and Aviary Village and buy from it with non-seasonal currency.",
         startDay: "2026-10-22",
         endDay: "2026-10-25",
+        confidence: "confirmed",
+        link: {url: "https://www.thatskygame.com/news/this-month-in-sky-october-2026-edition/", label: "This Month in Sky: October 2026"},
+        image: null,
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/kingdom/seasons/enchantment/scarecrow-farmer.ts",
+        verifiedOn: "2026-10-21",
+    },
+    {
+        id: "travelling-spirit-2026-11-05",
+        kind: "travelling-spirit",
+        title: "Travelling Spirit",
+        description: "A travelling spirit is a spirit from a past season who returns for four days to sell cosmetics, expressions and a wing buff for non-seasonal currency. This visit is expected from the two-week schedule. Its dates and spirit identity have not been announced yet.",
+        startDay: "2026-11-05",
+        endDay: "2026-11-08",
         confidence: "expected",
         link: {url: "https://thatgamecompany.helpshift.com/hc/en/17-sky-children-of-the-light/faq/609-what-is-a-traveling-spirit/", label: "What is a travelling spirit?"},
         image: null,
-        sourceUrl: "https://www.thatskygame.com/news/this-month-in-sky-october-2026-edition/",
-        verifiedOn: "2026-10-04",
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/schedule.ts",
+        verifiedOn: "2026-10-21",
     },
 ];
