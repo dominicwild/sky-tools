@@ -366,7 +366,7 @@ export const questsData = [
         "realm": "Hidden Forest",
         "questName": "Admire the sapling in Hidden Forest for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "29429cfb-e1a3-4e69-a645-ab65df1da78d.png",
+        "visualGuideUrl": "skyhelper-1562368313739444284.jpeg",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=152",
         "id": 40
     },
@@ -1338,7 +1338,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Bow at a player",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1560193279742447668.jpeg",
+        "visualGuideUrl": "skyhelper-1562368598528233522.jpeg",
         "videoGuideUrl": "https://youtu.be/tUWABu3t5Ic",
         "id": 148
     },
@@ -1518,7 +1518,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Relive a Spirit's memories in (a given Realm)",
         "iconUrl": "22d3b05c-31ac-46a8-8eb9-26cc94cbb489.png",
-        "visualGuideUrl": "skyhelper-1561642052179992576.jpeg",
+        "visualGuideUrl": "skyhelper-1562368774034817034.jpeg",
         "videoGuideUrl": null,
         "id": 168
     },
@@ -1671,7 +1671,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Admire the sapling in Hidden Forest for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1555115750203859045.jpeg",
+        "visualGuideUrl": "skyhelper-1562368313739444284.jpeg",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=157",
         "id": 185
     },
