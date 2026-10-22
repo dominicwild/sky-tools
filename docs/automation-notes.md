@@ -1,5 +1,12 @@
 # Automation notes
 
+## 2026-10-22
+
+- Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 22 October and supplies four real quests. Refreshed High-Five, Frozen Lake meditation, Valley light and Manta Whisperer image guides. Added the Manta Whisperer title alias, retaining wiki wording, IDs and existing videos. No video attachments or UploadThing issues.
+- calendar verified current. Read all referenced 2026 event files, checked the absent 2027 index and scanned 223 seasonal/event/model files. Pearl remains live through 31 December, Scarecrow Farmer visits 22–25 October and Mischief runs 23 October–12 November. No spirit is announced for the expected 5–8 November visit and no upcoming returning group is listed. Cinnamoroll’s end remains explicitly unrevealed, so its provisional range remains unpublished. Cross-checked against the latest official October news.
+- Typecheck, lint, duplication and dead-code checks passed; all 98 tests passed. Lint retains one existing navigation warning in app/not-found.tsx. Verified the four changed rows in both JSON mirrors, 261 unique IDs, local image files and preserved quest fields.
+- Local agent-browser checks confirm four current quests, Manta search, the High-Five video dialog, a loaded Valley seasonal candle image and the October calendar. Pearl’s emblem/countdown shows 70 days left. New quest images require the push before jsDelivr serves them.
+
 ## 2026-10-21
 
 - Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 21 October and supplies three real quests. Refreshed Hidden Forest sapling, bowing and reliving a spirit’s memories image guides, retaining wiki wording, existing aliases, IDs and videos. Updated both sapling entries consistently. No video attachments or UploadThing issues.

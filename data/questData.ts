@@ -600,7 +600,7 @@ export const questsData = [
         "realm": "Valley of Triumph",
         "questName": "Catch the light in Valley of Triumph",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1540983386473234492.jpeg",
+        "visualGuideUrl": "skyhelper-1562730268345761812.jpeg",
         "videoGuideUrl": "https://youtu.be/tXf-oZ6F5CU",
         "id": 66
     },
@@ -798,7 +798,7 @@ export const questsData = [
         "realm": "Valley of Triumph",
         "questName": "Relive Manta Whisperer's memory from Valley of Triumph",
         "iconUrl": "e8f000ee-54b3-41e4-bea0-ac88ab8dea38.png",
-        "visualGuideUrl": "25688191-6926-4b53-92c0-8c7bd3da346b.jpeg",
+        "visualGuideUrl": "skyhelper-1562730481840033812.jpeg",
         "videoGuideUrl": null,
         "id": 88
     },
@@ -1356,7 +1356,7 @@ export const questsData = [
         "realm": "General",
         "questName": "High-Five a Friend",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1546783248871596166.jpeg",
+        "visualGuideUrl": "skyhelper-1562729774013616269.jpeg",
         "videoGuideUrl": "https://youtu.be/WfvksJzaNKo",
         "id": 150
     },
@@ -1950,7 +1950,7 @@ export const questsData = [
         "realm": "Valley of Triumph",
         "questName": "Meditate overlooking the Frozen Lake",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1544617162214350858.jpeg",
+        "visualGuideUrl": "skyhelper-1562730044382781490.jpeg",
         "videoGuideUrl": null,
         "id": 216
     },
