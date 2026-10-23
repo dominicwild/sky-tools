@@ -1,5 +1,12 @@
 # Automation notes
 
+## 2026-10-23
+
+- Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 23 October and supplies four real quests plus one title-error row, which is excluded. Refreshed waving, Treasure Reef rainbow, underwater lights and crab image guides. Existing aliases resolve all four titles; wiki wording, IDs and videos retained. No video attachments or UploadThing issues.
+- calendar verified current. Read all referenced 2026 event files, checked the absent 2027 index and fetched 223 calendar, season and spirit sources. Confirmed Pearl’s exclusive 1 January end against the season model and official October news. Mischief starts today and remains through 12 November; Scarecrow Farmer remains 22–25 October. No identity is announced for the expected 5–8 November visit and no upcoming returning group is listed. Cinnamoroll’s end is still explicitly unrevealed, so its provisional range remains unpublished.
+- Typecheck, lint, duplication and dead-code checks passed; all 98 tests passed. Lint retains one existing navigation warning in app/not-found.tsx. Verified both JSON mirrors, 261 unique IDs, local image files and preserved quest fields.
+- Local agent-browser checks confirm four current quests, crab search, the waving video dialog, a loaded Golden Wasteland seasonal candle image and October calendar. Pearl’s emblem/countdown shows 69 days left. No browser runtime errors. New quest images require the push before jsDelivr serves them.
+
 ## 2026-10-22
 
 - Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 22 October and supplies four real quests. Refreshed High-Five, Frozen Lake meditation, Valley light and Manta Whisperer image guides. Added the Manta Whisperer title alias, retaining wiki wording, IDs and existing videos. No video attachments or UploadThing issues.
