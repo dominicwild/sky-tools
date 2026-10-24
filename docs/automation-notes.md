@@ -1,5 +1,13 @@
 # Automation notes
 
+## 2026-10-24
+
+- Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 24 October and supplies four real quests. Refreshed forging a candle, Vault light and Shushing Light Scholar image guides; existing aliases resolve all titles, with wiki wording and IDs retained.
+- Compressed and uploaded the expressions video (979,838 bytes) using the worktree .env. Attribution: @sky; source https://discord.com/channels/575762611111592007/575827924343848960/1445691997389197343; original media attachment 1563457135260606575. No UploadThing credential or upload issue.
+- calendar verified current. Fetched 223 event, season, spirit and schedule sources, read all referenced 2026 event files and checked the absent 2027 index. Confirmed Pearl’s exclusive 1 January end against the season model and official October news. Mischief remains 23 October–12 November and Scarecrow Farmer 22–25 October. No identity is announced for the expected 5–8 November visit and no upcoming returning group is listed. Cinnamoroll’s end is explicitly unrevealed, so its provisional range remains unpublished.
+- Typecheck, lint, duplication and dead-code checks passed; all 98 tests passed. Lint retains one existing navigation warning in app/not-found.tsx. Verified 261 unique IDs, local image files and the four changed rows in both JSON mirrors, preserving unrelated fields.
+- Local agent-browser checks confirm four current quests, expressions search, a loaded 12.26-second hosted video, the Vault seasonal candle image and October calendar. Pearl’s emblem/countdown shows 68 days left. No browser runtime errors. New quest images require the push before jsDelivr serves them.
+
 ## 2026-10-23
 
 - Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 23 October and supplies four real quests plus one title-error row, which is excluded. Refreshed waving, Treasure Reef rainbow, underwater lights and crab image guides. Existing aliases resolve all four titles; wiki wording, IDs and videos retained. No video attachments or UploadThing issues.
