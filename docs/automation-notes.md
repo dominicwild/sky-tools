@@ -1,5 +1,12 @@
 # Automation notes
 
+## 2026-10-25
+
+- Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 25 October and supplies four real quests. Refreshed calling to five players, Bird Nest lights, Timid Bookworm and polluted geyser image guides. Existing aliases resolve all titles; wiki wording, IDs and videos retained. No video attachments or UploadThing issues.
+- calendar verified current. Fetched the upstream utility sources, read all referenced 2026 event files, checked the absent 2027 index and scanned 205 season/spirit files. Confirmed Pearl’s exclusive 1 January end against the season model and official October news. Mischief remains 23 October–12 November and Scarecrow Farmer 22–25 October. No identity is announced for the expected 5–8 November visit and no upcoming returning group is listed. Cinnamoroll’s end remains explicitly unrevealed, so its provisional range remains unpublished.
+- Typecheck, lint, duplication and dead-code checks passed; all 98 tests passed. Lint retains one existing navigation warning in app/not-found.tsx. Reviewed all changes and verified 261 unique IDs, four real JPEG images and the four changed rows in both JSON mirrors, preserving unrelated fields.
+- Local agent-browser checks confirm four current quests, Bookworm search, the Bookworm video dialog, the seasonal candle image dialog and October calendar. Both candle thumbnails load. Pearl’s emblem/countdown shows 67 days left. No browser runtime errors.
+
 ## 2026-10-24
 
 - Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 24 October and supplies four real quests. Refreshed forging a candle, Vault light and Shushing Light Scholar image guides; existing aliases resolve all titles, with wiki wording and IDs retained.

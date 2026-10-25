@@ -78,7 +78,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Visit the polluted geyser in Sanctuary Islands",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "09a4b9f5-8f01-43ac-9398-333de01424b7.jpeg",
+        "visualGuideUrl": "skyhelper-1563822092775063552.jpeg",
         "videoGuideUrl": "https://youtu.be/jYhL0Cjxn-w",
         "id": 8
     },
@@ -231,7 +231,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Relive Timid Bookworm's memory from Daylight Prairie",
         "iconUrl": "87df5d77-157d-403b-8984-0d4bc4878dfe.png",
-        "visualGuideUrl": "26c9257e-48da-4f39-b69f-223324915a22.png",
+        "visualGuideUrl": "skyhelper-1563821894392619049.jpeg",
         "videoGuideUrl": "https://youtu.be/GTnvyuwFNE0",
         "id": 25
     },
@@ -1977,7 +1977,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Catch the wandering lights around the Bird Nest",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1534825018003820694.jpeg",
+        "visualGuideUrl": "skyhelper-1563821616108933160.jpeg",
         "videoGuideUrl": "https://youtu.be/w1LQDfF0fBs",
         "id": 219
     },
@@ -2085,7 +2085,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Call to 5 different players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1561641326573912064.jpeg",
+        "visualGuideUrl": "skyhelper-1563821328346124338.jpeg",
         "videoGuideUrl": "https://youtu.be/exk2Y2Cshys",
         "id": 231
     },
