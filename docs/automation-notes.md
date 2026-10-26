@@ -1,5 +1,12 @@
 # Automation notes
 
+## 2026-10-26
+
+- Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 26 October and supplies four real quests. Refreshed holding a friend's hand, Light Bloom, rescuing a manta and orange light image guides. Existing aliases resolve all titles; wiki wording, IDs and videos retained. No video attachments or UploadThing issues.
+- calendar verified current. Fetched the upstream utility sources, read every referenced 2026 event file, checked the absent 2027 index and scanned season/spirit files and the travelling/returning schedules. Pearl remains live through 31 December and Mischief through 12 November, confirmed by the latest official October news. No identity is announced for the expected 5–8 November visit and no upcoming returning group is listed. Cinnamoroll's end remains explicitly unrevealed, so its provisional range remains unpublished.
+- Typecheck, lint, duplication and dead-code checks passed; all 98 tests passed. Lint retains one existing navigation warning in app/not-found.tsx. Verified 261 unique IDs, four real JPEG images, local image references and both JSON mirrors, preserving unrelated fields.
+- Local agent-browser checks confirm four current quests, orange light search, its video dialog and the seasonal candle image dialog. New quest images require the push before jsDelivr serves them.
+
 ## 2026-10-25
 
 - Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 25 October and supplies four real quests. Refreshed calling to five players, Bird Nest lights, Timid Bookworm and polluted geyser image guides. Existing aliases resolve all titles; wiki wording, IDs and videos retained. No video attachments or UploadThing issues.
