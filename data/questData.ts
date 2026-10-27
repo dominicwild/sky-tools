@@ -1518,7 +1518,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Relive a Spirit's memories in (a given Realm)",
         "iconUrl": "22d3b05c-31ac-46a8-8eb9-26cc94cbb489.png",
-        "visualGuideUrl": "skyhelper-1562368774034817034.jpeg",
+        "visualGuideUrl": "skyhelper-1564537721664315522.jpeg",
         "videoGuideUrl": null,
         "id": 168
     },
@@ -1770,7 +1770,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Admire the rainbow in Hermit Valley for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1550045572105379920.jpeg",
+        "visualGuideUrl": "skyhelper-1564538281591312585.jpeg",
         "videoGuideUrl": null,
         "id": 196
     },
@@ -2031,7 +2031,7 @@ export const questsData = [
         "realm": "Valley of Triumph",
         "questName": "Catch the wandering lights atop Hermit Valley",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1550045733703385149.jpeg",
+        "visualGuideUrl": "skyhelper-1564538421731532830.jpeg",
         "videoGuideUrl": "https://youtu.be/IuVIz1F8RU8",
         "id": 225
     },
@@ -2221,7 +2221,7 @@ export const questsData = [
         "questName": "Meet up with Bearhug Hermit in Hermit Valley - Admire Shared Spaces with Bearhug Hermit",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
         "visualGuideUrl": null,
-        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxBbWRhZAjyVNG4C9Pw0zTOWtbmprRDAUHo2Xc",
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxwXWOEmepaskDSthLdoEbNIrZu26Kl9WyjfBg",
         "id": 247
     },
     {

@@ -1,5 +1,13 @@
 # Automation notes
 
+## 2026-10-27
+
+- Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 27 October and supplies four real quests. Refreshed the general spirit-memory, Hermit Valley rainbow and Hermit Valley lights image guides. Existing titles and aliases resolve all four quests; wording, IDs and unrelated media retained.
+- Compressed and uploaded the Bearhug Hermit Shared Spaces video (2,984,502 bytes) using the worktree .env. Attribution: @sky; source https://discord.com/channels/575762611111592007/575827924343848960/1461278919859638343; original media attachment 1564538027773263922. No UploadThing credential or upload issue.
+- calendar verified current. Fetched upstream utility sources, read all referenced 2026 event files, checked the absent 2027 index and scanned season/spirit files and travelling/returning schedules. Pearl's exclusive 1 January end remains inclusive 31 December locally; Mischief ends 12 November. The latest official October news confirms both windows. No identity is announced for the expected 5–8 November visit, and no upcoming returning group is listed. Cinnamoroll's end remains explicitly unrevealed, so its provisional range remains unpublished.
+- Typecheck, lint, duplication and dead-code checks passed; all 98 tests passed. Lint retains one existing navigation warning in app/not-found.tsx. Verified 261 unique IDs, three JPEG images and matching JSON mirrors, preserving unrelated fields.
+- Local agent-browser checks confirm four current quests, Hermit search, a loaded 30.18-second hosted video, a loaded Valley seasonal candle image and October calendar. Pearl's emblem/countdown shows 65 days left. No browser runtime errors. New quest images require the push before jsDelivr serves them.
+
 ## 2026-10-26
 
 - Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 26 October and supplies four real quests. Refreshed holding a friend's hand, Light Bloom, rescuing a manta and orange light image guides. Existing aliases resolve all titles; wiki wording, IDs and videos retained. No video attachments or UploadThing issues.
