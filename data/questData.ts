@@ -960,7 +960,7 @@ export const questsData = [
         "realm": "Golden Wasteland",
         "questName": "Catch the light in Golden Wasteland",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1559465473618481192.jpeg",
+        "visualGuideUrl": "skyhelper-1564903678958243881.jpeg",
         "videoGuideUrl": "https://youtu.be/Bj6YBPoGFQE",
         "id": 106
     },
@@ -1338,7 +1338,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Bow at a player",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1562368598528233522.jpeg",
+        "visualGuideUrl": "skyhelper-1564904443651166348.jpeg",
         "videoGuideUrl": "https://youtu.be/tUWABu3t5Ic",
         "id": 148
     },
@@ -2349,5 +2349,14 @@ export const questsData = [
         "visualGuideUrl": null,
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxjJjTau0aFoTgjdbQ5McXBHJeyR1uqwOsmNSU",
         "id": 262
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Golden Wasteland",
+        "questName": "Meet up with Crab Whisperer in Crab Fields- Help Saluting Captain to keep crabs away from Crab Whisperer",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfx3FUkcNj8ayA5W71HLtjIduUkJsBThwpODP6V",
+        "id": 263
     }
 ] satisfies Quest[]

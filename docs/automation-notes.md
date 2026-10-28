@@ -1,5 +1,13 @@
 # Automation notes
 
+## 2026-10-28
+
+- Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 28 October and supplies three real quests. Refreshed the Golden Wasteland light and bowing image guides. Added the distinct Crab Whisperer task as SkyHelper quest ID 263, bringing the local total to 262 quests; existing wording, IDs and unrelated media retained.
+- Compressed and uploaded the Crab Whisperer video (3,625,388 bytes) using the worktree .env. Attribution: @sky; source https://discord.com/channels/575762611111592007/575827924343848960/1450768655699677194; original media attachment 1564903951214714940. No UploadThing credential or upload issue.
+- calendar verified current. Fetched upstream utility sources, read all referenced 2026 event files, checked the absent 2027 index and scanned 205 season/spirit files plus travelling/returning schedules. Pearl's exclusive 1 January end remains inclusive 31 December locally; Mischief remains through 12 November. The latest official October news confirms both windows. No identity is announced for the expected 5–8 November visit and no upcoming returning group is listed. Cinnamoroll's end remains explicitly unrevealed, so its provisional range remains unpublished.
+- Typecheck, lint, duplication and dead-code checks passed; all 98 tests passed. Lint retains one existing navigation warning in app/not-found.tsx. Verified 262 unique IDs, two real JPEG images, both JSON mirrors and preserved unrelated fields.
+- Local agent-browser checks confirm three current quests, Crab Whisperer search, a loaded 34.71-second hosted video, a loaded Golden Wasteland seasonal candle image and October calendar. Pearl's emblem/countdown shows 64 days left. No browser runtime errors. New quest images require the push before jsDelivr serves them.
+
 ## 2026-10-27
 
 - Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 27 October and supplies four real quests. Refreshed the general spirit-memory, Hermit Valley rainbow and Hermit Valley lights image guides. Existing titles and aliases resolve all four quests; wording, IDs and unrelated media retained.
