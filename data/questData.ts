@@ -1167,7 +1167,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Meditate at Vault's summit",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1558015746976522300.jpeg",
+        "visualGuideUrl": "skyhelper-1565271811090944010.jpeg",
         "videoGuideUrl": "https://youtu.be/3cw9-gsh_EI",
         "id": 129
     },
@@ -1284,7 +1284,7 @@ export const questsData = [
         "realm": "Vault of Knowledge",
         "questName": "Relive Greeting Shaman's memory from Vault of Knowledge",
         "iconUrl": "7bdecc73-5961-41c8-ba8a-5d88662fe4c2.png",
-        "visualGuideUrl": "7132ba1d-d79d-4756-b4ed-df19cc603124.jpeg",
+        "visualGuideUrl": "skyhelper-1565271584522895400.jpeg",
         "videoGuideUrl": "https://www.youtube.com/watch?v=do0FvgzMOPI",
         "id": 142
     },
@@ -1743,7 +1743,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Find the candles at the end of the rainbow in the Vault of Knowledge",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1558015195568148490.jpeg",
+        "visualGuideUrl": "skyhelper-1565271073174331422.jpeg",
         "videoGuideUrl": "https://youtu.be/oiUQPs3E7GE",
         "id": 193
     },

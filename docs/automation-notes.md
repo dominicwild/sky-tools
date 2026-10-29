@@ -1,5 +1,12 @@
 # Automation notes
 
+## 2026-10-29
+
+- Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 29 October and supplies three real quests. Refreshed the Vault rainbow, Greeting Shaman and Vault summit image guides. Existing aliases resolve all titles; wiki wording, IDs and videos retained. No video attachments or UploadThing issues.
+- calendar verified current. Fetched upstream utility sources, read all referenced 2026 event files, checked the absent 2027 index and scanned 205 season/spirit files plus travelling/returning schedules. Pearl's exclusive 1 January end remains inclusive 31 December locally; Mischief remains through 12 November. The latest official October news confirms both windows. No identity is announced for the expected 5–8 November visit and no upcoming returning group is listed. Cinnamoroll's end remains explicitly unrevealed, so its provisional range remains unpublished.
+- Typecheck, lint, duplication and dead-code checks passed; all 98 tests passed. Lint retains one existing navigation warning in app/not-found.tsx. Verified 262 unique IDs, three real JPEG images, both JSON mirrors and preserved unrelated fields.
+- Local agent-browser checks confirm three current quests, Greeting Shaman search/video dialog, a loaded Vault seasonal candle image and October calendar. Pearl's emblem/countdown shows 63 days left. No browser runtime errors. New quest images require the push before jsDelivr serves them.
+
 ## 2026-10-28
 
 - Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 28 October and supplies three real quests. Refreshed the Golden Wasteland light and bowing image guides. Added the distinct Crab Whisperer task as SkyHelper quest ID 263, bringing the local total to 262 quests; existing wording, IDs and unrelated media retained.
