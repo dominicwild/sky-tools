@@ -1,5 +1,13 @@
 # Automation notes
 
+## 2026-10-30
+
+- Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 30 October and supplies four real quests. Refreshed Prairie sapling (both existing entries), general spirit-memory and candle-forging image guides. Existing aliases resolve all titles; wiki wording, IDs and unrelated media retained.
+- Compressed and uploaded the expressions video (979,838 bytes) using the worktree .env. Attribution: @sky; source https://discord.com/channels/575762611111592007/575827924343848960/1445691997389197343; original media attachment 1565628900997075004. No UploadThing credential or upload issue.
+- calendar verified current. Fetched 223 upstream event, season, spirit and schedule sources, read all referenced 2026 event files and checked the absent 2027 index. Pearl's exclusive 1 January end remains inclusive 31 December locally; Mischief remains through 12 November. The latest official October news confirms both windows; November's monthly post is not published. No identity is announced for the expected 5–8 November visit and no upcoming returning group is listed. Cinnamoroll's end remains explicitly unrevealed, so its provisional range remains unpublished.
+- Typecheck, lint, duplication and dead-code checks passed; all 98 tests passed. Lint retains one existing navigation warning in app/not-found.tsx. Verified 262 unique IDs, three real JPEG images, matching JSON mirrors and preserved unrelated fields.
+- Local agent-browser checks confirm four current quests, expressions search, the loaded 12.26-second hosted video and the seasonal candle image dialog. Pearl's emblem/countdown shows 62 days left. New quest images require the push before jsDelivr serves them.
+
 ## 2026-10-29
 
 - Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 29 October and supplies three real quests. Refreshed the Vault rainbow, Greeting Shaman and Vault summit image guides. Existing aliases resolve all titles; wiki wording, IDs and videos retained. No video attachments or UploadThing issues.

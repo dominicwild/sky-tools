@@ -87,7 +87,7 @@ export const questsData = [
         "realm": "Daylight Prairie",
         "questName": "Admire the sapling in Daylight Prairie for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1545694130603040818.jpeg",
+        "visualGuideUrl": "skyhelper-1565628705328341012.jpeg",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=131",
         "id": 9
     },
@@ -1437,7 +1437,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Forge a candle",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1563456349457621023.jpeg",
+        "visualGuideUrl": "skyhelper-1565629571997507624.jpeg",
         "videoGuideUrl": "https://youtu.be/mLhjvx19zzA",
         "id": 159
     },
@@ -1518,7 +1518,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Relive a Spirit's memories in (a given Realm)",
         "iconUrl": "22d3b05c-31ac-46a8-8eb9-26cc94cbb489.png",
-        "visualGuideUrl": "skyhelper-1564537721664315522.jpeg",
+        "visualGuideUrl": "skyhelper-1565629260217979042.jpeg",
         "videoGuideUrl": null,
         "id": 168
     },
@@ -1662,7 +1662,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Admire the sapling in Daylight Prairie for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1545694130603040818.jpeg",
+        "visualGuideUrl": "skyhelper-1565628705328341012.jpeg",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=132",
         "id": 184
     },
@@ -2077,7 +2077,7 @@ export const questsData = [
         "questName": "Use expressions with players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": null,
-        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxNobvwfQk6CcEDy9bdVOIUS4RHsvZgfY1LJT2",
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxJZ5c4Sc96OnJZECq8Wmo0TdPbRKIULFlhG24",
         "id": 230
     },
     {
