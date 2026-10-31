@@ -1,5 +1,12 @@
 # Automation notes
 
+## 2026-10-31
+
+- Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 31 October and supplies four real quests. Refreshed calling to five players, Hidden Forest rainbow (both existing entries), picking up a crab and the Ancestor's Table image guides. Existing titles and aliases resolve all four quests; wiki wording, IDs and videos retained. No video attachments or UploadThing issues.
+- calendar verified current. Read all referenced 2026 event files, checked the absent 2027 index and scanned 205 season/spirit files plus travelling/returning schedules. Pearl's exclusive 1 January end remains inclusive 31 December; Mischief remains through 12 November. The latest official October news confirms both windows; November's monthly post is not published. No identity is announced for the expected 5–8 November visit and no upcoming returning group is listed. Cinnamoroll's end remains explicitly unrevealed, so its provisional range remains unpublished.
+- Typecheck, lint, duplication and dead-code checks passed; all 98 tests passed. Lint retains one existing navigation warning in app/not-found.tsx. Verified 262 unique IDs, four JPEG images, both JSON mirrors and preserved unrelated fields.
+- Local agent-browser checks confirm four current quests, Crab search/video dialog and a loaded Hidden Forest seasonal candle image. Pearl's emblem/countdown shows 61 days left. New quest images require the push before jsDelivr serves them.
+
 ## 2026-10-30
 
 - Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 30 October and supplies four real quests. Refreshed Prairie sapling (both existing entries), general spirit-memory and candle-forging image guides. Existing aliases resolve all titles; wiki wording, IDs and unrelated media retained.
