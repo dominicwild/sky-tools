@@ -5,6 +5,10 @@ import type {Quest} from "@/lib/quest-types";
 
 const QUEST_TITLE_ALIASES = new Map([
     [
+        "relive spirit quest valley of triumph cheerful spectator",
+        "relive cheerful spectator s memory from valley of triumph",
+    ],
+    [
         "relive spirit quest valley of triumph manta whisperer",
         "relive manta whisperer s memory from valley of triumph",
     ],

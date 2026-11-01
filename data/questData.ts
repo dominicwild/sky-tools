@@ -618,7 +618,7 @@ export const questsData = [
         "realm": "Valley of Triumph",
         "questName": "Admire the sapling in Valley of Triumph for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "8a0234c6-1fc4-4ed1-aa3a-150083c61737.png",
+        "visualGuideUrl": "skyhelper-1566385258465861722.jpeg",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=152",
         "id": 68
     },
@@ -816,7 +816,7 @@ export const questsData = [
         "realm": "Valley of Triumph",
         "questName": "Relive Cheerful Spectator's memory from Valley of Triumph",
         "iconUrl": "e0ef56a9-7ae2-42cd-befa-3ee0709bc0ed.png",
-        "visualGuideUrl": "d040aefb-7d4c-43cd-95d0-9ea36955cfe5.png",
+        "visualGuideUrl": "skyhelper-1566385996428349501.jpeg",
         "videoGuideUrl": "https://youtu.be/-sVP-uZXkaI?t=1487",
         "id": 90
     },
@@ -1365,7 +1365,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Wave to a Friend",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1563093209255772231.jpeg",
+        "visualGuideUrl": "skyhelper-1566385524447383684.jpeg",
         "videoGuideUrl": "https://youtu.be/g-Ts_WZY4VM",
         "id": 151
     },
@@ -1680,7 +1680,7 @@ export const questsData = [
         "realm": "Seasonal/Event",
         "questName": "Admire the sapling in Valley of Triumph for a short while",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "8a0234c6-1fc4-4ed1-aa3a-150083c61737.png",
+        "visualGuideUrl": "skyhelper-1566385258465861722.jpeg",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=49",
         "id": 186
     },
@@ -1941,7 +1941,7 @@ export const questsData = [
         "realm": "Valley of Triumph",
         "questName": "Catch the 3 lights during the Valley's sliding race",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1559101675543855194.jpeg",
+        "visualGuideUrl": "skyhelper-1566385728160800870.jpeg",
         "videoGuideUrl": "https://youtu.be/QwsLH-XB2k8",
         "id": 215
     },

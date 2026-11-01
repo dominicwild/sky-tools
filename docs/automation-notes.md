@@ -1,5 +1,12 @@
 # Automation notes
 
+## 2026-11-01
+
+- Wiki dry run parsed 222 quests and found no additions. SkyHelper initially returned 31 October, remained stale at 09:20 and 09:30 UTC, then supplied current quests at the third 10-minute retry (09:40 UTC). It initially supplied three quests, then added Cheerful Spectator during the sync. Refreshed Valley sapling (both existing entries), waving, sliding-race lights and Cheerful Spectator image guides. Added the Cheerful Spectator title alias, retaining wiki wording, 262 unique IDs and existing videos. Both JSON mirrors updated without changing other fields. No video attachments or UploadThing issues.
+- calendar verified current. Fetched 223 upstream sources, read all referenced 2026 event files, checked the absent 2027 index and scanned 205 season/spirit files plus travelling/returning schedules. Pearl remains through 31 December (exclusive 1 January upstream), Mischief through 12 November, and no identity is announced for the expected 5–8 November visit. No upcoming returning group is listed. Official June–October posts confirm existing windows; November's monthly post is not published. Cinnamoroll's end remains explicitly unrevealed, so its provisional range remains unpublished.
+- SkyHelper's last_updated still reports 31 October, but all four quest dates and the Valley seasonal candle group are dated 1 November. The rotating candle group is still dated 31 October and is correctly excluded by the app. No yesterday-to-today data substitution or popularity fallback was added.
+- Typecheck, lint, duplication and dead-code checks passed; all 99 tests passed, including the new Cheerful Spectator alias case. Lint retains one existing navigation warning in app/not-found.tsx. Verified four JPEGs, both JSON mirrors, unchanged unrelated fields and 262 unique IDs. Local agent-browser checks passed for four current quests, Cheerful Spectator search, video/image dialogs and the loaded Valley seasonal candle guide. New quest image URLs require the push before jsDelivr serves them.
+
 ## 2026-10-31
 
 - Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 31 October and supplies four real quests. Refreshed calling to five players, Hidden Forest rainbow (both existing entries), picking up a crab and the Ancestor's Table image guides. Existing titles and aliases resolve all four quests; wiki wording, IDs and videos retained. No video attachments or UploadThing issues.
