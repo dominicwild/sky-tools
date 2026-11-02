@@ -1,5 +1,14 @@
 # Automation notes
 
+## 2026-11-02
+
+- Wiki dry run parsed 222 quests and found no additions. SkyHelper supplies three current quests. Added the distinct Crabwalk with the Spirits task as SkyHelper quest ID 264, bringing the total to 263 unique IDs. Compared frames from both Crab Whisperer videos: the existing task keeps crabs away; today's task performs the crabwalk expression with the spirits. Preserved both tasks.
+- Refreshed the battlefield meditation image and added its title alias after visually confirming the same shrine and directions. Retained wiki wording and unrelated fields; updated both JSON mirrors. Advanced the daily match cache version so previously unmatched titles resolve immediately.
+- Compressed and uploaded two videos using the worktree .env: expressions (979,838 bytes), author @sky, source https://discord.com/channels/575762611111592007/575827924343848960/1445691997389197343, original attachment 1566734397678551060; Crabwalk (4,505,944 bytes), author @sky, no source URL supplied, original attachment 1566734830220353556. No UploadThing credential or upload issue.
+- calendar verified current. Fetched 315 upstream event, season, model and schedule sources, read every referenced 2026 event file and checked the absent 2027 index. Pearl's end remains explicitly exclusive upstream (1 January), inclusive 31 December locally; Mischief remains through 12 November. Official October news confirms both windows; November's monthly post returns 404. No identity is announced for the expected 5–8 November visit and no upcoming returning group is listed. Cinnamoroll's end is explicitly unrevealed, so its provisional range remains unpublished.
+- SkyHelper's quests and seasonal candle guide are current for 2 November. Its rotating candle group remains dated 31 October and is correctly excluded. No substitute quests were added.
+- Typecheck, lint, duplication and dead-code checks passed; all 100 tests passed. Lint retains one existing navigation warning in app/not-found.tsx. Verified matching JSON mirrors, 263 unique IDs and local image references. Local agent-browser checks passed for three quests, Crabwalk search, the hosted 52.27-second video, the loaded seasonal candle image and November calendar. Pearl's emblem/countdown shows 59 days left. No browser runtime errors.
+
 ## 2026-11-01
 
 - Wiki dry run parsed 222 quests and found no additions. SkyHelper initially returned 31 October, remained stale at 09:20 and 09:30 UTC, then supplied current quests at the third 10-minute retry (09:40 UTC). It initially supplied three quests, then added Cheerful Spectator during the sync. Refreshed Valley sapling (both existing entries), waving, sliding-race lights and Cheerful Spectator image guides. Added the Cheerful Spectator title alias, retaining wiki wording, 262 unique IDs and existing videos. Both JSON mirrors updated without changing other fields. No video attachments or UploadThing issues.

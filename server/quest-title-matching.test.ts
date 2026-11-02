@@ -8,6 +8,7 @@ vi.mock("server-only", () => ({}), {virtual: true});
 vi.mock("@/lib/daily-quest-source", async () => import("../lib/daily-quest-source"), {virtual: true});
 
 const localQuests: Quest[] = [
+    createQuest(103, "Meditate on the battlefield"),
     createQuest(90, "Relive Cheerful Spectator's memory from Valley of Triumph"),
     createQuest(31, "Meditate at Forest's clearing"),
     createQuest(10, "Find the candles at the end of the rainbow in the Daylight Prairie"),
@@ -51,6 +52,7 @@ const localQuests: Quest[] = [
 
 describe("quest title matching", () => {
     it.each([
+        ["Meditation Quest Guide Golden Wasteland - Battlefield", 103],
         ["Relive Spirit Quest Valley of Triumph - Cheerful Spectator", 90],
         ["Days of Rainbow 2021 - Daily Quest, Rainbow Location - Daylight Prairie", 10],
         ["Days of Rainbow 2021 - Daily Quest, Rainbow Location - Hidden Forest", 41],

@@ -933,7 +933,7 @@ export const questsData = [
         "realm": "Golden Wasteland",
         "questName": "Meditate on the battlefield",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "e9fae9e3-d430-4225-a153-e7e0d5e4cb57.png",
+        "visualGuideUrl": "b672b687faba0def.jpeg",
         "videoGuideUrl": "https://youtu.be/M5gtIczRupY",
         "id": 103
     },
@@ -2077,7 +2077,7 @@ export const questsData = [
         "questName": "Use expressions with players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": null,
-        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxJZ5c4Sc96OnJZECq8Wmo0TdPbRKIULFlhG24",
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxj5zi170aFoTgjdbQ5McXBHJeyR1uqwOsmNSU",
         "id": 230
     },
     {
@@ -2358,5 +2358,14 @@ export const questsData = [
         "visualGuideUrl": null,
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfx3FUkcNj8ayA5W71HLtjIduUkJsBThwpODP6V",
         "id": 263
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Golden Wasteland",
+        "questName": "Meet up with Crab Whisperer in Crab Fields - Crabwalk with the Spirits",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxSyaCBTuZk94Q5v7YuE0pRr1SJsyLHBwCjgd2",
+        "id": 264
     }
 ] satisfies Quest[]
