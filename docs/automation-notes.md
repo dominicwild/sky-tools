@@ -1,5 +1,12 @@
 # Automation notes
 
+## 2026-11-04
+
+- Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 4 November and supplies three real quests. Refreshed Prairie light, green light and manta-riding image guides; existing aliases resolve all titles. Retained wiki wording, 263 unique IDs and existing videos; updated both JSON mirrors. No video attachments or UploadThing issues.
+- Read 223 freshly fetched upstream event, season, spirit, model and schedule sources, including every referenced 2026 event file; no 2027 event index exists. Pearl remains through 31 December (exclusive 1 January upstream), and Mischief through 12 November, both cross-checked against the latest official October monthly post. November's monthly post returns 404. Cinnamoroll's end remains explicitly unrevealed, so its provisional range remains unpublished. No upcoming returning group is listed.
+- Calendar source discrepancy: the upstream Hairtousle Teen file now lists a 5–9 November exclusive visit (5–8 November inclusive). The official news index has no November post or spirit announcement to corroborate it. Kept the existing expected 5–8 November window unchanged pending an official announcement, rather than promoting the fan-source identity to confirmed.
+- Typecheck, lint, duplication and dead-code checks passed; all 100 tests passed. Lint retains the existing navigation warning in app/not-found.tsx. Verified three real JPEGs, matching JSON mirror changes, unique IDs and preserved unrelated fields. Local agent-browser checks confirmed three current quests, Manta search, a loaded Prairie seasonal candle image and November calendar. Pearl shows 57 days left.
+
 ## 2026-11-02
 
 - Wiki dry run parsed 222 quests and found no additions. SkyHelper supplies three current quests. Added the distinct Crabwalk with the Spirits task as SkyHelper quest ID 264, bringing the total to 263 unique IDs. Compared frames from both Crab Whisperer videos: the existing task keeps crabs away; today's task performs the crabwalk expression with the spirits. Preserved both tasks.
