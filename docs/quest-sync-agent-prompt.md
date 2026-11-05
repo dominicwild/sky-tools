@@ -3,9 +3,12 @@
 You are maintaining quest data for the sky-tools repo.
 
 Goal:
-Keep data/questData.ts aligned with the wiki quest source and supplement it with SkyHelper media. Wiki quest wording is
-the source of truth. SkyHelper is supplemental for images, videos, aliases, and early quest discovery before the wiki
-catches up.
+Keep data/questData.ts aligned with the game's own quest wording and supplement it with wiki and SkyHelper data. The
+game's text is the only source of truth for wording. It lives in the private repo `dominicwild/sky-game-data`, checked
+out at `~/git/sky-game-data` and refreshed daily from the Steam install on Dominic's PC. `daily-quests.json` there
+lists every daily quest by game id with its in-game name in each language. The wiki is used to discover quests, icons
+and guides; SkyHelper is supplemental for images, videos, aliases, and early quest discovery. Never use wiki,
+SkyHelper or thatskyapplication wording where the game has a name for the quest.
 
 Before changing files:
 
@@ -22,6 +25,21 @@ Before changing files:
     - util/helper.ts
     - components/VideoGuideDialog.tsx
 
+Game wording:
+
+1. Run `git -C ~/git/sky-game-data pull --ff-only`.
+2. Check the game data is current: compare `steamBuildId` in `~/git/sky-game-data/build.json` with Steam's public build
+   from `curl -s https://api.steamcmd.net/v1/info/2325290` (`data["2325290"].depots.branches.public.buildid` and
+   `timeupdated`). If Steam's build is newer and was released more than 30 hours ago, report it in the final response:
+   the daily copy on Dominic's PC has not caught up (Steam has not updated the game there, or the scheduled task
+   "Sky game data sync" failed). Carry on with the sync either way.
+3. Run `npm --prefix scripts run checkGameWording -- --game-data ~/git/sky-game-data`. For every quest it reports,
+   set questName to the game's English name in data/questData.ts, data/skyDataLocal.json and scripts/skyDataLocal.json,
+   and add a QUEST_TITLE_ALIASES entry from the old normalized name to the new one so external titles still match. If
+   a linked game quest is no longer named by the game, report it and leave the quest unchanged.
+4. Each quest links to the game through `gameQuestId`. Never link two local quests to the same gameQuestId: they are
+   the same quest, so merge them, keeping the Realm or General copy and any media the other copy had.
+
 Wiki sync:
 
 1. Run npm --prefix scripts run syncQuests -- --dry-run.
@@ -32,7 +50,10 @@ Wiki sync:
     - scripts/skyData.json
     - scripts/skyDataLocal.json
     - skyImages/* (served to the site through jsDelivr, deliberately outside public/ so Vercel never ships them)
-4. Do not commit raw temporary files, downloaded videos, credentials, or ad hoc scratch output.
+4. For each quest the wiki sync adds, find the same quest in `~/git/sky-game-data/daily-quests.json` (same task, and
+   its `landmark` is in the quest's realm). When there is one clear match, set gameQuestId to its id and questName to
+   its English name. When there is no clear match, keep the wiki name and report it.
+5. Do not commit raw temporary files, downloaded videos, credentials, or ad hoc scratch output.
 
 SkyHelper sync:
 
@@ -45,12 +66,14 @@ SkyHelper sync:
     - normalized exact title match
     - existing QUEST_TITLE_ALIASES match
     - clear semantic duplicate, supported by matching quest intent, realm, and visual guide similarity
-5. If SkyHelper and wiki describe the same quest with different wording, keep the wiki questName in data/questData.ts
-   and add or update QUEST_TITLE_ALIASES so the SkyHelper title resolves to the wiki title.
+5. If SkyHelper words a local quest differently, keep the local questName in data/questData.ts and add or update
+   QUEST_TITLE_ALIASES so the SkyHelper title resolves to it.
 6. If SkyHelper has a materially new quest absent from wiki data, add it to data/questData.ts with:
     - type: "SkyHelper Quest"
     - realm: inferred from matched daily quests when there is exactly one clear realm, otherwise "Unknown (?)"
-    - questName: SkyHelper title with the "- video guide" suffix removed
+    - questName and gameQuestId: the game's English name and id when the quest is in
+      `~/git/sky-game-data/daily-quests.json`; otherwise the SkyHelper title with the "- video guide" suffix removed
+      and no gameQuestId
     - iconUrl: the existing default diamond quest icon, currently 9857649b-3859-413b-941c-dee139045b1d.png
     - visualGuideUrl: local filename in skyImages when an image exists, otherwise null
     - videoGuideUrl: UploadThing `ufsUrl` for the compressed hosted video when a video exists and UploadThing
@@ -85,9 +108,10 @@ SkyHelper sync:
 
 Duplicate handling:
 
-1. Prefer replacing SkyHelper-only wording with wiki wording when the wiki later adds the same quest.
-2. Preserve or move useful SkyHelper media onto the wiki-worded quest when it is the same quest.
-3. Add an alias from the SkyHelper normalized title to the wiki normalized title so daily API matching remains stable.
+1. Replace SkyHelper-only wording with the game's wording once the quest can be linked to a game quest.
+2. Preserve or move useful SkyHelper media onto the kept quest when two entries are the same quest.
+3. Add an alias from the SkyHelper normalized title to the kept quest's normalized title so daily API matching remains
+   stable.
 4. If uncertain whether two quests are duplicates, stop and report the specific candidates, titles, realms, and image
    evidence instead of guessing.
 

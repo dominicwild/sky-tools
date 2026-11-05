@@ -1,56 +1,13 @@
 import {describe, expect, it, vi} from "vitest";
-import {createLocalQuestTitleIndex, getMatchingLocalQuestId} from "./quest-title-matching";
-import type {Quest} from "@/lib/quest-types";
+import {createLocalQuestTitleIndex, getMatchingLocalQuestId, QUEST_TITLE_ALIASES} from "./quest-title-matching";
+import {questsData} from "../data/questData";
 
 // @ts-expect-error Vitest supports virtual module mocks at runtime.
 vi.mock("server-only", () => ({}), {virtual: true});
 // @ts-expect-error Vitest supports virtual module mocks at runtime.
 vi.mock("@/lib/daily-quest-source", async () => import("../lib/daily-quest-source"), {virtual: true});
 
-const localQuests: Quest[] = [
-    createQuest(52, "Relive Provoking Performer's memory from Hidden Forest"),
-    createQuest(103, "Meditate on the battlefield"),
-    createQuest(90, "Relive Cheerful Spectator's memory from Valley of Triumph"),
-    createQuest(31, "Meditate at Forest's clearing"),
-    createQuest(10, "Find the candles at the end of the rainbow in the Daylight Prairie"),
-    createQuest(41, "Find the candles at the end of the rainbow in the Hidden Forest"),
-    createQuest(7, "Collect Green Light"),
-    createQuest(37, "Collect Orange Light"),
-    createQuest(51, "Relive Tearful Light Miner's memory from Hidden Forest"),
-    createQuest(21, "Relive Stretching Guru's memory from Daylight Prairie"),
-    createQuest(26, "Relive Grateful Shell Collector's memory from Daylight Prairie"),
-    createQuest(195, "Admire the rainbow in the Wind Paths for a short while"),
-    createQuest(197, "Admire the rainbow in Treasure Reef for a short while"),
-    createQuest(223, "Catch the 3 lights in The Wind Paths"),
-    createQuest(226, "Catch the 3 lights under the sea in Treasure Reef"),
-    createQuest(150, "High-Five a Friend"),
-    createQuest(257, "Meet up with Anxious Angler in Treasure Reef - Catch a fish 🐟"),
-    createQuest(246, "Meet up with Cackling Cannoneer in Graveyard - Play a prank on Ceasing Commodore"),
-    createQuest(141, "Relive Meditating Monastic's memory from Vault of Knowledge"),
-    createQuest(17, "Relive Slumbering Shipwright's memory from Daylight Prairie"),
-    createQuest(15, "Relive Waving Bellmaker's memory from Daylight Prairie"),
-    createQuest(39, "Recharge your light from a light bloom"),
-    createQuest(222, "Catch the 3 lights in the big Treehouse"),
-    createQuest(221, "Ride a giant manta in Sanctuary Islands"),
-    createQuest(113, "Relive Indifferent Alchemist's memory from Golden Wasteland"),
-    createQuest(126, "Relive Nodding Muralist's memory from Golden Wasteland"),
-    createQuest(125, "Relive Scarecrow Farmer's memory from Golden Wasteland"),
-    createQuest(83, "Relive Saluting Protector's memory from Golden Wasteland"),
-    createQuest(11, "Visit the cozy hideout in Prairie Caves"),
-    createQuest(35, "Relive Daydream Forester's memory from Hidden Forest"),
-    createQuest(86, "Relive Sparkler Parent's memory from Valley of Triumph"),
-    createQuest(117, "Relive Saluting Captain's memory from Golden Wasteland"),
-    createQuest(217, "Meditate in the Crab Fields"),
-    createQuest(70, "Visit the Hotspring in the Village of Dreams"),
-    createQuest(97, "Relive Spinning Mentor's memory from Valley of Triumph"),
-    createQuest(74, "Relive Bearhug Hermit's memory from Valley of Triumph"),
-    createQuest(91, "Relive Bowing Medalist's memory from Valley of Triumph"),
-    createQuest(143, "Relive Shushing Light Scholar's memory from Vault of Knowledge"),
-    createQuest(38, "Rescue a Manta from Darkness"),
-    createQuest(4, "Meditate at Prairie's faerie ring"),
-    createQuest(258, "Catch the wandering lights in the Vault's Repository"),
-    createQuest(214, "Catch the 3 lights in the Forest Brook"),
-];
+const localQuestsByTitle = createLocalQuestTitleIndex(questsData);
 
 describe("quest title matching", () => {
     it.each([
@@ -79,37 +36,31 @@ describe("quest title matching", () => {
         ["Recharge from a light bloom", 39],
         ["Catch the wandering lights in the Treehouse", 222],
         ["https://discord.com/channels/575762611111592007/575827924343848960/1453303732572786822\n\n>  How to get to the Sanctuary Islands", 221],
-        ["Relive Spirit Quest Season of Enchantment  - Indifferent Alchemist", 113],
+        ["Relive Spirit Quest Season of Enchantment  - Indifferent Alchemist", 127],
         ["Relive Spirit Quest Season of Enchantment - Nodding Muralist by", 126],
         ["Relive Spirit Quest Season of Enchantment  - Scarecrow Farmer", 125],
-        ["Relive Spirit Quest Season of Gratitude  - Saluting Protector", 83],
+        ["Relive Spirit Quest Season of Gratitude  - Saluting Protector", 119],
         ["Visiting the Social Light Area - Daylight Prairie, Prairie Cave", 11],
-        ["Relive Spirit Quest Season of Assembly  - Daydreaming Forester", 35],
-        ["Relive Spirit Quest Season of Belonging  - Sparkler Parent", 86],
+        ["Relive Spirit Quest Season of Assembly  - Daydreaming Forester", 57],
+        ["Relive Spirit Quest Season of Belonging  - Sparkler Parent", 95],
         ["Relive Spirit Quest Golden Wasteland - Saluting Captain", 117],
-        ["Meditation Quest Guide - Golden Wasteland - The Boat a.k.a The Crab Fields", 217],
+        ["Meditation Quest Guide - Golden Wasteland - The Boat a.k.a The Crab Fields", 104],
         ["Relive Spirit Quest Season of Dreams  - Spinning Mentor", 97],
-        ["Relive Spirit Quest Season of Dreams  - Bearhug Hermit", 74],
+        ["Relive Spirit Quest Season of Dreams  - Bearhug Hermit", 98],
         ["Relive Spirit Quest Valley of Triumph - Bowing Medalist", 91],
         ["Visiting the Social Light Area - Valley of Triumph, Village of Dreams, Hotspring", 70],
         ["Relive Spirit Quest Season of Lightseekers - Shushing Light Scholar", 143],
         ["Rescue Manta Quest", 38],
         ["Meditation Quest Guide Daylight Prairie - Faerie Ring a.k.a Prairie Village", 4],
-        ["Catch the wandering lights in the Vault's Repository", 258],
+        ["Catch the wandering lights in the Vault's Repository", 229],
         ["Catch the wandering lights in the Forest Brook", 214],
     ])("matches SkyHelper alias %s", (title, expectedId) => {
-        expect(getMatchingLocalQuestId(title, createLocalQuestTitleIndex(localQuests))).toBe(expectedId);
+        expect(getMatchingLocalQuestId(title, localQuestsByTitle)).toBe(expectedId);
+    });
+
+    it("points every alias at a quest that exists", () => {
+        const missingTargets = [...QUEST_TITLE_ALIASES.values()].filter((target) => !localQuestsByTitle.has(target));
+
+        expect(missingTargets).toEqual([]);
     });
 });
-
-function createQuest(id: number, questName: string): Quest {
-    return {
-        id,
-        type: "Realm Quest",
-        realm: "Daylight Prairie",
-        questName,
-        iconUrl: "icon.png",
-        visualGuideUrl: null,
-        videoGuideUrl: null,
-    };
-}

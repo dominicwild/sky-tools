@@ -3,7 +3,7 @@ import "server-only";
 import {normalizeQuestTitle} from "@/lib/daily-quest-source";
 import type {Quest} from "@/lib/quest-types";
 
-const QUEST_TITLE_ALIASES = new Map([
+export const QUEST_TITLE_ALIASES = new Map([
     [
         "relive spirit quest season of gratitude provoking performer",
         "relive provoking performer s memory from hidden forest",
@@ -26,11 +26,11 @@ const QUEST_TITLE_ALIASES = new Map([
     ],
     [
         "meet up with nightbird whisperer in prairie village deep call the butterflies in the cave with jolly geologist video guide",
-        "meet up with nightbird whisperer in prairie village deep call the butterflies in the cave with jolly geologist",
+        "deep call the butterflies in the cave with jolly geologist",
     ],
     [
         "daily quest guide sit on a bench with a stranger",
-        "sit at a bench with a stranger",
+        "sit on a bench with a stranger",
     ],
     [
         "relive spirit quest hidden forest shivering trailblazer",
@@ -50,7 +50,7 @@ const QUEST_TITLE_ALIASES = new Map([
     ],
     [
         "days of bloom 2021 admire sapling quest vault of knowledge",
-        "admire the sapling in vault of knowledge for a short while",
+        "admire the sapling in the vault of knowledge for a short while",
     ],
     [
         "days of bloom 2021 admire sapling quest golden wasteland",
@@ -58,11 +58,11 @@ const QUEST_TITLE_ALIASES = new Map([
     ],
     [
         "days of bloom 2021 admire sapling quest hidden forest",
-        "admire the sapling in hidden forest for a short while",
+        "admire the sapling in the hidden forest for a short while",
     ],
     [
         "days of rainbow 2021 daily quest rainbow location golden wasteland",
-        "find the candles at the end of the rainbow in the golden wasteland forgotten ark",
+        "find the candles at the end of the rainbow in the golden wasteland",
     ],
     [
         "days of rainbow 2021 daily quest rainbow location vault of knowledge",
@@ -70,7 +70,7 @@ const QUEST_TITLE_ALIASES = new Map([
     ],
     [
         "days of rainbow 2021 daily quest rainbow location daylight prairie",
-        "find the candles at the end of the rainbow in the daylight prairie",
+        "find the candles at the end of the rainbow in daylight prairie",
     ],
     [
         "days of rainbow 2021 daily quest rainbow location hidden forest",
@@ -106,7 +106,7 @@ const QUEST_TITLE_ALIASES = new Map([
     ],
     [
         "social quest guide hold a friend s hand",
-        "hold the hand of a friend",
+        "hold a friend s hand",
     ],
     [
         "visiting the social light area golden wasteland graveyard bonfire spitroast",
@@ -131,14 +131,6 @@ const QUEST_TITLE_ALIASES = new Map([
     [
         "recharge from a light bloom",
         "recharge your light from a light bloom",
-    ],
-    [
-        "catch the wandering lights in the treehouse",
-        "catch the 3 lights in the big treehouse",
-    ],
-    [
-        "catch the wandering lights under the sea in treasure reef",
-        "catch the 3 lights under the sea in treasure reef",
     ],
     [
         "daily quest guide face the dark dragon",
@@ -166,7 +158,7 @@ const QUEST_TITLE_ALIASES = new Map([
     ],
     [
         "meditation quest guide daylight prairie koi pond",
-        "meditate by prairie s koi pond",
+        "meditate by the koi pond outside the temple of the prairie",
     ],
     [
         "catch the light quest vault of knowledge",
@@ -178,19 +170,19 @@ const QUEST_TITLE_ALIASES = new Map([
     ],
     [
         "meditation quest guide vault of knowledge vault second floor",
-        "meditate at vault s second floor",
+        "meditate on the second floor of the vault",
     ],
     [
         "meditation quest hidden forest boneyard",
-        "meditate in forest s boneyard",
+        "meditate by the forest s boneyard",
     ],
     [
         "meditation quest hidden forest forest s brook",
-        "meditate above the forest s brook",
+        "meditate above the forest brook",
     ],
     [
         "meditation quest guide hidden forest forest clearing",
-        "meditate at forest s clearing",
+        "meditate outside the forest courtyard",
     ],
     [
         "meditation quest guide golden wasteland the boat a k a the crab fields",
@@ -198,7 +190,7 @@ const QUEST_TITLE_ALIASES = new Map([
     ],
     [
         "meditation quest golden wasteland forgotten ark",
-        "meditate in the forgotten ark",
+        "meditate by the forgotten ark",
     ],
     [
         "coloured light quest purple light in vault of knowledge",
@@ -226,7 +218,7 @@ const QUEST_TITLE_ALIASES = new Map([
     ],
     [
         "tidy up the ancestor s table of belonging in hidden forest s elevated clearing",
-        "visit the ancestor s table of belonging in forest s elevated clearing",
+        "visit the ancestor s table in the elevated clearing",
     ],
     [
         "relive spirit quest season of belonging hairtousle teen",
@@ -266,7 +258,7 @@ const QUEST_TITLE_ALIASES = new Map([
     ],
     [
         "meet up with anxious angler in golden wasteland catch a fish",
-        "meet up with anxious angler in treasure reef catch a fish",
+        "catch a fish",
     ],
     [
         "catch the light quest daylight prairie",
@@ -274,15 +266,11 @@ const QUEST_TITLE_ALIASES = new Map([
     ],
     [
         "meditation quest guide daylight prairie faerie ring a k a prairie village",
-        "meditate at prairie s faerie ring",
+        "meditate in prairie village",
     ],
     [
         "fly with many butterflies in the butterfly fields",
         "fly with many butterflies in butterfly fields",
-    ],
-    [
-        "catch the wandering lights along the lower valley track",
-        "catch the 3 lights during the valley s sliding race",
     ],
     [
         "days of rainbow 2021 daily quest rainbow location valley of triumph",
@@ -303,18 +291,6 @@ const QUEST_TITLE_ALIASES = new Map([
     [
         "meditation quest guide valley of triumph ice rink meditate overlooking the frozen lake",
         "meditate overlooking the frozen lake",
-    ],
-    [
-        "catch the wandering lights in the citadel",
-        "catch the 3 lights in valley s citadel",
-    ],
-    [
-        "catch the wandering lights in the wind paths",
-        "catch the 3 lights in the wind paths",
-    ],
-    [
-        "catch the wandering lights in prairie village",
-        "catch the 3 lights in prairie village",
     ],
     [
         "ride a manta quest in daylight prairie",
@@ -430,35 +406,275 @@ const QUEST_TITLE_ALIASES = new Map([
     ],
     [
         "meet up with cackling cannoneer in graveyard get launched",
-        "meet up with cackling cannoneer in graveyard launch cackling cannoneer",
+        "launch cackling cannoneer",
     ],
     [
         "map of the treasure reef surface",
-        "meet up with anxious angler in treasure reef catch a fish",
+        "catch a fish",
     ],
     [
         "meditation quest daylight prairie bird nest shrine",
-        "meditate at prairie s bird nest shrine",
+        "meditate by the bird nest",
     ],
     [
         "meditation quest guide daylight prairie butterfly fields",
-        "meditate in prairie s butterfly field",
+        "meditate in butterfly fields",
     ],
     [
         "meditation quest guide vault of knowledge vault summit a k a vault temple",
-        "meditate at vault s summit",
+        "meditate at the temple of the vault",
     ],
     [
         "meditation quest guide golden wasteland broken temple",
         "meditate in the broken temple",
     ],
     [
-        "catch the wandering lights in the vault s repository",
-        "catch the wandering lights in the vault s repository",
+        "meditate in prairie s butterfly field",
+        "meditate in butterfly fields",
     ],
     [
-        "catch the wandering lights in the forest brook",
+        "meditate at prairie s cave shrine",
+        "meditate in prairie cave",
+    ],
+    [
+        "meditate at prairie s bird nest shrine",
+        "meditate by the bird nest",
+    ],
+    [
+        "meditate at the sanctuary islands",
+        "meditate in sanctuary islands",
+    ],
+    [
+        "meditate at prairie s faerie ring",
+        "meditate in prairie village",
+    ],
+    [
+        "meditate by prairie s koi pond",
+        "meditate by the koi pond outside the temple of the prairie",
+    ],
+    [
+        "find the candles at the end of the rainbow in the daylight prairie",
+        "find the candles at the end of the rainbow in daylight prairie",
+    ],
+    [
+        "meditate at forest s clearing",
+        "meditate outside the forest courtyard",
+    ],
+    [
+        "meditate above the forest s brook",
+        "meditate above the forest brook",
+    ],
+    [
+        "meditate in forest s boneyard",
+        "meditate by the forest s boneyard",
+    ],
+    [
+        "meditate at forest s end",
+        "meditate at the sacred pond",
+    ],
+    [
+        "meditate at forest s elevated clearing",
+        "meditate in the elevated clearing",
+    ],
+    [
+        "admire the sapling in hidden forest for a short while",
+        "admire the sapling in the hidden forest for a short while",
+    ],
+    [
+        "visit the ancestor s table of belonging in forest s elevated clearing",
+        "visit the ancestor s table in the elevated clearing",
+    ],
+    [
+        "meditate by valley s ice rink",
+        "meditate overlooking the frozen lake",
+    ],
+    [
+        "meditate high above the valley s citadel",
+        "meditate high above the citadel",
+    ],
+    [
+        "meditate above valley s citadel arch",
+        "meditate atop the entrance to the citadel",
+    ],
+    [
+        "meditate at the end of the race",
+        "meditate at the temple of the valley",
+    ],
+    [
+        "rehearse for a performance with the skater in the coliseum",
+        "rehearse for a performance with the skater in the temple of the valley",
+    ],
+    [
+        "meditate in the graveyard",
+        "meditate at the edge of the graveyard",
+    ],
+    [
+        "meditate on the boat shipwreck",
+        "meditate in the crab fields",
+    ],
+    [
+        "meditate in the forgotten ark",
+        "meditate by the forgotten ark",
+    ],
+    [
+        "find the candles at the end of the rainbow in the golden wasteland forgotten ark",
+        "find the candles at the end of the rainbow in the golden wasteland",
+    ],
+    [
+        "meditate at vault s summit",
+        "meditate at the temple of the vault",
+    ],
+    [
+        "meditate at vault s second floor",
+        "meditate on the second floor of the vault",
+    ],
+    [
+        "admire the sapling in vault of knowledge for a short while",
+        "admire the sapling in the vault of knowledge for a short while",
+    ],
+    [
+        "hold the hand of a friend",
+        "hold a friend s hand",
+    ],
+    [
+        "sit at a bench with a stranger",
+        "sit on a bench with a stranger",
+    ],
+    [
+        "collect cyan light in isle of dawn",
+        "collect cyan light",
+    ],
+    [
+        "collect green light in daylight prairie",
+        "collect green light",
+    ],
+    [
+        "collect orange light in hidden forest",
+        "collect orange light",
+    ],
+    [
+        "collect blue light in valley of triumph",
+        "collect blue light",
+    ],
+    [
+        "collect red light in golden wasteland",
+        "collect red light",
+    ],
+    [
+        "collect purple light in vault of knowledge",
+        "collect purple light",
+    ],
+    [
         "catch the 3 lights in the forest brook",
+        "catch the wandering lights in the forest brook",
+    ],
+    [
+        "catch the 3 lights during the valley s sliding race",
+        "catch the wandering lights along the lower valley track",
+    ],
+    [
+        "catch the 3 lights in prairie village",
+        "catch the wandering lights in prairie village",
+    ],
+    [
+        "catch the 3 lights in the big treehouse",
+        "catch the wandering lights in the treehouse",
+    ],
+    [
+        "catch the 3 lights in the wind paths",
+        "catch the wandering lights in the wind paths",
+    ],
+    [
+        "catch the 3 lights in valley s citadel",
+        "catch the wandering lights in the citadel",
+    ],
+    [
+        "catch the 3 lights under the sea in treasure reef",
+        "catch the wandering lights under the sea in treasure reef",
+    ],
+    [
+        "meet up with flight guide in prairie read a book together with flight guide",
+        "read a book together with flight guide",
+    ],
+    [
+        "meet up with flight guide in prairie village help bring flight guide up to the temple entrance",
+        "help bring flight guide up to the temple entrance",
+    ],
+    [
+        "meet up with flight guide in temple of the prairie join flight guide and meditate to reminisce the prairie",
+        "join flight guide and meditate to reminisce the prairie elder",
+    ],
+    [
+        "meet up with cackling cannoneer in graveyard launch cackling cannoneer",
+        "launch cackling cannoneer",
+    ],
+    [
+        "meet up with cackling cannoneer in graveyard play a prank on ceasing commodore",
+        "play a prank on ceasing commodore",
+    ],
+    [
+        "meet up with bearhug hermit in hermit valley admire shared spaces with bearhug hermit",
+        "admire shared spaces with bearhug hermit",
+    ],
+    [
+        "meet up with pleading child in repository of refuge help pleading child retrieve their lost memory lanterns",
+        "help pleading child retrieve their lost memory lanterns",
+    ],
+    [
+        "meet up with pleading child in repository of refuge help pleading child find their lost toy",
+        "help pleading child find their lost toy",
+    ],
+    [
+        "meet up with thoughtful director in vault rest meditate with thoughtful director",
+        "meditate with thoughtful director",
+    ],
+    [
+        "meet up with thoughtful director in vault rest sneak with thoughtful director and surprise their friends",
+        "sneak with thoughtful director and surprise their friends",
+    ],
+    [
+        "meditation quest guide valley of triumph coliseum",
+        "meditate at the temple of the valley",
+    ],
+    [
+        "meet up with admiring actor in bird nest learn how to play the instrument with admiring actor",
+        "learn how to play the instrument with admiring actor",
+    ],
+    [
+        "meet up with thoughtful director in repository of refuge join the session and play a song for bereft veteran",
+        "join the session and play a song for bereft veteran",
+    ],
+    [
+        "meet up with oddball outcast in boneyard introduce oddball outcast to a big surprise by activating the temple bridge",
+        "introduce oddball outcast to a big surprise by activating the temple bridge",
+    ],
+    [
+        "meet up with anxious angler in treasure reef catch a fish",
+        "catch a fish",
+    ],
+    [
+        "meet up with forgetful storyteller in village of dreams bring the gift to modest dancer",
+        "bring the gift to modest dancer",
+    ],
+    [
+        "meet up with nightbird whisperer in prairie village deep call the butterflies with nightbird whisperer",
+        "deep call the butterflies with nightbird whisperer",
+    ],
+    [
+        "meet up with nightbird whisperer in prairie village deep call the butterflies in the cave with jolly geologist",
+        "deep call the butterflies in the cave with jolly geologist",
+    ],
+    [
+        "meet up with nightbird whisperer in prairie village bring nightbird whisperer to the manta",
+        "bring nightbird whisperer to the manta",
+    ],
+    [
+        "meet up with crab whisperer in crab fields help saluting captain to keep crabs away from crab whisperer",
+        "help saluting captain to keep crabs away from crab whisperer",
+    ],
+    [
+        "meet up with crab whisperer in crab fields crabwalk with the spirits",
+        "crabwalk with the spirits",
     ],
 ]);
 

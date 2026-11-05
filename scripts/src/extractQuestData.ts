@@ -22,6 +22,7 @@ type QuestItem = {
     type: QuestType;
     realm: string;
     questName: string;
+    gameQuestId?: string;
     iconUrl: string | null;
     visualGuideUrl: string | null;
     videoGuideUrl: string | null;
@@ -393,7 +394,7 @@ function withoutIds(quests: AppQuestItem[]): QuestItem[] {
 }
 
 function toAppQuestDataSource(quests: AppQuestItem[]): string {
-    return `import {Quest} from "@/components/QuestTracker";\n\nexport const questsData = ${JSON.stringify(quests, null, 4)} satisfies Quest[]\n`;
+    return `import type {Quest} from "@/lib/quest-types";\n\nexport const questsData = ${JSON.stringify(quests, null, 4)} satisfies Quest[]\n`;
 }
 
 async function writeJson(filePath: string, data: unknown): Promise<void> {
@@ -411,7 +412,9 @@ async function main(): Promise<void> {
     const wikiQuests = parseWikiQuests(wikiHtml);
     const existingKeys = new Set(existingAppQuests.map(getQuestKey));
     const rawScriptKeys = new Set(rawScriptQuests.map(getQuestKey));
-    const newRawQuests = wikiQuests.filter((quest) => !existingKeys.has(getQuestKey(quest)));
+    const newRawQuests = wikiQuests.filter((quest) => (
+        !rawScriptKeys.has(getQuestKey(quest)) && !existingKeys.has(getQuestKey(quest))
+    ));
     const rawScriptQuestsToAdd = wikiQuests.filter((quest) => !rawScriptKeys.has(getQuestKey(quest)));
     const remoteAssetMap = buildRemoteAssetMap(rawScriptQuests, [
         ...localScriptQuests,
@@ -436,11 +439,12 @@ async function main(): Promise<void> {
     const localizedNewQuests = await Promise.all(
         newRawQuests.map((quest) => localizeNewQuestAssets(quest, remoteAssetMap)),
     );
+    const nextQuestId = Math.max(...existingAppQuests.map((quest) => quest.id)) + 1;
     const nextAppQuests = [
         ...existingAppQuests,
         ...localizedNewQuests.map((quest, index) => ({
             ...quest,
-            id: existingAppQuests.length + index,
+            id: nextQuestId + index,
         })),
     ];
     const nextRawScriptQuests = [
