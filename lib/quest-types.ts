@@ -3,6 +3,7 @@ export type Quest = {
     type: string
     realm: string
     questName: string
+    gameQuestId?: string
     iconUrl: string
     visualGuideUrl: string | null
     videoGuideUrl: string | null
