@@ -1,14 +1,17 @@
 import {describe, expect, it} from "vitest";
 import {
+    addMissingQuestMatches,
     classifyAttachmentUrl,
     createSkyHelperQuestMatchResponse,
     createThatSkyDailyGuidesQuestMatchResponse,
+    isMissingDailyQuests,
     isSkyHelperQuestMatchResponseCurrent,
     normalizeQuestTitle,
     parseThatSkyDailyGuidesHtml,
     resolveDailyQuestDisplayData,
     resolveDailyQuests,
     validateSkyHelperQuestResponse,
+    type SkyHelperQuestMatchResponse,
     type ThatSkyDailyGuidesResponse,
     type SkyHelperQuestResponse,
 } from "./daily-quest-source";
@@ -451,6 +454,53 @@ describe("daily quest source", () => {
         ]);
     });
 
+    it("fills quests SkyHelper could not title from thatskyapplication, keeping SkyHelper first", () => {
+        const skyHelperResponse = validateSkyHelperQuestResponse({
+            quests: [
+                {title: "Forge a Candle", date: "2026-07-08T00:00:00.000-07:00", images: [{url: imageUrl}]},
+                {title: "Recharge from a light bloom", date: "2026-07-08T00:00:00.000-07:00", images: []},
+                {title: "[Quest Title Error]: Unknown", date: "2026-07-08T00:00:00.000-07:00", images: [{url: imageUrl}]},
+            ],
+        });
+        const skyHelperMatches = requireQuestMatches(createQuestMatchResponse(skyHelperResponse));
+        const thatSkyMatches = requireQuestMatches(createThatSkyQuestMatchResponse({
+            sourceDate: "2026-07-08T12:00:00.000-07:00",
+            quests: [
+                "Forge a candle",
+                "Recharge from a light bloom",
+                "Catch the wandering lights in the Treehouse",
+            ],
+        }));
+
+        expect(isMissingDailyQuests(skyHelperMatches)).toBe(true);
+
+        const quests = resolveDailyQuests(addMissingQuestMatches(skyHelperMatches, thatSkyMatches), {}, localQuests);
+
+        expect(quests.map((quest) => quest.id)).toEqual([159, 39, 222]);
+    });
+
+    it("never adds more than four quests from thatskyapplication", () => {
+        const skyHelperResponse = validateSkyHelperQuestResponse({
+            quests: [
+                {title: "Light 20 candles", date: "2026-07-08T00:00:00.000-07:00", images: []},
+                {title: "Use expressions with players", date: "2026-07-08T00:00:00.000-07:00", images: []},
+                {title: "Call to 5 different players", date: "2026-07-08T00:00:00.000-07:00", images: []},
+            ],
+        });
+        const thatSkyMatches = requireQuestMatches(createThatSkyQuestMatchResponse({
+            sourceDate: "2026-07-08T12:00:00.000-07:00",
+            quests: ["Forge a candle", "Recharge from a light bloom"],
+        }));
+
+        const questMatches = addMissingQuestMatches(
+            requireQuestMatches(createQuestMatchResponse(skyHelperResponse)),
+            thatSkyMatches,
+        );
+
+        expect(questMatches.quests.map((quest) => quest.localQuestId)).toEqual([160, 230, 231, 159]);
+        expect(isMissingDailyQuests(questMatches)).toBe(false);
+    });
+
     it("does not create external quests from unmatched thatskyapplication titles", () => {
         const questMatches = createThatSkyQuestMatchResponse({
             sourceDate: "2026-07-08T12:00:00.000-07:00",
@@ -514,6 +564,14 @@ function createQuestMatchResponse(response: SkyHelperQuestResponse | null) {
 
         return localQuestsByTitle.get(aliasTitle ?? normalizedTitle) ?? null;
     });
+}
+
+function requireQuestMatches(response: SkyHelperQuestMatchResponse | null) {
+    if (!response) {
+        throw new Error("Expected a quest match response");
+    }
+
+    return response;
 }
 
 function createThatSkyQuestMatchResponse(response: ThatSkyDailyGuidesResponse | null) {

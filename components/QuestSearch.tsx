@@ -10,6 +10,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import {getImageUrl} from "@/util/helper";
 import type {Quest} from "@/lib/quest-types";
 import {isQuestSelected} from "@/lib/quest-selection";
+import {getHighlightParts} from "@/lib/quest-search";
 import {cn} from "@/lib/utils";
 
 interface QuestSearchProps {
@@ -59,27 +60,19 @@ export default function QuestSearch({
         },
     }
 
-    const highlightMatch = (text: string, query: string) => {
-        const trimmedQuery = query.trim()
-        if (!trimmedQuery) return <span>{text}</span>
-
-        const escapedQuery = trimmedQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
-        const parts = text.split(new RegExp(`(${escapedQuery})`, "gi"))
-
-        return (
-            <>
-                {parts.map((part, i) =>
-                    i % 2 === 1 ? (
-                            <span key={i} className="font-bold bg-blue-200 text-blue-700">
-                              {part}
-                            </span>
-                        ) : (
-                            <span key={i}>{part}</span>
-                        ),
-                )}
-            </>
-        )
-    }
+    const highlightMatch = (text: string, query: string) => (
+        <>
+            {getHighlightParts(text, query).map((part, i) =>
+                part.isMatch ? (
+                    <span key={i} className="font-bold bg-blue-200 text-blue-700">
+                        {part.text}
+                    </span>
+                ) : (
+                    <span key={i}>{part.text}</span>
+                ),
+            )}
+        </>
+    )
 
     // Handle click outside to close dropdown
     useEffect(() => {

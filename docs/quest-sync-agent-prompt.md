@@ -79,6 +79,9 @@ SkyHelper sync:
     credential, upload error, or ffmpeg error.
 11. Never add or restore a popularity/user-count fallback for missing daily quests. If SkyHelper returns fewer than four
     real daily quests, show fewer than four rather than guessing from historical user selections.
+12. When SkyHelper returns fewer than four real quests (for example a `[Quest Title Error]` row), the site fills the
+    gap from https://thatskyapplication.com/daily-guides. Check that day's thatskyapplication titles resolve to local
+    quests, and add a QUEST_TITLE_ALIASES entry for any that do not.
 
 Duplicate handling:
 

@@ -49,6 +49,7 @@ const localQuests: Quest[] = [
     createQuest(38, "Rescue a Manta from Darkness"),
     createQuest(4, "Meditate at Prairie's faerie ring"),
     createQuest(258, "Catch the wandering lights in the Vault's Repository"),
+    createQuest(214, "Catch the 3 lights in the Forest Brook"),
 ];
 
 describe("quest title matching", () => {
@@ -95,6 +96,7 @@ describe("quest title matching", () => {
         ["Rescue Manta Quest", 38],
         ["Meditation Quest Guide Daylight Prairie - Faerie Ring a.k.a Prairie Village", 4],
         ["Catch the wandering lights in the Vault's Repository", 258],
+        ["Catch the wandering lights in the Forest Brook", 214],
     ])("matches SkyHelper alias %s", (title, expectedId) => {
         expect(getMatchingLocalQuestId(title, createLocalQuestTitleIndex(localQuests))).toBe(expectedId);
     });
