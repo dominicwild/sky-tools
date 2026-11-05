@@ -456,6 +456,10 @@ const QUEST_TITLE_ALIASES = new Map([
         "catch the wandering lights in the vault s repository",
         "catch the wandering lights in the vault s repository",
     ],
+    [
+        "catch the wandering lights in the forest brook",
+        "catch the 3 lights in the forest brook",
+    ],
 ]);
 
 export function createLocalQuestTitleIndex(localQuests: Quest[]) {

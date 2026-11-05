@@ -274,6 +274,25 @@ export function createThatSkyDailyGuidesQuestMatchResponse(
     };
 }
 
+export function isMissingDailyQuests(response: SkyHelperQuestMatchResponse) {
+    return response.quests.length < QUEST_LIMIT;
+}
+
+export function addMissingQuestMatches(
+    response: SkyHelperQuestMatchResponse,
+    backupResponse: SkyHelperQuestMatchResponse,
+): SkyHelperQuestMatchResponse {
+    const knownQuestIds = new Set(response.quests.map((quest) => quest.localQuestId));
+    const missingQuests = backupResponse.quests.filter((quest) => (
+        quest.localQuestId !== null && !knownQuestIds.has(quest.localQuestId)
+    ));
+
+    return {
+        ...response,
+        quests: [...response.quests, ...missingQuests].slice(0, QUEST_LIMIT),
+    };
+}
+
 function getTopUserSelectedQuests(
     questCounts: QuestValue,
     localQuests: Quest[],

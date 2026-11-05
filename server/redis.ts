@@ -5,8 +5,10 @@ import {getSkyDate, getSkyDateKeyFromIsoDate} from "@/lib/utils";
 import {unstable_noStore as noStore} from 'next/cache';
 import {questsData} from "@/data/questData";
 import {
+    addMissingQuestMatches,
     createSkyHelperQuestMatchResponse,
     createThatSkyDailyGuidesQuestMatchResponse,
+    isMissingDailyQuests,
     isSkyHelperQuestMatchResponseCurrent,
     parseThatSkyDailyGuidesHtml,
     resolveDailyQuestDisplayData,
@@ -23,7 +25,7 @@ const client = new Redis(`rediss://default:${process.env.REDIS_TOKEN}@${process.
 const SKY_HELPER_QUESTS_URL = "https://api.skyhelper.xyz/update/quests";
 const THAT_SKY_DAILY_GUIDES_URL = "https://r.jina.ai/http://https://thatskyapplication.com/daily-guides";
 const SKY_HELPER_CACHE_TTL_SECONDS = 60 * 5;
-const SKY_HELPER_MATCH_CACHE_VERSION = "v66";
+const SKY_HELPER_MATCH_CACHE_VERSION = "v67";
 const MAX_QUEST_FIELDS_PER_DAY = 50;
 const MAX_QUEST_COUNT = 500;
 const QUEST_COUNT_TTL_SECONDS = 60 * 60 * 24 * 2;
@@ -93,14 +95,29 @@ async function getSkyHelperQuestMatchResponse() {
                 (title) => getMatchingLocalQuestId(title, localQuestsByTitle),
             );
 
-            await client.set(key, JSON.stringify(questMatchResponse), "EX", SKY_HELPER_CACHE_TTL_SECONDS);
-            return questMatchResponse;
+            const completeQuestMatchResponse = await addMissingQuestsFromThatSky(questMatchResponse, currentSkyDate);
+
+            await client.set(key, JSON.stringify(completeQuestMatchResponse), "EX", SKY_HELPER_CACHE_TTL_SECONDS);
+            return completeQuestMatchResponse;
         }
     } catch {
         return getThatSkyDailyGuidesQuestMatchResponse(currentSkyDate);
     }
 
     return getThatSkyDailyGuidesQuestMatchResponse(currentSkyDate);
+}
+
+async function addMissingQuestsFromThatSky(response: SkyHelperQuestMatchResponse, currentSkyDate: string) {
+    if (!isMissingDailyQuests(response)) {
+        return response;
+    }
+
+    const thatSkyResponse = await getThatSkyDailyGuidesQuestMatchResponse(currentSkyDate);
+    if (!thatSkyResponse) {
+        return response;
+    }
+
+    return addMissingQuestMatches(response, thatSkyResponse);
 }
 
 function parseSkyHelperQuestApiResponse(responseText: string) {

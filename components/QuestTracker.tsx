@@ -18,6 +18,7 @@ import {getSkyDate} from "@/lib/utils";
 import type {DailyQuestDisplayData} from "@/lib/daily-quest-source";
 import type {GuideMedia, Quest} from "@/lib/quest-types";
 import {isQuestSelected} from "@/lib/quest-selection";
+import {searchQuests} from "@/lib/quest-search";
 
 interface QuestTrackerProps {
     initialQuestData: DailyQuestDisplayData
@@ -38,19 +39,7 @@ export default function QuestTracker({initialQuestData, skyHelperQuestData}: Rea
         quest: GuideMedia | null
     }>({isOpen: false, quest: null})
 
-    const filteredQuests = useMemo(() => {
-        if (!searchQuery.trim()) return []
-
-        return questsData
-            .filter((quest) => {
-                const matchesSearch =
-                    quest.questName.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                    quest.realm.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                    quest.type.toLowerCase().includes(searchQuery.toLowerCase())
-                return matchesSearch
-            })
-            .slice(0, 8) // Limit results to 8 for better UX
-    }, [searchQuery])
+    const filteredQuests = useMemo(() => searchQuests(questsData, searchQuery), [searchQuery])
 
     const applySkyHelperQuestData = useCallback((nextQuestData: DailyQuestDisplayData) => {
         setQuestData(nextQuestData)
