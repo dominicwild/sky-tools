@@ -5,6 +5,10 @@ import type {Quest} from "@/lib/quest-types";
 
 const QUEST_TITLE_ALIASES = new Map([
     [
+        "relive spirit quest season of gratitude provoking performer",
+        "relive provoking performer s memory from hidden forest",
+    ],
+    [
         "meditation quest guide golden wasteland battlefield",
         "meditate on the battlefield",
     ],

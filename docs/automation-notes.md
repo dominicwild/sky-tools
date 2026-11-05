@@ -1,5 +1,12 @@
 # Automation notes
 
+## 2026-11-05
+
+- Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 5 November and supplies three real quests plus one title-error row, which is excluded. Refreshed candle-forging, Provoking Performer and Light Bloom image guides. Compared the Performer images and confirmed the same spirit, realm and route; added its title alias while retaining wiki wording, 263 unique IDs and existing videos. Updated both JSON mirrors and advanced the daily match cache version. No video attachments or UploadThing issues.
+- calendar verified current. Read 223 freshly fetched event, season, spirit, model and schedule sources, every referenced 2026 event file, the absent 2027 index and official June–October monthly posts. Pearl remains through 31 December (exclusive 1 January upstream, confirmed by the season model), and Mischief through 12 November. November's monthly post returns 404. No upcoming returning group is listed; Cinnamoroll's end is still explicitly unrevealed, so its provisional range remains unpublished.
+- Calendar source discrepancy remains: the upstream Hairtousle Teen file lists 5–9 November exclusive, or 5–8 November inclusive, but official news has no corroborating announcement. Kept the expected visit unchanged pending official confirmation.
+- Typecheck, lint, duplication and dead-code checks passed; all 101 tests passed. Lint retains the existing navigation warning in app/not-found.tsx. Verified three real JPEGs, local image references, unique IDs, mirror changes and unchanged unrelated fields. Local agent-browser checks passed for three current quests, Provoking Performer search/video dialog, the loaded Hidden Forest seasonal candle guide and November calendar. Pearl's emblem/countdown shows 56 days left. No browser runtime errors. New quest image URLs require the push before jsDelivr serves them.
+
 ## 2026-11-04
 
 - Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 4 November and supplies three real quests. Refreshed Prairie light, green light and manta-riding image guides; existing aliases resolve all titles. Retained wiki wording, 263 unique IDs and existing videos; updated both JSON mirrors. No video attachments or UploadThing issues.

@@ -357,7 +357,7 @@ export const questsData = [
         "realm": "Hidden Forest",
         "questName": "Recharge your light from a light bloom",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1564176129986928732.jpeg",
+        "visualGuideUrl": "skyhelper-1567819662518124695.jpeg",
         "videoGuideUrl": "https://youtu.be/yc6vJuqHko0",
         "id": 39
     },
@@ -474,7 +474,7 @@ export const questsData = [
         "realm": "Hidden Forest",
         "questName": "Relive Provoking Performer's memory from Hidden Forest",
         "iconUrl": "355c5a19-fda3-46d4-9022-0903dac10bff.png",
-        "visualGuideUrl": "aade6e10-222a-435e-aa89-6c550598e203.png",
+        "visualGuideUrl": "skyhelper-1567819436872826940.jpeg",
         "videoGuideUrl": "https://youtu.be/Plpl2MGoZYo",
         "id": 52
     },
@@ -1437,7 +1437,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Forge a candle",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1565629571997507624.jpeg",
+        "visualGuideUrl": "skyhelper-1567819027055644742.jpeg",
         "videoGuideUrl": "https://youtu.be/mLhjvx19zzA",
         "id": 159
     },
