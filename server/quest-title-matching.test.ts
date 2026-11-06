@@ -11,6 +11,7 @@ const localQuestsByTitle = createLocalQuestTitleIndex(questsData);
 
 describe("quest title matching", () => {
     it.each([
+        ["Relive Spirit Quest Season of Dreams  - Dancing Performer", 100],
         ["Relive Spirit Quest Season of Gratitude  - Provoking Performer", 52],
         ["Meditation Quest Guide Golden Wasteland - Battlefield", 103],
         ["Relive Spirit Quest Valley of Triumph - Cheerful Spectator", 90],

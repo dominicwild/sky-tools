@@ -1,5 +1,14 @@
 # Automation notes
 
+## 2026-11-06
+
+- Game data refreshed and Steam build 26314370 matches the local extraction. All 223 linked quests use the game's wording; 244 quest IDs and all game quest IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper is current for 6 November with four real quests. Refreshed Blue Light, calling to five players, Dancing Performer and Hotspring image guides. Compared both Dancing Performer guides and confirmed the same spirit and Village of Dreams route; added its title alias and advanced the daily match cache version. Updated both JSON mirrors, preserving quest wording, IDs, videos and unrelated fields. No video attachments or UploadThing issues.
+- calendar verified current. Read every referenced 2026 event file, checked the absent 2027 index, scanned 205 season/spirit files and checked the travelling/returning schedules and official June–October posts. Pearl remains through 31 December (exclusive 1 January upstream, confirmed by the season model), and Mischief through 12 November. No upcoming returning group is listed. Cinnamoroll's end remains explicitly unrevealed, so its provisional range remains unpublished.
+- Calendar source discrepancy remains: Hairtousle Teen is listed upstream for 5–9 November exclusive, or 5–8 November inclusive, but the official news index has no corroborating announcement and November's monthly post returns 404. Kept the expected visit unchanged.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing navigation warning in app/not-found.tsx. Verified four real JPEG images, exact JSON mirrors, local image references and that only the four intended image fields changed.
+- Local agent-browser checks passed for all four current quests, Dancing Performer search and video dialog, a loaded Valley seasonal candle image dialog and November calendar. Pearl shows its emblem and 55 days left. No uncaught browser errors; the development log reports an attribute hydration warning involving agent-browser instrumentation. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-05
 
 - Wiki dry run parsed 222 quests and found no additions. SkyHelper is current for 5 November and supplies three real quests plus one title-error row, which is excluded. Refreshed candle-forging, Provoking Performer and Light Bloom image guides. Compared the Performer images and confirmed the same spirit, realm and route; added its title alias while retaining wiki wording, 263 unique IDs and existing videos. Updated both JSON mirrors and advanced the daily match cache version. No video attachments or UploadThing issues.
