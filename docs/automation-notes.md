@@ -1,5 +1,15 @@
 # Automation notes
 
+## 2026-11-07
+
+- Game data refreshed; Steam build 26314370 matches the local extraction. All 224 linked quests use game wording; 245 local IDs and all game quest IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper is current for 7 November with four real quests. Added Reach above the pipes together with the crab (ID 265, gameQuestId spirit_crabvoice3, Golden Wasteland); its task and landmark clearly match the game data. Added the full SkyHelper title alias and advanced the daily match cache version. Refreshed the general spirit-memory and crab-pickup images and the Dark Dragon video; both JSON mirrors match, preserving unrelated fields.
+- Compressed and uploaded two videos using the worktree .env: Dark Dragon (592,769 bytes), author @theprincessraoni, source https://discord.com/channels/575762611111592007/575827924343848960/1468886081490653234, original attachment 1568552801565675600; crab/pipes (2,940,033 bytes), author @sky, source https://discord.com/channels/575762611111592007/575827924343848960/1454392719068758016, original attachment 1568553217296433152. No UploadThing credential or upload issue.
+- calendar verified current. Fetched 315 upstream event, season, spirit, model and schedule sources; read every referenced 2026 event file and checked the absent 2027 index. Pearl remains through 31 December (exclusive 1 January upstream, confirmed by the season model), Mischief through 12 November, both confirmed by official October news. No upcoming returning group is listed. Cinnamoroll's end remains explicitly unrevealed, so its provisional range remains unpublished.
+- Calendar source discrepancy remains: Hairtousle Teen is listed upstream for 5–9 November exclusive, or 5–8 November inclusive, but the official news index has no corroborating announcement and November's monthly post returns 404. Kept the expected visit unchanged.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing navigation warning in app/not-found.tsx. Verified two real JPEG images, exact JSON mirrors, unique IDs and the intended field changes.
+- Local agent-browser checks passed for all four current quests, crab/pipes search, its loaded 33.23-second hosted video, the loaded seasonal candle image dialog and November calendar. Pearl shows its emblem/countdown with 54 days left. No uncaught browser errors. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-06
 
 - Game data refreshed and Steam build 26314370 matches the local extraction. All 223 linked quests use the game's wording; 244 quest IDs and all game quest IDs are unique. Wiki dry run parsed 222 quests and found no additions.

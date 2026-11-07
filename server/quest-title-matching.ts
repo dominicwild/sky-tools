@@ -680,6 +680,10 @@ export const QUEST_TITLE_ALIASES = new Map([
         "meet up with crab whisperer in crab fields crabwalk with the spirits",
         "crabwalk with the spirits",
     ],
+    [
+        "meet up with crab whisperer in crab fields reach above the pipes together with the crab",
+        "reach above the pipes together with the crab",
+    ],
 ]);
 
 export function createLocalQuestTitleIndex(localQuests: Quest[]) {
