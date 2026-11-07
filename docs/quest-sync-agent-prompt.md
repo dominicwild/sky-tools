@@ -107,7 +107,8 @@ SkyHelper sync:
     quests, and add a QUEST_TITLE_ALIASES entry for any that do not. The exception is a title of the form "Meet up with
     <spirit> in <area>": that is the game's own placeholder (`daily_quest_help_spirit` in Localizable.strings) for any
     quest that needs a spirit to hand it over, and it hides which of that spirit's quests it is. Never alias it and do
-    not stop for it; leave it unmatched (the site then shows fewer quests) and name it in the summary.
+    not stop for it; leave it unmatched (the site then shows fewer quests) and name it in the summary. SkyHelper
+    usually names the real task later; the re-check in SkyHelper Lag Handling picks it up.
 
 Duplicate handling:
 
@@ -253,17 +254,27 @@ Calendar rules:
 
 ## SkyHelper Lag Handling
 
-Sky resets around 9am UK time, but reset timing can drift with daylight saving time and SkyHelper can lag behind the
-game. If SkyHelper returns a payload whose `last_updated`/quest `date` is older than the app's current Sky date:
+Sky resets at midnight US Pacific time, which is 08:00 UK time for almost all of the year. After the reset, Clement's
+team posts the day's guides in the Sky:CoTL Infographics Discord and SkyHelper copies them. They are usually all in
+within an hour, occasionally up to about 100 minutes, so this job's 09:10 run can find SkyHelper stale or only partly
+filled in.
 
-1. Do not treat yesterday's SkyHelper quests as today's quests.
-2. Wait 10 minutes, then fetch https://api.skyhelper.xyz/update/quests again.
-3. If SkyHelper is still stale, repeat the 10-minute wait-and-fetch cycle two more times.
-4. If SkyHelper is still stale after those three short-delay retries, wait one hour between each of three more
-   fetches.
-5. If the payload becomes current during any retry, continue the normal sync and live-site verification process.
-6. If the payload is still stale after all six retries, stop and report that SkyHelper did not update within the
-   extended polling window. Do not invent fallback quests.
+Today's SkyHelper data is incomplete when any of these hold:
+
+- its `last_updated`/quest `date` is older than the app's current Sky date (stale);
+- it lists fewer than four real daily quests (a `[Quest Title Error]` row is not a real quest);
+- a quest title is only the "Meet up with <spirit> in <area>" placeholder, without the actual task after it.
+
+When it is incomplete:
+
+1. Never treat yesterday's SkyHelper quests as today's quests, and do not invent quests.
+2. Sync, validate, commit and push everything that is present, as normal. Do not wait or poll inside the run.
+3. If it is before 12:00 UK time, book a re-check of this job by ending the final message with one more line after
+   JOB SUMMARY: `JOB RECHECK: 30 <what is still missing>`, for example `JOB RECHECK: 30 SkyHelper listed 2 of 4 quests`.
+4. A re-check run follows all of these instructions again. It finds the earlier run's work already in git, so it adds
+   only what is new. If the data is still incomplete, it books another re-check under the same rule.
+5. From 12:00 UK time, do not book a re-check: report what is still missing. If SkyHelper still has no data for the
+   current Sky date at that point, end with FAILED.
 
 ## UploadThing Setup
 
