@@ -104,7 +104,10 @@ SkyHelper sync:
     real daily quests, show fewer than four rather than guessing from historical user selections.
 12. When SkyHelper returns fewer than four real quests (for example a `[Quest Title Error]` row), the site fills the
     gap from https://thatskyapplication.com/daily-guides. Check that day's thatskyapplication titles resolve to local
-    quests, and add a QUEST_TITLE_ALIASES entry for any that do not.
+    quests, and add a QUEST_TITLE_ALIASES entry for any that do not. The exception is a title of the form "Meet up with
+    <spirit> in <area>": that is the game's own placeholder (`daily_quest_help_spirit` in Localizable.strings) for any
+    quest that needs a spirit to hand it over, and it hides which of that spirit's quests it is. Never alias it and do
+    not stop for it; leave it unmatched (the site then shows fewer quests) and name it in the summary.
 
 Duplicate handling:
 
