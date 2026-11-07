@@ -254,10 +254,11 @@ Calendar rules:
 
 ## SkyHelper Lag Handling
 
-Sky resets at midnight US Pacific time, which is 08:00 UK time for almost all of the year. After the reset, Clement's
-team posts the day's guides in the Sky:CoTL Infographics Discord and SkyHelper copies them. They are usually all in
-within an hour, occasionally up to about 100 minutes, so this job's 09:10 run can find SkyHelper stale or only partly
-filled in.
+Sky resets at midnight in the `America/Los_Angeles` time zone, the zone the site uses for the Sky date. Work out every
+time in these instructions in that zone; its UK equivalent shifts when either country changes its clocks. After the
+reset, Clement's team posts the day's guides in the Sky:CoTL Infographics Discord and SkyHelper copies them. They are
+usually all in within an hour, occasionally up to about 100 minutes, so this job's first run of the day can find
+SkyHelper stale or only partly filled in.
 
 Today's SkyHelper data is incomplete when any of these hold:
 
@@ -269,11 +270,11 @@ When it is incomplete:
 
 1. Never treat yesterday's SkyHelper quests as today's quests, and do not invent quests.
 2. Sync, validate, commit and push everything that is present, as normal. Do not wait or poll inside the run.
-3. If it is before 12:00 UK time, book a re-check of this job by ending the final message with one more line after
+3. If it is before 04:00 `America/Los_Angeles` time, book a re-check of this job by ending the final message with one more line after
    JOB SUMMARY: `JOB RECHECK: 30 <what is still missing>`, for example `JOB RECHECK: 30 SkyHelper listed 2 of 4 quests`.
 4. A re-check run follows all of these instructions again. It finds the earlier run's work already in git, so it adds
    only what is new. If the data is still incomplete, it books another re-check under the same rule.
-5. From 12:00 UK time, do not book a re-check: report what is still missing. If SkyHelper still has no data for the
+5. From 04:00 `America/Los_Angeles` time, do not book a re-check: report what is still missing. If SkyHelper still has no data for the
    current Sky date at that point, end with FAILED.
 
 ## UploadThing Setup
