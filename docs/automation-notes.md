@@ -1,5 +1,14 @@
 # Automation notes
 
+## 2026-11-08
+
+- Game data refreshed; Steam build 26314370 matches the local extraction. All 224 linked quests use game wording; 245 local IDs and all game quest IDs remain unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper is current for 8 November with three real quests. Refreshed Purple Light, Wise Grandparent and general spirit-memory image guides. Existing aliases resolve all three titles; wording, IDs, videos and unrelated fields are preserved in both JSON mirrors. No video attachments or UploadThing issues. The other daily-guide source is current but has no quest titles yet; a 30-minute re-check is requested for the missing fourth quest.
+- calendar verified current. Fetched 224 upstream event, season, spirit, model and schedule sources, read every referenced 2026 event file and checked the absent 2027 index. Pearl remains through 31 December (exclusive 1 January upstream, confirmed by the season model), Mischief through 12 November, both confirmed by official October news. No upcoming returning group is listed. Cinnamoroll and Days of Style now both explicitly mark their end dates unconfirmed, so their provisional ranges remain unpublished.
+- Calendar source discrepancy remains: Hairtousle Teen is listed upstream for 5–9 November exclusive, or 5–8 November inclusive, but the official news index has no corroborating announcement and November's monthly post returns 404. Kept the expected visit unchanged.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing navigation warning in app/not-found.tsx. Verified three real JPEG images, unique IDs, matching mirror field changes and no unrelated data changes.
+- Local agent-browser checks passed for all three current quests, Wise Grandparent search and video dialog, a loaded Vault seasonal candle image dialog and November calendar. Pearl shows its emblem/countdown with 53 days left. No uncaught browser errors. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-07
 
 - Game data refreshed; Steam build 26314370 matches the local extraction. All 224 linked quests use game wording; 245 local IDs and all game quest IDs are unique. Wiki dry run parsed 222 quests and found no additions.
