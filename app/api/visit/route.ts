@@ -1,7 +1,8 @@
-import { createHash } from "node:crypto";
+import { createHash, randomBytes } from "node:crypto";
 
 const STREAM_KEY = "visits";
 const RETENTION_MS = 90 * 24 * 60 * 60 * 1000;
+const SALT_LIFETIME_S = 2 * 24 * 60 * 60;
 const MAX_LEAVE_MS = 7 * 24 * 60 * 60 * 1000;
 const BOT_PATTERN = /bot|crawl|spider|slurp|headless|lighthouse|facebookexternalhit|embedly|preview/i;
 
@@ -73,16 +74,36 @@ function header(request: Request, name: string): string {
   return request.headers.get(name) ?? "";
 }
 
-function visitorHash(request: Request, userAgent: string): string {
-  const ip = header(request, "x-forwarded-for").replace(/,.*$/, "").trim();
-  const day = new Date().toISOString().slice(0, 10);
-  return createHash("sha256")
-    .update(`${requireEnv("METRICS_VISITOR_SECRET")}|${day}|${ip}|${userAgent}`)
-    .digest("hex")
-    .slice(0, 16);
+async function runCommand(command: string[]): Promise<unknown> {
+  const response = await fetch(requireEnv("METRICS_REDIS_REST_URL"), {
+    method: "POST",
+    headers: { Authorization: `Bearer ${requireEnv("METRICS_REDIS_REST_TOKEN")}` },
+    body: JSON.stringify(command),
+  });
+  if (!response.ok) throw new Error(`Metrics ${command[0]} failed: ${response.status} ${await response.text()}`);
+  const body: unknown = await response.json();
+  if (typeof body !== "object" || body === null || !("result" in body)) throw new Error(`Metrics ${command[0]} returned no result`);
+  return body.result;
 }
 
-function streamFields(event: VisitEvent, request: Request, userAgent: string): string[] {
+let cachedSalt: { day: string; salt: string } | undefined;
+
+async function dailySalt(day: string): Promise<string> {
+  if (cachedSalt?.day === day) return cachedSalt.salt;
+  const candidate = randomBytes(32).toString("hex");
+  const existing = await runCommand(["SET", `visitor-salt:${day}`, candidate, "NX", "GET", "EX", String(SALT_LIFETIME_S)]);
+  if (existing !== null && typeof existing !== "string") throw new Error("Metrics salt is not a string");
+  cachedSalt = { day, salt: existing ?? candidate };
+  return cachedSalt.salt;
+}
+
+async function visitorHash(request: Request, userAgent: string): Promise<string> {
+  const ip = header(request, "x-forwarded-for").replace(/,.*$/, "").trim();
+  const salt = await dailySalt(new Date().toISOString().slice(0, 10));
+  return createHash("sha256").update(`${salt}|${ip}|${userAgent}`).digest("hex").slice(0, 16);
+}
+
+async function streamFields(event: VisitEvent, request: Request, userAgent: string): Promise<string[]> {
   const project = requireEnv("METRICS_PROJECT");
   if (event.kind === "leave") {
     return ["kind", "leave", "project", project, "view", event.view, "ms", String(event.ms)];
@@ -102,19 +123,15 @@ function streamFields(event: VisitEvent, request: Request, userAgent: string): s
     "country", header(request, "x-vercel-ip-country"),
     "region", header(request, "x-vercel-ip-country-region"),
     "city", decodeURIComponent(header(request, "x-vercel-ip-city")),
+    "asn", header(request, "x-vercel-ip-as-number"),
     "userAgent", userAgent,
-    "visitor", visitorHash(request, userAgent),
+    "visitor", await visitorHash(request, userAgent),
   ];
 }
 
 async function appendToStream(fields: string[]): Promise<void> {
   const oldestKept = String(Date.now() - RETENTION_MS);
-  const response = await fetch(requireEnv("METRICS_REDIS_REST_URL"), {
-    method: "POST",
-    headers: { Authorization: `Bearer ${requireEnv("METRICS_REDIS_REST_TOKEN")}` },
-    body: JSON.stringify(["XADD", STREAM_KEY, "MINID", "~", oldestKept, "*", ...fields]),
-  });
-  if (!response.ok) throw new Error(`Metrics write failed: ${response.status} ${await response.text()}`);
+  await runCommand(["XADD", STREAM_KEY, "MINID", "~", oldestKept, "*", ...fields]);
 }
 
 export async function POST(request: Request): Promise<Response> {
@@ -131,6 +148,6 @@ export async function POST(request: Request): Promise<Response> {
     throw error;
   }
 
-  await appendToStream(streamFields(event, request, userAgent));
+  await appendToStream(await streamFields(event, request, userAgent));
   return new Response(null, { status: 204 });
 }
