@@ -96,7 +96,7 @@ export default function RootLayout({
         {children}
 
         <Footer/>
-        <VisitTracker/>
+        <VisitTracker privatePaths={[]}/>
         </body>
         </html>
     );

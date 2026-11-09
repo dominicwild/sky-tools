@@ -37,6 +37,12 @@ function text(body: Record<string, unknown>, field: string, maxLength: number, p
   return value;
 }
 
+function clippedText(body: Record<string, unknown>, field: string, maxLength: number): string {
+  const value = body[field];
+  if (typeof value !== "string") throw new InvalidEvent(field);
+  return value.slice(0, maxLength);
+}
+
 function parseEvent(raw: unknown): VisitEvent {
   if (typeof raw !== "object" || raw === null) throw new InvalidEvent("body");
   const body = raw as Record<string, unknown>;
@@ -53,13 +59,13 @@ function parseEvent(raw: unknown): VisitEvent {
     kind: "view",
     view,
     path: text(body, "path", 500, /^\//),
-    title: text(body, "title", 300),
-    referrer: text(body, "referrer", 500),
+    title: clippedText(body, "title", 300),
+    referrer: clippedText(body, "referrer", 500),
     screen: text(body, "screen", 11, /^\d{1,5}x\d{1,5}$/),
-    language: text(body, "language", 35),
-    utmSource: text(body, "utmSource", 100),
-    utmMedium: text(body, "utmMedium", 100),
-    utmCampaign: text(body, "utmCampaign", 100),
+    language: clippedText(body, "language", 35),
+    utmSource: clippedText(body, "utmSource", 100),
+    utmMedium: clippedText(body, "utmMedium", 100),
+    utmCampaign: clippedText(body, "utmCampaign", 100),
   };
 }
 
@@ -68,7 +74,7 @@ function header(request: Request, name: string): string {
 }
 
 function visitorHash(request: Request, userAgent: string): string {
-  const ip = header(request, "x-forwarded-for").split(",")[0].trim();
+  const ip = header(request, "x-forwarded-for").replace(/,.*$/, "").trim();
   const day = new Date().toISOString().slice(0, 10);
   return createHash("sha256")
     .update(`${requireEnv("METRICS_VISITOR_SECRET")}|${day}|${ip}|${userAgent}`)
