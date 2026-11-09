@@ -10,6 +10,7 @@ type TrackerProps = {
 type ActiveView = { id: string; startedAt: number; left: boolean };
 
 function send(event: Record<string, string | number>): void {
+  if (navigator.webdriver) return;
   navigator.sendBeacon("/api/visit", new Blob([JSON.stringify(event)], { type: "application/json" }));
 }
 
