@@ -29,7 +29,7 @@ export type SkyCalendarEntry =
     | (SkyCalendarEntryCommon & {kind: "travelling-spirit" | "returning-spirits"});
 
 export const calendarCoverage = {
-    checkedOn: "2026-10-21",
+    checkedOn: "2026-11-09",
     coverageThrough: "2026-12-31",
 } as const;
 
@@ -371,5 +371,18 @@ export const skyCalendarEntries: SkyCalendarEntry[] = [
         image: null,
         sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/schedule.ts",
         verifiedOn: "2026-10-21",
+    },
+    {
+        id: "travelling-spirit-2026-11-19",
+        kind: "travelling-spirit",
+        title: "Travelling Spirit",
+        description: "A travelling spirit is a spirit from a past season who returns for four days to sell cosmetics, expressions and a wing buff for non-seasonal currency. This visit is expected from the two-week schedule. Its dates and spirit identity have not been announced yet.",
+        startDay: "2026-11-19",
+        endDay: "2026-11-22",
+        confidence: "expected",
+        link: {url: "https://thatgamecompany.helpshift.com/hc/en/17-sky-children-of-the-light/faq/609-what-is-a-traveling-spirit/", label: "What is a travelling spirit?"},
+        image: null,
+        sourceUrl: "https://raw.githubusercontent.com/thatskyapplication/thatskyapplication/main/packages/utility/source/schedule.ts",
+        verifiedOn: "2026-11-09",
     },
 ];
