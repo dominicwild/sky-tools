@@ -3,6 +3,7 @@ import {Nunito} from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import {ThemeToggle} from "@/components/ThemeToggle";
+import {VisitTracker} from "@/components/visit-tracker";
 import {Analytics} from "@vercel/analytics/react"
 import {siteDescription, siteName, siteUrl} from "@/lib/seo";
 
@@ -95,6 +96,7 @@ export default function RootLayout({
         {children}
 
         <Footer/>
+        <VisitTracker/>
         </body>
         </html>
     );
