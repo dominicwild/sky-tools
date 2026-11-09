@@ -1,5 +1,14 @@
 # Automation notes
 
+## 2026-11-09
+
+- Game extraction refreshed; Steam build 26314370 matches the local extraction. All 224 linked quests use game wording; 245 quest IDs and all game quest IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper is current for 9 November with four real quests. Refreshed bowing, Prairie rainbow, Butterfly Fields flight and Prairie Cave meditation images. Compared both cave guides and confirmed the same shrine and realm; added its title alias and advanced the match cache version. Both JSON mirrors preserve wording, IDs, videos and unrelated fields. No video attachments or UploadThing issues.
+- Calendar checked against 224 upstream event, season, spirit, model and schedule sources at b3ddd1b95a0c6d819c0d10016b9a7157e8d52674. Read every referenced 2026 event file; no 2027 index exists. Pearl remains through 31 December (exclusive 1 January in its season model), Mischief through 12 November, confirmed by the latest official October news. Added the next expected travelling-spirit window, 19–22 November, two weeks after the latest recorded visit. No upcoming returning group is listed. Cinnamoroll and Days of Style still have explicitly unconfirmed end dates, so their provisional ranges remain unpublished.
+- Calendar source discrepancy remains: Hairtousle Teen is recorded upstream for 5–9 November exclusive, or 5–8 November inclusive, but the official news index has no corroborating announcement and November's monthly post returns 404. Retained the past expected entry unchanged.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing navigation warning in app/not-found.tsx. Verified four real JPEGs, unique IDs, matching mirror changes and no unrelated quest field changes.
+- Local agent-browser checks passed for four current quests, Prairie Cave search and its loaded YouTube guide, a loaded Prairie seasonal candle image dialog, and November calendar showing the expected 19–22 November visit. Pearl shows its emblem/countdown with 52 days left. No uncaught browser errors. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-08
 
 - Game data refreshed; Steam build 26314370 matches the local extraction. All 224 linked quests use game wording; 245 local IDs and all game quest IDs remain unique. Wiki dry run parsed 222 quests and found no additions.

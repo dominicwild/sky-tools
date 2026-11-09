@@ -17,7 +17,7 @@ export const questsData = [
         "questName": "Meditate in Prairie Cave",
         "gameQuestId": "meditate_prairie_cave",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "9b09a386-26f1-4bb1-ac82-1f82c977e033.png",
+        "visualGuideUrl": "skyhelper-1569267349121532065.jpeg",
         "videoGuideUrl": "https://youtu.be/Pc8wrPEPcus",
         "id": 1
     },
@@ -107,7 +107,7 @@ export const questsData = [
         "questName": "Find the candles at the end of the rainbow in Daylight Prairie",
         "gameQuestId": "visit_rainbow_prairie",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1562013816613638258.jpeg",
+        "visualGuideUrl": "skyhelper-1569267021839863840.jpeg",
         "videoGuideUrl": "https://youtu.be/fCtpCZFJLmE",
         "id": 10
     },
@@ -1475,7 +1475,7 @@ export const questsData = [
         "questName": "Bow at a player",
         "gameQuestId": "bow_at_a_player",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1564904443651166348.jpeg",
+        "visualGuideUrl": "skyhelper-1569266298549043210.jpeg",
         "videoGuideUrl": "https://youtu.be/tUWABu3t5Ic",
         "id": 148
     },
@@ -2020,7 +2020,7 @@ export const questsData = [
         "questName": "Fly with many butterflies in Butterfly Fields",
         "gameQuestId": "touch_butterflies_butterflyfields",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1562013647562215545.jpeg",
+        "visualGuideUrl": "skyhelper-1569266586261389383.jpeg",
         "videoGuideUrl": "https://youtu.be/uX8olVYuGU4",
         "id": 220
     },
