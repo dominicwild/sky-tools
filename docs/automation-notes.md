@@ -1,5 +1,15 @@
 # Automation notes
 
+## 2026-11-10
+
+- Game extraction refreshed; Steam build 26314370 matches the local extraction. All 224 linked quests use game wording; 245 quest IDs and all game quest IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper is current for 10 November with three real quests. Refreshed the general spirit-memory image and expressions and Treehouse videos. Existing matching resolves all three titles; both JSON mirrors match exactly, preserving wording, IDs and unrelated fields. The other daily-guide source is current but has no quest titles. Request a 30-minute re-check for the missing fourth quest.
+- Compressed and uploaded two videos using the worktree .env: expressions (979,838 bytes), author @sky, source https://discord.com/channels/575762611111592007/575827924343848960/1445691997389197343, original attachment 1569633751275671595; Treehouse lights (6,477,746 bytes), author @sky, source https://discord.com/channels/575762611111592007/575827924343848960/1439171491903049748, original attachment 1569635240933072986. No UploadThing credential or upload issue.
+- Calendar checked against 315 upstream event, season, spirit, model and schedule sources at c4fe374465ee809832615851f87a84bbd86d9312. Read all referenced 2026 event files; no 2027 index exists. Pearl remains through 31 December, with the exclusive end confirmed in the season model; Mischief remains through 12 November. The newly published official November post confirms Days of Style for 27 November–10 December, Double Hearts for 13–26 November and a Dreams/Performance returning-spirit group for 13–26 November. Added these announced windows, without inventing group members. The returning group is not yet recorded in upstream spirit visit files; official dates take precedence. Fetch-verified the official article and calendar image.
+- The November post now corroborates the 5–8 November visit recorded for Hairtousle Teen upstream, resolving the earlier date discrepancy; confirmed that past entry. No identity is announced for 19–22 November, so that entry remains expected. Cinnamoroll still has no confirmed end and remains unpublished.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing navigation warning in app/not-found.tsx. Verified the new JPEG, local image references, unique IDs and exact mirrors.
+- Local agent-browser checks confirm three daily quests, Treehouse search and its loaded 46.12-second hosted video, a loaded Hidden Forest seasonal candle image dialog, and November calendar with the new windows. Pearl shows its emblem/countdown with 51 days left. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-09
 
 - Game extraction refreshed; Steam build 26314370 matches the local extraction. All 224 linked quests use game wording; 245 quest IDs and all game quest IDs are unique. Wiki dry run parsed 222 quests and found no additions.

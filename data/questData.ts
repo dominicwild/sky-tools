@@ -1671,7 +1671,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Relive a Spirit's memories in (a given Realm)",
         "iconUrl": "22d3b05c-31ac-46a8-8eb9-26cc94cbb489.png",
-        "visualGuideUrl": "skyhelper-1568909967933841418.jpeg",
+        "visualGuideUrl": "skyhelper-1569633395133120583.jpeg",
         "videoGuideUrl": null,
         "id": 168
     },
@@ -2041,7 +2041,7 @@ export const questsData = [
         "gameQuestId": "lightseeker3_rain_basecamp",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
         "visualGuideUrl": null,
-        "videoGuideUrl": "https://youtu.be/l8A0BnyXATU",
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxZTBywfdkYBkahE2SRIKDW7cfUCe4s0ijGny1",
         "id": 222
     },
     {
@@ -2121,7 +2121,7 @@ export const questsData = [
         "gameQuestId": "emote_with_players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": null,
-        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxj5zi170aFoTgjdbQ5McXBHJeyR1uqwOsmNSU",
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxahMDlo4Eqw58kseUQtYJvp3OdrPjGRDhSmF7",
         "id": 230
     },
     {
