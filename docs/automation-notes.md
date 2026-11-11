@@ -1,5 +1,14 @@
 # Automation notes
 
+## 2026-11-11
+
+- Steam build 26314370 matches the refreshed game extraction. All 224 linked quests use game wording; all 245 quest IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper is current for 11 November with three real quests. Refreshed Citadel Arch meditation, Valley rainbow and Manta Whisperer image guides in both exact JSON mirrors, preserving wording, IDs, videos and unrelated fields. Compared the old and new Citadel guides: both show the same entrance-arch shrine. Added the Citadel Arch title alias and advanced the match cache version. No video attachments or UploadThing issues.
+- The other daily-guide source is current but contains no quest titles (direct access has a Cloudflare challenge; the readable proxy confirms the date). Request a 30-minute re-check for the missing fourth quest.
+- calendar verified current. Fetched 223 upstream event, season, spirit, model and schedule sources at 29285b3d012f4cde609cad56de593d57f030f85b, read all referenced 2026 event files and checked the absent 2027 index. Pearl remains through 31 December, with the exclusive end confirmed in the season model; Mischief remains through 12 November. Fetch-verified all seven official news sources referenced locally and cross-checked the latest November post: Days of Style remains 27 November–10 December, Double Hearts and the Dreams/Performance group remain 13–26 November. No individual returning spirits or identity for 19–22 November are announced; no calendar changes needed.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing navigation warning in app/not-found.tsx. Verified three real JPEGs, unique IDs, exact mirrors and the full diff.
+- Local agent-browser checks confirm three current quests, Citadel search, the Citadel video dialog, a loaded Valley seasonal candle image dialog and November calendar. Pearl shows 50 days left. No uncaught browser errors. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-10
 
 - Game extraction refreshed; Steam build 26314370 matches the local extraction. All 224 linked quests use game wording; 245 quest IDs and all game quest IDs are unique. Wiki dry run parsed 222 quests and found no additions.

@@ -647,7 +647,7 @@ export const questsData = [
         "questName": "Meditate atop the entrance to The Citadel",
         "gameQuestId": "meditate_sunset_citadel",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "0b3bd8b7-140a-44dc-aa27-227333529514.png",
+        "visualGuideUrl": "skyhelper-1569994488313815080.jpeg",
         "videoGuideUrl": "https://youtu.be/mjRDf1J5sZ8",
         "id": 64
     },
@@ -697,7 +697,7 @@ export const questsData = [
         "questName": "Find the candles at the end of the rainbow in the Valley of Triumph",
         "gameQuestId": "visit_rainbow_sunset",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1557301561950998570.jpeg",
+        "visualGuideUrl": "skyhelper-1569995131803672636.jpeg",
         "videoGuideUrl": "https://youtu.be/nAQKhaiwhjc",
         "id": 69
     },
@@ -877,7 +877,7 @@ export const questsData = [
         "questName": "Relive Manta Whisperer's memory from Valley of Triumph",
         "gameQuestId": "world_quest_sunset_manta",
         "iconUrl": "e8f000ee-54b3-41e4-bea0-ac88ab8dea38.png",
-        "visualGuideUrl": "skyhelper-1562730481840033812.jpeg",
+        "visualGuideUrl": "skyhelper-1569995396443537520.jpeg",
         "videoGuideUrl": null,
         "id": 88
     },

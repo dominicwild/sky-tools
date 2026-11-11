@@ -5,6 +5,10 @@ import type {Quest} from "@/lib/quest-types";
 
 export const QUEST_TITLE_ALIASES = new Map([
     [
+        "meditate atop the entrance to the citadel citadel arch",
+        "meditate atop the entrance to the citadel",
+    ],
+    [
         "meditation quest guide daylight prairie cave",
         "meditate in prairie cave",
     ],
