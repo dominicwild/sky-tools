@@ -5,6 +5,10 @@ import type {Quest} from "@/lib/quest-types";
 
 export const QUEST_TITLE_ALIASES = new Map([
     [
+        "relive spirit quest season of enchantment playfighting herbalist",
+        "relive playfighting herbalist s memory from golden wasteland",
+    ],
+    [
         "relive the manta whisperer",
         "relive manta whisperer s memory from valley of triumph",
     ],

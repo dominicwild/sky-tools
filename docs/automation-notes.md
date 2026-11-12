@@ -1,5 +1,12 @@
 # Automation notes
 
+## 2026-11-12
+
+- Steam build 26314370 matches the refreshed game extraction. All 224 linked quests use game wording; all 245 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper supplies four current quests. Refreshed Wasteland sapling, Wasteland rainbow, Playfighting Herbalist and waving image guides in both exact JSON mirrors, preserving game wording, IDs, videos and unrelated fields. Added the Herbalist title alias and advanced the match cache version. No video attachments or UploadThing issues.
+- calendar verified current. Fetched 223 upstream event, season, spirit, model and schedule files at 29285b3d012f4cde609cad56de593d57f030f85b; read every referenced 2026 event file and checked the absent 2027 index. Pearl remains through 31 December (exclusive end confirmed in the season model), Mischief through today, Style 27 November–10 December and Double Hearts/Dreams and Performance 13–26 November. Fresh official October/November posts and all seven official sources referenced locally agree; no extension or spirit identity announcement. Calendar files remain unchanged.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing app/not-found.tsx navigation warning. Verified four JPEGs, exact JSON mirrors, unique IDs and the full diff. Local browser confirms four current quests, Herbalist search/video dialog and November calendar; Pearl shows its emblem and 49 days left. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-11
 
 - 09:50 re-check: SkyHelper still supplies the same three current quests and unchanged media. The alternative daily-guide source now supplies all four, including Light 20 candles. Added its shortened “Relive the Manta Whisperer” title alias and advanced the match cache version; all seven source titles resolve to the four existing quests. No new media, video uploads or UploadThing issues.

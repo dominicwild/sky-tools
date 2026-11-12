@@ -1077,7 +1077,7 @@ export const questsData = [
         "questName": "Admire the sapling in Golden Wasteland for a short while",
         "gameQuestId": "cherry_sappling_dusk_01",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1557660710916464700.jpeg",
+        "visualGuideUrl": "skyhelper-1570353410648051712.jpeg",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=209",
         "id": 108
     },
@@ -1087,7 +1087,7 @@ export const questsData = [
         "questName": "Find the candles at the end of the rainbow in the Golden Wasteland",
         "gameQuestId": "visit_rainbow_dusk",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1557661390984978482.jpeg",
+        "visualGuideUrl": "skyhelper-1570353778710937670.jpeg",
         "videoGuideUrl": "https://youtu.be/rVcwi1pH-YA",
         "id": 109
     },
@@ -1276,7 +1276,7 @@ export const questsData = [
         "questName": "Relive Playfighting Herbalist's memory from Golden Wasteland",
         "gameQuestId": "world_quest_oasis_playfight",
         "iconUrl": "701581a2-4abf-4a00-afb7-2354125b80c2.png",
-        "visualGuideUrl": "5e62ede7-6e0b-411d-b504-19c463c89280.jpeg",
+        "visualGuideUrl": "skyhelper-1570354207502901261.jpeg",
         "videoGuideUrl": "https://youtu.be/2C7nqLsQKDU",
         "id": 128
     },
@@ -1505,7 +1505,7 @@ export const questsData = [
         "questName": "Wave to a friend",
         "gameQuestId": "wave_at_a_friend",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1566385524447383684.jpeg",
+        "visualGuideUrl": "skyhelper-1570354691269988382.jpeg",
         "videoGuideUrl": "https://youtu.be/g-Ts_WZY4VM",
         "id": 151
     },
