@@ -1,5 +1,12 @@
 # Automation notes
 
+## 2026-11-13
+
+- Steam build 26314370 matches the refreshed game extraction. All 224 linked quests use game wording; all 245 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper supplies four current quests. Refreshed Hug a friend, Vault light, Levitating Adept and Vault second-floor meditation image guides in both exact JSON mirrors, preserving game wording, IDs, videos and unrelated fields. Existing aliases resolve all four titles. No video attachments or UploadThing issues.
+- calendar verified current. Fetched 315 upstream event, season, spirit, model and schedule files at 96f3203377d2cecb5f46bd6887fedbcec53e31e7; read all referenced 2026 event files and checked the absent 2027 index. Pearl remains through 31 December, with its exclusive end confirmed in the season model. Fresh official October/November posts and all seven official news sources referenced locally agree: Mischief ended 12 November, Double Hearts and the Dreams/Performance group run 13–26 November, and Style runs 27 November–10 December. No individual returning spirits or identity for 19–22 November are announced. The upstream spirit files no longer include the previously recorded November Hairtousle visit; the official November dates still corroborate its window, so retained the confirmed entry. Cinnamoroll still has no confirmed end. Calendar files remain unchanged.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing app/not-found.tsx navigation warning. Verified four real JPEGs, exact JSON mirrors, unique IDs and the full diff. Local browser confirms four current quests, Levitating search/video dialog, a loaded Vault seasonal candle image and November calendar; Pearl shows its emblem and 48 days left. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-12
 
 - Steam build 26314370 matches the refreshed game extraction. All 224 linked quests use game wording; all 245 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.

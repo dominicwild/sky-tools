@@ -1296,7 +1296,7 @@ export const questsData = [
         "questName": "Meditate on the second floor of the Vault",
         "gameQuestId": "meditate_night_main",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1548961767537905714.jpeg",
+        "visualGuideUrl": "skyhelper-1570720271198060634.jpeg",
         "videoGuideUrl": "https://youtu.be/CiRzC_9vxqM",
         "id": 130
     },
@@ -1316,7 +1316,7 @@ export const questsData = [
         "questName": "Catch the light in the Vault of Knowledge",
         "gameQuestId": "lightseeker_vault",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1563456624499236884.jpeg",
+        "visualGuideUrl": "skyhelper-1570719653099995226.jpeg",
         "videoGuideUrl": "https://youtu.be/GIbVemllsZ0",
         "id": 132
     },
@@ -1376,7 +1376,7 @@ export const questsData = [
         "questName": "Relive Levitating Adept's memory from Vault of Knowledge",
         "gameQuestId": "world_quest_night_force",
         "iconUrl": "8a88436c-caa7-4613-83a9-f908d9de4d15.png",
-        "visualGuideUrl": "skyhelper-1559829606276665434.jpeg",
+        "visualGuideUrl": "skyhelper-1570720004901703701.jpeg",
         "videoGuideUrl": "https://youtu.be/bvv34rDB9h8",
         "id": 138
     },
@@ -1515,7 +1515,7 @@ export const questsData = [
         "questName": "Hug a friend",
         "gameQuestId": "hug_someone",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1558745214925938698.jpeg",
+        "visualGuideUrl": "skyhelper-1570718863769731203.jpeg",
         "videoGuideUrl": null,
         "id": 152
     },
