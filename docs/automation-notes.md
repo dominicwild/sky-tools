@@ -1,5 +1,13 @@
 # Automation notes
 
+## 2026-11-14
+
+- Steam build 26314370 matches the refreshed game extraction. All 224 linked quests use game wording; all 245 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper supplies three current quests. Refreshed calling to five players, Prairie Village wandering lights and manta-riding images in both exact JSON mirrors, preserving game wording, IDs, videos and unrelated fields. Existing aliases resolve all titles. The current alternative daily guide supplies Melt 10 darkness, so the app shows four real quests. No video attachments or UploadThing issues. Request a 30-minute re-check while SkyHelper lacks its fourth quest.
+- Calendar checked against all referenced 2026 event files, the absent 2027 index, schedule, spirit model and 206 season/spirit/model files at b306aff3f46368a7584719d39250f2dc410a962e. The returning group now names Peeking Postman, Bearhug Hermit, Frantic Stagehand and Mellow Musician, each with 13–27 November exclusive visits. Updated its description and calendar checked date. Fresh official November/October posts and all seven official sources referenced locally confirm the retained windows: Double Hearts and the group through 26 November, Style 27 November–10 December and Pearl through 31 December. Season model confirms exclusive ends. No identity for 19–22 November is announced; no running-event extension found.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing app/not-found.tsx navigation warning. Verified three real JPEGs, exact JSON mirrors, unique IDs, local image references and the full diff.
+- Local agent-browser checks confirm four current quests, wandering-lights search/video dialog, a loaded Prairie seasonal candle image and November calendar with the named returning spirits. Pearl shows its emblem and 47 days left. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-13
 
 - Steam build 26314370 matches the refreshed game extraction. All 224 linked quests use game wording; all 245 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
