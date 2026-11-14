@@ -29,7 +29,7 @@ export type SkyCalendarEntry =
     | (SkyCalendarEntryCommon & {kind: "travelling-spirit" | "returning-spirits"});
 
 export const calendarCoverage = {
-    checkedOn: "2026-11-10",
+    checkedOn: "2026-11-14",
     coverageThrough: "2026-12-31",
 } as const;
 
@@ -403,14 +403,14 @@ export const skyCalendarEntries: SkyCalendarEntry[] = [
         id: "returning-spirits-dreams-performance-2026-11",
         kind: "returning-spirits",
         title: "Returning Spirits: Dreams and Performance",
-        description: "A group of spirits from the Seasons of Dreams and Performance returns for a limited visit. Players can buy cosmetics, expressions and wing buffs they missed using non-seasonal currency. The announcement does not yet name the individual spirits.",
+        description: "Peeking Postman, Bearhug Hermit, Frantic Stagehand and Mellow Musician return together from the Seasons of Dreams and Performance. Players can buy cosmetics, expressions and wing buffs they missed using non-seasonal currency. The group is available for a limited visit.",
         startDay: "2026-11-13",
         endDay: "2026-11-26",
         confidence: "confirmed",
         link: {url: "https://www.thatskygame.com/news/this-month-in-sky-november-2026-edition/", label: "This Month in Sky: November 2026"},
         image: {url: "https://a.storyblok.com/f/108104/1920x1080/3f81503b1d/2_tmiscalendar_sls_2611.png", alt: "November 2026 events calendar from That Sky Game"},
         sourceUrl: "https://www.thatskygame.com/news/this-month-in-sky-november-2026-edition/",
-        verifiedOn: "2026-11-10",
+        verifiedOn: "2026-11-14",
     },
     {
         id: "days-of-style-2026",
