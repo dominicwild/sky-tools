@@ -1,5 +1,15 @@
 # Automation notes
 
+## 2026-11-16
+
+- Steam build 26314370 matches the refreshed game extraction. All 224 linked quests use game wording; 245 quest IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper supplies all four current quests and both candle guides. Refreshed acquaintance, general spirit memories and Citadel wandering-lights images, plus the expressions video, in both exact JSON mirrors. Existing aliases resolve every title; wording, IDs and unrelated fields are preserved.
+- Compressed and uploaded the expressions video (979,838 bytes) using the worktree .env. Attribution: @sky; source https://discord.com/channels/575762611111592007/575827924343848960/1445691997389197343; original media attachment 1571806380505964545. No UploadThing credential or upload issue.
+- calendar verified current for announced content. Fetched 315 upstream event, season, spirit, model and schedule sources at 245e8287dff16e84e3bdf3bb40d062966dc47bd7, read all referenced 2026 event files and checked the absent 2027 index. Pearl retains its exclusive 1 January end, and the four returning spirits retain exclusive 27 November ends. Fresh official October/November posts and all seven official news sources referenced locally confirm the published dates. No extension or identity for 19–22 November is announced.
+- Calendar discrepancy: upstream commit 7d76710abc9aff56fa446d20f60ecd9939014459 adds Dancing Performer as a returning spirit for 26 November–3 December exclusive. The latest official November post announces only the Dreams/Performance group for 13–26 November; the official news index has no newer announcement corroborating this separate visit. Left it unpublished under the rule to add returning visits only once announced; check again on the next daily run. Calendar files remain unchanged.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing navigation warning in app/not-found.tsx. Verified three real JPEGs, exact JSON mirrors, unique IDs and media-only quest changes.
+- Local agent-browser checks confirm four current quests, expressions search, the loaded 12.26-second hosted video, a loaded Valley seasonal candle image and November calendar. Pearl shows its emblem, 45 days left and expected tooltip. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-15
 
 - Steam build 26314370 matches the refreshed game extraction. All 224 linked quests use game wording; all 245 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.

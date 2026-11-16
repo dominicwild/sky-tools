@@ -1535,7 +1535,7 @@ export const questsData = [
         "questName": "Make a new acquaintance",
         "gameQuestId": "make_a_new_acquaintance",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1561280060709666877.jpeg",
+        "visualGuideUrl": "daa2e1d4d727f97b.jpeg",
         "videoGuideUrl": "https://youtu.be/8dxeUcmyc0o",
         "id": 154
     },
@@ -1671,7 +1671,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Relive a Spirit's memories in (a given Realm)",
         "iconUrl": "22d3b05c-31ac-46a8-8eb9-26cc94cbb489.png",
-        "visualGuideUrl": "skyhelper-1569633395133120583.jpeg",
+        "visualGuideUrl": "bb033792e77a3b8c.jpeg",
         "videoGuideUrl": null,
         "id": 168
     },
@@ -2060,7 +2060,7 @@ export const questsData = [
         "questName": "Catch the wandering lights in The Citadel",
         "gameQuestId": "lightseeker3_sunset_citadel",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1557301250821718036.jpeg",
+        "visualGuideUrl": "a1f409f15fc68092.jpeg",
         "videoGuideUrl": "https://youtu.be/2Z_YAF8SXsI",
         "id": 224
     },
@@ -2121,7 +2121,7 @@ export const questsData = [
         "gameQuestId": "emote_with_players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
         "visualGuideUrl": null,
-        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxahMDlo4Eqw58kseUQtYJvp3OdrPjGRDhSmF7",
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxLXGu0FBGijgD2RIoMS1lWZctQaYxL7Hdyezw",
         "id": 230
     },
     {
