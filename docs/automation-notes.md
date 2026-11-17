@@ -1,5 +1,15 @@
 # Automation notes
 
+## 2026-11-17
+
+- Steam build 26314370 matches the refreshed game extraction. All 225 linked quests use game wording; 246 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper supplies all four current quests and both candle guides. Added game-linked quest 266, Admire Shared Spaces with Bumbling Boatswain (spirit_ugc4, Dusk_Triangle), and its external title alias. Refreshed Treasure Reef rainbow, forging a candle and underwater wandering-lights images in both exact JSON mirrors, preserving existing wording, IDs and videos.
+- Compressed and uploaded the Boatswain video (4,762,922 bytes) using the worktree .env. Attribution: @sky; source https://discord.com/channels/575762611111592007/575827924343848960/932545027211665429; original media attachment 1572172090700988526. No UploadThing credential or upload issue.
+- calendar verified current for announced content. Fetched 224 upstream event, season, spirit, model and schedule sources at 86f3941c235e054dacf03e57064cec2fdcda8727, read all referenced 2026 event files and checked the absent 2027 index. Pearl retains its exclusive 1 January end; the four returning spirits retain exclusive 27 November ends. Fresh official October/November posts and all seven official news sources referenced locally confirm the published dates. No running-event extension or identity for 19–22 November is announced.
+- Calendar discrepancy persists: upstream Dancing Performer has 26 November–3 December exclusive dates, but the latest official November post and news index still contain no announcement corroborating this separate returning visit. Left it unpublished under the announcement rule; calendar files remain unchanged.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing navigation warning in app/not-found.tsx. Verified three real JPEGs, exact JSON mirrors and the focused diff. Next.js reports a security advisory for the locked 16.4.2 version; dependency upgrades are outside this sync.
+- Local agent-browser checks confirm four current quests, Boatswain search, the loaded 51.09-second hosted video and a loaded Golden Wasteland seasonal candle image dialog. Pearl shows its emblem, 44 days left and the expected tooltip. The initial snapshot before hydration caused an agent-browser attribute mismatch warning; no page errors were recorded. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-16
 
 - Steam build 26314370 matches the refreshed game extraction. All 224 linked quests use game wording; 245 quest IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.

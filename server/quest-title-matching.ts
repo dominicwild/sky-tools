@@ -700,6 +700,10 @@ export const QUEST_TITLE_ALIASES = new Map([
         "meet up with crab whisperer in crab fields reach above the pipes together with the crab",
         "reach above the pipes together with the crab",
     ],
+    [
+        "meet up with bumbling boatswain in treasure reef admire shared spaces with bumbling boatswain",
+        "admire shared spaces with bumbling boatswain",
+    ],
 ]);
 
 export function createLocalQuestTitleIndex(localQuests: Quest[]) {

@@ -1583,7 +1583,7 @@ export const questsData = [
         "questName": "Forge a candle",
         "gameQuestId": "forge_a_candle",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1567819027055644742.jpeg",
+        "visualGuideUrl": "skyhelper-1572171844700606624.jpeg",
         "videoGuideUrl": "https://youtu.be/mLhjvx19zzA",
         "id": 159
     },
@@ -1811,7 +1811,7 @@ export const questsData = [
         "questName": "Admire the rainbow in Treasure Reef for a short while",
         "gameQuestId": "rainbow_rainbow_dusk_01",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1563093450545692742.jpeg",
+        "visualGuideUrl": "skyhelper-1572171584557293629.jpeg",
         "videoGuideUrl": null,
         "id": 197
     },
@@ -2080,7 +2080,7 @@ export const questsData = [
         "questName": "Catch the wandering lights under the sea in Treasure Reef",
         "gameQuestId": "lightseeker3_dusk_triangle",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1563093678346600478.jpeg",
+        "visualGuideUrl": "skyhelper-1572172319026184312.jpeg",
         "videoGuideUrl": "https://youtu.be/HNF_-I52F_8",
         "id": 226
     },
@@ -2429,5 +2429,15 @@ export const questsData = [
         "visualGuideUrl": null,
         "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxCXbY3Q2Eawbtk8D0f2TpojiWy4Rnz1GSLm3Y",
         "id": 265
+    },
+    {
+        "type": "SkyHelper Quest",
+        "realm": "Golden Wasteland (?)",
+        "questName": "Admire Shared Spaces with Bumbling Boatswain",
+        "gameQuestId": "spirit_ugc4",
+        "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
+        "visualGuideUrl": null,
+        "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxr2tquG67xBAtlFdg0jUeyRXi1KDSwTaLVOHJ",
+        "id": 266
     }
 ] satisfies Quest[]
