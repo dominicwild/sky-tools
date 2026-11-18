@@ -1446,7 +1446,7 @@ export const questsData = [
         "questName": "Relive Thoughtful Director's memory from Vault of Knowledge",
         "gameQuestId": "world_quest_night_think",
         "iconUrl": "89877a4d-5788-4da0-98e1-e07274f2d0e0.png",
-        "visualGuideUrl": "ec07a6bf-3bfc-4dbc-bbbd-76dffb6e0653.jpeg",
+        "visualGuideUrl": "skyhelper-1572535172455211048.jpeg",
         "videoGuideUrl": "https://youtu.be/h5SzQI60xz0",
         "id": 145
     },
@@ -1505,7 +1505,7 @@ export const questsData = [
         "questName": "Wave to a friend",
         "gameQuestId": "wave_at_a_friend",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1570354691269988382.jpeg",
+        "visualGuideUrl": "skyhelper-1572534873606852618.jpeg",
         "videoGuideUrl": "https://youtu.be/g-Ts_WZY4VM",
         "id": 151
     },
@@ -1671,7 +1671,7 @@ export const questsData = [
         "realm": "General",
         "questName": "Relive a Spirit's memories in (a given Realm)",
         "iconUrl": "22d3b05c-31ac-46a8-8eb9-26cc94cbb489.png",
-        "visualGuideUrl": "bb033792e77a3b8c.jpeg",
+        "visualGuideUrl": "skyhelper-1572534554970030141.jpeg",
         "videoGuideUrl": null,
         "id": 168
     },

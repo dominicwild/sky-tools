@@ -704,6 +704,14 @@ export const QUEST_TITLE_ALIASES = new Map([
         "meet up with bumbling boatswain in treasure reef admire shared spaces with bumbling boatswain",
         "admire shared spaces with bumbling boatswain",
     ],
+    [
+        "relive spirit quest season of rhythm thoughtful director",
+        "relive thoughtful director s memory from vault of knowledge",
+    ],
+    [
+        "wave to a player",
+        "wave to a friend",
+    ],
 ]);
 
 export function createLocalQuestTitleIndex(localQuests: Quest[]) {

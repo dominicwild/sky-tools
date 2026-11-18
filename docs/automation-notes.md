@@ -1,5 +1,14 @@
 # Automation notes
 
+## 2026-11-18
+
+- Steam build 26314370 matches the refreshed game extraction. All 225 linked quests use game wording; 246 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper supplies three current quests and both candle guides. Refreshed general spirit memories, waving and Thoughtful Director images in both exact JSON mirrors, preserving wording, IDs, videos and unrelated fields. Added the Director title alias and advanced the match cache version. The current alternative daily guide supplies Light 20 candles; added its Wave to a player alias. No video attachments or UploadThing issues. Request a 30-minute re-check while SkyHelper lacks its fourth quest.
+- calendar verified current for officially announced content. Fetched 223 upstream event, season, spirit, model and schedule files at 9be683317f793404561dec04dddb141e8c256bfb, read every referenced 2026 event file and checked the absent 2027 index. Pearl retains its exclusive 1 January end; all four returning spirits retain exclusive 27 November ends. Fresh official October/November posts and all seven official sources referenced locally agree with retained dates; no running-event extension found.
+- Calendar discrepancy: upstream now names Thoughtful Director for 19–23 November exclusive. The official November post confirms the 19–22 November window but does not identify the spirit, and the official news index has no newer announcement. Retained the expected entry pending official identity confirmation. Dancing Performer’s separate 26 November–3 December exclusive return also remains uncorroborated by official news and unpublished. Calendar files remain unchanged.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing navigation warning in app/not-found.tsx. Verified three real JPEGs, exact JSON mirrors, unique IDs and the focused diff. Next.js reports a security advisory for locked version 16.4.2; dependency changes are outside this sync.
+- Local agent-browser checks confirm four current quests, Thoughtful Director search/video dialog and a loaded Vault seasonal candle image dialog. Pearl shows its emblem and 43 days left. No browser page errors. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-17
 
 - Steam build 26314370 matches the refreshed game extraction. All 225 linked quests use game wording; 246 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
