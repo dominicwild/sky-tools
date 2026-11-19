@@ -1,5 +1,14 @@
 # Automation notes
 
+## 2026-11-19
+
+- Steam build 26314370 matches the refreshed game extraction. All 225 linked quests use game wording; 246 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper supplies three current quests and both candle guides. Refreshed giant manta, Jelly Whisperer and polluted geyser images in both exact JSON mirrors, preserving wording, IDs, videos and unrelated fields. Added the Jelly Whisperer title alias and advanced the match cache version. The alternative daily guide is current but supplies no quest titles. Request a 30-minute re-check for the missing fourth quest. No video attachments or UploadThing issues.
+- calendar verified current for officially announced content. Freshly fetched 223 upstream event, season, spirit, model and schedule files at 9be683317f793404561dec04dddb141e8c256bfb, read the 2026 event sources and checked the absent 2027 index. Pearl retains its exclusive 1 January end; all four returning spirits retain exclusive 27 November ends. Fresh official October/November posts and all seven official sources referenced locally agree with retained dates; no running-event extension found.
+- Calendar discrepancy persists: upstream names Thoughtful Director for 19–23 November exclusive, but official November news confirms only the 19–22 November window and the news index has no newer identity announcement. Retained the expected entry. Dancing Performer’s separate 26 November–3 December exclusive return remains uncorroborated by official news and unpublished. Calendar files remain unchanged.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing navigation warning in app/not-found.tsx. Verified real JPEGs, exact JSON mirrors and image-only quest changes. Locked Next.js 16.4.2 displayed a security advisory and stopped the first dev launch; retry succeeded without dependency changes.
+- Local agent-browser checks confirm three current quests, Jelly Whisperer search and its loaded YouTube video dialog, a loaded Prairie seasonal candle image dialog and November calendar. Pearl shows its emblem, 42 days left and expected tooltip. No browser page errors. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-18
 
 - Steam build 26314370 matches the refreshed game extraction. All 225 linked quests use game wording; 246 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.

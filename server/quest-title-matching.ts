@@ -712,6 +712,10 @@ export const QUEST_TITLE_ALIASES = new Map([
         "wave to a player",
         "wave to a friend",
     ],
+    [
+        "relive spirit quest season of sanctuary jelly whisperer s",
+        "relive jelly whisperer s memory from daylight prairie",
+    ],
 ]);
 
 export function createLocalQuestTitleIndex(localQuests: Quest[]) {
