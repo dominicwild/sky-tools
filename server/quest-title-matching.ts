@@ -716,6 +716,10 @@ export const QUEST_TITLE_ALIASES = new Map([
         "relive spirit quest season of sanctuary jelly whisperer s",
         "relive jelly whisperer s memory from daylight prairie",
     ],
+    [
+        "meditation quest guide hidden forest elevated clearing",
+        "meditate in the elevated clearing",
+    ],
 ]);
 
 export function createLocalQuestTitleIndex(localQuests: Quest[]) {

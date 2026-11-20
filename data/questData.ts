@@ -357,7 +357,7 @@ export const questsData = [
         "questName": "Meditate in the Elevated Clearing",
         "gameQuestId": "meditate_rain_shelter",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "de65b2bc-8e89-4410-a402-27b1cb63b77a.png",
+        "visualGuideUrl": "skyhelper-1573252659798876231.jpeg",
         "videoGuideUrl": "https://youtu.be/9KgxsVvkr-M",
         "id": 35
     },
@@ -417,7 +417,7 @@ export const questsData = [
         "questName": "Find the candles at the end of the rainbow in the Hidden Forest",
         "gameQuestId": "visit_rainbow_rain",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1565987295247732836.jpeg",
+        "visualGuideUrl": "skyhelper-1573252846718291978.jpeg",
         "videoGuideUrl": "https://youtu.be/otI3wuLQKis",
         "id": 41
     },
@@ -427,7 +427,7 @@ export const questsData = [
         "questName": "Visit the Ancestor's table in the Elevated Clearing",
         "gameQuestId": "visit_rain_grandmatable",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1565987791433633802.jpeg",
+        "visualGuideUrl": "skyhelper-1573253204504748085.jpeg",
         "videoGuideUrl": null,
         "id": 42
     },
@@ -2130,7 +2130,7 @@ export const questsData = [
         "questName": "Call to 5 different players",
         "gameQuestId": "honk_at_players",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1571084077031882792.jpeg",
+        "visualGuideUrl": "skyhelper-1573252999612993556.jpeg",
         "videoGuideUrl": "https://youtu.be/exk2Y2Cshys",
         "id": 231
     },

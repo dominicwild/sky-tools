@@ -1,5 +1,14 @@
 # Automation notes
 
+## 2026-11-20
+
+- Steam build 26314370 matches the refreshed game extraction. All 225 linked quests use game wording; 246 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper supplies all four current quests and both candle guides. Refreshed Elevated Clearing meditation, Forest rainbow, calling to five players and Ancestor's table images in both exact JSON mirrors, preserving wording, IDs, videos and unrelated fields. Added the meditation title alias and advanced the match cache version. No video attachments or UploadThing issues; no re-check required.
+- calendar verified current for officially announced content. Fetched 223 upstream event, season, spirit, model and schedule files at 3f8df1260a1b64d478fb536e3bd4bc9fa18ad0a9, read the 2026 event sources and checked the absent 2027 index. Pearl retains its exclusive 1 January end; all four returning spirits retain exclusive 27 November ends. Fresh official October/November posts and official sources referenced locally agree with retained dates; no running-event extension found.
+- Calendar discrepancy persists: upstream names Thoughtful Director for 19–23 November exclusive, but official November news confirms only the 19–22 November window and the news index has no newer identity announcement. Retained the expected entry. Dancing Performer's separate 26 November–3 December exclusive return remains uncorroborated by official news and unpublished. Calendar files remain unchanged.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing navigation warning in app/not-found.tsx. Verified four real JPEGs, exact JSON mirrors and image-only quest changes. Locked Next.js 16.4.2 displayed its existing security advisory; retry succeeded without dependency changes.
+- Local agent-browser checks confirm four current quests, Elevated Clearing search and its loaded YouTube video dialog. Pearl shows its emblem, 41 days left and the expected tooltip. The initial pre-hydration automation snapshot produced the known injected-attribute warning. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-19
 
 - Steam build 26314370 matches the refreshed game extraction. All 225 linked quests use game wording; 246 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
