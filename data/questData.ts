@@ -407,7 +407,7 @@ export const questsData = [
         "questName": "Admire the sapling in the Hidden Forest for a short while",
         "gameQuestId": "cherry_sappling_rain_01",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "c3aa3a864b080cfa.jpeg",
+        "visualGuideUrl": "skyhelper-1573624952610099280.jpeg",
         "videoGuideUrl": "https://youtu.be/c7g4_wYYEmg?t=152",
         "id": 40
     },
@@ -657,7 +657,7 @@ export const questsData = [
         "questName": "Meditate at the Temple of the Valley",
         "gameQuestId": "meditate_sunset_raceend",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "aa2ea6f6-b3eb-48b3-8ad5-d9e47446dee0.png",
+        "visualGuideUrl": "skyhelper-1573625345125646356.jpeg",
         "videoGuideUrl": null,
         "id": 65
     },
@@ -1495,7 +1495,7 @@ export const questsData = [
         "questName": "High-Five a friend",
         "gameQuestId": "high_five_someone",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1562729774013616269.jpeg",
+        "visualGuideUrl": "skyhelper-1573624795898056784.jpeg",
         "videoGuideUrl": "https://youtu.be/WfvksJzaNKo",
         "id": 150
     },
@@ -1990,7 +1990,7 @@ export const questsData = [
         "questName": "Catch the wandering lights along the Lower Valley Track",
         "gameQuestId": "lightseeker3_sunset_race",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1566385728160800870.jpeg",
+        "visualGuideUrl": "skyhelper-1573625150551625841.jpeg",
         "videoGuideUrl": "https://youtu.be/QwsLH-XB2k8",
         "id": 215
     },
