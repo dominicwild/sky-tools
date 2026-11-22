@@ -1055,7 +1055,7 @@
     "questName": "Catch the light in Golden Wasteland",
     "gameQuestId": "lightseeker_wasteland",
     "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-    "visualGuideUrl": "skyhelper-1564903678958243881.jpeg",
+    "visualGuideUrl": "skyhelper-1573974093718355968.jpeg",
     "videoGuideUrl": "https://youtu.be/Bj6YBPoGFQE",
     "id": 106
   },
@@ -1124,7 +1124,7 @@
     "questName": "Relive Fainting Warrior's memory from Golden Wasteland",
     "gameQuestId": "world_quest_dusk_die",
     "iconUrl": "58ddac69-3ec4-4660-b4b3-212f65c442f4.png",
-    "visualGuideUrl": "99543ec8-73b1-4790-99e4-385da998cc14.jpeg",
+    "visualGuideUrl": "skyhelper-1573974296672469022.jpeg",
     "videoGuideUrl": "https://youtu.be/X0dj10tnvpQ?t=154",
     "id": 113
   },
@@ -1473,7 +1473,7 @@
     "questName": "Bow at a player",
     "gameQuestId": "bow_at_a_player",
     "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-    "visualGuideUrl": "02bbb769d20dbfca.jpeg",
+    "visualGuideUrl": "skyhelper-1573974529154351134.jpeg",
     "videoGuideUrl": "https://youtu.be/tUWABu3t5Ic",
     "id": 148
   },
@@ -2119,7 +2119,7 @@
     "gameQuestId": "emote_with_players",
     "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
     "visualGuideUrl": null,
-    "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxLXGu0FBGijgD2RIoMS1lWZctQaYxL7Hdyezw",
+    "videoGuideUrl": "https://pvdgn2f770.ufs.sh/f/1tBsGxWZALfxAYVjysxmHVAPWc49sZyx7Qb5GkoYL2iMEfR6",
     "id": 230
   },
   {

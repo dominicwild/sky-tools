@@ -720,6 +720,10 @@ export const QUEST_TITLE_ALIASES = new Map([
         "meditation quest guide hidden forest elevated clearing",
         "meditate in the elevated clearing",
     ],
+    [
+        "relive spirit quest golden wasteland fainting warrior",
+        "relive fainting warrior s memory from golden wasteland",
+    ],
 ]);
 
 export function createLocalQuestTitleIndex(localQuests: Quest[]) {
