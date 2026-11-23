@@ -1346,7 +1346,7 @@ export const questsData = [
         "questName": "Find the candles at the end of the rainbow in the Vault of Knowledge",
         "gameQuestId": "visit_rainbow_night",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1558015195568148490.jpeg",
+        "visualGuideUrl": "skyhelper-1574343101391175840.jpeg",
         "videoGuideUrl": "https://youtu.be/oiUQPs3E7GE",
         "id": 135
     },
@@ -1366,7 +1366,7 @@ export const questsData = [
         "questName": "Relive Polite Scholar's memory from Vault of Knowledge",
         "gameQuestId": "world_quest_night_love",
         "iconUrl": "932f85fe-b5cc-4503-91f2-4cdd1b0a718f.png",
-        "visualGuideUrl": "skyhelper-1550767734940246076.jpeg",
+        "visualGuideUrl": "skyhelper-1574342511319584788.jpeg",
         "videoGuideUrl": "https://youtu.be/Dqb5TXHNe2Y",
         "id": 137
     },
@@ -1583,7 +1583,7 @@ export const questsData = [
         "questName": "Forge a candle",
         "gameQuestId": "forge_a_candle",
         "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-        "visualGuideUrl": "skyhelper-1572171844700606624.jpeg",
+        "visualGuideUrl": "skyhelper-1574342192812531772.jpeg",
         "videoGuideUrl": "https://youtu.be/mLhjvx19zzA",
         "id": 159
     },
@@ -2100,7 +2100,7 @@ export const questsData = [
         "questName": "Catch the wandering lights in the Upper Vault",
         "gameQuestId": "lightseeker3_night_floor4",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1558015428129857576.jpeg",
+        "visualGuideUrl": "skyhelper-1574342729289310319.jpeg",
         "videoGuideUrl": "https://youtu.be/0NaC9D49ujM",
         "id": 228
     },
