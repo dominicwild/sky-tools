@@ -1,5 +1,14 @@
 # Automation notes
 
+## 2026-11-24
+
+- Steam build 26314370 matches the refreshed game extraction. All 225 linked quests use game wording; 246 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper supplies all four current quests and both candle guides. Refreshed hugging a friend, Butterfly Fields flight, Green Light and Prairie Caves hideout images in both exact JSON mirrors, preserving wording, IDs, videos and unrelated fields. Existing aliases resolve every title. No video attachments or UploadThing issues; no re-check required.
+- calendar verified current. Fetched 224 upstream event, season, spirit, model and schedule sources at 7c7f7dbeb040552de0fd99916a1c4fd1b9861272, read the referenced 2026 events and checked the absent 2027 index. All eight official news/source pages have unchanged text. Pearl retains its exclusive 1 January end; the four returning spirits retain exclusive 27 November ends. No running-event extension or identity announcement for 3–6 December; calendar files remain unchanged.
+- Calendar discrepancy persists: upstream names Thoughtful Director for the past 19–22 November visit without official identity confirmation, and Dancing Performer's separate 26 November–2 December return remains uncorroborated by official news and unpublished.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing navigation warning in app/not-found.tsx. Verified four real JPEGs, exact JSON mirrors and image-only quest changes. Locked Next.js 16.4.2 displayed its existing security advisory; retry succeeded without dependency changes.
+- Local agent-browser checks confirm four current quests, Hug search, the Butterfly Fields YouTube video dialog and a loaded Prairie seasonal candle image dialog. Pearl shows its emblem, 37 days left and the expected tooltip. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-23
 
 - Steam build 26314370 matches the refreshed game extraction. All 225 linked quests use game wording; 246 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.

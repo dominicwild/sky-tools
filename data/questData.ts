@@ -77,7 +77,7 @@ export const questsData = [
         "questName": "Collect Green Light",
         "gameQuestId": "fetchlight_earth",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1567455436045819904.jpeg",
+        "visualGuideUrl": "skyhelper-1574700689496735796.jpeg",
         "videoGuideUrl": "https://youtu.be/mzUVM4sqroI",
         "id": 7
     },
@@ -117,7 +117,7 @@ export const questsData = [
         "questName": "Visit the cozy hideout in Prairie Caves",
         "gameQuestId": "visit_prairie_cozycave",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1545694870109163600.jpeg",
+        "visualGuideUrl": "skyhelper-1574700984318300160.jpeg",
         "videoGuideUrl": null,
         "id": 11
     },
@@ -1515,7 +1515,7 @@ export const questsData = [
         "questName": "Hug a friend",
         "gameQuestId": "hug_someone",
         "iconUrl": "c916462a-d4a8-4242-84bb-c004735d5b6f.png",
-        "visualGuideUrl": "skyhelper-1570718863769731203.jpeg",
+        "visualGuideUrl": "skyhelper-1574700215817076825.jpeg",
         "videoGuideUrl": null,
         "id": 152
     },
@@ -2020,7 +2020,7 @@ export const questsData = [
         "questName": "Fly with many butterflies in Butterfly Fields",
         "gameQuestId": "touch_butterflies_butterflyfields",
         "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-        "visualGuideUrl": "skyhelper-1569266586261389383.jpeg",
+        "visualGuideUrl": "skyhelper-1574700446679834634.jpeg",
         "videoGuideUrl": "https://youtu.be/uX8olVYuGU4",
         "id": 220
     },
