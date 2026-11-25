@@ -375,7 +375,7 @@
     "questName": "Collect Orange Light",
     "gameQuestId": "fetchlight_fire",
     "iconUrl": "9857649b-3859-413b-941c-dee139045b1d.png",
-    "visualGuideUrl": "skyhelper-1564176638072332380.jpeg",
+    "visualGuideUrl": "skyhelper-1575064773152866464.jpeg",
     "videoGuideUrl": "https://youtu.be/m92rALQldBM",
     "id": 37
   },
@@ -385,7 +385,7 @@
     "questName": "Rescue a manta from darkness",
     "gameQuestId": "rescue_a_manta_from_darkstone",
     "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-    "visualGuideUrl": "skyhelper-1564176421176213664.jpeg",
+    "visualGuideUrl": "skyhelper-1575064543053484183.jpeg",
     "videoGuideUrl": "https://youtu.be/23gUb_G0mGI",
     "id": 38
   },
@@ -2138,7 +2138,7 @@
     "questName": "Pick up a Crab",
     "gameQuestId": "pick_up_1_crab",
     "iconUrl": "650aead0-29a2-49ce-89ce-f402ee3b9b87.png",
-    "visualGuideUrl": "skyhelper-1568553741773312022.jpeg",
+    "visualGuideUrl": "skyhelper-1575064217503928491.jpeg",
     "videoGuideUrl": "https://youtu.be/Xn5jM2jMH94",
     "id": 232
   },

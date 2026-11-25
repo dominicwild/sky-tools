@@ -1,5 +1,14 @@
 # Automation notes
 
+## 2026-11-25
+
+- Refreshed game extraction to Steam build 26768897, matching the public build. All 225 linked quests retain game wording; 246 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper supplies three current quests and both candle guides. Refreshed crab, manta rescue and Orange Light images in both exact JSON mirrors, preserving all other quest fields. Existing aliases resolve every title. thatskyapplication supplies matching crab, Light 20 candles and manta titles, with its fourth slot blank; the site combines these into four quests. No video attachments or UploadThing issues. Book a 30-minute re-check for the missing SkyHelper quest.
+- calendar verified current for officially announced content. Downloaded the upstream source tree, read the 2026 event sources and checked the absent 2027 index. Rechecked season/spirit ranges and fetched all official source pages through the reader proxy after direct requests returned 403. Pearl retains its exclusive 1 January end; the four returning spirits retain exclusive 27 November ends. November news still confirms Double Hearts and the returning group through 26 November, and Style for 27 November–10 December. No extension or identity announcement for 3–6 December; calendar files remain unchanged.
+- Calendar discrepancies persist: Thoughtful Director for the past 19–22 November visit and Dancing Performer's separate 26 November–2 December return lack official identity/date corroboration. Upstream Feast has a provisional 18 December–7 January range without official news confirmation; retained the published calendar pending announcement.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing navigation warning in app/not-found.tsx. Verified three JPEGs, exact JSON mirrors and image-only changes. Locked Next.js 16.4.2 displayed its existing security advisory; retry succeeded without dependency changes.
+- Local agent-browser checks confirm four current quests, crab search, the crab YouTube video dialog and a loaded Forest seasonal candle image dialog. Calendar and Pearl countdown checked. New quest images require the push before jsDelivr serves them.
+
 ## 2026-11-24
 
 - Steam build 26314370 matches the refreshed game extraction. All 225 linked quests use game wording; 246 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
