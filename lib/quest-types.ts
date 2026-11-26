@@ -10,5 +10,3 @@ export type Quest = {
 }
 
 export type GuideMedia = Pick<Quest, "questName" | "visualGuideUrl" | "videoGuideUrl">
-
-export type QuestValue = Record<string, number>

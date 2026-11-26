@@ -102,7 +102,7 @@ describe("daily quest source", () => {
         expect(parsedResponse).not.toBeNull();
 
         const questMatches = createQuestMatchResponse(parsedResponse);
-        const quests = resolveDailyQuests(questMatches, {}, localQuests);
+        const quests = resolveDailyQuests(questMatches, localQuests);
 
         expect(quests).toHaveLength(4);
         expect(quests.map((quest) => quest.questName)).toEqual([
@@ -147,7 +147,7 @@ describe("daily quest source", () => {
         });
         expect(parsedResponse).not.toBeNull();
 
-        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), {}, localQuests);
+        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), localQuests);
 
         expect(displayData.quests).toHaveLength(4);
         expect(displayData.candleGuides).toEqual([
@@ -190,7 +190,7 @@ describe("daily quest source", () => {
         });
         expect(parsedResponse).not.toBeNull();
 
-        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), {}, localQuests);
+        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), localQuests);
 
         expect(displayData.quests.map((quest) => quest.questName)).toEqual(["Forge a candle"]);
         expect(displayData.candleGuides).toEqual([
@@ -225,7 +225,7 @@ describe("daily quest source", () => {
         });
         expect(parsedResponse).not.toBeNull();
 
-        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), {}, localQuests);
+        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), localQuests);
 
         expect(displayData.candleGuides).toEqual([
             createExpectedCandleCakeGuide("Rotating Treasure Candle Locations - Rotation 20 | Valley Of Triumph", "Valley of Triumph"),
@@ -287,7 +287,7 @@ describe("daily quest source", () => {
         });
         expect(parsedResponse).not.toBeNull();
 
-        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), {}, localQuests);
+        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), localQuests);
 
         expect(displayData.candleGuides).toEqual([
             createExpectedCandleCakeGuide("Rotating Treasure Candle Locations - Rotation 1 | Golden Wasteland", "Golden Wasteland"),
@@ -361,20 +361,15 @@ describe("daily quest source", () => {
         });
         expect(parsedResponse).not.toBeNull();
 
-        const quests = resolveDailyQuests(createQuestMatchResponse(parsedResponse), {"11": 9}, localQuests);
+        const quests = resolveDailyQuests(createQuestMatchResponse(parsedResponse), localQuests);
 
         expect(quests.map((quest) => quest.id)).toEqual([159]);
     });
 
-    it("uses user-selected data entirely when SkyHelper data is unavailable", () => {
-        const quests = resolveDailyQuests(null, {
-            "10": 2,
-            "11": 9,
-            "12": 4,
-            "132": 1,
-        }, localQuests);
+    it("returns no quests or candle guides when source data is unavailable", () => {
+        const displayData = resolveDailyQuestDisplayData(null, localQuests);
 
-        expect(quests.map((quest) => quest.id)).toEqual([11, 12, 10, 132]);
+        expect(displayData).toEqual({quests: [], candleGuides: []});
     });
 
     it("parses thatskyapplication daily guide HTML", () => {
@@ -438,7 +433,7 @@ describe("daily quest source", () => {
             ],
         });
 
-        const quests = resolveDailyQuests(questMatches, {}, localQuests);
+        const quests = resolveDailyQuests(questMatches, localQuests);
 
         expect(quests.map((quest) => quest.questName)).toEqual([
             "Light 20 candles",
@@ -474,7 +469,7 @@ describe("daily quest source", () => {
 
         expect(isMissingDailyQuests(skyHelperMatches)).toBe(true);
 
-        const quests = resolveDailyQuests(addMissingQuestMatches(skyHelperMatches, thatSkyMatches), {}, localQuests);
+        const quests = resolveDailyQuests(addMissingQuestMatches(skyHelperMatches, thatSkyMatches), localQuests);
 
         expect(quests.map((quest) => quest.id)).toEqual([159, 39, 222]);
     });
@@ -510,7 +505,7 @@ describe("daily quest source", () => {
             ],
         });
 
-        const quests = resolveDailyQuests(questMatches, {}, localQuests);
+        const quests = resolveDailyQuests(questMatches, localQuests);
 
         expect(quests.map((quest) => quest.questName)).toEqual(["Light 20 candles"]);
     });
