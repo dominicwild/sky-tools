@@ -1,4 +1,4 @@
-import type {Quest, QuestValue} from "./quest-types";
+import type {Quest} from "./quest-types";
 import {getSkyDateKeyFromIsoDate} from "./utils";
 
 const QUEST_LIMIT = 4;
@@ -293,33 +293,12 @@ export function addMissingQuestMatches(
     };
 }
 
-function getTopUserSelectedQuests(
-    questCounts: QuestValue,
-    localQuests: Quest[],
-    excludedQuestIds = new Set<number>(),
-    limit = QUEST_LIMIT,
-) {
-    return Object
-        .entries(questCounts)
-        .sort(([, countA], [, countB]) => countB - countA)
-        .map(([questId]) => {
-            const parsedQuestId = Number(questId);
-            if (!Number.isInteger(parsedQuestId) || excludedQuestIds.has(parsedQuestId)) {
-                return undefined;
-            }
-            return localQuests.find((quest) => quest.id === parsedQuestId);
-        })
-        .filter((quest): quest is Quest => quest !== undefined)
-        .slice(0, limit);
-}
-
 export function resolveDailyQuests(
     skyHelperResponse: SkyHelperQuestMatchResponse | null,
-    userQuestCounts: QuestValue,
     localQuests: Quest[],
 ) {
     if (!skyHelperResponse) {
-        return getTopUserSelectedQuests(userQuestCounts, localQuests);
+        return [];
     }
 
     return getSkyHelperDisplayQuests(skyHelperResponse, localQuests).slice(0, QUEST_LIMIT);
@@ -327,11 +306,10 @@ export function resolveDailyQuests(
 
 export function resolveDailyQuestDisplayData(
     skyHelperResponse: SkyHelperQuestMatchResponse | null,
-    userQuestCounts: QuestValue,
     localQuests: Quest[],
 ): DailyQuestDisplayData {
     return {
-        quests: resolveDailyQuests(skyHelperResponse, userQuestCounts, localQuests),
+        quests: resolveDailyQuests(skyHelperResponse, localQuests),
         candleGuides: skyHelperResponse?.candleGuides ?? [],
     };
 }

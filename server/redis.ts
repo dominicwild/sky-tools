@@ -17,7 +17,6 @@ import {
     type DailyQuestDisplayData,
     type SkyHelperQuestMatchResponse,
 } from "@/lib/daily-quest-source";
-import type {QuestValue} from "@/lib/quest-types";
 import {createLocalQuestTitleIndex, getMatchingLocalQuestId} from "@/server/quest-title-matching";
 
 const client = new Redis(`rediss://default:${process.env.REDIS_TOKEN}@${process.env.REDIS_URL}:6379`);
@@ -32,34 +31,11 @@ const QUEST_COUNT_TTL_SECONDS = 60 * 60 * 24 * 2;
 const localQuestsByTitle = createLocalQuestTitleIndex(questsData);
 const validQuestIds = new Set(questsData.map((quest) => quest.id).filter((questId): questId is number => questId !== undefined));
 
-export async function getSkyHelperQuestDisplayData(userQuestCounts: Promise<QuestValue>): Promise<DailyQuestDisplayData> {
+export async function getSkyHelperQuestDisplayData(): Promise<DailyQuestDisplayData> {
     noStore();
 
-    const [resolvedUserQuestCounts, skyHelperResponse] = await Promise.all([
-        userQuestCounts,
-        getSkyHelperQuestMatchResponse(),
-    ]);
-
-    return resolveDailyQuestDisplayData(skyHelperResponse, resolvedUserQuestCounts, questsData);
-}
-
-export async function getTodaysQuests(): Promise<QuestValue> {
-    // Opt out of caching at the data fetch level
-    noStore();
-
-    const key = getSkyDate();
-    const storedQuests = await client.hgetall(key)
-
-    return Object.fromEntries(
-        Object.entries(storedQuests).map(([questId, count]) => {
-            const parsedCount = Number(count)
-            if (!Number.isFinite(parsedCount)) {
-                throw new Error(`Invalid quest count for quest ${questId}`)
-            }
-
-            return [questId, parsedCount]
-        })
-    )
+    const skyHelperResponse = await getSkyHelperQuestMatchResponse();
+    return resolveDailyQuestDisplayData(skyHelperResponse, questsData);
 }
 
 async function getSkyHelperQuestMatchResponse() {

@@ -21,13 +21,12 @@ import {isQuestSelected} from "@/lib/quest-selection";
 import {searchQuests} from "@/lib/quest-search";
 
 interface QuestTrackerProps {
-    initialQuestData: DailyQuestDisplayData
     skyHelperQuestData: Promise<DailyQuestDisplayData>
 }
 
-export default function QuestTracker({initialQuestData, skyHelperQuestData}: Readonly<QuestTrackerProps>) {
-    const [questData, setQuestData] = useState(initialQuestData)
-    const [selectedQuests, setSelectedQuests] = useState<Quest[]>(initialQuestData.quests)
+export default function QuestTracker({skyHelperQuestData}: Readonly<QuestTrackerProps>) {
+    const [questData, setQuestData] = useState<DailyQuestDisplayData>({quests: [], candleGuides: []})
+    const [selectedQuests, setSelectedQuests] = useState<Quest[]>([])
     const [searchQuery, setSearchQuery] = useState("")
     const hasEditedSelectedQuests = useRef(false)
     const [visualGuideDialog, setVisualGuideDialog] = useState<{

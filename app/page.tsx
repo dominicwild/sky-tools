@@ -1,9 +1,7 @@
 import QuestTracker from "@/components/QuestTracker";
 import {CloudEffect} from "@/components/CloudEffect";
-import {getSkyHelperQuestDisplayData, getTodaysQuests} from "@/server/redis";
+import {getSkyHelperQuestDisplayData} from "@/server/redis";
 import {createPageMetadata, siteDescription} from "@/lib/seo";
-import {resolveDailyQuestDisplayData} from "@/lib/daily-quest-source";
-import {questsData} from "@/data/questData";
 
 export const metadata = createPageMetadata(
     "Sky Daily Quest Tracker",
@@ -12,9 +10,7 @@ export const metadata = createPageMetadata(
 );
 
 export default async function Home() {
-    const userQuestCounts = getTodaysQuests();
-    const skyHelperQuestData = getSkyHelperQuestDisplayData(userQuestCounts);
-    const initialQuestData = resolveDailyQuestDisplayData(null, await userQuestCounts, questsData);
+    const skyHelperQuestData = getSkyHelperQuestDisplayData();
 
     return (
         <main className="relative">
@@ -23,7 +19,7 @@ export default async function Home() {
             </div>
 
             <div className={"min-h-screen"}>
-                <QuestTracker initialQuestData={initialQuestData} skyHelperQuestData={skyHelperQuestData}/>
+                <QuestTracker skyHelperQuestData={skyHelperQuestData}/>
             </div>
         </main>
     )
