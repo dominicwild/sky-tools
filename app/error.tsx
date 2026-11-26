@@ -4,6 +4,7 @@ import {useEffect, useState} from "react"
 import Image from "next/image"
 import {motion, AnimatePresence} from "motion/react"
 import {CloudEffect} from "@/components/CloudEffect";
+import LoadingDots from "@/components/LoadingDots";
 
 export default function ErrorPage({error, reset}: { error: Error & { digest?: string }; reset: () => void }) {
     const [isRetrying, setIsRetrying] = useState(false)
@@ -166,26 +167,7 @@ export default function ErrorPage({error, reset}: { error: Error & { digest?: st
                                     </defs>
                                 </svg>
 
-                                {/* Loading animation */}
-                                <div className="relative z-10 flex items-center justify-center space-x-1">
-                                    {[0, 1, 2].map((i) => (
-                                        <motion.div
-                                            key={i}
-                                            className="w-3 h-3 rounded-full bg-white"
-                                            animate={{
-                                                y: [-4, 4, -4],
-                                                opacity: [0.5, 1, 0.5],
-                                                scale: [0.8, 1.2, 0.8],
-                                            }}
-                                            transition={{
-                                                duration: 1,
-                                                repeat: Number.POSITIVE_INFINITY,
-                                                delay: i * 0.2,
-                                                ease: "easeInOut",
-                                            }}
-                                        />
-                                    ))}
-                                </div>
+                                <LoadingDots/>
 
                                 {/* Sparkles around the cloud */}
                                 {[0, 1, 2, 3, 4].map((i) => (
