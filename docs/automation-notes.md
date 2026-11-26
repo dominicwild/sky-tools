@@ -1,5 +1,13 @@
 # Automation notes
 
+## 2026-11-26 (09:44 re-check)
+
+- SkyHelper now supplies three current quests and both candle guides. Refreshed acquaintance, Spinning Mentor and Village of Dreams Hotspring images, preserving game wording, IDs and videos. Existing aliases resolve all titles. The current alternative daily guide supplies Collect 30 pieces of light, which already matches locally and completes the four displayed quests. No video attachments or UploadThing issues. Request another 30-minute re-check for SkyHelper's missing fourth quest.
+- Game extraction remains build 26768897; public Steam build 26935361 was released more than 30 hours ago. Dominic's PC Steam installation or scheduled Sky game data sync needs checking. All 225 linked quests retain game wording; wiki dry run parsed 222 quests with no additions.
+- calendar verified current for officially announced content. Re-fetched the upstream source archive (3f04e8d), read 2026 event ranges and checked the absent 2027 index, season end convention and spirit schedules. Fresh official October/November news confirms Pearl through 31 December, Double Hearts and the returning group through today, and Style for 27 November–10 December. No running-event extension or announcement for 3–6 December. The previously recorded Thoughtful Director, Dancing Performer and provisional Feast discrepancies remain; calendar files unchanged.
+- Typecheck, lint, duplication and dead-code checks passed; all 114 tests passed. Lint retains the existing app/not-found.tsx navigation warning. Verified three JPEGs, both JSON mirrors in their existing shapes, unique IDs and image-only quest changes. The locked Next.js version displayed its existing security upgrade recommendation; the instructed retry ran successfully without dependency changes.
+- Local agent-browser checks confirm four quests, Spinning Mentor search, the acquaintance video dialog and a loaded Valley seasonal candle image. No browser page errors. The temporary server will be stopped after production verification.
+
 ## 2026-11-25
 
 - Refreshed game extraction to Steam build 26768897, matching the public build. All 225 linked quests retain game wording; 246 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
