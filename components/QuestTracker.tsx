@@ -11,6 +11,7 @@ import VideoGuideDialog from "@/components/VideoGuideDialog";
 import {Button} from "@/components/ui/button";
 import QuestCard from "@/components/QuestCard";
 import EmptyQuestSlot from "@/components/EmptyQuestSlot";
+import QuestLoadingSlot from "@/components/QuestLoadingSlot";
 import CandleGuideSection from "@/components/CandleGuideSection";
 import {questsData} from "@/data/questData";
 import {incrementQuest} from "@/server/redis";
@@ -26,6 +27,7 @@ interface QuestTrackerProps {
 
 export default function QuestTracker({skyHelperQuestData}: Readonly<QuestTrackerProps>) {
     const [questData, setQuestData] = useState<DailyQuestDisplayData>({quests: [], candleGuides: []})
+    const [isQuestDataLoading, setIsQuestDataLoading] = useState(true)
     const [selectedQuests, setSelectedQuests] = useState<Quest[]>([])
     const [searchQuery, setSearchQuery] = useState("")
     const hasEditedSelectedQuests = useRef(false)
@@ -42,6 +44,7 @@ export default function QuestTracker({skyHelperQuestData}: Readonly<QuestTracker
 
     const applySkyHelperQuestData = useCallback((nextQuestData: DailyQuestDisplayData) => {
         setQuestData(nextQuestData)
+        setIsQuestDataLoading(false)
         setSelectedQuests((currentSelectedQuests) => {
             if (hasEditedSelectedQuests.current) {
                 return currentSelectedQuests
@@ -235,7 +238,7 @@ export default function QuestTracker({skyHelperQuestData}: Readonly<QuestTracker
                                     }}
                                     className="w-full"
                                 >
-                                    {selectedQuests.length == 0 && <EmptyQuestSlot/>}
+                                    {selectedQuests.length == 0 && (isQuestDataLoading ? <QuestLoadingSlot/> : <EmptyQuestSlot/>)}
                                 </motion.div>
                             </AnimatePresence>
                         </div>
