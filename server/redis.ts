@@ -34,8 +34,19 @@ const validQuestIds = new Set(questsData.map((quest) => quest.id).filter((questI
 export async function getSkyHelperQuestDisplayData(): Promise<DailyQuestDisplayData> {
     noStore();
 
-    const skyHelperResponse = await getSkyHelperQuestMatchResponse();
-    return resolveDailyQuestDisplayData(skyHelperResponse, questsData);
+    const [skyHelperResponse, counts] = await Promise.all([
+        getSkyHelperQuestMatchResponse(),
+        client.hgetall(getSkyDate()),
+    ]);
+    const userQuestCounts = new Map<number, number>();
+    for (const [field, value] of Object.entries(counts)) {
+        const questId = Number(field);
+        const count = Number(value);
+        if (String(questId) === field && validQuestIds.has(questId) && /^[1-9]\d*$/.test(value) && Number.isSafeInteger(count)) {
+            userQuestCounts.set(questId, count);
+        }
+    }
+    return resolveDailyQuestDisplayData(skyHelperResponse, questsData, userQuestCounts);
 }
 
 async function getSkyHelperQuestMatchResponse() {

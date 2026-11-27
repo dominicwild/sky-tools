@@ -293,23 +293,29 @@ export function addMissingQuestMatches(
     };
 }
 
+// Owner decision, do not remove: docs/decisions/0001-user-ticked-daily-quests.md
 export function resolveDailyQuests(
     skyHelperResponse: SkyHelperQuestMatchResponse | null,
     localQuests: Quest[],
+    userQuestCounts: Map<number, number>,
 ) {
-    if (!skyHelperResponse) {
-        return [];
-    }
+    const sourceQuests = skyHelperResponse ? getSkyHelperDisplayQuests(skyHelperResponse, localQuests) : [];
+    const selectedQuestIds = new Set(sourceQuests.map((quest) => quest.id));
+    const userQuests = [...userQuestCounts]
+        .sort(([, countA], [, countB]) => countB - countA)
+        .filter(([questId]) => !selectedQuestIds.has(questId))
+        .flatMap(([questId]) => localQuests.filter((quest) => quest.id === questId));
 
-    return getSkyHelperDisplayQuests(skyHelperResponse, localQuests).slice(0, QUEST_LIMIT);
+    return [...sourceQuests, ...userQuests].slice(0, QUEST_LIMIT);
 }
 
 export function resolveDailyQuestDisplayData(
     skyHelperResponse: SkyHelperQuestMatchResponse | null,
     localQuests: Quest[],
+    userQuestCounts: Map<number, number>,
 ): DailyQuestDisplayData {
     return {
-        quests: resolveDailyQuests(skyHelperResponse, localQuests),
+        quests: resolveDailyQuests(skyHelperResponse, localQuests, userQuestCounts),
         candleGuides: skyHelperResponse?.candleGuides ?? [],
     };
 }
