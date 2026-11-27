@@ -11,6 +11,7 @@ import {
     isMissingDailyQuests,
     isSkyHelperQuestMatchResponseCurrent,
     parseThatSkyDailyGuidesHtml,
+    parseUserQuestCounts,
     resolveDailyQuestDisplayData,
     validateSkyHelperQuestMatchResponse,
     validateSkyHelperQuestResponse,
@@ -34,8 +35,16 @@ const validQuestIds = new Set(questsData.map((quest) => quest.id).filter((questI
 export async function getSkyHelperQuestDisplayData(): Promise<DailyQuestDisplayData> {
     noStore();
 
-    const skyHelperResponse = await getSkyHelperQuestMatchResponse();
-    return resolveDailyQuestDisplayData(skyHelperResponse, questsData);
+    const skyDateKey = getSkyDate();
+    const [skyHelperResponse, rawCounts] = await Promise.all([
+        getSkyHelperQuestMatchResponse(),
+        client.hgetall(skyDateKey),
+    ]);
+    const {counts, rejectedFields} = parseUserQuestCounts(rawCounts, validQuestIds);
+    if (rejectedFields.length > 0) {
+        console.warn(`Rejected quest count fields for ${skyDateKey}:`, rejectedFields);
+    }
+    return resolveDailyQuestDisplayData(skyHelperResponse, questsData, counts);
 }
 
 async function getSkyHelperQuestMatchResponse() {

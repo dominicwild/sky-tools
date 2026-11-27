@@ -8,6 +8,7 @@ import {
     isSkyHelperQuestMatchResponseCurrent,
     normalizeQuestTitle,
     parseThatSkyDailyGuidesHtml,
+    parseUserQuestCounts,
     resolveDailyQuestDisplayData,
     resolveDailyQuests,
     validateSkyHelperQuestResponse,
@@ -54,6 +55,22 @@ const questTitleAliases = new Map([
 ]);
 
 describe("daily quest source", () => {
+    it("parses valid user quest counts and reports rejected fields", () => {
+        const result = parseUserQuestCounts({
+            "10": "5",
+            "999": "1",
+            invalid: "1",
+            "011": "1",
+            "11": "0",
+            "12": "-1",
+            "132": "1.5",
+            "159": "01",
+        }, new Set([10, 11, 12, 132, 159]));
+
+        expect(result.counts).toEqual(new Map([[10, 5]]));
+        expect(result.rejectedFields).toEqual(["11", "12", "132", "159", "999", "invalid", "011"]);
+    });
+
     it("parses a representative SkyHelper response", () => {
         const parsedResponse = validateSkyHelperQuestResponse(createRepresentativeResponse());
 
@@ -102,7 +119,7 @@ describe("daily quest source", () => {
         expect(parsedResponse).not.toBeNull();
 
         const questMatches = createQuestMatchResponse(parsedResponse);
-        const quests = resolveDailyQuests(questMatches, localQuests);
+        const quests = resolveDailyQuests(questMatches, localQuests, new Map());
 
         expect(quests).toHaveLength(4);
         expect(quests.map((quest) => quest.questName)).toEqual([
@@ -132,7 +149,7 @@ describe("daily quest source", () => {
     });
 
     it("parses candle guide groups without adding them to daily quests", () => {
-        const parsedResponse = validateSkyHelperQuestResponse({
+        const displayData = resolveCandleDisplayData({
             ...createRepresentativeResponse(),
             seasonal_candles: {
                 title: "Seasonal Candle Location - Hidden Forest - Rotation 1",
@@ -145,10 +162,6 @@ describe("daily quest source", () => {
                 images: [{url: videoUrl, by: "Clement"}],
             },
         });
-        expect(parsedResponse).not.toBeNull();
-
-        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), localQuests);
-
         expect(displayData.quests).toHaveLength(4);
         expect(displayData.candleGuides).toEqual([
             {
@@ -169,7 +182,7 @@ describe("daily quest source", () => {
     });
 
     it("uses current candle guide quest rows before stale candle guide groups", () => {
-        const parsedResponse = validateSkyHelperQuestResponse({
+        const displayData = resolveCandleDisplayData({
             quests: [
                 {
                     title: "Forge a Candle",
@@ -188,10 +201,6 @@ describe("daily quest source", () => {
                 images: [{url: videoUrl, by: "Clement"}],
             },
         });
-        expect(parsedResponse).not.toBeNull();
-
-        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), localQuests);
-
         expect(displayData.quests.map((quest) => quest.questName)).toEqual(["Forge a candle"]);
         expect(displayData.candleGuides).toEqual([
             {
@@ -205,7 +214,7 @@ describe("daily quest source", () => {
     });
 
     it("ignores placeholder candle guide titles", () => {
-        const parsedResponse = validateSkyHelperQuestResponse({
+        const displayData = resolveCandleDisplayData({
             quests: [
                 {
                     title: "Forge a Candle",
@@ -223,10 +232,6 @@ describe("daily quest source", () => {
                 "2026-06-23T00:00:00.000-07:00",
             ),
         });
-        expect(parsedResponse).not.toBeNull();
-
-        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), localQuests);
-
         expect(displayData.candleGuides).toEqual([
             createExpectedCandleCakeGuide("Rotating Treasure Candle Locations - Rotation 20 | Valley Of Triumph", "Valley of Triumph"),
         ]);
@@ -266,7 +271,7 @@ describe("daily quest source", () => {
     });
 
     it("ignores stale optional candle guide groups", () => {
-        const parsedResponse = validateSkyHelperQuestResponse({
+        const displayData = resolveCandleDisplayData({
             last_updated: "2026-07-04T00:00:00.000-07:00",
             quests: [
                 {
@@ -285,10 +290,6 @@ describe("daily quest source", () => {
                 "2026-07-04T00:00:00.000-07:00",
             ),
         });
-        expect(parsedResponse).not.toBeNull();
-
-        const displayData = resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), localQuests);
-
         expect(displayData.candleGuides).toEqual([
             createExpectedCandleCakeGuide("Rotating Treasure Candle Locations - Rotation 1 | Golden Wasteland", "Golden Wasteland"),
         ]);
@@ -361,15 +362,50 @@ describe("daily quest source", () => {
         });
         expect(parsedResponse).not.toBeNull();
 
-        const quests = resolveDailyQuests(createQuestMatchResponse(parsedResponse), localQuests);
+        const quests = resolveDailyQuests(createQuestMatchResponse(parsedResponse), localQuests, new Map());
 
         expect(quests.map((quest) => quest.id)).toEqual([159]);
     });
 
-    it("returns no quests or candle guides when source data is unavailable", () => {
-        const displayData = resolveDailyQuestDisplayData(null, localQuests);
+    it("shows user-ticked quests by count when source data is unavailable", () => {
+        const displayData = resolveDailyQuestDisplayData(null, localQuests, new Map([[10, 1], [11, 3], [12, 2]]));
 
-        expect(displayData).toEqual({quests: [], candleGuides: []});
+        expect(displayData.quests.map((quest) => quest.id)).toEqual([11, 12, 10]);
+        expect(displayData.candleGuides).toEqual([]);
+    });
+
+    it("shows no quests or candle guides without source data or user ticks", () => {
+        expect(resolveDailyQuestDisplayData(null, localQuests, new Map())).toEqual({quests: [], candleGuides: []});
+    });
+
+    it("keeps source quests first and fills free slots with distinct user-ticked quests", () => {
+        const source: SkyHelperQuestMatchResponse = {
+            quests: [159, 160, 132].map((localQuestId) => ({
+                localQuestId, title: null, visualGuideUrl: null, videoGuideUrl: null,
+            })),
+            candleGuides: [],
+        };
+        const counts = new Map([[10, 50], [11, 100], [159, 200], [12, 75]]);
+
+        expect(resolveDailyQuests(source, localQuests, counts).map((quest) => quest.id)).toEqual([159, 160, 132, 11]);
+    });
+
+    it("never displaces a full source list with higher-count user ticks", () => {
+        const source: SkyHelperQuestMatchResponse = {
+            quests: [159, 160, 132, 222].map((localQuestId) => ({
+                localQuestId, title: null, visualGuideUrl: null, videoGuideUrl: null,
+            })),
+            candleGuides: [],
+        };
+
+        expect(resolveDailyQuests(source, localQuests, new Map([[11, 500]])).map((quest) => quest.id))
+            .toEqual([159, 160, 132, 222]);
+    });
+
+    it("limits user-ticked quests to four without source data", () => {
+        const counts = new Map([[10, 1], [11, 5], [12, 3], [159, 4], [160, 2]]);
+
+        expect(resolveDailyQuests(null, localQuests, counts).map((quest) => quest.id)).toEqual([11, 159, 12, 160]);
     });
 
     it("parses thatskyapplication daily guide HTML", () => {
@@ -433,7 +469,7 @@ describe("daily quest source", () => {
             ],
         });
 
-        const quests = resolveDailyQuests(questMatches, localQuests);
+        const quests = resolveDailyQuests(questMatches, localQuests, new Map());
 
         expect(quests.map((quest) => quest.questName)).toEqual([
             "Light 20 candles",
@@ -469,7 +505,7 @@ describe("daily quest source", () => {
 
         expect(isMissingDailyQuests(skyHelperMatches)).toBe(true);
 
-        const quests = resolveDailyQuests(addMissingQuestMatches(skyHelperMatches, thatSkyMatches), localQuests);
+        const quests = resolveDailyQuests(addMissingQuestMatches(skyHelperMatches, thatSkyMatches), localQuests, new Map());
 
         expect(quests.map((quest) => quest.id)).toEqual([159, 39, 222]);
     });
@@ -505,7 +541,7 @@ describe("daily quest source", () => {
             ],
         });
 
-        const quests = resolveDailyQuests(questMatches, localQuests);
+        const quests = resolveDailyQuests(questMatches, localQuests, new Map());
 
         expect(quests.map((quest) => quest.questName)).toEqual(["Light 20 candles"]);
     });
@@ -584,6 +620,12 @@ function createThatSkyQuestMatchResponse(response: ThatSkyDailyGuidesResponse | 
 
         return localQuestsByTitle.get(aliasTitle ?? normalizedTitle) ?? null;
     });
+}
+
+function resolveCandleDisplayData(response: object) {
+    const parsedResponse = validateSkyHelperQuestResponse(response);
+    expect(parsedResponse).not.toBeNull();
+    return resolveDailyQuestDisplayData(createQuestMatchResponse(parsedResponse), localQuests, new Map());
 }
 
 function createCandleGroup(title: string, date: string) {

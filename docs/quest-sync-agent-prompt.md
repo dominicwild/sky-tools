@@ -100,14 +100,16 @@ SkyHelper sync:
       downloaded source videos or compressed scratch output.
 10. If UploadThing upload is unavailable, do not invent another hosting path. Leave a clear summary of the missing
     credential, upload error, or ffmpeg error.
-11. Never add or restore a popularity/user-count fallback for missing daily quests. If SkyHelper returns fewer than four
-    real daily quests, show fewer than four rather than guessing from historical user selections.
+11. Never remove or weaken the user-ticked quest fill. Authoritative source quests come first; free slots, or the
+    whole list when no source has data, are filled from the quests users have ticked today. This is the owner's
+    fixed decision in `docs/decisions/0001-user-ticked-daily-quests.md`. Quests shown through this fill are expected
+    behaviour, not a verification failure: do not report them as a conflict.
 12. When SkyHelper returns fewer than four real quests (for example a `[Quest Title Error]` row), the site fills the
     gap from https://thatskyapplication.com/daily-guides. Check that day's thatskyapplication titles resolve to local
     quests, and add a QUEST_TITLE_ALIASES entry for any that do not. The exception is a title of the form "Meet up with
     <spirit> in <area>": that is the game's own placeholder (`daily_quest_help_spirit` in Localizable.strings) for any
     quest that needs a spirit to hand it over, and it hides which of that spirit's quests it is. Never alias it and do
-    not stop for it; leave it unmatched (the site then shows fewer quests) and name it in the summary. SkyHelper
+    not stop for it; leave it unmatched (user-ticked quests can fill the gap) and name it in the summary. SkyHelper
     usually names the real task later; the re-check in SkyHelper Lag Handling picks it up.
 
 Duplicate handling:
@@ -155,8 +157,9 @@ Commit and push:
    and then check the newest matching deployment status for `state: "success"`.
 7. Use agent-browser to open the live site at https://sky.dominicwild.com. Compare the visible daily quests and candle
    guides against the current SkyHelper API payload. This live-site/API comparison is the final verification point:
-    - If the live site matches the current SkyHelper payload, the sync is verified.
-    - If the live site does not match the current SkyHelper payload, debug the production problem before finishing.
+    - Verify that current source quests appear first, followed by any user-ticked quests filling free slots, and that
+      candle guides match the source response.
+    - If source quests are missing or displaced, debug the production problem before finishing.
 8. Final response must include:
     - what changed
     - validation results
