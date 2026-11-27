@@ -1,5 +1,13 @@
 # Automation notes
 
+## 2026-11-27
+
+- Refreshed game data to Steam build 26935361, matching the public build. All 225 linked quests retain game wording; 246 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
+- SkyHelper supplies three current quests and both candle guides. Refreshed calling to five players, Graveyard wandering lights and Graveyard bonfire images in both exact JSON mirrors, preserving wording, IDs, videos and unrelated fields. Existing aliases resolve every title. The current alternative daily guide supplies Melt 10 darkness, completing the four displayed quests. No video attachments or UploadThing issues. Request a 30-minute re-check for SkyHelper's missing fourth quest.
+- calendar verified current for officially announced content. Downloaded upstream sources at 5137656, read every referenced 2026 event range, checked the absent 2027 index, season end convention and all seasonal spirit visit files. Re-fetched official news and all official pages referenced by the calendar through the reader proxy after a direct request returned 403. Pearl remains live through 31 December and Style runs 27 November–10 December; Double Hearts and the four-spirit group ended on 26 November. No extension or announcement for 3–6 December. Previously recorded Thoughtful Director, Dancing Performer and provisional Feast discrepancies remain uncorroborated; calendar files unchanged.
+- Typecheck, lint, duplication and dead-code checks passed; all 119 tests passed. Lint retains the existing app/not-found.tsx navigation warning. Verified three JPEGs, exact JSON mirrors and image-only quest changes. Locked Next.js 16.4.2 displayed its existing security upgrade recommendation; the instructed retry succeeded without dependency changes.
+- Local agent-browser checks confirm four current quests in source order, calling quest search and its YouTube video dialog, plus a loaded Golden Wasteland seasonal candle guide. Pearl shows its emblem and 34 days left. No browser page errors. New quest images require the push before jsDelivr serves them. The temporary server is stopped after production verification.
+
 ## 2026-11-26 (09:44 re-check)
 
 - SkyHelper now supplies three current quests and both candle guides. Refreshed acquaintance, Spinning Mentor and Village of Dreams Hotspring images, preserving game wording, IDs and videos. Existing aliases resolve all titles. The current alternative daily guide supplies Collect 30 pieces of light, which already matches locally and completes the four displayed quests. No video attachments or UploadThing issues. Request another 30-minute re-check for SkyHelper's missing fourth quest.
