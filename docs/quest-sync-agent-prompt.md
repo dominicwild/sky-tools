@@ -100,7 +100,10 @@ SkyHelper sync:
       downloaded source videos or compressed scratch output.
 10. If UploadThing upload is unavailable, do not invent another hosting path. Leave a clear summary of the missing
     credential, upload error, or ffmpeg error.
-11. Never remove or weaken the user-ticked quest fill. Authoritative source quests come first; free slots, or the whole list when no source has data, are filled from the quests users have ticked today. This is the owner's fixed decision in `docs/decisions/0001-user-ticked-daily-quests.md`. Quests shown through this fill are expected behaviour, not a verification failure: do not report them as a conflict.
+11. Never remove or weaken the user-ticked quest fill. Authoritative source quests come first; free slots, or the
+    whole list when no source has data, are filled from the quests users have ticked today. This is the owner's
+    fixed decision in `docs/decisions/0001-user-ticked-daily-quests.md`. Quests shown through this fill are expected
+    behaviour, not a verification failure: do not report them as a conflict.
 12. When SkyHelper returns fewer than four real quests (for example a `[Quest Title Error]` row), the site fills the
     gap from https://thatskyapplication.com/daily-guides. Check that day's thatskyapplication titles resolve to local
     quests, and add a QUEST_TITLE_ALIASES entry for any that do not. The exception is a title of the form "Meet up with

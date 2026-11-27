@@ -293,6 +293,23 @@ export function addMissingQuestMatches(
     };
 }
 
+export function parseUserQuestCounts(rawCounts: Record<string, string>, validQuestIds: ReadonlySet<number>) {
+    const counts = new Map<number, number>();
+    const rejectedFields: string[] = [];
+
+    for (const [field, value] of Object.entries(rawCounts)) {
+        const questId = Number(field);
+        const count = Number(value);
+        if (String(questId) === field && validQuestIds.has(questId) && /^[1-9]\d*$/.test(value) && Number.isSafeInteger(count)) {
+            counts.set(questId, count);
+        } else {
+            rejectedFields.push(field);
+        }
+    }
+
+    return {counts, rejectedFields};
+}
+
 // Owner decision, do not remove: docs/decisions/0001-user-ticked-daily-quests.md
 export function resolveDailyQuests(
     skyHelperResponse: SkyHelperQuestMatchResponse | null,
