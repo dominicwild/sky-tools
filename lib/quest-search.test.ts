@@ -72,7 +72,7 @@ function createQuest(questName: string, realm: string): Quest {
         type: realm === "General" ? "General Quest" : "Realm Quest",
         realm,
         questName,
-        iconUrl: "icon.png",
+        iconUrl: "icon.webp",
         visualGuideUrl: null,
         videoGuideUrl: null,
     };

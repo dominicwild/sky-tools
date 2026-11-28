@@ -1,5 +1,5 @@
 import fs from "fs/promises";
-import {QuestItem} from "./processImages";
+import type {QuestItem} from "./extractQuestData";
 
 const main = async () => {
     console.log("Starting writing IDs")

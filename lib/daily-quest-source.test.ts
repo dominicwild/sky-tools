@@ -138,7 +138,7 @@ describe("daily quest source", () => {
         });
         expect(quests[3]).toMatchObject({
             id: 159,
-            visualGuideUrl: "local-image.png",
+            visualGuideUrl: "local-image.webp",
             videoGuideUrl: "https://youtu.be/local-forge",
         });
     });
@@ -478,10 +478,10 @@ describe("daily quest source", () => {
             "Use expressions with players",
         ]);
         expect(quests.map((quest) => quest.visualGuideUrl)).toEqual([
-            "local-image.png",
-            "local-image.png",
-            "local-image.png",
-            "local-image.png",
+            "local-image.webp",
+            "local-image.webp",
+            "local-image.webp",
+            "local-image.webp",
         ]);
     });
 
@@ -652,8 +652,8 @@ function createLocalQuest(id: number, questName: string, realm: string, videoGui
         type: realm === "General" ? "General Quest" : "Realm Quest",
         realm,
         questName,
-        iconUrl: "icon.png",
-        visualGuideUrl: "local-image.png",
+        iconUrl: "icon.webp",
+        visualGuideUrl: "local-image.webp",
         videoGuideUrl,
     };
 }

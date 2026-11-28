@@ -4,6 +4,7 @@ import crypto from "crypto";
 import fs from "fs/promises";
 import path from "path";
 import type { AnyNode } from "domhandler";
+import { encodeGuideImage, GUIDE_IMAGE_DIR } from "./guideImages";
 
 const WIKI_API_URL = "https://sky-children-of-the-light.fandom.com/api.php";
 const WIKI_PAGE = "Quests";
@@ -13,12 +14,11 @@ const RAW_DATA_PATH = path.join(SCRIPT_DIR, "skyData.json");
 const SCRIPT_LOCAL_DATA_PATH = path.join(SCRIPT_DIR, "skyDataLocal.json");
 const APP_LOCAL_DATA_PATH = path.join(ROOT_DIR, "data/skyDataLocal.json");
 const APP_QUEST_DATA_PATH = path.join(ROOT_DIR, "data/questData.ts");
-const IMAGE_OUTPUT_DIR = path.join(ROOT_DIR, "skyImages");
 const FALLBACK_HTML_PATH = path.join(SCRIPT_DIR, "mainQuestPage.html");
 
 type QuestType = "Realm Quest" | "General Quest" | "Seasonal/Event Quest";
 
-type QuestItem = {
+export type QuestItem = {
     type: QuestType;
     realm: string;
     questName: string;
@@ -336,20 +336,6 @@ function buildRemoteAssetMap(rawQuests: QuestItem[], localQuests: QuestItem[]): 
     return map;
 }
 
-function getImageExtension(url: string, contentType?: string): string {
-    const pathname = new URL(url).pathname;
-    const extension = path.extname(pathname);
-    if (extension) {
-        return extension;
-    }
-
-    if (contentType?.startsWith("image/")) {
-        return `.${contentType.split("/")[1].split(";")[0]}`;
-    }
-
-    return ".png";
-}
-
 async function downloadImage(url: string, assetMap: Map<string, string>): Promise<string> {
     const existingFilename = assetMap.get(url);
     if (existingFilename) {
@@ -363,12 +349,11 @@ async function downloadImage(url: string, assetMap: Map<string, string>): Promis
             "User-Agent": "sky-tools quest-sync",
         },
     });
-    const contentType = response.headers["content-type"];
-    const filename = `${crypto.createHash("sha1").update(url).digest("hex").slice(0, 16)}${getImageExtension(url, contentType)}`;
-    const outputPath = path.join(IMAGE_OUTPUT_DIR, filename);
+    const filename = `${crypto.createHash("sha1").update(url).digest("hex").slice(0, 16)}.webp`;
+    const webp = await encodeGuideImage(Buffer.from(response.data), url);
 
-    await fs.mkdir(IMAGE_OUTPUT_DIR, { recursive: true });
-    await fs.writeFile(outputPath, Buffer.from(response.data));
+    await fs.mkdir(GUIDE_IMAGE_DIR, { recursive: true });
+    await fs.writeFile(path.join(GUIDE_IMAGE_DIR, filename), webp);
     assetMap.set(url, filename);
 
     return filename;
