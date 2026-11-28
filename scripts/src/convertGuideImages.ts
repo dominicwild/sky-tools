@@ -1,3 +1,4 @@
+import {existsSync} from "fs";
 import fs from "fs/promises";
 import path from "path";
 import {encodeGuideImage, isConvertedGuideImage} from "./guideImages";
@@ -17,6 +18,20 @@ async function listFiles(target: string): Promise<string[]> {
     return entries.filter((entry) => entry.isFile()).map((entry) => path.join(target, entry.name));
 }
 
+async function assertOutputPathIsFree(filePath: string, outputPath: string): Promise<void> {
+    if (!existsSync(outputPath)) {
+        return;
+    }
+
+    const [source, output] = await Promise.all([fs.stat(filePath, {bigint: true}), fs.stat(outputPath, {bigint: true})]);
+    if (source.ino !== output.ino || source.dev !== output.dev) {
+        throw new Error(`Not converting ${filePath}: ${outputPath} already exists and is a different image`);
+    }
+    if (filePath !== outputPath) {
+        throw new Error(`Not converting ${filePath}: on this disk it is the same file as ${outputPath}. Rename it to ${path.basename(outputPath)} first`);
+    }
+}
+
 async function convertFile(filePath: string): Promise<void> {
     const input = await fs.readFile(filePath);
     if (await isConvertedGuideImage(filePath, input)) {
@@ -25,8 +40,12 @@ async function convertFile(filePath: string): Promise<void> {
     }
 
     const outputPath = path.join(path.dirname(filePath), `${path.parse(filePath).name}.webp`);
+    await assertOutputPathIsFree(filePath, outputPath);
+
     const webp = await encodeGuideImage(input, filePath);
-    await fs.writeFile(outputPath, webp);
+    const tempPath = `${outputPath}.${process.pid}.tmp`;
+    await fs.writeFile(tempPath, webp);
+    await fs.rename(tempPath, outputPath);
     if (outputPath !== filePath) {
         await fs.rm(filePath);
     }

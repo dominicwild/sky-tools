@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: `${SKY_IMAGES_PATH}/:file`,
-        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+        headers: [{ key: "Cache-Control", value: "public, max-age=604800" }],
       },
     ];
   },
