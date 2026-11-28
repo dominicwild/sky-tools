@@ -56,7 +56,7 @@ async function convertFile(filePath: string): Promise<void> {
 async function main(): Promise<void> {
     const targets = process.argv.slice(2).map((target) => path.resolve(getInvocationDir(), target));
     if (targets.length === 0) {
-        throw new Error("Pass the image files or folders to convert, e.g. npm --prefix scripts run convertImages -- public/skyImages/<file>");
+        throw new Error("Pass the image files or folders to convert, e.g. npm --prefix scripts run convertImages -- skyImages/<file>");
     }
 
     for (const target of targets) {

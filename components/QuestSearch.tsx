@@ -2,7 +2,7 @@
 
 import { Search, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { motion, AnimatePresence } from "motion/react"
+import { motion, AnimatePresence, type Variants } from "motion/react"
 import {ChangeEvent, useEffect, useState} from "react"
 import { questsData } from "@/data/questData"
 import {Input} from "@/components/ui/input";
@@ -33,7 +33,7 @@ export default function QuestSearch({
     const displayQuests = searchQuery.trim() === "" && isFocused ? questsData.slice(0, 8) : filteredQuests
     const hasNoResults = displayQuests.length === 0
 
-    const searchResultsVariants = {
+    const searchResultsVariants: Variants = {
         hidden: {
             opacity: 0,
             y: -10,
