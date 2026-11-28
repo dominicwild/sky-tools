@@ -1,4 +1,4 @@
-const SKY_IMAGES_CDN_URL = "https://cdn.jsdelivr.net/gh/dominicwild/sky-tools@master/skyImages";
+export const SKY_IMAGES_PATH = "/skyImages";
 
 export function getImageUrl(imageFileName?: string){
     if(imageFileName){
@@ -6,7 +6,7 @@ export function getImageUrl(imageFileName?: string){
             return imageFileName
         }
 
-        return `${SKY_IMAGES_CDN_URL}/${imageFileName}`
+        return `${SKY_IMAGES_PATH}/${imageFileName}`
     } else {
         return "/placeholder.svg"
     }
