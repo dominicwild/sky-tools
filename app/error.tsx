@@ -2,7 +2,7 @@
 
 import {useEffect, useState} from "react"
 import Image from "next/image"
-import {motion, AnimatePresence} from "motion/react"
+import {motion, AnimatePresence, type Variants} from "motion/react"
 import {CloudEffect} from "@/components/CloudEffect";
 import LoadingDots from "@/components/LoadingDots";
 
@@ -18,7 +18,7 @@ export default function ErrorPage({error, reset}: { error: Error & { digest?: st
         reset()
     }
 
-    const characterVariants = {
+    const characterVariants: Variants = {
         initial: {scale: 0.8, rotate: -5, opacity: 0},
         animate: {
             scale: 1,
@@ -39,7 +39,7 @@ export default function ErrorPage({error, reset}: { error: Error & { digest?: st
         },
     }
 
-    const containerVariants = {
+    const containerVariants: Variants = {
         initial: {y: 20, opacity: 0},
         animate: {
             y: 0,
@@ -52,7 +52,7 @@ export default function ErrorPage({error, reset}: { error: Error & { digest?: st
         },
     }
 
-    const textVariants = {
+    const textVariants: Variants = {
         initial: {y: 20, opacity: 0},
         animate: {
             y: 0,
