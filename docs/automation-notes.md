@@ -1,5 +1,12 @@
 # Automation notes
 
+## 2026-11-28 (10:48 re-check)
+
+- Game build 26935361 matches public Steam; all 225 linked quests use game wording. Wiki parsed 222 quests with no additions. Both installed dependency trees are complete and lockfiles unchanged.
+- SkyHelper now supplies all four current quests and both candle guides. Refreshed Vault sapling, bowing and Repository wandering-light images in both JSON mirrors, preserving wording, IDs and other fields. Compressed and uploaded the expressions video successfully (979,838 bytes) using the checkout .env. Attribution: @sky; source https://discord.com/channels/575762611111592007/575827924343848960/1445691997389197343; media attachment 1576182180621848787. Existing aliases resolve every title; no re-check or UploadThing issue.
+- calendar verified current. Read upstream 2026 event files, checked the absent 2027 index, Pearl's exclusive season end and all seasonal spirit visits. Re-fetched official news and all seven official calendar source posts through the reader proxy. Pearl remains live through 31 December and Style through 10 December, with no extension or announcement for 3–6 December. Previously recorded Thoughtful Director, Dancing Performer and provisional Feast discrepancies remain uncorroborated; calendar unchanged.
+- Typecheck, lint, duplication and dead-code checks passed; all 119 tests passed. Existing app/not-found.tsx navigation warning remains. Verified 246 unique quest IDs, unique linked game IDs, exact JSON mirrors, three JPEGs and media-only changes. Next.js displayed its existing security upgrade recommendation; retry succeeded without dependency changes.
+
 ## 2026-11-27
 
 - Refreshed game data to Steam build 26935361, matching the public build. All 225 linked quests retain game wording; 246 local IDs and linked game IDs are unique. Wiki dry run parsed 222 quests and found no additions.
