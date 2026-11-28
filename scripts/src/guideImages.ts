@@ -1,8 +1,7 @@
 import path from "path";
 import sharp from "sharp";
-import {SKY_IMAGES_PATH} from "../../util/helper";
 
-export const GUIDE_IMAGE_DIR = path.join(__dirname, "../../public", SKY_IMAGES_PATH);
+export const GUIDE_IMAGE_DIR = path.join(__dirname, "../../skyImages");
 
 const MAX_SIDE_PX = 2048;
 const WEBP_OPTIONS = {quality: 80, effort: 6, smartSubsample: true} satisfies sharp.WebpOptions;

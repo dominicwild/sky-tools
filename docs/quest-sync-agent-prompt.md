@@ -50,7 +50,7 @@ Wiki sync:
     - data/skyDataLocal.json
     - scripts/skyData.json
     - scripts/skyDataLocal.json
-    - public/skyImages/*.webp (new wiki images; syncQuests converts them to WebP itself, and the site serves them)
+    - skyImages/*.webp (new wiki images; syncQuests converts them to WebP itself. Served to the site through jsDelivr, deliberately outside public/ so Vercel never ships them)
 4. For each quest the wiki sync adds, find the same quest in `~/git/sky-game-data/daily-quests.json` (same task, and
    its `landmark` is in the quest's realm). When there is one clear match, set gameQuestId to its id and questName to
    its English name. When there is no clear match, keep the wiki name and report it.
@@ -76,17 +76,17 @@ SkyHelper sync:
       `~/git/sky-game-data/daily-quests.json`; otherwise the SkyHelper title with the "- video guide" suffix removed
       and no gameQuestId
     - iconUrl: the existing default diamond quest icon, currently 9857649b-3859-413b-941c-dee139045b1d.webp
-    - visualGuideUrl: the `.webp` filename in public/skyImages when an image exists, otherwise null
+    - visualGuideUrl: the `.webp` filename in skyImages when an image exists, otherwise null
     - videoGuideUrl: UploadThing `ufsUrl` for the compressed hosted video when a video exists and UploadThing
       credentials
       are available. If upload is blocked, preserve any existing videoGuideUrl on matched quests, use null for new
       quests, and report the blocker
     - id: next available numeric id with no duplicate ids
-7. Download each new SkyHelper image attachment into public/skyImages, then run
-   `npm --prefix scripts run convertImages -- public/skyImages/<file>`. The script replaces the download with a `.webp`
+7. Download each new SkyHelper image attachment into skyImages, then run
+   `npm --prefix scripts run convertImages -- skyImages/<file>`. The script replaces the download with a `.webp`
    file of the same base name, small enough for the web, and stops with an error if it cannot convert the file. Store only the
-   `.webp` filename in questData.ts. The site serves these files itself, and `data/questData.test.ts` fails if
-   questData.ts names an image that is not in public/skyImages.
+   `.webp` filename in questData.ts. jsDelivr serves these files to the site, and `data/questData.test.ts` fails if
+   questData.ts names an image that is not in skyImages.
 8. Mirror data/questData.ts changes into data/skyDataLocal.json and scripts/skyDataLocal.json. Do not add
    SkyHelper-only rows to scripts/skyData.json because that file is the raw wiki source.
 9. For video attachments:
